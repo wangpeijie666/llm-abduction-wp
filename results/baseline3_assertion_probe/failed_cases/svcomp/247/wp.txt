@@ -1,0 +1,184 @@
+Dataset: svcomp
+File: 247.c
+Source: /home/wangpeijie/wpj_2010215/spec_generation_abduction/data/AutoBench/svcomp/247.c
+Final status: Fail
+Best attempt: 4
+Best result: Fail_11_12
+
+Command:
+frama-c -wp -wp-precond-weakening -wp-no-callee-precond -wp-prover Alt-Ergo,Z3 -wp-prop=-@terminates,-@variant,-@decreases -wp-print -wp-timeout 8 /tmp/baseline3_1pzdzdfl/attempt_04_repair_01/repair_01_01_01_rewrite_annotation.c
+
+WP stdout:
+[kernel] Parsing /tmp/baseline3_1pzdzdfl/attempt_04_repair_01/repair_01_01_01_rewrite_annotation.c (with preprocessing)
+[kernel:typing:no-proto] /tmp/baseline3_1pzdzdfl/attempt_04_repair_01/repair_01_01_01_rewrite_annotation.c:6: Warning: 
+  Function unknown_int is declared without prototype.
+  Its formals will be inferred from actual arguments at first call.
+  Declare it as unknown_int(void) if the function does not take any parameters.
+[wp] Running WP plugin...
+[kernel:annot:missing-spec] /tmp/baseline3_1pzdzdfl/attempt_04_repair_01/repair_01_01_01_rewrite_annotation.c:6: Warning: 
+  Neither code nor explicit exits and terminates for function unknown_int,
+   generating default clauses. See -generated-spec-* options for more info
+[wp] /tmp/baseline3_1pzdzdfl/attempt_04_repair_01/repair_01_01_01_rewrite_annotation.c:22: Warning: 
+  Statement specifications not yet supported (skipped).
+[wp] Warning: Missing RTE guards
+[wp] 12 goals scheduled
+[wp] [Timeout] typed_main_loop_invariant_established (Qed 14ms) (Z3)
+[wp] Proved goals:   11 / 12
+  Qed:             9 (14ms-9ms-52ms)
+  Z3 4.8.12:       2 (70ms-78ms)
+  Timeout:         1
+------------------------------------------------------------
+  Function main
+------------------------------------------------------------
+
+Goal Exit-condition (generated) in 'main':
+Prove: true.
+Prover Qed returns Valid
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline3_1pzdzdfl/attempt_04_repair_01/repair_01_01_01_rewrite_annotation.c, line 25):
+Prove: true.
+Prover Qed returns Valid (30ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline3_1pzdzdfl/attempt_04_repair_01/repair_01_01_01_rewrite_annotation.c, line 25):
+Assume {
+  Type: is_sint32(l) /\ is_sint32(m) /\ is_sint32(n).
+  (* Call 'unknown_int' *)
+  Have: ((-2147483648) <= n) /\ (n <= 2147483647).
+  (* Call 'unknown_int' *)
+  Have: ((-2147483648) <= m) /\ (m <= 2147483647).
+  (* Call 'unknown_int' *)
+  Have: ((-2147483648) <= l) /\ (l <= 2147483647).
+  (* Then *)
+  Have: (3 * n) <= (l + m).
+}
+Prove: 0 <= n.
+Prover Alt-Ergo 2.2.0 returns Failed
+unrecognized prover answer
+Prover Z3 4.8.12 returns Timeout (Qed:14ms) (8s)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline3_1pzdzdfl/attempt_04_repair_01/repair_01_01_01_rewrite_annotation.c, line 26):
+Prove: true.
+Prover Qed returns Valid (16ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline3_1pzdzdfl/attempt_04_repair_01/repair_01_01_01_rewrite_annotation.c, line 26):
+Prove: true.
+Prover Qed returns Valid (8ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline3_1pzdzdfl/attempt_04_repair_01/repair_01_01_01_rewrite_annotation.c, line 32):
+Let x = 3 * i.
+Let x_1 = 2 * i.
+Let x_2 = 1 + j.
+Assume {
+  Type: is_sint32(i) /\ is_sint32(j) /\ is_sint32(k) /\ is_sint32(l) /\
+      is_sint32(m) /\ is_sint32(n) /\ is_sint32(x_1) /\ is_sint32(x_2).
+  (* Call 'unknown_int' *)
+  Have: ((-2147483648) <= n) /\ (n <= 2147483647).
+  (* Call 'unknown_int' *)
+  Have: ((-2147483648) <= m) /\ (m <= 2147483647).
+  (* Call 'unknown_int' *)
+  Have: ((-2147483648) <= l) /\ (l <= 2147483647).
+  (* Then *)
+  Have: (3 * n) <= (l + m).
+  (* Invariant *)
+  Have: 0 <= n.
+  (* Invariant *)
+  Have: (0 <= i) /\ (i <= n).
+  (* Then *)
+  Have: i < n.
+  (* Invariant *)
+  Have: (x_1 <= j) /\ (j <= x).
+  (* Then *)
+  Have: j < x.
+  (* Invariant *)
+  Have: i <= j.
+  (* Invariant *)
+  Have: (k <= j) /\ (i <= k).
+  (* Invariant *)
+  Have: k <= (i + (2 * n)).
+  (* Else *)
+  Have: j <= k.
+}
+Prove: x_1 <= x_2.
+Prover Alt-Ergo 2.2.0 returns Failed
+unrecognized prover answer
+Prover Z3 4.8.12 returns Valid (Qed:52ms) (78ms) (27755)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline3_1pzdzdfl/attempt_04_repair_01/repair_01_01_01_rewrite_annotation.c, line 32):
+Prove: true.
+Prover Qed returns Valid (11ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline3_1pzdzdfl/attempt_04_repair_01/repair_01_01_01_rewrite_annotation.c, line 38):
+Let x = 3 * i.
+Let x_1 = 2 * i.
+Assume {
+  Type: is_sint32(i) /\ is_sint32(j) /\ is_sint32(l) /\ is_sint32(m) /\
+      is_sint32(n) /\ is_sint32(x_1).
+  (* Call 'unknown_int' *)
+  Have: ((-2147483648) <= n) /\ (n <= 2147483647).
+  (* Call 'unknown_int' *)
+  Have: ((-2147483648) <= m) /\ (m <= 2147483647).
+  (* Call 'unknown_int' *)
+  Have: ((-2147483648) <= l) /\ (l <= 2147483647).
+  (* Then *)
+  Have: (3 * n) <= (l + m).
+  (* Invariant *)
+  Have: 0 <= n.
+  (* Invariant *)
+  Have: (0 <= i) /\ (i <= n).
+  (* Then *)
+  Have: i < n.
+  (* Invariant *)
+  Have: (x_1 <= j) /\ (j <= x).
+  (* Then *)
+  Have: j < x.
+}
+Prove: i <= j.
+Prover Alt-Ergo 2.2.0 returns Failed
+unrecognized prover answer
+Prover Z3 4.8.12 returns Valid (Qed:41ms) (70ms) (26884)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline3_1pzdzdfl/attempt_04_repair_01/repair_01_01_01_rewrite_annotation.c, line 40):
+Prove: true.
+Prover Qed returns Valid (16ms)
+
+------------------------------------------------------------
+
+Goal Assertion (file /tmp/baseline3_1pzdzdfl/attempt_04_repair_01/repair_01_01_01_rewrite_annotation.c, line 44):
+Prove: true.
+Prover Qed returns Valid (19ms)
+
+------------------------------------------------------------
+
+Goal Loop assigns (file /tmp/baseline3_1pzdzdfl/attempt_04_repair_01/repair_01_01_01_rewrite_annotation.c, line 27):
+Prove: true.
+Prover Qed returns Valid
+
+------------------------------------------------------------
+
+Goal Loop assigns (file /tmp/baseline3_1pzdzdfl/attempt_04_repair_01/repair_01_01_01_rewrite_annotation.c, line 33):
+Prove: true.
+Prover Qed returns Valid
+
+------------------------------------------------------------
+[wp:pedantic-assigns] /tmp/baseline3_1pzdzdfl/attempt_04_repair_01/repair_01_01_01_rewrite_annotation.c:11: Warning: 
+  No 'assigns' specification for function 'main'.
+  Callers assumptions might be imprecise.
+
+
+WP stderr:

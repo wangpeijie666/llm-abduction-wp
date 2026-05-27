@@ -1,0 +1,111 @@
+Dataset: svcomp
+File: 241.c
+Source: /home/wangpeijie/wpj_2010215/spec_generation_abduction/data/AutoBench/svcomp/241.c
+Final status: Fail
+Best attempt: 4
+Best result: Fail_13_14
+
+Command:
+frama-c -wp -wp-precond-weakening -wp-no-callee-precond -wp-prover Alt-Ergo,Z3 -wp-prop=-@terminates,-@variant,-@decreases -wp-print -wp-timeout 8 /tmp/baseline2_l6l8o73h/generated_specs/round_04.c
+
+WP stdout:
+[kernel] Parsing /tmp/baseline2_l6l8o73h/generated_specs/round_04.c (with preprocessing)
+[wp] Running WP plugin...
+[wp] Warning: Missing RTE guards
+[wp] 13 goals scheduled
+[wp] [Timeout] typed_main_loop_invariant_established (Qed 5ms) (Z3)
+[wp] Proved goals:   13 / 14
+  Unreachable:     1
+  Qed:            12 (0.36ms)
+  Timeout:         1
+------------------------------------------------------------
+  Function main
+------------------------------------------------------------
+
+Goal Pre-condition (file /tmp/baseline2_l6l8o73h/generated_specs/round_04.c, line 4) in 'main':
+Prove: true.
+Prover Qed returns Valid
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline2_l6l8o73h/generated_specs/round_04.c, line 17):
+Prove: true.
+Prover Qed returns Valid (8ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline2_l6l8o73h/generated_specs/round_04.c, line 17):
+Assume { Type: is_sint32(cnt_0). }
+Prove: 0 <= cnt_0.
+Prover Alt-Ergo 2.2.0 returns Failed
+unrecognized prover answer
+Prover Z3 4.8.12 returns Timeout (Qed:5ms) (8s)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline2_l6l8o73h/generated_specs/round_04.c, line 18):
+Prove: true.
+Prover Qed returns Valid (8ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline2_l6l8o73h/generated_specs/round_04.c, line 18):
+Prove: true.
+Prover Qed returns Valid (6ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline2_l6l8o73h/generated_specs/round_04.c, line 19):
+Prove: true.
+Prover Qed returns Valid (11ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline2_l6l8o73h/generated_specs/round_04.c, line 19):
+Prove: true.
+Prover Qed returns Valid (6ms)
+
+------------------------------------------------------------
+
+Goal Assertion (file /tmp/baseline2_l6l8o73h/generated_specs/round_04.c, line 28):
+Prove: true.
+Prover Qed returns Valid (12ms)
+
+------------------------------------------------------------
+
+Goal Loop assigns (file /tmp/baseline2_l6l8o73h/generated_specs/round_04.c, line 20):
+Prove: true.
+Prover Qed returns Valid
+
+------------------------------------------------------------
+
+Goal Assigns nothing in 'main' (1/4):
+Effect at line 13
+Prove: true.
+Prover Qed returns Valid (3ms)
+
+------------------------------------------------------------
+
+Goal Assigns nothing in 'main' (2/4):
+Effect at line 14
+Prove: true.
+Prover Qed returns Valid (4ms)
+
+------------------------------------------------------------
+
+Goal Assigns nothing in 'main' (3/4):
+Effect at line 23
+Prove: true.
+Prover Qed returns Valid (4ms)
+
+------------------------------------------------------------
+
+Goal Assigns nothing in 'main' (4/4):
+Effect at line 30
+Prove: true.
+Prover Qed returns Valid (8ms)
+
+------------------------------------------------------------
+
+
+WP stderr:

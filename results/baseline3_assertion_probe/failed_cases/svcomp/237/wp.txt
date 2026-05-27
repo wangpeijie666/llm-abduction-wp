@@ -1,0 +1,162 @@
+Dataset: svcomp
+File: 237.c
+Source: /home/wangpeijie/wpj_2010215/spec_generation_abduction/data/AutoBench/svcomp/237.c
+Final status: Fail
+Best attempt: 2
+Best result: Fail_12_15
+
+Command:
+frama-c -wp -wp-precond-weakening -wp-no-callee-precond -wp-prover Alt-Ergo,Z3 -wp-prop=-@terminates,-@variant,-@decreases -wp-print -wp-timeout 8 /tmp/baseline3_9r1dte9g/attempt_02_repair_03/invalid_repair_03_01.c
+
+WP stdout:
+[kernel] Parsing /tmp/baseline3_9r1dte9g/attempt_02_repair_03/invalid_repair_03_01.c (with preprocessing)
+[kernel:typing:no-proto] /tmp/baseline3_9r1dte9g/attempt_02_repair_03/invalid_repair_03_01.c:6: Warning: 
+  Function unknown_int is declared without prototype.
+  Its formals will be inferred from actual arguments at first call.
+  Declare it as unknown_int(void) if the function does not take any parameters.
+[wp] Running WP plugin...
+[kernel:annot:missing-spec] /tmp/baseline3_9r1dte9g/attempt_02_repair_03/invalid_repair_03_01.c:6: Warning: 
+  Neither code nor explicit exits and terminates for function unknown_int,
+   generating default clauses. See -generated-spec-* options for more info
+[wp] Warning: Missing RTE guards
+[wp] 15 goals scheduled
+[wp] [Timeout] typed_main_loop_invariant_2_preserved (Qed 23ms) (Z3)
+[wp] [Timeout] typed_main_loop_invariant_2_established (Qed 6ms) (Z3)
+[wp] [Timeout] typed_main_loop_invariant_4_preserved (Qed 25ms) (Z3)
+[wp] Proved goals:   12 / 15
+  Qed:            12 (6ms-4ms-25ms)
+  Timeout:         3
+------------------------------------------------------------
+  Function main
+------------------------------------------------------------
+
+Goal Exit-condition (generated) in 'main':
+Prove: true.
+Prover Qed returns Valid
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline3_9r1dte9g/attempt_02_repair_03/invalid_repair_03_01.c, line 14):
+Prove: true.
+Prover Qed returns Valid (10ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline3_9r1dte9g/attempt_02_repair_03/invalid_repair_03_01.c, line 14):
+Prove: true.
+Prover Qed returns Valid (3ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline3_9r1dte9g/attempt_02_repair_03/invalid_repair_03_01.c, line 15):
+Let x = -k.
+Assume {
+  Type: is_sint32(j) /\ is_sint32(k) /\ is_sint32(k - 1) /\
+      is_sint32(j + k) /\ is_sint32(j - k) /\ is_sint32(1 + j - k).
+  (* Invariant *)
+  Have: (k < j) /\ (j <= (2147483647 + k)).
+  (* Invariant *)
+  Have: k <= 1.
+  (* Invariant *)
+  Have: 0 <= k.
+  (* Invariant *)
+  Have: (0 < j) /\ (j <= 2).
+  (* Then *)
+  Have: j <= (2147483646 + k).
+}
+Prove: k = 0.
+Prover Alt-Ergo 2.2.0 returns Failed
+unrecognized prover answer
+Prover Z3 4.8.12 returns Timeout (Qed:23ms) (8s)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline3_9r1dte9g/attempt_02_repair_03/invalid_repair_03_01.c, line 15):
+Assume {
+  Type: is_sint32(k).
+  (* Call 'unknown_int' *)
+  Have: (0 <= k) /\ (k <= 1).
+}
+Prove: k = 0.
+Prover Alt-Ergo 2.2.0 returns Failed
+unrecognized prover answer
+Prover Z3 4.8.12 returns Timeout (Qed:6ms) (8s)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline3_9r1dte9g/attempt_02_repair_03/invalid_repair_03_01.c, line 16):
+Prove: true.
+Prover Qed returns Valid (15ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline3_9r1dte9g/attempt_02_repair_03/invalid_repair_03_01.c, line 16):
+Prove: true.
+Prover Qed returns Valid (3ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline3_9r1dte9g/attempt_02_repair_03/invalid_repair_03_01.c, line 17):
+Assume {
+  Type: is_sint32(i) /\ is_sint32(1 + i).
+  (* Invariant *)
+  Have: (0 < i) /\ (i <= 2147483647).
+  (* Invariant *)
+  Have: i <= 2.
+  (* Then *)
+  Have: i <= 2147483646.
+}
+Prove: false.
+Prover Alt-Ergo 2.2.0 returns Failed
+unrecognized prover answer
+Prover Z3 4.8.12 returns Timeout (Qed:25ms) (8s)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline3_9r1dte9g/attempt_02_repair_03/invalid_repair_03_01.c, line 17):
+Prove: true.
+Prover Qed returns Valid (3ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline3_9r1dte9g/attempt_02_repair_03/invalid_repair_03_01.c, line 18):
+Prove: true.
+Prover Qed returns Valid (13ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline3_9r1dte9g/attempt_02_repair_03/invalid_repair_03_01.c, line 18):
+Prove: true.
+Prover Qed returns Valid (5ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline3_9r1dte9g/attempt_02_repair_03/invalid_repair_03_01.c, line 19):
+Prove: true.
+Prover Qed returns Valid (9ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline3_9r1dte9g/attempt_02_repair_03/invalid_repair_03_01.c, line 19):
+Prove: true.
+Prover Qed returns Valid (3ms)
+
+------------------------------------------------------------
+
+Goal Assertion (file /tmp/baseline3_9r1dte9g/attempt_02_repair_03/invalid_repair_03_01.c, line 28):
+Prove: true.
+Prover Qed returns Valid (23ms)
+
+------------------------------------------------------------
+
+Goal Loop assigns (file /tmp/baseline3_9r1dte9g/attempt_02_repair_03/invalid_repair_03_01.c, line 20):
+Prove: true.
+Prover Qed returns Valid
+
+------------------------------------------------------------
+[wp:pedantic-assigns] /tmp/baseline3_9r1dte9g/attempt_02_repair_03/invalid_repair_03_01.c:8: Warning: 
+  No 'assigns' specification for function 'main'.
+  Callers assumptions might be imprecise.
+
+
+WP stderr:

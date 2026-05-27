@@ -1,0 +1,126 @@
+Dataset: svcomp
+File: 237.c
+Source: /home/wangpeijie/wpj_2010215/spec_generation_abduction/data/AutoBench/svcomp/237.c
+Final status: Fail
+Best attempt: 1
+Best result: Fail_7_9
+
+Command:
+frama-c -wp -wp-precond-weakening -wp-no-callee-precond -wp-prover Alt-Ergo,Z3 -wp-prop=-@terminates,-@variant,-@decreases -wp-print -wp-timeout 8 /tmp/baseline2_zmjttjax/generated_specs/round_01.c
+
+WP stdout:
+[kernel] Parsing /tmp/baseline2_zmjttjax/generated_specs/round_01.c (with preprocessing)
+[kernel:typing:no-proto] /tmp/baseline2_zmjttjax/generated_specs/round_01.c:5: Warning: 
+  Function unknown_int is declared without prototype.
+  Its formals will be inferred from actual arguments at first call.
+  Declare it as unknown_int(void) if the function does not take any parameters.
+[wp] Running WP plugin...
+[kernel:annot:missing-spec] /tmp/baseline2_zmjttjax/generated_specs/round_01.c:5: Warning: 
+  Neither code nor explicit exits, assigns and terminates for function unknown_int,
+   generating default clauses. See -generated-spec-* options for more info
+[wp] Warning: Missing RTE guards
+[wp] 9 goals scheduled
+[wp] [Timeout] typed_main_loop_invariant_2_preserved (Qed 23ms) (Z3)
+[wp] [Timeout] typed_main_loop_invariant_2_established (Qed 6ms) (Z3)
+[wp] Proved goals:    7 / 9
+  Qed:             6 (6ms-6ms-23ms)
+  Z3 4.8.12:       1 (65ms)
+  Timeout:         2
+------------------------------------------------------------
+  Function main
+------------------------------------------------------------
+
+Goal Exit-condition (generated) in 'main':
+Prove: true.
+Prover Qed returns Valid
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline2_zmjttjax/generated_specs/round_01.c, line 12):
+Prove: true.
+Prover Qed returns Valid (12ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline2_zmjttjax/generated_specs/round_01.c, line 12):
+Prove: true.
+Prover Qed returns Valid (4ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline2_zmjttjax/generated_specs/round_01.c, line 13):
+Let x = -k.
+Assume {
+  Type: is_sint32(j) /\ is_sint32(k) /\ is_sint32(k - 1) /\
+      is_sint32(j + k) /\ is_sint32(1 + j - k) /\ is_sint32(2 + j - k).
+  (* Invariant *)
+  Have: (k <= j) /\ (j <= (2147483646 + k)).
+  (* Invariant *)
+  Have: (0 <= j) /\ (j <= 1).
+  (* Then *)
+  Have: j <= (2147483645 + k).
+  (* Assertion *)
+  Have: k <= (1 + j).
+}
+Prove: k = 0.
+Prover Alt-Ergo 2.2.0 returns Failed
+unrecognized prover answer
+Prover Z3 4.8.12 returns Timeout (Qed:23ms) (8s)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline2_zmjttjax/generated_specs/round_01.c, line 13):
+Assume {
+  Type: is_sint32(k).
+  (* Call 'unknown_int' *)
+  Have: (0 <= k) /\ (k <= 1).
+}
+Prove: k = 1.
+Prover Alt-Ergo 2.2.0 returns Failed
+unrecognized prover answer
+Prover Z3 4.8.12 returns Timeout (Qed:6ms) (8s)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline2_zmjttjax/generated_specs/round_01.c, line 14):
+Prove: true.
+Prover Qed returns Valid (9ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline2_zmjttjax/generated_specs/round_01.c, line 14):
+Prove: true.
+Prover Qed returns Valid (3ms)
+
+------------------------------------------------------------
+
+Goal Assertion (file /tmp/baseline2_zmjttjax/generated_specs/round_01.c, line 22):
+Let x = -k.
+Assume {
+  Type: is_sint32(j) /\ is_sint32(k) /\ is_sint32(k - 1) /\
+      is_sint32(1 + j - k) /\ is_sint32(2 + j - k).
+  (* Invariant *)
+  Have: (k <= j) /\ (j <= (2147483646 + k)).
+  (* Invariant *)
+  Have: (0 <= j) /\ (j <= 1).
+  (* Then *)
+  Have: j <= (2147483645 + k).
+}
+Prove: k <= (1 + j).
+Prover Alt-Ergo 2.2.0 returns Failed
+unrecognized prover answer
+Prover Z3 4.8.12 returns Valid (Qed:21ms) (65ms) (25671)
+
+------------------------------------------------------------
+
+Goal Loop assigns (file /tmp/baseline2_zmjttjax/generated_specs/round_01.c, line 15):
+Prove: true.
+Prover Qed returns Valid
+
+------------------------------------------------------------
+[wp:pedantic-assigns] /tmp/baseline2_zmjttjax/generated_specs/round_01.c:6: Warning: 
+  No 'assigns' specification for function 'main'.
+  Callers assumptions might be imprecise.
+
+
+WP stderr:

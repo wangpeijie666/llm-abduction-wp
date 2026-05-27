@@ -1,0 +1,1387 @@
+[1/21] baseline3 svcomp/231.c
+[22:36:39] LLM start svcomp_231.c_initial1
+[22:36:43] LLM done svcomp_231.c_initial1, chars=318
+[2/21] baseline3 svcomp/232.c
+[22:36:46] LLM start svcomp_232.c_initial1
+[22:36:51] LLM done svcomp_232.c_initial1, chars=413
+[22:36:52] LLM start baseline3_invalid_repair
+[22:36:56] LLM done baseline3_invalid_repair, chars=641
+[3/21] baseline3 svcomp/233.c
+[22:36:58] LLM start svcomp_233.c_initial1
+[22:37:03] LLM done svcomp_233.c_initial1, chars=518
+[4/21] baseline3 svcomp/234.c
+[22:37:05] LLM start svcomp_234.c_initial1
+[22:37:09] LLM done svcomp_234.c_initial1, chars=709
+[22:37:20] LLM start baseline3_diagnose_typed_main_loop_invariant_established
+[22:37:22] LLM done baseline3_diagnose_typed_main_loop_invariant_established, chars=467
+[22:37:22] LLM start baseline3_wrong_spec_typed_main_loop_invariant_established
+[22:37:26] LLM done baseline3_wrong_spec_typed_main_loop_invariant_established, chars=442
+[22:37:37] LLM start baseline3_diagnose_typed_main_loop_invariant_established
+[22:37:41] LLM done baseline3_diagnose_typed_main_loop_invariant_established, chars=411
+[22:37:41] LLM start baseline3_wrong_spec_typed_main_loop_invariant_established
+[22:37:44] LLM done baseline3_wrong_spec_typed_main_loop_invariant_established, chars=448
+[22:37:54] LLM start baseline3_diagnose_typed_main_assert
+[22:37:57] LLM done baseline3_diagnose_typed_main_assert, chars=414
+[22:37:57] LLM start baseline3_candidates_typed_main_assert
+[22:38:02] LLM done baseline3_candidates_typed_main_assert, chars=1329
+[22:38:02] LLM start baseline3_precheck_typed_main_assert
+[22:38:06] LLM done baseline3_precheck_typed_main_assert, chars=427
+[22:38:07] LLM start baseline3_precheck_typed_main_assert
+[22:38:11] LLM done baseline3_precheck_typed_main_assert, chars=416
+[22:38:12] LLM start baseline3_precheck_typed_main_assert
+[22:38:15] LLM done baseline3_precheck_typed_main_assert, chars=456
+[22:38:26] LLM start baseline3_precheck_typed_main_assert
+[22:38:29] LLM done baseline3_precheck_typed_main_assert, chars=462
+[22:38:40] LLM start baseline3_precheck_typed_main_assert
+[22:38:43] LLM done baseline3_precheck_typed_main_assert, chars=469
+[22:38:54] LLM start baseline3_missing_spec_typed_main_assert
+[22:38:58] LLM done baseline3_missing_spec_typed_main_assert, chars=544
+[22:38:59] LLM start svcomp_234.c_initial2
+[22:39:02] LLM done svcomp_234.c_initial2, chars=765
+[22:39:03] LLM start baseline3_invalid_repair
+[22:39:06] LLM done baseline3_invalid_repair, chars=438
+[22:39:07] LLM start baseline3_invalid_repair
+[22:39:10] LLM done baseline3_invalid_repair, chars=518
+[22:39:11] LLM start svcomp_234.c_initial3
+[22:39:14] LLM done svcomp_234.c_initial3, chars=676
+[22:39:25] LLM start baseline3_diagnose_typed_main_loop_invariant_established
+[22:39:27] LLM done baseline3_diagnose_typed_main_loop_invariant_established, chars=370
+[22:39:27] LLM start baseline3_wrong_spec_typed_main_loop_invariant_established
+[22:39:31] LLM done baseline3_wrong_spec_typed_main_loop_invariant_established, chars=775
+[22:39:41] LLM start baseline3_diagnose_typed_main_loop_invariant_established
+[22:39:44] LLM done baseline3_diagnose_typed_main_loop_invariant_established, chars=349
+[22:39:44] LLM start baseline3_wrong_spec_typed_main_loop_invariant_established
+[22:39:48] LLM done baseline3_wrong_spec_typed_main_loop_invariant_established, chars=462
+[22:39:58] LLM start baseline3_diagnose_typed_main_assert
+[22:40:04] LLM done baseline3_diagnose_typed_main_assert, chars=477
+[22:40:04] LLM start baseline3_candidates_typed_main_assert
+[22:40:10] LLM done baseline3_candidates_typed_main_assert, chars=1445
+[22:40:10] LLM start baseline3_precheck_typed_main_assert
+[22:40:14] LLM done baseline3_precheck_typed_main_assert, chars=572
+[22:40:15] LLM start baseline3_precheck_typed_main_assert
+[22:40:18] LLM done baseline3_precheck_typed_main_assert, chars=453
+[22:40:28] LLM start baseline3_precheck_typed_main_assert
+[22:40:31] LLM done baseline3_precheck_typed_main_assert, chars=527
+[22:40:41] LLM start baseline3_precheck_typed_main_assert
+[22:40:45] LLM done baseline3_precheck_typed_main_assert, chars=624
+[22:40:56] LLM start baseline3_precheck_typed_main_assert
+[22:41:00] LLM done baseline3_precheck_typed_main_assert, chars=448
+[22:41:10] LLM start baseline3_missing_spec_typed_main_assert
+[22:41:13] LLM done baseline3_missing_spec_typed_main_assert, chars=596
+[22:41:14] LLM start svcomp_234.c_initial4
+[22:41:17] LLM done svcomp_234.c_initial4, chars=672
+[22:41:27] LLM start baseline3_diagnose_typed_main_loop_invariant_established
+[22:41:31] LLM done baseline3_diagnose_typed_main_loop_invariant_established, chars=370
+[22:41:31] LLM start baseline3_wrong_spec_typed_main_loop_invariant_established
+[22:41:34] LLM done baseline3_wrong_spec_typed_main_loop_invariant_established, chars=397
+[22:41:44] LLM start baseline3_diagnose_typed_main_assert
+[22:41:48] LLM done baseline3_diagnose_typed_main_assert, chars=434
+[22:41:48] LLM start baseline3_candidates_typed_main_assert
+[22:41:53] LLM done baseline3_candidates_typed_main_assert, chars=1521
+[22:41:53] LLM start baseline3_precheck_typed_main_assert
+[22:41:56] LLM done baseline3_precheck_typed_main_assert, chars=484
+[22:42:06] LLM start baseline3_precheck_typed_main_assert
+[22:42:09] LLM done baseline3_precheck_typed_main_assert, chars=554
+[22:42:10] LLM start baseline3_precheck_typed_main_assert
+[22:42:13] LLM done baseline3_precheck_typed_main_assert, chars=382
+[22:42:23] LLM start baseline3_precheck_typed_main_assert
+[22:42:26] LLM done baseline3_precheck_typed_main_assert, chars=517
+[22:42:37] LLM start baseline3_precheck_typed_main_assert
+[22:42:40] LLM done baseline3_precheck_typed_main_assert, chars=480
+[22:42:41] LLM start baseline3_missing_spec_typed_main_assert
+[22:42:45] LLM done baseline3_missing_spec_typed_main_assert, chars=822
+[22:42:46] LLM start baseline3_invalid_repair
+[22:42:48] LLM done baseline3_invalid_repair, chars=581
+[22:42:49] LLM start svcomp_234.c_initial5
+[22:42:52] LLM done svcomp_234.c_initial5, chars=680
+[22:43:03] LLM start baseline3_diagnose_typed_main_loop_invariant_established
+[22:43:07] LLM done baseline3_diagnose_typed_main_loop_invariant_established, chars=412
+[22:43:07] LLM start baseline3_wrong_spec_typed_main_loop_invariant_established
+[22:43:10] LLM done baseline3_wrong_spec_typed_main_loop_invariant_established, chars=436
+[22:43:20] LLM start baseline3_diagnose_typed_main_loop_invariant_established
+[22:43:24] LLM done baseline3_diagnose_typed_main_loop_invariant_established, chars=351
+[22:43:24] LLM start baseline3_wrong_spec_typed_main_loop_invariant_established
+[22:43:26] LLM done baseline3_wrong_spec_typed_main_loop_invariant_established, chars=394
+[22:43:37] LLM start baseline3_diagnose_typed_main_assert
+[22:43:40] LLM done baseline3_diagnose_typed_main_assert, chars=424
+[22:43:40] LLM start baseline3_candidates_typed_main_assert
+[22:43:45] LLM done baseline3_candidates_typed_main_assert, chars=1555
+[22:43:45] LLM start baseline3_precheck_typed_main_assert
+[22:43:48] LLM done baseline3_precheck_typed_main_assert, chars=500
+[22:43:49] LLM start baseline3_precheck_typed_main_assert
+[22:43:53] LLM done baseline3_precheck_typed_main_assert, chars=439
+[22:44:03] LLM start baseline3_precheck_typed_main_assert
+[22:44:07] LLM done baseline3_precheck_typed_main_assert, chars=615
+[22:44:17] LLM start baseline3_precheck_typed_main_assert
+[22:44:21] LLM done baseline3_precheck_typed_main_assert, chars=485
+[22:44:32] LLM start baseline3_precheck_typed_main_assert
+[22:44:35] LLM done baseline3_precheck_typed_main_assert, chars=527
+[22:44:45] LLM start baseline3_missing_spec_typed_main_assert
+[22:44:48] LLM done baseline3_missing_spec_typed_main_assert, chars=526
+[5/21] baseline3 svcomp/235.c
+[22:44:49] LLM start svcomp_235.c_initial1
+[22:44:54] LLM done svcomp_235.c_initial1, chars=577
+[22:45:05] LLM start baseline3_diagnose_typed_main_loop_invariant_3_preserved
+[22:45:08] LLM done baseline3_diagnose_typed_main_loop_invariant_3_preserved, chars=445
+[22:45:08] LLM start baseline3_candidates_typed_main_loop_invariant_3_preserved
+[22:45:17] LLM done baseline3_candidates_typed_main_loop_invariant_3_preserved, chars=1562
+[22:45:17] LLM start baseline3_precheck_typed_main_loop_invariant_3_preserved
+[22:45:20] LLM done baseline3_precheck_typed_main_loop_invariant_3_preserved, chars=527
+[22:45:30] LLM start baseline3_precheck_typed_main_loop_invariant_3_preserved
+[22:45:34] LLM done baseline3_precheck_typed_main_loop_invariant_3_preserved, chars=419
+[22:45:44] LLM start baseline3_precheck_typed_main_loop_invariant_3_preserved
+[22:45:48] LLM done baseline3_precheck_typed_main_loop_invariant_3_preserved, chars=435
+[22:45:59] LLM start baseline3_precheck_typed_main_loop_invariant_3_preserved
+[22:46:02] LLM done baseline3_precheck_typed_main_loop_invariant_3_preserved, chars=476
+[22:46:13] LLM start baseline3_precheck_typed_main_loop_invariant_3_preserved
+[22:46:15] LLM done baseline3_precheck_typed_main_loop_invariant_3_preserved, chars=353
+[22:46:16] LLM start baseline3_missing_spec_typed_main_loop_invariant_3_preserved
+[22:46:20] LLM done baseline3_missing_spec_typed_main_loop_invariant_3_preserved, chars=475
+[22:46:21] LLM start baseline3_invalid_repair
+[22:46:24] LLM done baseline3_invalid_repair, chars=407
+[22:46:25] LLM start baseline3_invalid_repair
+[22:46:27] LLM done baseline3_invalid_repair, chars=435
+[22:46:28] LLM start svcomp_235.c_initial2
+[22:46:31] LLM done svcomp_235.c_initial2, chars=546
+[22:46:42] LLM start baseline3_diagnose_typed_main_loop_invariant_2_preserved
+[22:46:45] LLM done baseline3_diagnose_typed_main_loop_invariant_2_preserved, chars=394
+[22:46:45] LLM start baseline3_candidates_typed_main_loop_invariant_2_preserved
+[22:46:53] LLM done baseline3_candidates_typed_main_loop_invariant_2_preserved, chars=1582
+[22:46:53] LLM start baseline3_precheck_typed_main_loop_invariant_2_preserved
+[22:46:56] LLM done baseline3_precheck_typed_main_loop_invariant_2_preserved, chars=355
+[22:47:07] LLM start baseline3_precheck_typed_main_loop_invariant_2_preserved
+[22:47:09] LLM done baseline3_precheck_typed_main_loop_invariant_2_preserved, chars=557
+[22:47:20] LLM start baseline3_precheck_typed_main_loop_invariant_2_preserved
+[22:47:24] LLM done baseline3_precheck_typed_main_loop_invariant_2_preserved, chars=478
+[22:47:35] LLM start baseline3_precheck_typed_main_loop_invariant_2_preserved
+[22:47:38] LLM done baseline3_precheck_typed_main_loop_invariant_2_preserved, chars=427
+[22:47:49] LLM start baseline3_precheck_typed_main_loop_invariant_2_preserved
+[22:47:53] LLM done baseline3_precheck_typed_main_loop_invariant_2_preserved, chars=533
+[22:48:04] LLM start baseline3_missing_spec_typed_main_loop_invariant_2_preserved
+[22:48:06] LLM done baseline3_missing_spec_typed_main_loop_invariant_2_preserved, chars=405
+[22:48:17] LLM start baseline3_diagnose_typed_main_loop_invariant_4_preserved
+[22:48:22] LLM done baseline3_diagnose_typed_main_loop_invariant_4_preserved, chars=489
+[22:48:22] LLM start baseline3_candidates_typed_main_loop_invariant_4_preserved
+[22:48:27] LLM done baseline3_candidates_typed_main_loop_invariant_4_preserved, chars=1495
+[22:48:27] LLM start baseline3_precheck_typed_main_loop_invariant_4_preserved
+[22:48:32] LLM done baseline3_precheck_typed_main_loop_invariant_4_preserved, chars=403
+[22:48:43] LLM start baseline3_precheck_typed_main_loop_invariant_4_preserved
+[22:48:46] LLM done baseline3_precheck_typed_main_loop_invariant_4_preserved, chars=413
+[22:48:57] LLM start baseline3_precheck_typed_main_loop_invariant_4_preserved
+[22:49:01] LLM done baseline3_precheck_typed_main_loop_invariant_4_preserved, chars=418
+[22:49:11] LLM start baseline3_precheck_typed_main_loop_invariant_4_preserved
+[22:49:15] LLM done baseline3_precheck_typed_main_loop_invariant_4_preserved, chars=425
+[22:49:25] LLM start baseline3_precheck_typed_main_loop_invariant_4_preserved
+[22:49:28] LLM done baseline3_precheck_typed_main_loop_invariant_4_preserved, chars=454
+[22:49:38] LLM start baseline3_missing_spec_typed_main_loop_invariant_4_preserved
+[22:49:41] LLM done baseline3_missing_spec_typed_main_loop_invariant_4_preserved, chars=709
+[22:49:52] LLM start baseline3_diagnose_typed_main_loop_invariant_4_preserved
+[22:49:55] LLM done baseline3_diagnose_typed_main_loop_invariant_4_preserved, chars=530
+[22:49:55] LLM start baseline3_candidates_typed_main_loop_invariant_4_preserved
+[22:50:03] LLM done baseline3_candidates_typed_main_loop_invariant_4_preserved, chars=1265
+[22:50:03] LLM start baseline3_precheck_typed_main_loop_invariant_4_preserved
+[22:50:06] LLM done baseline3_precheck_typed_main_loop_invariant_4_preserved, chars=411
+[22:50:07] LLM start baseline3_precheck_typed_main_loop_invariant_4_preserved
+[22:50:10] LLM done baseline3_precheck_typed_main_loop_invariant_4_preserved, chars=271
+[22:50:20] LLM start baseline3_precheck_typed_main_loop_invariant_4_preserved
+[22:50:24] LLM done baseline3_precheck_typed_main_loop_invariant_4_preserved, chars=433
+[22:50:35] LLM start baseline3_precheck_typed_main_loop_invariant_4_preserved
+[22:50:37] LLM done baseline3_precheck_typed_main_loop_invariant_4_preserved, chars=408
+[22:50:38] LLM start baseline3_precheck_typed_main_loop_invariant_4_preserved
+[22:50:41] LLM done baseline3_precheck_typed_main_loop_invariant_4_preserved, chars=470
+[22:50:42] LLM start baseline3_missing_spec_typed_main_loop_invariant_4_preserved
+[22:50:45] LLM done baseline3_missing_spec_typed_main_loop_invariant_4_preserved, chars=433
+[22:50:56] LLM start svcomp_235.c_initial3
+[22:50:58] LLM done svcomp_235.c_initial3, chars=576
+[22:51:09] LLM start baseline3_diagnose_typed_main_loop_invariant_3_established
+[22:51:13] LLM done baseline3_diagnose_typed_main_loop_invariant_3_established, chars=394
+[22:51:13] LLM start baseline3_wrong_spec_typed_main_loop_invariant_3_established
+[22:51:16] LLM done baseline3_wrong_spec_typed_main_loop_invariant_3_established, chars=379
+[22:51:26] LLM start baseline3_diagnose_typed_main_loop_invariant_3_established
+[22:51:29] LLM done baseline3_diagnose_typed_main_loop_invariant_3_established, chars=363
+[22:51:29] LLM start baseline3_wrong_spec_typed_main_loop_invariant_3_established
+[22:51:32] LLM done baseline3_wrong_spec_typed_main_loop_invariant_3_established, chars=445
+[22:51:43] LLM start baseline3_diagnose_typed_main_loop_invariant_3_established
+[22:51:45] LLM done baseline3_diagnose_typed_main_loop_invariant_3_established, chars=321
+[22:51:45] LLM start baseline3_wrong_spec_typed_main_loop_invariant_3_established
+[22:51:49] LLM done baseline3_wrong_spec_typed_main_loop_invariant_3_established, chars=433
+[22:51:59] LLM start svcomp_235.c_initial4
+[22:52:03] LLM done svcomp_235.c_initial4, chars=534
+[22:52:13] LLM start baseline3_diagnose_typed_main_loop_invariant_preserved
+[22:52:17] LLM done baseline3_diagnose_typed_main_loop_invariant_preserved, chars=404
+[22:52:17] LLM start baseline3_candidates_typed_main_loop_invariant_preserved
+[22:52:22] LLM done baseline3_candidates_typed_main_loop_invariant_preserved, chars=1316
+[22:52:22] LLM start baseline3_precheck_typed_main_loop_invariant_preserved
+[22:52:25] LLM done baseline3_precheck_typed_main_loop_invariant_preserved, chars=490
+[22:52:26] LLM start baseline3_precheck_typed_main_loop_invariant_preserved
+[22:52:29] LLM done baseline3_precheck_typed_main_loop_invariant_preserved, chars=379
+[22:52:30] LLM start baseline3_precheck_typed_main_loop_invariant_preserved
+[22:52:33] LLM done baseline3_precheck_typed_main_loop_invariant_preserved, chars=422
+[22:52:35] LLM start baseline3_precheck_typed_main_loop_invariant_preserved
+[22:52:37] LLM done baseline3_precheck_typed_main_loop_invariant_preserved, chars=377
+[22:52:48] LLM start baseline3_precheck_typed_main_loop_invariant_preserved
+[22:52:50] LLM done baseline3_precheck_typed_main_loop_invariant_preserved, chars=460
+[22:53:01] LLM start baseline3_missing_spec_typed_main_loop_invariant_preserved
+[22:53:05] LLM done baseline3_missing_spec_typed_main_loop_invariant_preserved, chars=418
+[22:53:15] LLM start baseline3_diagnose_typed_main_loop_invariant_2_preserved
+[22:53:19] LLM done baseline3_diagnose_typed_main_loop_invariant_2_preserved, chars=541
+[22:53:19] LLM start baseline3_candidates_typed_main_loop_invariant_2_preserved
+[22:53:25] LLM done baseline3_candidates_typed_main_loop_invariant_2_preserved, chars=1467
+[22:53:25] LLM start baseline3_precheck_typed_main_loop_invariant_2_preserved
+[22:53:28] LLM done baseline3_precheck_typed_main_loop_invariant_2_preserved, chars=352
+[22:53:38] LLM start baseline3_precheck_typed_main_loop_invariant_2_preserved
+[22:53:41] LLM done baseline3_precheck_typed_main_loop_invariant_2_preserved, chars=478
+[22:53:52] LLM start baseline3_precheck_typed_main_loop_invariant_2_preserved
+[22:53:56] LLM done baseline3_precheck_typed_main_loop_invariant_2_preserved, chars=531
+[22:54:06] LLM start baseline3_precheck_typed_main_loop_invariant_2_preserved
+[22:54:09] LLM done baseline3_precheck_typed_main_loop_invariant_2_preserved, chars=423
+[22:54:10] LLM start baseline3_precheck_typed_main_loop_invariant_2_preserved
+[22:54:14] LLM done baseline3_precheck_typed_main_loop_invariant_2_preserved, chars=492
+[22:54:15] LLM start baseline3_missing_spec_typed_main_loop_invariant_2_preserved
+[22:54:19] LLM done baseline3_missing_spec_typed_main_loop_invariant_2_preserved, chars=703
+[22:54:29] LLM start baseline3_diagnose_typed_main_loop_invariant_4_preserved
+[22:54:31] LLM done baseline3_diagnose_typed_main_loop_invariant_4_preserved, chars=394
+[22:54:31] LLM start baseline3_candidates_typed_main_loop_invariant_4_preserved
+[22:54:37] LLM done baseline3_candidates_typed_main_loop_invariant_4_preserved, chars=1713
+[22:54:37] LLM start baseline3_precheck_typed_main_loop_invariant_4_preserved
+[22:54:39] LLM done baseline3_precheck_typed_main_loop_invariant_4_preserved, chars=430
+[22:54:49] LLM start baseline3_precheck_typed_main_loop_invariant_4_preserved
+[22:54:52] LLM done baseline3_precheck_typed_main_loop_invariant_4_preserved, chars=376
+[22:55:03] LLM start baseline3_precheck_typed_main_loop_invariant_4_preserved
+[22:55:06] LLM done baseline3_precheck_typed_main_loop_invariant_4_preserved, chars=470
+[22:55:16] LLM start baseline3_precheck_typed_main_loop_invariant_4_preserved
+[22:55:20] LLM done baseline3_precheck_typed_main_loop_invariant_4_preserved, chars=487
+[22:55:30] LLM start baseline3_precheck_typed_main_loop_invariant_4_preserved
+[22:55:33] LLM done baseline3_precheck_typed_main_loop_invariant_4_preserved, chars=421
+[22:55:43] LLM start baseline3_missing_spec_typed_main_loop_invariant_4_preserved
+[22:55:46] LLM done baseline3_missing_spec_typed_main_loop_invariant_4_preserved, chars=484
+[22:55:56] LLM start svcomp_235.c_initial5
+[22:56:00] LLM done svcomp_235.c_initial5, chars=541
+[22:56:10] LLM start baseline3_diagnose_typed_main_loop_invariant_preserved
+[22:56:13] LLM done baseline3_diagnose_typed_main_loop_invariant_preserved, chars=424
+[22:56:13] LLM start baseline3_candidates_typed_main_loop_invariant_preserved
+[22:56:21] LLM done baseline3_candidates_typed_main_loop_invariant_preserved, chars=1559
+[22:56:21] LLM start baseline3_precheck_typed_main_loop_invariant_preserved
+[22:56:24] LLM done baseline3_precheck_typed_main_loop_invariant_preserved, chars=423
+[22:56:25] LLM start baseline3_precheck_typed_main_loop_invariant_preserved
+[22:56:27] LLM done baseline3_precheck_typed_main_loop_invariant_preserved, chars=405
+[22:56:38] LLM start baseline3_precheck_typed_main_loop_invariant_preserved
+[22:56:41] LLM done baseline3_precheck_typed_main_loop_invariant_preserved, chars=421
+[22:56:42] LLM start baseline3_precheck_typed_main_loop_invariant_preserved
+[22:56:45] LLM done baseline3_precheck_typed_main_loop_invariant_preserved, chars=559
+[22:56:56] LLM start baseline3_precheck_typed_main_loop_invariant_preserved
+[22:57:00] LLM done baseline3_precheck_typed_main_loop_invariant_preserved, chars=514
+[22:57:01] LLM start baseline3_missing_spec_typed_main_loop_invariant_preserved
+[22:57:06] LLM done baseline3_missing_spec_typed_main_loop_invariant_preserved, chars=789
+[22:57:17] LLM start baseline3_diagnose_typed_main_loop_invariant_2_preserved
+[22:57:20] LLM done baseline3_diagnose_typed_main_loop_invariant_2_preserved, chars=426
+[22:57:20] LLM start baseline3_candidates_typed_main_loop_invariant_2_preserved
+[22:57:24] LLM done baseline3_candidates_typed_main_loop_invariant_2_preserved, chars=1593
+[22:57:24] LLM start baseline3_precheck_typed_main_loop_invariant_2_preserved
+[22:57:27] LLM done baseline3_precheck_typed_main_loop_invariant_2_preserved, chars=454
+[22:57:37] LLM start baseline3_precheck_typed_main_loop_invariant_2_preserved
+[22:57:40] LLM done baseline3_precheck_typed_main_loop_invariant_2_preserved, chars=473
+[22:57:50] LLM start baseline3_precheck_typed_main_loop_invariant_2_preserved
+[22:57:54] LLM done baseline3_precheck_typed_main_loop_invariant_2_preserved, chars=512
+[22:58:05] LLM start baseline3_precheck_typed_main_loop_invariant_2_preserved
+[22:58:08] LLM done baseline3_precheck_typed_main_loop_invariant_2_preserved, chars=430
+[22:58:19] LLM start baseline3_precheck_typed_main_loop_invariant_2_preserved
+[22:58:22] LLM done baseline3_precheck_typed_main_loop_invariant_2_preserved, chars=409
+[22:58:33] LLM start baseline3_missing_spec_typed_main_loop_invariant_2_preserved
+[22:58:37] LLM done baseline3_missing_spec_typed_main_loop_invariant_2_preserved, chars=755
+[22:58:47] LLM start baseline3_diagnose_typed_main_loop_invariant_2_preserved
+[22:58:51] LLM done baseline3_diagnose_typed_main_loop_invariant_2_preserved, chars=463
+[22:58:51] LLM start baseline3_candidates_typed_main_loop_invariant_2_preserved
+[22:58:56] LLM done baseline3_candidates_typed_main_loop_invariant_2_preserved, chars=1695
+[22:58:56] LLM start baseline3_precheck_typed_main_loop_invariant_2_preserved
+[22:58:59] LLM done baseline3_precheck_typed_main_loop_invariant_2_preserved, chars=654
+[22:59:09] LLM start baseline3_precheck_typed_main_loop_invariant_2_preserved
+[22:59:13] LLM done baseline3_precheck_typed_main_loop_invariant_2_preserved, chars=422
+[22:59:24] LLM start baseline3_precheck_typed_main_loop_invariant_2_preserved
+[22:59:26] LLM done baseline3_precheck_typed_main_loop_invariant_2_preserved, chars=387
+[22:59:37] LLM start baseline3_precheck_typed_main_loop_invariant_2_preserved
+[22:59:40] LLM done baseline3_precheck_typed_main_loop_invariant_2_preserved, chars=413
+[22:59:50] LLM start baseline3_precheck_typed_main_loop_invariant_2_preserved
+[22:59:54] LLM done baseline3_precheck_typed_main_loop_invariant_2_preserved, chars=418
+[23:00:05] LLM start baseline3_missing_spec_typed_main_loop_invariant_2_preserved
+[23:00:09] LLM done baseline3_missing_spec_typed_main_loop_invariant_2_preserved, chars=426
+[6/21] baseline3 svcomp/236.c
+[23:00:19] LLM start svcomp_236.c_initial1
+[23:00:23] LLM done svcomp_236.c_initial1, chars=421
+[7/21] baseline3 svcomp/237.c
+[23:00:24] LLM start svcomp_237.c_initial1
+[23:00:27] LLM done svcomp_237.c_initial1, chars=543
+[23:00:38] LLM start baseline3_diagnose_typed_main_loop_invariant_2_preserved
+[23:00:41] LLM done baseline3_diagnose_typed_main_loop_invariant_2_preserved, chars=520
+[23:00:41] LLM start baseline3_candidates_typed_main_loop_invariant_2_preserved
+[23:00:46] LLM done baseline3_candidates_typed_main_loop_invariant_2_preserved, chars=1541
+[23:00:46] LLM start baseline3_precheck_typed_main_loop_invariant_2_preserved
+[23:00:50] LLM done baseline3_precheck_typed_main_loop_invariant_2_preserved, chars=449
+[23:01:01] LLM start baseline3_precheck_typed_main_loop_invariant_2_preserved
+[23:01:04] LLM done baseline3_precheck_typed_main_loop_invariant_2_preserved, chars=443
+[23:01:15] LLM start baseline3_precheck_typed_main_loop_invariant_2_preserved
+[23:01:19] LLM done baseline3_precheck_typed_main_loop_invariant_2_preserved, chars=658
+[23:01:30] LLM start baseline3_precheck_typed_main_loop_invariant_2_preserved
+[23:01:33] LLM done baseline3_precheck_typed_main_loop_invariant_2_preserved, chars=408
+[23:01:44] LLM start baseline3_precheck_typed_main_loop_invariant_2_preserved
+[23:01:48] LLM done baseline3_precheck_typed_main_loop_invariant_2_preserved, chars=482
+[23:01:59] LLM start baseline3_missing_spec_typed_main_loop_invariant_2_preserved
+[23:02:03] LLM done baseline3_missing_spec_typed_main_loop_invariant_2_preserved, chars=1937
+[23:02:14] LLM start baseline3_diagnose_typed_main_loop_invariant_2_preserved
+[23:02:17] LLM done baseline3_diagnose_typed_main_loop_invariant_2_preserved, chars=517
+[23:02:17] LLM start baseline3_candidates_typed_main_loop_invariant_2_preserved
+[23:02:23] LLM done baseline3_candidates_typed_main_loop_invariant_2_preserved, chars=1508
+[23:02:23] LLM start baseline3_precheck_typed_main_loop_invariant_2_preserved
+[23:02:27] LLM done baseline3_precheck_typed_main_loop_invariant_2_preserved, chars=495
+[23:02:38] LLM start baseline3_precheck_typed_main_loop_invariant_2_preserved
+[23:02:41] LLM done baseline3_precheck_typed_main_loop_invariant_2_preserved, chars=446
+[23:02:52] LLM start baseline3_precheck_typed_main_loop_invariant_2_preserved
+[23:02:56] LLM done baseline3_precheck_typed_main_loop_invariant_2_preserved, chars=423
+[23:03:07] LLM start baseline3_precheck_typed_main_loop_invariant_2_preserved
+[23:03:11] LLM done baseline3_precheck_typed_main_loop_invariant_2_preserved, chars=444
+[23:03:11] LLM start baseline3_precheck_typed_main_loop_invariant_2_preserved
+[23:03:14] LLM done baseline3_precheck_typed_main_loop_invariant_2_preserved, chars=498
+[23:03:25] LLM start baseline3_missing_spec_typed_main_loop_invariant_2_preserved
+[23:03:29] LLM done baseline3_missing_spec_typed_main_loop_invariant_2_preserved, chars=1114
+[23:03:30] LLM start baseline3_invalid_repair
+[23:03:32] LLM done baseline3_invalid_repair, chars=336
+[23:03:33] LLM start svcomp_237.c_initial2
+[23:03:37] LLM done svcomp_237.c_initial2, chars=540
+[23:03:47] LLM start baseline3_diagnose_typed_main_loop_invariant_2_preserved
+[23:03:50] LLM done baseline3_diagnose_typed_main_loop_invariant_2_preserved, chars=348
+[23:03:50] LLM start baseline3_candidates_typed_main_loop_invariant_2_preserved
+[23:03:56] LLM done baseline3_candidates_typed_main_loop_invariant_2_preserved, chars=1777
+[23:03:56] LLM start baseline3_precheck_typed_main_loop_invariant_2_preserved
+[23:04:01] LLM done baseline3_precheck_typed_main_loop_invariant_2_preserved, chars=583
+[23:04:02] LLM start baseline3_precheck_typed_main_loop_invariant_2_preserved
+[23:04:04] LLM done baseline3_precheck_typed_main_loop_invariant_2_preserved, chars=472
+[23:04:15] LLM start baseline3_precheck_typed_main_loop_invariant_2_preserved
+[23:04:18] LLM done baseline3_precheck_typed_main_loop_invariant_2_preserved, chars=406
+[23:04:29] LLM start baseline3_precheck_typed_main_loop_invariant_2_preserved
+[23:04:32] LLM done baseline3_precheck_typed_main_loop_invariant_2_preserved, chars=459
+[23:04:42] LLM start baseline3_precheck_typed_main_loop_invariant_2_preserved
+[23:04:46] LLM done baseline3_precheck_typed_main_loop_invariant_2_preserved, chars=431
+[23:04:57] LLM start baseline3_missing_spec_typed_main_loop_invariant_2_preserved
+[23:05:01] LLM done baseline3_missing_spec_typed_main_loop_invariant_2_preserved, chars=854
+[23:05:12] LLM start baseline3_diagnose_typed_main_loop_invariant_2_preserved
+[23:05:15] LLM done baseline3_diagnose_typed_main_loop_invariant_2_preserved, chars=375
+[23:05:15] LLM start baseline3_candidates_typed_main_loop_invariant_2_preserved
+[23:05:20] LLM done baseline3_candidates_typed_main_loop_invariant_2_preserved, chars=1508
+[23:05:20] LLM start baseline3_precheck_typed_main_loop_invariant_2_preserved
+[23:05:23] LLM done baseline3_precheck_typed_main_loop_invariant_2_preserved, chars=471
+[23:05:24] LLM start baseline3_precheck_typed_main_loop_invariant_2_preserved
+[23:05:27] LLM done baseline3_precheck_typed_main_loop_invariant_2_preserved, chars=430
+[23:05:28] LLM start baseline3_precheck_typed_main_loop_invariant_2_preserved
+[23:05:31] LLM done baseline3_precheck_typed_main_loop_invariant_2_preserved, chars=562
+[23:05:32] LLM start baseline3_precheck_typed_main_loop_invariant_2_preserved
+[23:05:35] LLM done baseline3_precheck_typed_main_loop_invariant_2_preserved, chars=384
+[23:05:46] LLM start baseline3_precheck_typed_main_loop_invariant_2_preserved
+[23:05:49] LLM done baseline3_precheck_typed_main_loop_invariant_2_preserved, chars=470
+[23:06:00] LLM start baseline3_missing_spec_typed_main_loop_invariant_2_preserved
+[23:06:04] LLM done baseline3_missing_spec_typed_main_loop_invariant_2_preserved, chars=1634
+[23:06:05] LLM start baseline3_invalid_repair
+[23:06:08] LLM done baseline3_invalid_repair, chars=848
+[23:06:19] LLM start svcomp_237.c_initial3
+[23:06:26] LLM done svcomp_237.c_initial3, chars=626
+[23:06:27] LLM start baseline3_invalid_repair
+[23:06:30] LLM done baseline3_invalid_repair, chars=503
+[23:06:31] LLM start baseline3_invalid_repair
+[23:06:34] LLM done baseline3_invalid_repair, chars=411
+[23:06:35] LLM start svcomp_237.c_initial4
+[23:06:38] LLM done svcomp_237.c_initial4, chars=536
+[23:06:49] LLM start baseline3_diagnose_typed_main_loop_invariant_2_preserved
+[23:06:52] LLM done baseline3_diagnose_typed_main_loop_invariant_2_preserved, chars=334
+[23:06:52] LLM start baseline3_candidates_typed_main_loop_invariant_2_preserved
+[23:06:57] LLM done baseline3_candidates_typed_main_loop_invariant_2_preserved, chars=1379
+[23:06:57] LLM start baseline3_precheck_typed_main_loop_invariant_2_preserved
+[23:07:01] LLM done baseline3_precheck_typed_main_loop_invariant_2_preserved, chars=449
+[23:07:02] LLM start baseline3_precheck_typed_main_loop_invariant_2_preserved
+[23:07:06] LLM done baseline3_precheck_typed_main_loop_invariant_2_preserved, chars=451
+[23:07:07] LLM start baseline3_precheck_typed_main_loop_invariant_2_preserved
+[23:07:10] LLM done baseline3_precheck_typed_main_loop_invariant_2_preserved, chars=491
+[23:07:21] LLM start baseline3_precheck_typed_main_loop_invariant_2_preserved
+[23:07:24] LLM done baseline3_precheck_typed_main_loop_invariant_2_preserved, chars=424
+[23:07:35] LLM start baseline3_precheck_typed_main_loop_invariant_2_preserved
+[23:07:38] LLM done baseline3_precheck_typed_main_loop_invariant_2_preserved, chars=412
+[23:07:49] LLM start baseline3_missing_spec_typed_main_loop_invariant_2_preserved
+[23:07:53] LLM done baseline3_missing_spec_typed_main_loop_invariant_2_preserved, chars=427
+[23:08:04] LLM start baseline3_diagnose_typed_main_loop_invariant_2_preserved
+[23:08:08] LLM done baseline3_diagnose_typed_main_loop_invariant_2_preserved, chars=425
+[23:08:08] LLM start baseline3_candidates_typed_main_loop_invariant_2_preserved
+[23:08:15] LLM done baseline3_candidates_typed_main_loop_invariant_2_preserved, chars=1725
+[23:08:15] LLM start baseline3_precheck_typed_main_loop_invariant_2_preserved
+[23:08:19] LLM done baseline3_precheck_typed_main_loop_invariant_2_preserved, chars=478
+[23:08:29] LLM start baseline3_precheck_typed_main_loop_invariant_2_preserved
+[23:08:33] LLM done baseline3_precheck_typed_main_loop_invariant_2_preserved, chars=508
+[23:08:44] LLM start baseline3_precheck_typed_main_loop_invariant_2_preserved
+[23:08:47] LLM done baseline3_precheck_typed_main_loop_invariant_2_preserved, chars=474
+[23:08:57] LLM start baseline3_precheck_typed_main_loop_invariant_2_preserved
+[23:09:01] LLM done baseline3_precheck_typed_main_loop_invariant_2_preserved, chars=484
+[23:09:12] LLM start baseline3_precheck_typed_main_loop_invariant_2_preserved
+[23:09:16] LLM done baseline3_precheck_typed_main_loop_invariant_2_preserved, chars=449
+[23:09:27] LLM start baseline3_missing_spec_typed_main_loop_invariant_2_preserved
+[23:09:31] LLM done baseline3_missing_spec_typed_main_loop_invariant_2_preserved, chars=895
+[23:09:42] LLM start baseline3_diagnose_typed_main_loop_invariant_2_preserved
+[23:09:45] LLM done baseline3_diagnose_typed_main_loop_invariant_2_preserved, chars=507
+[23:09:45] LLM start baseline3_candidates_typed_main_loop_invariant_2_preserved
+[23:09:52] LLM done baseline3_candidates_typed_main_loop_invariant_2_preserved, chars=1569
+[23:09:52] LLM start baseline3_precheck_typed_main_loop_invariant_2_preserved
+[23:09:55] LLM done baseline3_precheck_typed_main_loop_invariant_2_preserved, chars=382
+[23:10:06] LLM start baseline3_precheck_typed_main_loop_invariant_2_preserved
+[23:10:09] LLM done baseline3_precheck_typed_main_loop_invariant_2_preserved, chars=379
+[23:10:20] LLM start baseline3_precheck_typed_main_loop_invariant_2_preserved
+[23:10:24] LLM done baseline3_precheck_typed_main_loop_invariant_2_preserved, chars=469
+[23:10:35] LLM start baseline3_precheck_typed_main_loop_invariant_2_preserved
+[23:10:38] LLM done baseline3_precheck_typed_main_loop_invariant_2_preserved, chars=546
+[23:10:48] LLM start baseline3_precheck_typed_main_loop_invariant_2_preserved
+[23:10:52] LLM done baseline3_precheck_typed_main_loop_invariant_2_preserved, chars=459
+[23:11:03] LLM start baseline3_missing_spec_typed_main_loop_invariant_2_preserved
+[23:11:07] LLM done baseline3_missing_spec_typed_main_loop_invariant_2_preserved, chars=878
+[23:11:17] LLM start svcomp_237.c_initial5
+[23:11:20] LLM done svcomp_237.c_initial5, chars=541
+[23:11:31] LLM start baseline3_diagnose_typed_main_loop_invariant_2_preserved
+[23:11:35] LLM done baseline3_diagnose_typed_main_loop_invariant_2_preserved, chars=436
+[23:11:35] LLM start baseline3_candidates_typed_main_loop_invariant_2_preserved
+[23:11:40] LLM done baseline3_candidates_typed_main_loop_invariant_2_preserved, chars=1438
+[23:11:40] LLM start baseline3_precheck_typed_main_loop_invariant_2_preserved
+[23:11:43] LLM done baseline3_precheck_typed_main_loop_invariant_2_preserved, chars=544
+[23:11:54] LLM start baseline3_precheck_typed_main_loop_invariant_2_preserved
+[23:11:57] LLM done baseline3_precheck_typed_main_loop_invariant_2_preserved, chars=385
+[23:12:08] LLM start baseline3_precheck_typed_main_loop_invariant_2_preserved
+[23:12:11] LLM done baseline3_precheck_typed_main_loop_invariant_2_preserved, chars=509
+[23:12:22] LLM start baseline3_precheck_typed_main_loop_invariant_2_preserved
+[23:12:26] LLM done baseline3_precheck_typed_main_loop_invariant_2_preserved, chars=539
+[23:12:37] LLM start baseline3_precheck_typed_main_loop_invariant_2_preserved
+[23:12:40] LLM done baseline3_precheck_typed_main_loop_invariant_2_preserved, chars=372
+[23:12:51] LLM start baseline3_missing_spec_typed_main_loop_invariant_2_preserved
+[23:12:55] LLM done baseline3_missing_spec_typed_main_loop_invariant_2_preserved, chars=1004
+[23:12:56] LLM start baseline3_invalid_repair
+[23:12:59] LLM done baseline3_invalid_repair, chars=377
+[8/21] baseline3 svcomp/238.c
+[23:12:59] LLM start svcomp_238.c_initial1
+[23:13:03] LLM done svcomp_238.c_initial1, chars=909
+[23:13:14] LLM start baseline3_diagnose_typed_main_loop_invariant_4_preserved
+[23:13:18] LLM done baseline3_diagnose_typed_main_loop_invariant_4_preserved, chars=479
+[23:13:18] LLM start baseline3_candidates_typed_main_loop_invariant_4_preserved
+[23:13:25] LLM done baseline3_candidates_typed_main_loop_invariant_4_preserved, chars=1696
+[23:13:25] LLM start baseline3_precheck_typed_main_loop_invariant_4_preserved
+[23:13:29] LLM done baseline3_precheck_typed_main_loop_invariant_4_preserved, chars=533
+[23:13:40] LLM start baseline3_precheck_typed_main_loop_invariant_4_preserved
+[23:13:44] LLM done baseline3_precheck_typed_main_loop_invariant_4_preserved, chars=589
+[23:13:45] LLM start baseline3_missing_spec_typed_main_loop_invariant_4_preserved
+[23:13:48] LLM done baseline3_missing_spec_typed_main_loop_invariant_4_preserved, chars=398
+[23:13:59] LLM start baseline3_diagnose_typed_main_loop_invariant_4_preserved
+[23:14:02] LLM done baseline3_diagnose_typed_main_loop_invariant_4_preserved, chars=534
+[23:14:02] LLM start baseline3_candidates_typed_main_loop_invariant_4_preserved
+[23:14:09] LLM done baseline3_candidates_typed_main_loop_invariant_4_preserved, chars=1623
+[23:14:09] LLM start baseline3_precheck_typed_main_loop_invariant_4_preserved
+[23:14:12] LLM done baseline3_precheck_typed_main_loop_invariant_4_preserved, chars=429
+[23:14:23] LLM start baseline3_missing_spec_typed_main_loop_invariant_4_preserved
+[23:14:27] LLM done baseline3_missing_spec_typed_main_loop_invariant_4_preserved, chars=406
+[23:14:38] LLM start baseline3_diagnose_typed_main_loop_invariant_4_preserved
+[23:14:41] LLM done baseline3_diagnose_typed_main_loop_invariant_4_preserved, chars=530
+[23:14:41] LLM start baseline3_candidates_typed_main_loop_invariant_4_preserved
+[23:14:46] LLM done baseline3_candidates_typed_main_loop_invariant_4_preserved, chars=1585
+[23:14:46] LLM start baseline3_precheck_typed_main_loop_invariant_4_preserved
+[23:14:50] LLM done baseline3_precheck_typed_main_loop_invariant_4_preserved, chars=545
+[23:14:51] LLM start baseline3_missing_spec_typed_main_loop_invariant_4_preserved
+[23:14:54] LLM done baseline3_missing_spec_typed_main_loop_invariant_4_preserved, chars=571
+[23:14:55] LLM start svcomp_238.c_initial2
+[23:14:59] LLM done svcomp_238.c_initial2, chars=955
+[23:15:10] LLM start baseline3_diagnose_typed_main_loop_invariant_4_preserved
+[23:15:14] LLM done baseline3_diagnose_typed_main_loop_invariant_4_preserved, chars=471
+[23:15:14] LLM start baseline3_candidates_typed_main_loop_invariant_4_preserved
+[23:15:22] LLM done baseline3_candidates_typed_main_loop_invariant_4_preserved, chars=1776
+[23:15:22] LLM start baseline3_precheck_typed_main_loop_invariant_4_preserved
+[23:15:27] LLM done baseline3_precheck_typed_main_loop_invariant_4_preserved, chars=420
+[23:15:38] LLM start baseline3_missing_spec_typed_main_loop_invariant_4_preserved
+[23:15:41] LLM done baseline3_missing_spec_typed_main_loop_invariant_4_preserved, chars=834
+[23:15:52] LLM start baseline3_diagnose_typed_main_loop_invariant_4_preserved
+[23:15:55] LLM done baseline3_diagnose_typed_main_loop_invariant_4_preserved, chars=529
+[23:15:55] LLM start baseline3_candidates_typed_main_loop_invariant_4_preserved
+[23:16:01] LLM done baseline3_candidates_typed_main_loop_invariant_4_preserved, chars=1847
+[23:16:01] LLM start baseline3_precheck_typed_main_loop_invariant_4_preserved
+[23:16:04] LLM done baseline3_precheck_typed_main_loop_invariant_4_preserved, chars=467
+[23:16:15] LLM start baseline3_missing_spec_typed_main_loop_invariant_4_preserved
+[23:16:18] LLM done baseline3_missing_spec_typed_main_loop_invariant_4_preserved, chars=487
+[23:16:30] LLM start baseline3_diagnose_typed_main_loop_invariant_4_preserved
+[23:16:34] LLM done baseline3_diagnose_typed_main_loop_invariant_4_preserved, chars=436
+[23:16:34] LLM start baseline3_candidates_typed_main_loop_invariant_4_preserved
+[23:16:41] LLM done baseline3_candidates_typed_main_loop_invariant_4_preserved, chars=1568
+[23:16:41] LLM start baseline3_precheck_typed_main_loop_invariant_4_preserved
+[23:16:44] LLM done baseline3_precheck_typed_main_loop_invariant_4_preserved, chars=542
+[23:16:56] LLM start baseline3_missing_spec_typed_main_loop_invariant_4_preserved
+[23:16:59] LLM done baseline3_missing_spec_typed_main_loop_invariant_4_preserved, chars=949
+[23:17:10] LLM start svcomp_238.c_initial3
+[23:17:14] LLM done svcomp_238.c_initial3, chars=959
+[23:17:26] LLM start baseline3_diagnose_typed_main_loop_invariant_4_preserved
+[23:17:29] LLM done baseline3_diagnose_typed_main_loop_invariant_4_preserved, chars=467
+[23:17:29] LLM start baseline3_candidates_typed_main_loop_invariant_4_preserved
+[23:17:35] LLM done baseline3_candidates_typed_main_loop_invariant_4_preserved, chars=1590
+[23:17:35] LLM start baseline3_precheck_typed_main_loop_invariant_4_preserved
+[23:17:39] LLM done baseline3_precheck_typed_main_loop_invariant_4_preserved, chars=456
+[23:17:40] LLM start baseline3_missing_spec_typed_main_loop_invariant_4_preserved
+[23:17:43] LLM done baseline3_missing_spec_typed_main_loop_invariant_4_preserved, chars=450
+[23:17:54] LLM start baseline3_diagnose_typed_main_loop_invariant_4_preserved
+[23:17:59] LLM done baseline3_diagnose_typed_main_loop_invariant_4_preserved, chars=567
+[23:17:59] LLM start baseline3_candidates_typed_main_loop_invariant_4_preserved
+[23:18:04] LLM done baseline3_candidates_typed_main_loop_invariant_4_preserved, chars=1460
+[23:18:04] LLM start baseline3_missing_spec_typed_main_loop_invariant_4_preserved
+[23:18:07] LLM done baseline3_missing_spec_typed_main_loop_invariant_4_preserved, chars=405
+[23:18:08] LLM start baseline3_invalid_repair
+[23:18:11] LLM done baseline3_invalid_repair, chars=306
+[23:18:12] LLM start svcomp_238.c_initial4
+[23:18:17] LLM done svcomp_238.c_initial4, chars=909
+[23:18:28] LLM start baseline3_diagnose_typed_main_loop_invariant_4_preserved
+[23:18:31] LLM done baseline3_diagnose_typed_main_loop_invariant_4_preserved, chars=524
+[23:18:31] LLM start baseline3_candidates_typed_main_loop_invariant_4_preserved
+[23:18:36] LLM done baseline3_candidates_typed_main_loop_invariant_4_preserved, chars=1732
+[23:18:36] LLM start baseline3_missing_spec_typed_main_loop_invariant_4_preserved
+[23:18:39] LLM done baseline3_missing_spec_typed_main_loop_invariant_4_preserved, chars=454
+[23:18:40] LLM start baseline3_invalid_repair
+[23:18:43] LLM done baseline3_invalid_repair, chars=461
+[23:18:43] LLM start svcomp_238.c_initial5
+[23:18:47] LLM done svcomp_238.c_initial5, chars=907
+[23:18:58] LLM start baseline3_diagnose_typed_main_loop_invariant_4_preserved
+[23:19:01] LLM done baseline3_diagnose_typed_main_loop_invariant_4_preserved, chars=471
+[23:19:01] LLM start baseline3_candidates_typed_main_loop_invariant_4_preserved
+[23:19:07] LLM done baseline3_candidates_typed_main_loop_invariant_4_preserved, chars=1607
+[23:19:07] LLM start baseline3_precheck_typed_main_loop_invariant_4_preserved
+[23:19:10] LLM done baseline3_precheck_typed_main_loop_invariant_4_preserved, chars=449
+[23:19:11] LLM start baseline3_missing_spec_typed_main_loop_invariant_4_preserved
+[23:19:15] LLM done baseline3_missing_spec_typed_main_loop_invariant_4_preserved, chars=609
+[23:19:16] LLM start baseline3_invalid_repair
+[23:19:18] LLM done baseline3_invalid_repair, chars=614
+[23:19:19] LLM start baseline3_invalid_repair
+[23:19:22] LLM done baseline3_invalid_repair, chars=535
+[9/21] baseline3 svcomp/239.c
+[23:19:23] LLM start svcomp_239.c_initial1
+[23:19:27] LLM done svcomp_239.c_initial1, chars=531
+[23:19:37] LLM start baseline3_diagnose_typed_main_loop_invariant_established
+[23:19:41] LLM done baseline3_diagnose_typed_main_loop_invariant_established, chars=381
+[23:19:41] LLM start baseline3_wrong_spec_typed_main_loop_invariant_established
+[23:19:44] LLM done baseline3_wrong_spec_typed_main_loop_invariant_established, chars=665
+[23:19:54] LLM start baseline3_diagnose_typed_main_loop_invariant_3_established
+[23:19:57] LLM done baseline3_diagnose_typed_main_loop_invariant_3_established, chars=419
+[23:19:57] LLM start baseline3_wrong_spec_typed_main_loop_invariant_3_established
+[23:20:01] LLM done baseline3_wrong_spec_typed_main_loop_invariant_3_established, chars=458
+[23:20:11] LLM start baseline3_diagnose_typed_main_loop_invariant_established
+[23:20:17] LLM done baseline3_diagnose_typed_main_loop_invariant_established, chars=419
+[23:20:17] LLM start baseline3_wrong_spec_typed_main_loop_invariant_established
+[23:20:20] LLM done baseline3_wrong_spec_typed_main_loop_invariant_established, chars=440
+[23:20:31] LLM start svcomp_239.c_initial2
+[23:20:35] LLM done svcomp_239.c_initial2, chars=681
+[23:20:46] LLM start baseline3_diagnose_typed_main_loop_invariant_established
+[23:20:50] LLM done baseline3_diagnose_typed_main_loop_invariant_established, chars=462
+[23:20:50] LLM start baseline3_wrong_spec_typed_main_loop_invariant_established
+[23:20:53] LLM done baseline3_wrong_spec_typed_main_loop_invariant_established, chars=455
+[23:21:03] LLM start baseline3_diagnose_typed_main_loop_invariant_established
+[23:21:07] LLM done baseline3_diagnose_typed_main_loop_invariant_established, chars=390
+[23:21:07] LLM start baseline3_wrong_spec_typed_main_loop_invariant_established
+[23:21:10] LLM done baseline3_wrong_spec_typed_main_loop_invariant_established, chars=434
+[23:21:20] LLM start baseline3_diagnose_typed_main_loop_invariant_3_established
+[23:21:24] LLM done baseline3_diagnose_typed_main_loop_invariant_3_established, chars=450
+[23:21:24] LLM start baseline3_wrong_spec_typed_main_loop_invariant_3_established
+[23:21:27] LLM done baseline3_wrong_spec_typed_main_loop_invariant_3_established, chars=451
+[23:21:37] LLM start svcomp_239.c_initial3
+[23:21:41] LLM done svcomp_239.c_initial3, chars=531
+[23:21:51] LLM start baseline3_diagnose_typed_main_loop_invariant_established
+[23:21:54] LLM done baseline3_diagnose_typed_main_loop_invariant_established, chars=375
+[23:21:54] LLM start baseline3_wrong_spec_typed_main_loop_invariant_established
+[23:21:59] LLM done baseline3_wrong_spec_typed_main_loop_invariant_established, chars=752
+[23:22:10] LLM start baseline3_diagnose_typed_main_loop_invariant_established
+[23:22:13] LLM done baseline3_diagnose_typed_main_loop_invariant_established, chars=403
+[23:22:13] LLM start baseline3_wrong_spec_typed_main_loop_invariant_established
+[23:22:16] LLM done baseline3_wrong_spec_typed_main_loop_invariant_established, chars=398
+[23:22:26] LLM start baseline3_diagnose_typed_main_loop_invariant_3_established
+[23:22:31] LLM done baseline3_diagnose_typed_main_loop_invariant_3_established, chars=441
+[23:22:31] LLM start baseline3_wrong_spec_typed_main_loop_invariant_3_established
+[23:22:33] LLM done baseline3_wrong_spec_typed_main_loop_invariant_3_established, chars=400
+[23:22:44] LLM start svcomp_239.c_initial4
+[23:22:47] LLM done svcomp_239.c_initial4, chars=631
+[23:22:58] LLM start baseline3_diagnose_typed_main_loop_invariant_established
+[23:23:01] LLM done baseline3_diagnose_typed_main_loop_invariant_established, chars=396
+[23:23:01] LLM start baseline3_wrong_spec_typed_main_loop_invariant_established
+[23:23:04] LLM done baseline3_wrong_spec_typed_main_loop_invariant_established, chars=836
+[23:23:14] LLM start baseline3_diagnose_typed_main_loop_invariant_3_established
+[23:23:18] LLM done baseline3_diagnose_typed_main_loop_invariant_3_established, chars=439
+[23:23:18] LLM start baseline3_wrong_spec_typed_main_loop_invariant_3_established
+[23:23:21] LLM done baseline3_wrong_spec_typed_main_loop_invariant_3_established, chars=417
+[23:23:32] LLM start baseline3_diagnose_typed_main_loop_invariant_3_established
+[23:23:36] LLM done baseline3_diagnose_typed_main_loop_invariant_3_established, chars=461
+[23:23:36] LLM start baseline3_wrong_spec_typed_main_loop_invariant_3_established
+[23:23:39] LLM done baseline3_wrong_spec_typed_main_loop_invariant_3_established, chars=484
+[23:23:40] LLM start svcomp_239.c_initial5
+[23:23:44] LLM done svcomp_239.c_initial5, chars=631
+[23:23:54] LLM start baseline3_diagnose_typed_main_loop_invariant_established
+[23:23:59] LLM done baseline3_diagnose_typed_main_loop_invariant_established, chars=425
+[23:23:59] LLM start baseline3_wrong_spec_typed_main_loop_invariant_established
+[23:24:02] LLM done baseline3_wrong_spec_typed_main_loop_invariant_established, chars=368
+[23:24:12] LLM start baseline3_diagnose_typed_main_loop_invariant_3_established
+[23:24:16] LLM done baseline3_diagnose_typed_main_loop_invariant_3_established, chars=438
+[23:24:16] LLM start baseline3_wrong_spec_typed_main_loop_invariant_3_established
+[23:24:19] LLM done baseline3_wrong_spec_typed_main_loop_invariant_3_established, chars=474
+[23:24:29] LLM start baseline3_diagnose_typed_main_loop_invariant_established
+[23:24:32] LLM done baseline3_diagnose_typed_main_loop_invariant_established, chars=405
+[23:24:32] LLM start baseline3_wrong_spec_typed_main_loop_invariant_established
+[23:24:35] LLM done baseline3_wrong_spec_typed_main_loop_invariant_established, chars=778
+[10/21] baseline3 svcomp/240.c
+[23:24:38] LLM start svcomp_240.c_initial1
+[23:24:41] LLM done svcomp_240.c_initial1, chars=592
+[23:24:52] LLM start baseline3_diagnose_typed_main_loop_invariant_established
+[23:24:55] LLM done baseline3_diagnose_typed_main_loop_invariant_established, chars=439
+[23:24:55] LLM start baseline3_wrong_spec_typed_main_loop_invariant_established
+[23:24:58] LLM done baseline3_wrong_spec_typed_main_loop_invariant_established, chars=414
+[23:25:09] LLM start baseline3_diagnose_typed_main_loop_invariant_established
+[23:25:11] LLM done baseline3_diagnose_typed_main_loop_invariant_established, chars=399
+[23:25:11] LLM start baseline3_wrong_spec_typed_main_loop_invariant_established
+[23:25:15] LLM done baseline3_wrong_spec_typed_main_loop_invariant_established, chars=461
+[23:25:25] LLM start baseline3_diagnose_typed_main_loop_invariant_established
+[23:25:29] LLM done baseline3_diagnose_typed_main_loop_invariant_established, chars=430
+[23:25:29] LLM start baseline3_wrong_spec_typed_main_loop_invariant_established
+[23:25:32] LLM done baseline3_wrong_spec_typed_main_loop_invariant_established, chars=379
+[23:25:43] LLM start svcomp_240.c_initial2
+[23:25:46] LLM done svcomp_240.c_initial2, chars=593
+[23:25:57] LLM start baseline3_diagnose_typed_main_loop_invariant_established
+[23:26:01] LLM done baseline3_diagnose_typed_main_loop_invariant_established, chars=408
+[23:26:01] LLM start baseline3_wrong_spec_typed_main_loop_invariant_established
+[23:26:05] LLM done baseline3_wrong_spec_typed_main_loop_invariant_established, chars=791
+[23:26:16] LLM start baseline3_diagnose_typed_main_loop_invariant_established
+[23:26:19] LLM done baseline3_diagnose_typed_main_loop_invariant_established, chars=432
+[23:26:19] LLM start baseline3_wrong_spec_typed_main_loop_invariant_established
+[23:26:21] LLM done baseline3_wrong_spec_typed_main_loop_invariant_established, chars=361
+[23:26:32] LLM start baseline3_diagnose_typed_main_loop_invariant_established
+[23:26:35] LLM done baseline3_diagnose_typed_main_loop_invariant_established, chars=397
+[23:26:35] LLM start baseline3_wrong_spec_typed_main_loop_invariant_established
+[23:26:37] LLM done baseline3_wrong_spec_typed_main_loop_invariant_established, chars=471
+[23:26:48] LLM start svcomp_240.c_initial3
+[23:26:51] LLM done svcomp_240.c_initial3, chars=597
+[23:27:02] LLM start baseline3_diagnose_typed_main_loop_invariant_established
+[23:27:05] LLM done baseline3_diagnose_typed_main_loop_invariant_established, chars=393
+[23:27:05] LLM start baseline3_wrong_spec_typed_main_loop_invariant_established
+[23:27:09] LLM done baseline3_wrong_spec_typed_main_loop_invariant_established, chars=711
+[23:27:19] LLM start baseline3_diagnose_typed_main_loop_invariant_established
+[23:27:23] LLM done baseline3_diagnose_typed_main_loop_invariant_established, chars=391
+[23:27:23] LLM start baseline3_wrong_spec_typed_main_loop_invariant_established
+[23:27:26] LLM done baseline3_wrong_spec_typed_main_loop_invariant_established, chars=390
+[23:27:36] LLM start baseline3_diagnose_typed_main_loop_invariant_established
+[23:27:40] LLM done baseline3_diagnose_typed_main_loop_invariant_established, chars=417
+[23:27:40] LLM start baseline3_wrong_spec_typed_main_loop_invariant_established
+[23:27:43] LLM done baseline3_wrong_spec_typed_main_loop_invariant_established, chars=427
+[23:27:54] LLM start svcomp_240.c_initial4
+[23:27:58] LLM done svcomp_240.c_initial4, chars=592
+[23:28:08] LLM start baseline3_diagnose_typed_main_loop_invariant_established
+[23:28:12] LLM done baseline3_diagnose_typed_main_loop_invariant_established, chars=472
+[23:28:12] LLM start baseline3_wrong_spec_typed_main_loop_invariant_established
+[23:28:16] LLM done baseline3_wrong_spec_typed_main_loop_invariant_established, chars=366
+[23:28:27] LLM start baseline3_diagnose_typed_main_loop_invariant_established
+[23:28:29] LLM done baseline3_diagnose_typed_main_loop_invariant_established, chars=447
+[23:28:29] LLM start baseline3_wrong_spec_typed_main_loop_invariant_established
+[23:28:32] LLM done baseline3_wrong_spec_typed_main_loop_invariant_established, chars=403
+[23:28:43] LLM start baseline3_diagnose_typed_main_loop_invariant_established
+[23:28:46] LLM done baseline3_diagnose_typed_main_loop_invariant_established, chars=470
+[23:28:46] LLM start baseline3_wrong_spec_typed_main_loop_invariant_established
+[23:28:49] LLM done baseline3_wrong_spec_typed_main_loop_invariant_established, chars=426
+[23:29:00] LLM start svcomp_240.c_initial5
+[23:29:04] LLM done svcomp_240.c_initial5, chars=598
+[23:29:14] LLM start baseline3_diagnose_typed_main_loop_invariant_established
+[23:29:17] LLM done baseline3_diagnose_typed_main_loop_invariant_established, chars=382
+[23:29:17] LLM start baseline3_wrong_spec_typed_main_loop_invariant_established
+[23:29:20] LLM done baseline3_wrong_spec_typed_main_loop_invariant_established, chars=715
+[23:29:31] LLM start baseline3_diagnose_typed_main_loop_invariant_established
+[23:29:34] LLM done baseline3_diagnose_typed_main_loop_invariant_established, chars=427
+[23:29:34] LLM start baseline3_wrong_spec_typed_main_loop_invariant_established
+[23:29:38] LLM done baseline3_wrong_spec_typed_main_loop_invariant_established, chars=461
+[23:29:49] LLM start baseline3_diagnose_typed_main_loop_invariant_established
+[23:29:52] LLM done baseline3_diagnose_typed_main_loop_invariant_established, chars=458
+[23:29:52] LLM start baseline3_wrong_spec_typed_main_loop_invariant_established
+[23:29:55] LLM done baseline3_wrong_spec_typed_main_loop_invariant_established, chars=452
+[11/21] baseline3 svcomp/241.c
+[23:30:05] LLM start svcomp_241.c_initial1
+[23:30:09] LLM done svcomp_241.c_initial1, chars=485
+[23:30:19] LLM start baseline3_diagnose_typed_main_loop_invariant_established
+[23:30:22] LLM done baseline3_diagnose_typed_main_loop_invariant_established, chars=435
+[23:30:22] LLM start baseline3_wrong_spec_typed_main_loop_invariant_established
+[23:30:25] LLM done baseline3_wrong_spec_typed_main_loop_invariant_established, chars=440
+[23:30:36] LLM start baseline3_diagnose_typed_main_loop_invariant_established
+[23:30:38] LLM done baseline3_diagnose_typed_main_loop_invariant_established, chars=363
+[23:30:38] LLM start baseline3_wrong_spec_typed_main_loop_invariant_established
+[23:30:43] LLM done baseline3_wrong_spec_typed_main_loop_invariant_established, chars=414
+[23:30:53] LLM start baseline3_diagnose_typed_main_loop_invariant_established
+[23:30:55] LLM done baseline3_diagnose_typed_main_loop_invariant_established, chars=361
+[23:30:55] LLM start baseline3_wrong_spec_typed_main_loop_invariant_established
+[23:30:59] LLM done baseline3_wrong_spec_typed_main_loop_invariant_established, chars=427
+[23:31:09] LLM start svcomp_241.c_initial2
+[23:31:12] LLM done svcomp_241.c_initial2, chars=444
+[23:31:22] LLM start baseline3_diagnose_typed_main_loop_invariant_established
+[23:31:26] LLM done baseline3_diagnose_typed_main_loop_invariant_established, chars=399
+[23:31:26] LLM start baseline3_wrong_spec_typed_main_loop_invariant_established
+[23:31:30] LLM done baseline3_wrong_spec_typed_main_loop_invariant_established, chars=437
+[23:31:40] LLM start baseline3_diagnose_typed_main_assert
+[23:31:43] LLM done baseline3_diagnose_typed_main_assert, chars=427
+[23:31:43] LLM start baseline3_candidates_typed_main_assert
+[23:31:50] LLM done baseline3_candidates_typed_main_assert, chars=1502
+[23:31:50] LLM start baseline3_missing_spec_typed_main_assert
+[23:31:53] LLM done baseline3_missing_spec_typed_main_assert, chars=641
+[23:31:54] LLM start baseline3_invalid_repair
+[23:31:57] LLM done baseline3_invalid_repair, chars=450
+[23:31:58] LLM start svcomp_241.c_initial3
+[23:32:01] LLM done svcomp_241.c_initial3, chars=542
+[23:32:11] LLM start baseline3_diagnose_typed_main_loop_invariant_established
+[23:32:14] LLM done baseline3_diagnose_typed_main_loop_invariant_established, chars=352
+[23:32:14] LLM start baseline3_wrong_spec_typed_main_loop_invariant_established
+[23:32:17] LLM done baseline3_wrong_spec_typed_main_loop_invariant_established, chars=422
+[23:32:28] LLM start baseline3_diagnose_typed_main_loop_invariant_established
+[23:32:32] LLM done baseline3_diagnose_typed_main_loop_invariant_established, chars=376
+[23:32:32] LLM start baseline3_wrong_spec_typed_main_loop_invariant_established
+[23:32:35] LLM done baseline3_wrong_spec_typed_main_loop_invariant_established, chars=441
+[23:32:45] LLM start baseline3_diagnose_typed_main_loop_invariant_established
+[23:32:48] LLM done baseline3_diagnose_typed_main_loop_invariant_established, chars=334
+[23:32:48] LLM start baseline3_wrong_spec_typed_main_loop_invariant_established
+[23:32:50] LLM done baseline3_wrong_spec_typed_main_loop_invariant_established, chars=382
+[23:33:01] LLM start svcomp_241.c_initial4
+[23:33:03] LLM done svcomp_241.c_initial4, chars=528
+[23:33:13] LLM start baseline3_diagnose_typed_main_loop_invariant_established
+[23:33:17] LLM done baseline3_diagnose_typed_main_loop_invariant_established, chars=435
+[23:33:17] LLM start baseline3_wrong_spec_typed_main_loop_invariant_established
+[23:33:20] LLM done baseline3_wrong_spec_typed_main_loop_invariant_established, chars=483
+[23:33:30] LLM start baseline3_diagnose_typed_main_loop_invariant_established
+[23:33:33] LLM done baseline3_diagnose_typed_main_loop_invariant_established, chars=366
+[23:33:33] LLM start baseline3_wrong_spec_typed_main_loop_invariant_established
+[23:33:36] LLM done baseline3_wrong_spec_typed_main_loop_invariant_established, chars=424
+[23:33:47] LLM start baseline3_diagnose_typed_main_loop_invariant_established
+[23:33:50] LLM done baseline3_diagnose_typed_main_loop_invariant_established, chars=462
+[23:33:50] LLM start baseline3_wrong_spec_typed_main_loop_invariant_established
+[23:33:53] LLM done baseline3_wrong_spec_typed_main_loop_invariant_established, chars=426
+[23:34:04] LLM start svcomp_241.c_initial5
+[23:34:07] LLM done svcomp_241.c_initial5, chars=543
+[23:34:08] LLM start baseline3_invalid_repair
+[23:34:11] LLM done baseline3_invalid_repair, chars=304
+[23:34:12] LLM start baseline3_invalid_repair
+[23:34:14] LLM done baseline3_invalid_repair, chars=389
+[23:34:25] LLM start baseline3_diagnose_typed_main_loop_invariant_established
+[23:34:28] LLM done baseline3_diagnose_typed_main_loop_invariant_established, chars=438
+[23:34:28] LLM start baseline3_wrong_spec_typed_main_loop_invariant_established
+[23:34:31] LLM done baseline3_wrong_spec_typed_main_loop_invariant_established, chars=424
+[12/21] baseline3 svcomp/242.c
+[23:34:42] LLM start svcomp_242.c_initial1
+[23:34:45] LLM done svcomp_242.c_initial1, chars=486
+[23:34:46] LLM start baseline3_invalid_repair
+[23:34:49] LLM done baseline3_invalid_repair, chars=348
+[23:34:59] LLM start baseline3_diagnose_typed_main_loop_invariant_established
+[23:35:02] LLM done baseline3_diagnose_typed_main_loop_invariant_established, chars=417
+[23:35:02] LLM start baseline3_wrong_spec_typed_main_loop_invariant_established
+[23:35:04] LLM done baseline3_wrong_spec_typed_main_loop_invariant_established, chars=391
+[23:35:15] LLM start baseline3_diagnose_typed_main_loop_invariant_preserved
+[23:35:18] LLM done baseline3_diagnose_typed_main_loop_invariant_preserved, chars=421
+[23:35:18] LLM start baseline3_candidates_typed_main_loop_invariant_preserved
+[23:35:24] LLM done baseline3_candidates_typed_main_loop_invariant_preserved, chars=1612
+[23:35:24] LLM start baseline3_precheck_typed_main_loop_invariant_preserved
+[23:35:27] LLM done baseline3_precheck_typed_main_loop_invariant_preserved, chars=383
+[23:35:28] LLM start baseline3_precheck_typed_main_loop_invariant_preserved
+[23:35:33] LLM done baseline3_precheck_typed_main_loop_invariant_preserved, chars=371
+[23:35:34] LLM start baseline3_precheck_typed_main_loop_invariant_preserved
+[23:35:36] LLM done baseline3_precheck_typed_main_loop_invariant_preserved, chars=424
+[23:35:47] LLM start baseline3_precheck_typed_main_loop_invariant_preserved
+[23:35:51] LLM done baseline3_precheck_typed_main_loop_invariant_preserved, chars=488
+[23:36:01] LLM start baseline3_precheck_typed_main_loop_invariant_preserved
+[23:36:04] LLM done baseline3_precheck_typed_main_loop_invariant_preserved, chars=433
+[23:36:15] LLM start baseline3_missing_spec_typed_main_loop_invariant_preserved
+[23:36:20] LLM done baseline3_missing_spec_typed_main_loop_invariant_preserved, chars=833
+[23:36:31] LLM start svcomp_242.c_initial2
+[23:36:35] LLM done svcomp_242.c_initial2, chars=518
+[23:36:36] LLM start baseline3_invalid_repair
+[23:36:38] LLM done baseline3_invalid_repair, chars=392
+[23:36:48] LLM start baseline3_diagnose_typed_main_loop_invariant_established
+[23:36:52] LLM done baseline3_diagnose_typed_main_loop_invariant_established, chars=387
+[23:36:52] LLM start baseline3_wrong_spec_typed_main_loop_invariant_established
+[23:36:54] LLM done baseline3_wrong_spec_typed_main_loop_invariant_established, chars=366
+[23:37:05] LLM start baseline3_diagnose_typed_main_loop_invariant_preserved
+[23:37:08] LLM done baseline3_diagnose_typed_main_loop_invariant_preserved, chars=465
+[23:37:08] LLM start baseline3_candidates_typed_main_loop_invariant_preserved
+[23:37:14] LLM done baseline3_candidates_typed_main_loop_invariant_preserved, chars=1466
+[23:37:14] LLM start baseline3_precheck_typed_main_loop_invariant_preserved
+[23:37:17] LLM done baseline3_precheck_typed_main_loop_invariant_preserved, chars=372
+[23:37:18] LLM start baseline3_precheck_typed_main_loop_invariant_preserved
+[23:37:21] LLM done baseline3_precheck_typed_main_loop_invariant_preserved, chars=460
+[23:37:22] LLM start baseline3_precheck_typed_main_loop_invariant_preserved
+[23:37:25] LLM done baseline3_precheck_typed_main_loop_invariant_preserved, chars=496
+[23:37:26] LLM start baseline3_precheck_typed_main_loop_invariant_preserved
+[23:37:28] LLM done baseline3_precheck_typed_main_loop_invariant_preserved, chars=383
+[23:37:29] LLM start baseline3_precheck_typed_main_loop_invariant_preserved
+[23:37:32] LLM done baseline3_precheck_typed_main_loop_invariant_preserved, chars=410
+[23:37:33] LLM start baseline3_missing_spec_typed_main_loop_invariant_preserved
+[23:37:37] LLM done baseline3_missing_spec_typed_main_loop_invariant_preserved, chars=801
+[23:37:48] LLM start svcomp_242.c_initial3
+[23:37:50] LLM done svcomp_242.c_initial3, chars=494
+[23:37:52] LLM start baseline3_invalid_repair
+[23:37:55] LLM done baseline3_invalid_repair, chars=364
+[23:38:05] LLM start baseline3_diagnose_typed_main_loop_invariant_established
+[23:38:08] LLM done baseline3_diagnose_typed_main_loop_invariant_established, chars=346
+[23:38:08] LLM start baseline3_wrong_spec_typed_main_loop_invariant_established
+[23:38:11] LLM done baseline3_wrong_spec_typed_main_loop_invariant_established, chars=429
+[23:38:21] LLM start baseline3_diagnose_typed_main_loop_invariant_preserved
+[23:38:25] LLM done baseline3_diagnose_typed_main_loop_invariant_preserved, chars=446
+[23:38:25] LLM start baseline3_candidates_typed_main_loop_invariant_preserved
+[23:38:31] LLM done baseline3_candidates_typed_main_loop_invariant_preserved, chars=1546
+[23:38:31] LLM start baseline3_precheck_typed_main_loop_invariant_preserved
+[23:38:35] LLM done baseline3_precheck_typed_main_loop_invariant_preserved, chars=385
+[23:38:46] LLM start baseline3_precheck_typed_main_loop_invariant_preserved
+[23:38:49] LLM done baseline3_precheck_typed_main_loop_invariant_preserved, chars=367
+[23:38:59] LLM start baseline3_precheck_typed_main_loop_invariant_preserved
+[23:39:03] LLM done baseline3_precheck_typed_main_loop_invariant_preserved, chars=423
+[23:39:14] LLM start baseline3_precheck_typed_main_loop_invariant_preserved
+[23:39:18] LLM done baseline3_precheck_typed_main_loop_invariant_preserved, chars=462
+[23:39:28] LLM start baseline3_precheck_typed_main_loop_invariant_preserved
+[23:39:31] LLM done baseline3_precheck_typed_main_loop_invariant_preserved, chars=578
+[23:39:42] LLM start baseline3_missing_spec_typed_main_loop_invariant_preserved
+[23:39:47] LLM done baseline3_missing_spec_typed_main_loop_invariant_preserved, chars=1317
+[23:39:57] LLM start svcomp_242.c_initial4
+[23:40:01] LLM done svcomp_242.c_initial4, chars=520
+[23:40:12] LLM start baseline3_diagnose_typed_main_loop_invariant_established
+[23:40:16] LLM done baseline3_diagnose_typed_main_loop_invariant_established, chars=338
+[23:40:16] LLM start baseline3_wrong_spec_typed_main_loop_invariant_established
+[23:40:19] LLM done baseline3_wrong_spec_typed_main_loop_invariant_established, chars=390
+[23:40:30] LLM start baseline3_diagnose_typed_main_loop_invariant_preserved
+[23:40:32] LLM done baseline3_diagnose_typed_main_loop_invariant_preserved, chars=419
+[23:40:32] LLM start baseline3_candidates_typed_main_loop_invariant_preserved
+[23:40:37] LLM done baseline3_candidates_typed_main_loop_invariant_preserved, chars=1453
+[23:40:37] LLM start baseline3_precheck_typed_main_loop_invariant_preserved
+[23:40:40] LLM done baseline3_precheck_typed_main_loop_invariant_preserved, chars=402
+[23:40:41] LLM start baseline3_precheck_typed_main_loop_invariant_preserved
+[23:40:44] LLM done baseline3_precheck_typed_main_loop_invariant_preserved, chars=292
+[23:40:45] LLM start baseline3_precheck_typed_main_loop_invariant_preserved
+[23:40:48] LLM done baseline3_precheck_typed_main_loop_invariant_preserved, chars=454
+[23:40:58] LLM start baseline3_precheck_typed_main_loop_invariant_preserved
+[23:41:02] LLM done baseline3_precheck_typed_main_loop_invariant_preserved, chars=507
+[23:41:12] LLM start baseline3_precheck_typed_main_loop_invariant_preserved
+[23:41:16] LLM done baseline3_precheck_typed_main_loop_invariant_preserved, chars=391
+[23:41:17] LLM start baseline3_missing_spec_typed_main_loop_invariant_preserved
+[23:41:21] LLM done baseline3_missing_spec_typed_main_loop_invariant_preserved, chars=904
+[23:41:32] LLM start baseline3_diagnose_typed_main_loop_invariant_3_established
+[23:41:35] LLM done baseline3_diagnose_typed_main_loop_invariant_3_established, chars=491
+[23:41:35] LLM start baseline3_wrong_spec_typed_main_loop_invariant_3_established
+[23:41:40] LLM done baseline3_wrong_spec_typed_main_loop_invariant_3_established, chars=753
+[23:41:50] LLM start svcomp_242.c_initial5
+[23:41:56] LLM done svcomp_242.c_initial5, chars=517
+[23:42:06] LLM start baseline3_diagnose_typed_main_loop_invariant_established
+[23:42:09] LLM done baseline3_diagnose_typed_main_loop_invariant_established, chars=407
+[23:42:09] LLM start baseline3_wrong_spec_typed_main_loop_invariant_established
+[23:42:12] LLM done baseline3_wrong_spec_typed_main_loop_invariant_established, chars=405
+[23:42:23] LLM start baseline3_diagnose_typed_main_loop_invariant_preserved
+[23:42:27] LLM done baseline3_diagnose_typed_main_loop_invariant_preserved, chars=442
+[23:42:27] LLM start baseline3_candidates_typed_main_loop_invariant_preserved
+[23:42:31] LLM done baseline3_candidates_typed_main_loop_invariant_preserved, chars=1549
+[23:42:31] LLM start baseline3_precheck_typed_main_loop_invariant_preserved
+[23:42:34] LLM done baseline3_precheck_typed_main_loop_invariant_preserved, chars=551
+[23:42:45] LLM start baseline3_precheck_typed_main_loop_invariant_preserved
+[23:42:48] LLM done baseline3_precheck_typed_main_loop_invariant_preserved, chars=485
+[23:42:58] LLM start baseline3_precheck_typed_main_loop_invariant_preserved
+[23:43:01] LLM done baseline3_precheck_typed_main_loop_invariant_preserved, chars=453
+[23:43:12] LLM start baseline3_precheck_typed_main_loop_invariant_preserved
+[23:43:16] LLM done baseline3_precheck_typed_main_loop_invariant_preserved, chars=471
+[23:43:27] LLM start baseline3_precheck_typed_main_loop_invariant_preserved
+[23:43:30] LLM done baseline3_precheck_typed_main_loop_invariant_preserved, chars=485
+[23:43:41] LLM start baseline3_missing_spec_typed_main_loop_invariant_preserved
+[23:43:43] LLM done baseline3_missing_spec_typed_main_loop_invariant_preserved, chars=457
+[23:43:44] LLM start baseline3_invalid_repair
+[23:43:47] LLM done baseline3_invalid_repair, chars=426
+[13/21] baseline3 svcomp/243.c
+[23:43:48] LLM start svcomp_243.c_initial1
+[23:43:51] LLM done svcomp_243.c_initial1, chars=403
+[23:44:02] LLM start baseline3_diagnose_typed_main_loop_invariant_established
+[23:44:05] LLM done baseline3_diagnose_typed_main_loop_invariant_established, chars=404
+[23:44:05] LLM start baseline3_wrong_spec_typed_main_loop_invariant_established
+[23:44:08] LLM done baseline3_wrong_spec_typed_main_loop_invariant_established, chars=362
+[23:44:18] LLM start baseline3_diagnose_typed_main_loop_invariant_established
+[23:44:22] LLM done baseline3_diagnose_typed_main_loop_invariant_established, chars=351
+[23:44:22] LLM start baseline3_wrong_spec_typed_main_loop_invariant_established
+[23:44:25] LLM done baseline3_wrong_spec_typed_main_loop_invariant_established, chars=441
+[23:44:36] LLM start baseline3_diagnose_typed_main_loop_invariant_established
+[23:44:41] LLM done baseline3_diagnose_typed_main_loop_invariant_established, chars=387
+[23:44:41] LLM start baseline3_wrong_spec_typed_main_loop_invariant_established
+[23:44:43] LLM done baseline3_wrong_spec_typed_main_loop_invariant_established, chars=365
+[23:44:53] LLM start svcomp_243.c_initial2
+[23:44:56] LLM done svcomp_243.c_initial2, chars=335
+[23:45:06] LLM start baseline3_diagnose_typed_main_loop_invariant_established
+[23:45:08] LLM done baseline3_diagnose_typed_main_loop_invariant_established, chars=330
+[23:45:08] LLM start baseline3_wrong_spec_typed_main_loop_invariant_established
+[23:45:11] LLM done baseline3_wrong_spec_typed_main_loop_invariant_established, chars=456
+[23:45:22] LLM start baseline3_diagnose_typed_main_loop_invariant_established
+[23:45:28] LLM done baseline3_diagnose_typed_main_loop_invariant_established, chars=369
+[23:45:28] LLM start baseline3_wrong_spec_typed_main_loop_invariant_established
+[23:45:32] LLM done baseline3_wrong_spec_typed_main_loop_invariant_established, chars=395
+[23:45:42] LLM start baseline3_diagnose_typed_main_loop_invariant_established
+[23:45:45] LLM done baseline3_diagnose_typed_main_loop_invariant_established, chars=411
+[23:45:45] LLM start baseline3_wrong_spec_typed_main_loop_invariant_established
+[23:45:49] LLM done baseline3_wrong_spec_typed_main_loop_invariant_established, chars=433
+[23:45:59] LLM start svcomp_243.c_initial3
+[23:46:03] LLM done svcomp_243.c_initial3, chars=335
+[23:46:13] LLM start baseline3_diagnose_typed_main_loop_invariant_established
+[23:46:16] LLM done baseline3_diagnose_typed_main_loop_invariant_established, chars=387
+[23:46:16] LLM start baseline3_wrong_spec_typed_main_loop_invariant_established
+[23:46:19] LLM done baseline3_wrong_spec_typed_main_loop_invariant_established, chars=392
+[23:46:20] LLM start baseline3_invalid_repair
+[23:46:23] LLM done baseline3_invalid_repair, chars=583
+[23:46:33] LLM start baseline3_diagnose_typed_main_loop_invariant_established
+[23:46:36] LLM done baseline3_diagnose_typed_main_loop_invariant_established, chars=424
+[23:46:36] LLM start baseline3_wrong_spec_typed_main_loop_invariant_established
+[23:46:38] LLM done baseline3_wrong_spec_typed_main_loop_invariant_established, chars=522
+[23:46:49] LLM start svcomp_243.c_initial4
+[23:46:52] LLM done svcomp_243.c_initial4, chars=445
+[23:47:03] LLM start baseline3_diagnose_typed_main_loop_invariant_2_established
+[23:47:05] LLM done baseline3_diagnose_typed_main_loop_invariant_2_established, chars=391
+[23:47:05] LLM start baseline3_wrong_spec_typed_main_loop_invariant_2_established
+[23:47:08] LLM done baseline3_wrong_spec_typed_main_loop_invariant_2_established, chars=394
+[23:47:19] LLM start baseline3_diagnose_typed_main_loop_invariant_2_established
+[23:47:23] LLM done baseline3_diagnose_typed_main_loop_invariant_2_established, chars=380
+[23:47:23] LLM start baseline3_wrong_spec_typed_main_loop_invariant_2_established
+[23:47:26] LLM done baseline3_wrong_spec_typed_main_loop_invariant_2_established, chars=430
+[23:47:37] LLM start baseline3_diagnose_typed_main_loop_invariant_2_established
+[23:47:40] LLM done baseline3_diagnose_typed_main_loop_invariant_2_established, chars=345
+[23:47:40] LLM start baseline3_wrong_spec_typed_main_loop_invariant_2_established
+[23:47:43] LLM done baseline3_wrong_spec_typed_main_loop_invariant_2_established, chars=414
+[23:47:54] LLM start svcomp_243.c_initial5
+[23:47:57] LLM done svcomp_243.c_initial5, chars=341
+[23:48:07] LLM start baseline3_diagnose_typed_main_loop_invariant_established
+[23:48:10] LLM done baseline3_diagnose_typed_main_loop_invariant_established, chars=339
+[23:48:10] LLM start baseline3_wrong_spec_typed_main_loop_invariant_established
+[23:48:12] LLM done baseline3_wrong_spec_typed_main_loop_invariant_established, chars=473
+[23:48:22] LLM start baseline3_diagnose_typed_main_loop_invariant_established
+[23:48:25] LLM done baseline3_diagnose_typed_main_loop_invariant_established, chars=397
+[23:48:25] LLM start baseline3_wrong_spec_typed_main_loop_invariant_established
+[23:48:28] LLM done baseline3_wrong_spec_typed_main_loop_invariant_established, chars=496
+[23:48:38] LLM start baseline3_diagnose_typed_main_loop_invariant_established
+[23:48:41] LLM done baseline3_diagnose_typed_main_loop_invariant_established, chars=383
+[23:48:41] LLM start baseline3_wrong_spec_typed_main_loop_invariant_established
+[23:48:45] LLM done baseline3_wrong_spec_typed_main_loop_invariant_established, chars=476
+[14/21] baseline3 svcomp/244.c
+[23:48:55] LLM start svcomp_244.c_initial1
+[23:48:59] LLM done svcomp_244.c_initial1, chars=961
+[23:49:11] LLM start baseline3_diagnose_typed_main_loop_invariant_2_preserved
+[23:49:14] LLM done baseline3_diagnose_typed_main_loop_invariant_2_preserved, chars=514
+[23:49:14] LLM start baseline3_candidates_typed_main_loop_invariant_2_preserved
+[23:49:19] LLM done baseline3_candidates_typed_main_loop_invariant_2_preserved, chars=1656
+[23:49:19] LLM start baseline3_precheck_typed_main_loop_invariant_2_preserved
+[23:49:21] LLM done baseline3_precheck_typed_main_loop_invariant_2_preserved, chars=395
+[23:49:33] LLM start baseline3_missing_spec_typed_main_loop_invariant_2_preserved
+[23:49:38] LLM done baseline3_missing_spec_typed_main_loop_invariant_2_preserved, chars=774
+[23:49:49] LLM start baseline3_diagnose_typed_main_loop_invariant_2_preserved
+[23:49:53] LLM done baseline3_diagnose_typed_main_loop_invariant_2_preserved, chars=465
+[23:49:53] LLM start baseline3_candidates_typed_main_loop_invariant_2_preserved
+[23:49:58] LLM done baseline3_candidates_typed_main_loop_invariant_2_preserved, chars=1670
+[23:49:58] LLM start baseline3_precheck_typed_main_loop_invariant_2_preserved
+[23:50:00] LLM done baseline3_precheck_typed_main_loop_invariant_2_preserved, chars=403
+[23:50:12] LLM start baseline3_missing_spec_typed_main_loop_invariant_2_preserved
+[23:50:15] LLM done baseline3_missing_spec_typed_main_loop_invariant_2_preserved, chars=474
+[23:50:16] LLM start baseline3_invalid_repair
+[23:50:19] LLM done baseline3_invalid_repair, chars=399
+[23:50:20] LLM start svcomp_244.c_initial2
+[23:50:25] LLM done svcomp_244.c_initial2, chars=925
+[23:50:36] LLM start baseline3_diagnose_typed_main_assert
+[23:50:39] LLM done baseline3_diagnose_typed_main_assert, chars=435
+[23:50:39] LLM start baseline3_candidates_typed_main_assert
+[23:50:46] LLM done baseline3_candidates_typed_main_assert, chars=1567
+[23:50:46] LLM start baseline3_precheck_typed_main_assert
+[23:50:51] LLM done baseline3_precheck_typed_main_assert, chars=557
+[23:51:02] LLM start baseline3_precheck_typed_main_assert
+[23:51:06] LLM done baseline3_precheck_typed_main_assert, chars=584
+[23:51:07] LLM start baseline3_precheck_typed_main_assert
+[23:51:09] LLM done baseline3_precheck_typed_main_assert, chars=480
+[23:51:10] LLM start baseline3_precheck_typed_main_assert
+[23:51:13] LLM done baseline3_precheck_typed_main_assert, chars=513
+[23:51:14] LLM start baseline3_precheck_typed_main_assert
+[23:51:17] LLM done baseline3_precheck_typed_main_assert, chars=466
+[23:51:18] LLM start baseline3_missing_spec_typed_main_assert
+[23:51:22] LLM done baseline3_missing_spec_typed_main_assert, chars=669
+[23:51:33] LLM start baseline3_diagnose_typed_main_loop_invariant_5_preserved
+[23:51:37] LLM done baseline3_diagnose_typed_main_loop_invariant_5_preserved, chars=463
+[23:51:37] LLM start baseline3_candidates_typed_main_loop_invariant_5_preserved
+[23:51:41] LLM done baseline3_candidates_typed_main_loop_invariant_5_preserved, chars=1486
+[23:51:41] LLM start baseline3_precheck_typed_main_loop_invariant_5_preserved
+[23:51:46] LLM done baseline3_precheck_typed_main_loop_invariant_5_preserved, chars=427
+[23:51:57] LLM start baseline3_precheck_typed_main_loop_invariant_5_preserved
+[23:52:01] LLM done baseline3_precheck_typed_main_loop_invariant_5_preserved, chars=616
+[23:52:13] LLM start baseline3_precheck_typed_main_loop_invariant_5_preserved
+[23:52:16] LLM done baseline3_precheck_typed_main_loop_invariant_5_preserved, chars=688
+[23:52:28] LLM start baseline3_missing_spec_typed_main_loop_invariant_5_preserved
+[23:52:32] LLM done baseline3_missing_spec_typed_main_loop_invariant_5_preserved, chars=497
+[23:52:43] LLM start baseline3_diagnose_typed_main_loop_invariant_3_preserved
+[23:52:46] LLM done baseline3_diagnose_typed_main_loop_invariant_3_preserved, chars=523
+[23:52:46] LLM start baseline3_candidates_typed_main_loop_invariant_3_preserved
+[23:52:51] LLM done baseline3_candidates_typed_main_loop_invariant_3_preserved, chars=1605
+[23:52:51] LLM start baseline3_precheck_typed_main_loop_invariant_3_preserved
+[23:52:56] LLM done baseline3_precheck_typed_main_loop_invariant_3_preserved, chars=445
+[23:53:08] LLM start baseline3_precheck_typed_main_loop_invariant_3_preserved
+[23:53:12] LLM done baseline3_precheck_typed_main_loop_invariant_3_preserved, chars=500
+[23:53:24] LLM start baseline3_missing_spec_typed_main_loop_invariant_3_preserved
+[23:53:28] LLM done baseline3_missing_spec_typed_main_loop_invariant_3_preserved, chars=1159
+[23:53:29] LLM start svcomp_244.c_initial3
+[23:53:33] LLM done svcomp_244.c_initial3, chars=1063
+[23:53:44] LLM start baseline3_diagnose_typed_main_assert
+[23:53:49] LLM done baseline3_diagnose_typed_main_assert, chars=428
+[23:53:49] LLM start baseline3_candidates_typed_main_assert
+[23:53:54] LLM done baseline3_candidates_typed_main_assert, chars=1467
+[23:53:54] LLM start baseline3_precheck_typed_main_assert
+[23:53:56] LLM done baseline3_precheck_typed_main_assert, chars=534
+[23:53:56] LLM start baseline3_precheck_typed_main_assert
+[23:54:00] LLM done baseline3_precheck_typed_main_assert, chars=500
+[23:54:11] LLM start baseline3_precheck_typed_main_assert
+[23:54:14] LLM done baseline3_precheck_typed_main_assert, chars=622
+[23:54:14] LLM start baseline3_precheck_typed_main_assert
+[23:54:17] LLM done baseline3_precheck_typed_main_assert, chars=479
+[23:54:28] LLM start baseline3_precheck_typed_main_assert
+[23:54:33] LLM done baseline3_precheck_typed_main_assert, chars=550
+[23:54:44] LLM start baseline3_missing_spec_typed_main_assert
+[23:54:49] LLM done baseline3_missing_spec_typed_main_assert, chars=1501
+[23:55:00] LLM start baseline3_diagnose_typed_main_loop_invariant_5_preserved
+[23:55:04] LLM done baseline3_diagnose_typed_main_loop_invariant_5_preserved, chars=549
+[23:55:04] LLM start baseline3_candidates_typed_main_loop_invariant_5_preserved
+[23:55:10] LLM done baseline3_candidates_typed_main_loop_invariant_5_preserved, chars=1383
+[23:55:10] LLM start baseline3_precheck_typed_main_loop_invariant_5_preserved
+[23:55:16] LLM done baseline3_precheck_typed_main_loop_invariant_5_preserved, chars=588
+[23:55:27] LLM start baseline3_precheck_typed_main_loop_invariant_5_preserved
+[23:55:31] LLM done baseline3_precheck_typed_main_loop_invariant_5_preserved, chars=546
+[23:55:42] LLM start baseline3_precheck_typed_main_loop_invariant_5_preserved
+[23:55:46] LLM done baseline3_precheck_typed_main_loop_invariant_5_preserved, chars=410
+[23:55:57] LLM start baseline3_missing_spec_typed_main_loop_invariant_5_preserved
+[23:56:02] LLM done baseline3_missing_spec_typed_main_loop_invariant_5_preserved, chars=1210
+[23:56:14] LLM start baseline3_diagnose_typed_main_loop_invariant_3_preserved
+[23:56:17] LLM done baseline3_diagnose_typed_main_loop_invariant_3_preserved, chars=374
+[23:56:17] LLM start baseline3_candidates_typed_main_loop_invariant_3_preserved
+[23:56:21] LLM done baseline3_candidates_typed_main_loop_invariant_3_preserved, chars=1564
+[23:56:21] LLM start baseline3_precheck_typed_main_loop_invariant_3_preserved
+[23:56:24] LLM done baseline3_precheck_typed_main_loop_invariant_3_preserved, chars=423
+[23:56:35] LLM start baseline3_precheck_typed_main_loop_invariant_3_preserved
+[23:56:38] LLM done baseline3_precheck_typed_main_loop_invariant_3_preserved, chars=534
+[23:56:50] LLM start baseline3_missing_spec_typed_main_loop_invariant_3_preserved
+[23:56:54] LLM done baseline3_missing_spec_typed_main_loop_invariant_3_preserved, chars=817
+[23:57:06] LLM start svcomp_244.c_initial4
+[23:57:09] LLM done svcomp_244.c_initial4, chars=905
+[23:57:20] LLM start baseline3_diagnose_typed_main_assert
+[23:57:24] LLM done baseline3_diagnose_typed_main_assert, chars=457
+[23:57:24] LLM start baseline3_candidates_typed_main_assert
+[23:57:30] LLM done baseline3_candidates_typed_main_assert, chars=1676
+[23:57:30] LLM start baseline3_precheck_typed_main_assert
+[23:57:33] LLM done baseline3_precheck_typed_main_assert, chars=584
+[23:57:44] LLM start baseline3_precheck_typed_main_assert
+[23:57:47] LLM done baseline3_precheck_typed_main_assert, chars=571
+[23:57:48] LLM start baseline3_precheck_typed_main_assert
+[23:57:52] LLM done baseline3_precheck_typed_main_assert, chars=616
+[23:57:53] LLM start baseline3_precheck_typed_main_assert
+[23:57:55] LLM done baseline3_precheck_typed_main_assert, chars=550
+[23:57:56] LLM start baseline3_precheck_typed_main_assert
+[23:57:59] LLM done baseline3_precheck_typed_main_assert, chars=666
+[23:58:00] LLM start baseline3_missing_spec_typed_main_assert
+[23:58:03] LLM done baseline3_missing_spec_typed_main_assert, chars=570
+[23:58:03] LLM start svcomp_244.c_initial5
+[23:58:07] LLM done svcomp_244.c_initial5, chars=1033
+[23:58:18] LLM start baseline3_diagnose_typed_main_assert
+[23:58:21] LLM done baseline3_diagnose_typed_main_assert, chars=477
+[23:58:21] LLM start baseline3_candidates_typed_main_assert
+[23:58:26] LLM done baseline3_candidates_typed_main_assert, chars=1449
+[23:58:26] LLM start baseline3_precheck_typed_main_assert
+[23:58:29] LLM done baseline3_precheck_typed_main_assert, chars=612
+[23:58:29] LLM start baseline3_precheck_typed_main_assert
+[23:58:31] LLM done baseline3_precheck_typed_main_assert, chars=538
+[23:58:42] LLM start baseline3_precheck_typed_main_assert
+[23:58:45] LLM done baseline3_precheck_typed_main_assert, chars=728
+[23:58:45] LLM start baseline3_precheck_typed_main_assert
+[23:58:48] LLM done baseline3_precheck_typed_main_assert, chars=440
+[23:58:59] LLM start baseline3_precheck_typed_main_assert
+[23:59:02] LLM done baseline3_precheck_typed_main_assert, chars=438
+[23:59:03] LLM start baseline3_missing_spec_typed_main_assert
+[23:59:08] LLM done baseline3_missing_spec_typed_main_assert, chars=1630
+[23:59:19] LLM start baseline3_diagnose_typed_main_loop_invariant_5_established
+[23:59:22] LLM done baseline3_diagnose_typed_main_loop_invariant_5_established, chars=428
+[23:59:22] LLM start baseline3_wrong_spec_typed_main_loop_invariant_5_established
+[23:59:25] LLM done baseline3_wrong_spec_typed_main_loop_invariant_5_established, chars=388
+[15/21] baseline3 svcomp/245.c
+[23:59:28] LLM start svcomp_245.c_initial1
+[23:59:32] LLM done svcomp_245.c_initial1, chars=644
+[23:59:32] LLM start svcomp_245.c_initial2
+[23:59:36] LLM done svcomp_245.c_initial2, chars=778
+[23:59:36] LLM start svcomp_245.c_initial3
+[23:59:41] LLM done svcomp_245.c_initial3, chars=858
+[23:59:41] LLM start svcomp_245.c_initial4
+[23:59:45] LLM done svcomp_245.c_initial4, chars=722
+[23:59:45] LLM start svcomp_245.c_initial5
+[23:59:51] LLM done svcomp_245.c_initial5, chars=798
+[16/21] baseline3 svcomp/246.c
+[23:59:51] LLM start svcomp_246.c_initial1
+[23:59:56] LLM done svcomp_246.c_initial1, chars=1172
+[00:00:08] LLM start baseline3_diagnose_typed_main_loop_invariant_established
+[00:00:11] LLM done baseline3_diagnose_typed_main_loop_invariant_established, chars=432
+[00:00:11] LLM start baseline3_wrong_spec_typed_main_loop_invariant_established
+[00:00:14] LLM done baseline3_wrong_spec_typed_main_loop_invariant_established, chars=416
+[00:00:26] LLM start baseline3_diagnose_typed_main_loop_invariant_established
+[00:00:30] LLM done baseline3_diagnose_typed_main_loop_invariant_established, chars=409
+[00:00:30] LLM start baseline3_wrong_spec_typed_main_loop_invariant_established
+[00:00:33] LLM done baseline3_wrong_spec_typed_main_loop_invariant_established, chars=444
+[00:00:45] LLM start baseline3_diagnose_typed_main_loop_invariant_established
+[00:00:49] LLM done baseline3_diagnose_typed_main_loop_invariant_established, chars=509
+[00:00:49] LLM start baseline3_wrong_spec_typed_main_loop_invariant_established
+[00:00:54] LLM done baseline3_wrong_spec_typed_main_loop_invariant_established, chars=1171
+[00:01:06] LLM start svcomp_246.c_initial2
+[00:01:10] LLM done svcomp_246.c_initial2, chars=1040
+[00:01:21] LLM start baseline3_diagnose_typed_main_loop_invariant_established
+[00:01:26] LLM done baseline3_diagnose_typed_main_loop_invariant_established, chars=410
+[00:01:26] LLM start baseline3_wrong_spec_typed_main_loop_invariant_established
+[00:01:31] LLM done baseline3_wrong_spec_typed_main_loop_invariant_established, chars=702
+[00:01:42] LLM start baseline3_diagnose_typed_main_loop_invariant_established
+[00:01:46] LLM done baseline3_diagnose_typed_main_loop_invariant_established, chars=416
+[00:01:46] LLM start baseline3_wrong_spec_typed_main_loop_invariant_established
+[00:01:49] LLM done baseline3_wrong_spec_typed_main_loop_invariant_established, chars=467
+[00:02:00] LLM start baseline3_diagnose_typed_main_loop_invariant_established
+[00:02:03] LLM done baseline3_diagnose_typed_main_loop_invariant_established, chars=429
+[00:02:03] LLM start baseline3_wrong_spec_typed_main_loop_invariant_established
+[00:02:06] LLM done baseline3_wrong_spec_typed_main_loop_invariant_established, chars=480
+[00:02:17] LLM start svcomp_246.c_initial3
+[00:02:21] LLM done svcomp_246.c_initial3, chars=1024
+[00:02:32] LLM start baseline3_diagnose_typed_main_loop_invariant_established
+[00:02:36] LLM done baseline3_diagnose_typed_main_loop_invariant_established, chars=496
+[00:02:36] LLM start baseline3_wrong_spec_typed_main_loop_invariant_established
+[00:02:41] LLM done baseline3_wrong_spec_typed_main_loop_invariant_established, chars=828
+[00:02:52] LLM start baseline3_diagnose_typed_main_loop_invariant_established
+[00:02:57] LLM done baseline3_diagnose_typed_main_loop_invariant_established, chars=395
+[00:02:57] LLM start baseline3_wrong_spec_typed_main_loop_invariant_established
+[00:02:59] LLM done baseline3_wrong_spec_typed_main_loop_invariant_established, chars=471
+[00:03:11] LLM start baseline3_diagnose_typed_main_loop_invariant_established
+[00:03:14] LLM done baseline3_diagnose_typed_main_loop_invariant_established, chars=435
+[00:03:14] LLM start baseline3_wrong_spec_typed_main_loop_invariant_established
+[00:03:18] LLM done baseline3_wrong_spec_typed_main_loop_invariant_established, chars=500
+[00:03:29] LLM start svcomp_246.c_initial4
+[00:03:34] LLM done svcomp_246.c_initial4, chars=1177
+[00:03:45] LLM start baseline3_diagnose_typed_main_loop_invariant_established
+[00:03:49] LLM done baseline3_diagnose_typed_main_loop_invariant_established, chars=520
+[00:03:49] LLM start baseline3_wrong_spec_typed_main_loop_invariant_established
+[00:03:54] LLM done baseline3_wrong_spec_typed_main_loop_invariant_established, chars=1176
+[00:04:06] LLM start baseline3_diagnose_typed_main_loop_invariant_established
+[00:04:12] LLM done baseline3_diagnose_typed_main_loop_invariant_established, chars=551
+[00:04:12] LLM start baseline3_wrong_spec_typed_main_loop_invariant_established
+[00:04:16] LLM done baseline3_wrong_spec_typed_main_loop_invariant_established, chars=987
+[00:04:28] LLM start baseline3_diagnose_typed_main_loop_invariant_established
+[00:04:33] LLM done baseline3_diagnose_typed_main_loop_invariant_established, chars=598
+[00:04:33] LLM start baseline3_wrong_spec_typed_main_loop_invariant_established
+[00:04:35] LLM done baseline3_wrong_spec_typed_main_loop_invariant_established, chars=477
+[00:04:47] LLM start svcomp_246.c_initial5
+[00:04:50] LLM done svcomp_246.c_initial5, chars=1043
+[00:05:02] LLM start baseline3_diagnose_typed_main_loop_invariant_established
+[00:05:05] LLM done baseline3_diagnose_typed_main_loop_invariant_established, chars=422
+[00:05:05] LLM start baseline3_wrong_spec_typed_main_loop_invariant_established
+[00:05:11] LLM done baseline3_wrong_spec_typed_main_loop_invariant_established, chars=1561
+[00:05:23] LLM start baseline3_diagnose_typed_main_loop_invariant_established
+[00:05:26] LLM done baseline3_diagnose_typed_main_loop_invariant_established, chars=369
+[00:05:26] LLM start baseline3_wrong_spec_typed_main_loop_invariant_established
+[00:05:29] LLM done baseline3_wrong_spec_typed_main_loop_invariant_established, chars=421
+[00:05:41] LLM start baseline3_diagnose_typed_main_loop_invariant_established
+[00:05:43] LLM done baseline3_diagnose_typed_main_loop_invariant_established, chars=440
+[00:05:43] LLM start baseline3_wrong_spec_typed_main_loop_invariant_established
+[00:05:46] LLM done baseline3_wrong_spec_typed_main_loop_invariant_established, chars=435
+[17/21] baseline3 svcomp/247.c
+[00:05:58] LLM start svcomp_247.c_initial1
+[00:06:02] LLM done svcomp_247.c_initial1, chars=932
+[00:06:13] LLM start baseline3_diagnose_typed_main_loop_invariant_established
+[00:06:16] LLM done baseline3_diagnose_typed_main_loop_invariant_established, chars=420
+[00:06:16] LLM start baseline3_wrong_spec_typed_main_loop_invariant_established
+[00:06:19] LLM done baseline3_wrong_spec_typed_main_loop_invariant_established, chars=391
+[00:06:30] LLM start baseline3_diagnose_typed_main_loop_invariant_established
+[00:06:34] LLM done baseline3_diagnose_typed_main_loop_invariant_established, chars=483
+[00:06:34] LLM start baseline3_wrong_spec_typed_main_loop_invariant_established
+[00:06:36] LLM done baseline3_wrong_spec_typed_main_loop_invariant_established, chars=443
+[00:06:47] LLM start baseline3_diagnose_typed_main_loop_invariant_established
+[00:06:49] LLM done baseline3_diagnose_typed_main_loop_invariant_established, chars=399
+[00:06:49] LLM start baseline3_wrong_spec_typed_main_loop_invariant_established
+[00:06:52] LLM done baseline3_wrong_spec_typed_main_loop_invariant_established, chars=449
+[00:07:03] LLM start svcomp_247.c_initial2
+[00:07:07] LLM done svcomp_247.c_initial2, chars=854
+[00:07:17] LLM start baseline3_diagnose_typed_main_loop_invariant_established
+[00:07:20] LLM done baseline3_diagnose_typed_main_loop_invariant_established, chars=369
+[00:07:20] LLM start baseline3_wrong_spec_typed_main_loop_invariant_established
+[00:07:24] LLM done baseline3_wrong_spec_typed_main_loop_invariant_established, chars=373
+[00:07:35] LLM start baseline3_diagnose_typed_main_loop_invariant_established
+[00:07:37] LLM done baseline3_diagnose_typed_main_loop_invariant_established, chars=446
+[00:07:37] LLM start baseline3_wrong_spec_typed_main_loop_invariant_established
+[00:07:40] LLM done baseline3_wrong_spec_typed_main_loop_invariant_established, chars=445
+[00:07:51] LLM start baseline3_diagnose_typed_main_loop_invariant_established
+[00:07:53] LLM done baseline3_diagnose_typed_main_loop_invariant_established, chars=412
+[00:07:53] LLM start baseline3_wrong_spec_typed_main_loop_invariant_established
+[00:07:58] LLM done baseline3_wrong_spec_typed_main_loop_invariant_established, chars=466
+[00:08:08] LLM start svcomp_247.c_initial3
+[00:08:12] LLM done svcomp_247.c_initial3, chars=816
+[00:08:13] LLM start baseline3_invalid_repair
+[00:08:16] LLM done baseline3_invalid_repair, chars=384
+[00:08:27] LLM start baseline3_diagnose_typed_main_loop_invariant_established
+[00:08:30] LLM done baseline3_diagnose_typed_main_loop_invariant_established, chars=390
+[00:08:30] LLM start baseline3_wrong_spec_typed_main_loop_invariant_established
+[00:08:32] LLM done baseline3_wrong_spec_typed_main_loop_invariant_established, chars=381
+[00:08:43] LLM start baseline3_diagnose_typed_main_loop_invariant_established
+[00:08:46] LLM done baseline3_diagnose_typed_main_loop_invariant_established, chars=414
+[00:08:46] LLM start baseline3_wrong_spec_typed_main_loop_invariant_established
+[00:08:49] LLM done baseline3_wrong_spec_typed_main_loop_invariant_established, chars=463
+[00:08:59] LLM start svcomp_247.c_initial4
+[00:09:04] LLM done svcomp_247.c_initial4, chars=930
+[00:09:14] LLM start baseline3_diagnose_typed_main_loop_invariant_established
+[00:09:17] LLM done baseline3_diagnose_typed_main_loop_invariant_established, chars=432
+[00:09:17] LLM start baseline3_wrong_spec_typed_main_loop_invariant_established
+[00:09:20] LLM done baseline3_wrong_spec_typed_main_loop_invariant_established, chars=538
+[00:09:30] LLM start baseline3_diagnose_typed_main_loop_invariant_established
+[00:09:33] LLM done baseline3_diagnose_typed_main_loop_invariant_established, chars=502
+[00:09:33] LLM start baseline3_wrong_spec_typed_main_loop_invariant_established
+[00:09:38] LLM done baseline3_wrong_spec_typed_main_loop_invariant_established, chars=775
+[00:09:48] LLM start baseline3_diagnose_typed_main_loop_invariant_established
+[00:09:52] LLM done baseline3_diagnose_typed_main_loop_invariant_established, chars=523
+[00:09:52] LLM start baseline3_wrong_spec_typed_main_loop_invariant_established
+[00:09:55] LLM done baseline3_wrong_spec_typed_main_loop_invariant_established, chars=400
+[00:10:06] LLM start svcomp_247.c_initial5
+[00:10:12] LLM done svcomp_247.c_initial5, chars=1045
+[00:10:23] LLM start baseline3_diagnose_typed_main_loop_invariant_established
+[00:10:26] LLM done baseline3_diagnose_typed_main_loop_invariant_established, chars=532
+[00:10:26] LLM start baseline3_wrong_spec_typed_main_loop_invariant_established
+[00:10:33] LLM done baseline3_wrong_spec_typed_main_loop_invariant_established, chars=1203
+[00:10:44] LLM start baseline3_diagnose_typed_main_loop_invariant_established
+[00:10:47] LLM done baseline3_diagnose_typed_main_loop_invariant_established, chars=395
+[00:10:47] LLM start baseline3_wrong_spec_typed_main_loop_invariant_established
+[00:10:50] LLM done baseline3_wrong_spec_typed_main_loop_invariant_established, chars=412
+[00:11:00] LLM start baseline3_diagnose_typed_main_loop_invariant_established
+[00:11:03] LLM done baseline3_diagnose_typed_main_loop_invariant_established, chars=401
+[00:11:03] LLM start baseline3_wrong_spec_typed_main_loop_invariant_established
+[00:11:06] LLM done baseline3_wrong_spec_typed_main_loop_invariant_established, chars=445
+[18/21] baseline3 svcomp/248.c
+[00:11:17] LLM start svcomp_248.c_initial1
+[00:11:20] LLM done svcomp_248.c_initial1, chars=978
+[00:11:31] LLM start baseline3_diagnose_typed_main_loop_invariant_established
+[00:11:34] LLM done baseline3_diagnose_typed_main_loop_invariant_established, chars=369
+[00:11:34] LLM start baseline3_wrong_spec_typed_main_loop_invariant_established
+[00:11:38] LLM done baseline3_wrong_spec_typed_main_loop_invariant_established, chars=400
+[00:11:49] LLM start baseline3_diagnose_typed_main_loop_invariant_established
+[00:11:51] LLM done baseline3_diagnose_typed_main_loop_invariant_established, chars=391
+[00:11:51] LLM start baseline3_wrong_spec_typed_main_loop_invariant_established
+[00:11:55] LLM done baseline3_wrong_spec_typed_main_loop_invariant_established, chars=402
+[00:12:05] LLM start baseline3_diagnose_typed_main_loop_invariant_established
+[00:12:10] LLM done baseline3_diagnose_typed_main_loop_invariant_established, chars=477
+[00:12:10] LLM start baseline3_wrong_spec_typed_main_loop_invariant_established
+[00:12:15] LLM done baseline3_wrong_spec_typed_main_loop_invariant_established, chars=757
+[19/21] baseline3 svcomp/249.c
+[00:12:17] LLM start svcomp_249.c_initial1
+[00:12:21] LLM done svcomp_249.c_initial1, chars=459
+[00:12:22] LLM start baseline3_invalid_repair
+[00:12:25] LLM done baseline3_invalid_repair, chars=386
+[00:12:26] LLM start baseline3_invalid_repair
+[00:12:30] LLM done baseline3_invalid_repair, chars=432
+[00:12:31] LLM start svcomp_249.c_initial2
+[00:12:35] LLM done svcomp_249.c_initial2, chars=476
+[00:12:45] LLM start baseline3_diagnose_typed_main_loop_invariant_established
+[00:12:48] LLM done baseline3_diagnose_typed_main_loop_invariant_established, chars=337
+[00:12:48] LLM start baseline3_wrong_spec_typed_main_loop_invariant_established
+[00:12:51] LLM done baseline3_wrong_spec_typed_main_loop_invariant_established, chars=338
+[00:13:01] LLM start baseline3_diagnose_typed_main_loop_invariant_established
+[00:13:06] LLM done baseline3_diagnose_typed_main_loop_invariant_established, chars=396
+[00:13:06] LLM start baseline3_wrong_spec_typed_main_loop_invariant_established
+[00:13:09] LLM done baseline3_wrong_spec_typed_main_loop_invariant_established, chars=497
+[00:13:19] LLM start baseline3_diagnose_typed_main_assert
+[00:13:22] LLM done baseline3_diagnose_typed_main_assert, chars=447
+[00:13:22] LLM start baseline3_candidates_typed_main_assert
+[00:13:27] LLM done baseline3_candidates_typed_main_assert, chars=1466
+[00:13:27] LLM start baseline3_precheck_typed_main_assert
+[00:13:30] LLM done baseline3_precheck_typed_main_assert, chars=464
+[00:13:40] LLM start baseline3_precheck_typed_main_assert
+[00:13:45] LLM done baseline3_precheck_typed_main_assert, chars=437
+[00:13:46] LLM start baseline3_precheck_typed_main_assert
+[00:13:48] LLM done baseline3_precheck_typed_main_assert, chars=496
+[00:13:59] LLM start baseline3_missing_spec_typed_main_assert
+[00:14:03] LLM done baseline3_missing_spec_typed_main_assert, chars=966
+[00:14:05] LLM start svcomp_249.c_initial3
+[00:14:08] LLM done svcomp_249.c_initial3, chars=588
+[00:14:09] LLM start baseline3_invalid_repair
+[00:14:12] LLM done baseline3_invalid_repair, chars=609
+[00:14:13] LLM start baseline3_invalid_repair
+[00:14:16] LLM done baseline3_invalid_repair, chars=466
+[00:14:17] LLM start svcomp_249.c_initial4
+[00:14:21] LLM done svcomp_249.c_initial4, chars=421
+[00:14:31] LLM start baseline3_diagnose_typed_main_loop_invariant_established
+[00:14:35] LLM done baseline3_diagnose_typed_main_loop_invariant_established, chars=378
+[00:14:35] LLM start baseline3_wrong_spec_typed_main_loop_invariant_established
+[00:14:38] LLM done baseline3_wrong_spec_typed_main_loop_invariant_established, chars=436
+[00:14:49] LLM start baseline3_diagnose_typed_main_loop_invariant_established
+[00:14:52] LLM done baseline3_diagnose_typed_main_loop_invariant_established, chars=444
+[00:14:52] LLM start baseline3_wrong_spec_typed_main_loop_invariant_established
+[00:14:55] LLM done baseline3_wrong_spec_typed_main_loop_invariant_established, chars=420
+[00:15:06] LLM start baseline3_diagnose_typed_main_assert
+[00:15:08] LLM done baseline3_diagnose_typed_main_assert, chars=459
+[00:15:08] LLM start baseline3_candidates_typed_main_assert
+[00:15:13] LLM done baseline3_candidates_typed_main_assert, chars=1508
+[00:15:13] LLM start baseline3_precheck_typed_main_assert
+[00:15:16] LLM done baseline3_precheck_typed_main_assert, chars=413
+[00:15:27] LLM start baseline3_precheck_typed_main_assert
+[00:15:30] LLM done baseline3_precheck_typed_main_assert, chars=454
+[00:15:31] LLM start baseline3_precheck_typed_main_assert
+[00:15:34] LLM done baseline3_precheck_typed_main_assert, chars=303
+[00:15:35] LLM start baseline3_precheck_typed_main_assert
+[00:15:37] LLM done baseline3_precheck_typed_main_assert, chars=287
+[00:15:48] LLM start baseline3_missing_spec_typed_main_assert
+[00:15:52] LLM done baseline3_missing_spec_typed_main_assert, chars=1001
+[00:15:54] LLM start svcomp_249.c_initial5
+[00:15:57] LLM done svcomp_249.c_initial5, chars=491
+[00:15:58] LLM start baseline3_invalid_repair
+[00:16:01] LLM done baseline3_invalid_repair, chars=467
+[00:16:02] LLM start baseline3_invalid_repair
+[00:16:05] LLM done baseline3_invalid_repair, chars=497
+[20/21] baseline3 svcomp/250.c
+[00:16:06] LLM start svcomp_250.c_initial1
+[00:16:13] LLM done svcomp_250.c_initial1, chars=462
+[00:16:14] LLM start baseline3_invalid_repair
+[00:16:17] LLM done baseline3_invalid_repair, chars=646
+[00:16:18] LLM start baseline3_invalid_repair
+[00:16:21] LLM done baseline3_invalid_repair, chars=637
+[00:16:22] LLM start svcomp_250.c_initial2
+[00:16:27] LLM done svcomp_250.c_initial2, chars=461
+[00:16:28] LLM start baseline3_invalid_repair
+[00:16:32] LLM done baseline3_invalid_repair, chars=680
+[00:16:33] LLM start baseline3_invalid_repair
+[00:16:35] LLM done baseline3_invalid_repair, chars=397
+[00:16:36] LLM start svcomp_250.c_initial3
+[00:16:39] LLM done svcomp_250.c_initial3, chars=511
+[00:16:40] LLM start baseline3_invalid_repair
+[00:16:43] LLM done baseline3_invalid_repair, chars=292
+[00:16:44] LLM start baseline3_invalid_repair
+[00:16:47] LLM done baseline3_invalid_repair, chars=458
+[00:16:48] LLM start svcomp_250.c_initial4
+[00:16:51] LLM done svcomp_250.c_initial4, chars=526
+[00:16:52] LLM start baseline3_invalid_repair
+[00:16:54] LLM done baseline3_invalid_repair, chars=283
+[00:16:55] LLM start baseline3_invalid_repair
+[00:16:59] LLM done baseline3_invalid_repair, chars=297
+[00:17:00] LLM start svcomp_250.c_initial5
+[00:17:03] LLM done svcomp_250.c_initial5, chars=441
+[21/21] baseline3 svcomp/251.c
+[00:17:03] LLM start svcomp_251.c_initial1
+[00:17:07] LLM done svcomp_251.c_initial1, chars=615
+[00:17:17] LLM start baseline3_diagnose_typed_main_loop_invariant_established
+[00:17:20] LLM done baseline3_diagnose_typed_main_loop_invariant_established, chars=380
+[00:17:20] LLM start baseline3_wrong_spec_typed_main_loop_invariant_established
+[00:17:23] LLM done baseline3_wrong_spec_typed_main_loop_invariant_established, chars=381
+[00:17:33] LLM start baseline3_diagnose_typed_main_loop_invariant_3_established
+[00:17:37] LLM done baseline3_diagnose_typed_main_loop_invariant_3_established, chars=409
+[00:17:37] LLM start baseline3_wrong_spec_typed_main_loop_invariant_3_established
+[00:17:40] LLM done baseline3_wrong_spec_typed_main_loop_invariant_3_established, chars=434
+[00:17:51] LLM start baseline3_diagnose_typed_main_loop_invariant_established
+[00:17:53] LLM done baseline3_diagnose_typed_main_loop_invariant_established, chars=436
+[00:17:53] LLM start baseline3_wrong_spec_typed_main_loop_invariant_established
+[00:17:57] LLM done baseline3_wrong_spec_typed_main_loop_invariant_established, chars=426
+[00:18:07] LLM start svcomp_251.c_initial2
+[00:18:11] LLM done svcomp_251.c_initial2, chars=558
+[00:18:11] LLM start svcomp_251.c_initial3
+[00:18:14] LLM done svcomp_251.c_initial3, chars=674
+[00:18:25] LLM start baseline3_diagnose_typed_main_loop_invariant_established
+[00:18:28] LLM done baseline3_diagnose_typed_main_loop_invariant_established, chars=434
+[00:18:28] LLM start baseline3_wrong_spec_typed_main_loop_invariant_established
+[00:18:32] LLM done baseline3_wrong_spec_typed_main_loop_invariant_established, chars=729
+[00:18:42] LLM start baseline3_diagnose_typed_main_loop_invariant_established
+[00:18:47] LLM done baseline3_diagnose_typed_main_loop_invariant_established, chars=429
+[00:18:47] LLM start baseline3_wrong_spec_typed_main_loop_invariant_established
+[00:18:50] LLM done baseline3_wrong_spec_typed_main_loop_invariant_established, chars=814
+Summary: /home/wangpeijie/wpj_2010215/spec_generation_abduction/results/baseline3_assertion_probe/baseline3_summary.md
+Successful files: /home/wangpeijie/wpj_2010215/spec_generation_abduction/results/baseline3_assertion_probe/successful_files
+Failed cases: /home/wangpeijie/wpj_2010215/spec_generation_abduction/results/baseline3_assertion_probe/failed_cases
+Console log: /home/wangpeijie/wpj_2010215/spec_generation_abduction/results/baseline3_assertion_probe/baseline3_console.txt

@@ -1,0 +1,143 @@
+Dataset: svcomp
+File: 242.c
+Source: /home/wangpeijie/wpj_2010215/spec_generation_abduction/data/AutoBench/svcomp/242.c
+Final status: Fail
+Best attempt: 2
+Best result: Fail_13_14
+
+Command:
+frama-c -wp -wp-precond-weakening -wp-no-callee-precond -wp-prover Alt-Ergo,Z3 -wp-prop=-@terminates,-@variant,-@decreases -wp-print -wp-timeout 8 /tmp/baseline3_zioffzzo/attempt_02_repair_03/repair_03_01_01_add_invariant.c
+
+WP stdout:
+[kernel] Parsing /tmp/baseline3_zioffzzo/attempt_02_repair_03/repair_03_01_01_add_invariant.c (with preprocessing)
+[wp] Running WP plugin...
+[wp] Warning: Missing RTE guards
+[wp] 13 goals scheduled
+[wp] [Timeout] typed_main_loop_invariant_2_established (Qed 6ms) (Z3)
+[wp] Proved goals:   13 / 14
+  Unreachable:     1
+  Qed:            10 (6ms-4ms-25ms)
+  Z3 4.8.12:       2 (65ms-83ms)
+  Timeout:         1
+------------------------------------------------------------
+  Function main
+------------------------------------------------------------
+
+Goal Post-condition (file /tmp/baseline3_zioffzzo/attempt_02_repair_03/repair_03_01_01_add_invariant.c, line 5) in 'main':
+Prove: true.
+Prover Qed returns Valid (12ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline3_zioffzzo/attempt_02_repair_03/repair_03_01_01_add_invariant.c, line 16):
+Let x = -z.
+Assume {
+  Type: is_sint32(i) /\ is_sint32(z) /\ is_sint32(i - z) /\
+      is_sint32(i - 1 - z).
+  (* Invariant *)
+  Have: 0 <= i.
+  (* Invariant *)
+  Have: z <= i.
+  (* Invariant *)
+  Have: 0 <= z.
+  (* Then *)
+  Have: z != i.
+}
+Prove: (z = (-1)) \/ (z < i).
+Prover Alt-Ergo 2.2.0 returns Failed
+unrecognized prover answer
+Prover Z3 4.8.12 returns Valid (Qed:21ms) (83ms) (25299)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline3_zioffzzo/attempt_02_repair_03/repair_03_01_01_add_invariant.c, line 16):
+Prove: true.
+Prover Qed returns Valid (4ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline3_zioffzzo/attempt_02_repair_03/repair_03_01_01_add_invariant.c, line 17):
+Let x = -z.
+Assume {
+  Type: is_sint32(i) /\ is_sint32(z) /\ is_sint32(1 + z) /\
+      is_sint32(i - z) /\ is_sint32(i - 1 - z).
+  (* Invariant *)
+  Have: 0 <= i.
+  (* Invariant *)
+  Have: z <= i.
+  (* Invariant *)
+  Have: 0 <= z.
+  (* Then *)
+  Have: z != i.
+  (* Invariant *)
+  Have: (z = (-1)) \/ (z < i).
+}
+Prove: z < i.
+Prover Alt-Ergo 2.2.0 returns Failed
+unrecognized prover answer
+Prover Z3 4.8.12 returns Valid (Qed:25ms) (65ms) (25519)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline3_zioffzzo/attempt_02_repair_03/repair_03_01_01_add_invariant.c, line 17):
+Assume { Type: is_sint32(i). }
+Prove: 0 <= i.
+Prover Alt-Ergo 2.2.0 returns Failed
+unrecognized prover answer
+Prover Z3 4.8.12 returns Timeout (Qed:6ms) (8s)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline3_zioffzzo/attempt_02_repair_03/repair_03_01_01_add_invariant.c, line 18):
+Prove: true.
+Prover Qed returns Valid (23ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline3_zioffzzo/attempt_02_repair_03/repair_03_01_01_add_invariant.c, line 18):
+Prove: true.
+Prover Qed returns Valid (4ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline3_zioffzzo/attempt_02_repair_03/repair_03_01_01_add_invariant.c, line 19):
+Prove: true.
+Prover Qed returns Valid (12ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline3_zioffzzo/attempt_02_repair_03/repair_03_01_01_add_invariant.c, line 19):
+Prove: true.
+Prover Qed returns Valid (4ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline3_zioffzzo/attempt_02_repair_03/repair_03_01_01_add_invariant.c, line 20):
+Prove: true.
+Prover Qed returns Valid (12ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline3_zioffzzo/attempt_02_repair_03/repair_03_01_01_add_invariant.c, line 20):
+Prove: true.
+Prover Qed returns Valid (4ms)
+
+------------------------------------------------------------
+
+Goal Assertion (file /tmp/baseline3_zioffzzo/attempt_02_repair_03/repair_03_01_01_add_invariant.c, line 32):
+Prove: true.
+Prover Qed returns Valid (12ms)
+
+------------------------------------------------------------
+
+Goal Loop assigns (file /tmp/baseline3_zioffzzo/attempt_02_repair_03/repair_03_01_01_add_invariant.c, line 21):
+Prove: true.
+Prover Qed returns Valid
+
+------------------------------------------------------------
+[wp:pedantic-assigns] /tmp/baseline3_zioffzzo/attempt_02_repair_03/repair_03_01_01_add_invariant.c:7: Warning: 
+  No 'assigns' specification for function 'main'.
+  Callers assumptions might be imprecise.
+
+
+WP stderr:

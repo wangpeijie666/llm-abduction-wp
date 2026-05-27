@@ -1,0 +1,223 @@
+[1/21] baseline1 svcomp/231.c
+[15:58:17] LLM start svcomp_231.c_attempt1
+[15:58:25] LLM done svcomp_231.c_attempt1, chars=454
+[2/21] baseline1 svcomp/232.c
+[15:58:28] LLM start svcomp_232.c_attempt1
+[15:58:37] LLM done svcomp_232.c_attempt1, chars=652
+[15:58:38] LLM start svcomp_232.c_attempt2
+[15:58:41] LLM done svcomp_232.c_attempt2, chars=609
+[15:58:42] LLM start svcomp_232.c_attempt3
+[15:58:46] LLM done svcomp_232.c_attempt3, chars=650
+[15:58:47] LLM start svcomp_232.c_attempt4
+[15:58:57] LLM done svcomp_232.c_attempt4, chars=669
+[15:58:58] LLM start svcomp_232.c_attempt5
+[15:59:05] LLM done svcomp_232.c_attempt5, chars=619
+[3/21] baseline1 svcomp/233.c
+[15:59:07] LLM start svcomp_233.c_attempt1
+[15:59:12] LLM done svcomp_233.c_attempt1, chars=496
+[15:59:23] LLM start svcomp_233.c_attempt2
+[15:59:29] LLM done svcomp_233.c_attempt2, chars=496
+[15:59:39] LLM start svcomp_233.c_attempt3
+[15:59:44] LLM done svcomp_233.c_attempt3, chars=551
+[4/21] baseline1 svcomp/234.c
+[15:59:47] LLM start svcomp_234.c_attempt1
+[15:59:50] LLM done svcomp_234.c_attempt1, chars=840
+[15:59:51] LLM start svcomp_234.c_attempt2
+[15:59:58] LLM done svcomp_234.c_attempt2, chars=809
+[16:00:09] LLM start svcomp_234.c_attempt3
+[16:00:17] LLM done svcomp_234.c_attempt3, chars=796
+[16:00:28] LLM start svcomp_234.c_attempt4
+[16:00:36] LLM done svcomp_234.c_attempt4, chars=775
+[16:00:47] LLM start svcomp_234.c_attempt5
+[16:00:55] LLM done svcomp_234.c_attempt5, chars=782
+[5/21] baseline1 svcomp/235.c
+[16:01:05] LLM start svcomp_235.c_attempt1
+[16:01:11] LLM done svcomp_235.c_attempt1, chars=536
+[16:01:22] LLM start svcomp_235.c_attempt2
+[16:01:32] LLM done svcomp_235.c_attempt2, chars=536
+[16:01:43] LLM start svcomp_235.c_attempt3
+[16:01:50] LLM done svcomp_235.c_attempt3, chars=536
+[16:02:01] LLM start svcomp_235.c_attempt4
+[16:02:07] LLM done svcomp_235.c_attempt4, chars=536
+[16:02:18] LLM start svcomp_235.c_attempt5
+[16:02:27] LLM done svcomp_235.c_attempt5, chars=536
+[6/21] baseline1 svcomp/236.c
+[16:02:38] LLM start svcomp_236.c_attempt1
+[16:02:41] LLM done svcomp_236.c_attempt1, chars=338
+[16:02:42] LLM start svcomp_236.c_attempt2
+[16:02:46] LLM done svcomp_236.c_attempt2, chars=276
+[16:02:48] LLM start svcomp_236.c_attempt3
+[16:02:52] LLM done svcomp_236.c_attempt3, chars=461
+[16:02:53] LLM start svcomp_236.c_attempt4
+[16:02:58] LLM done svcomp_236.c_attempt4, chars=328
+[16:03:00] LLM start svcomp_236.c_attempt5
+[16:03:03] LLM done svcomp_236.c_attempt5, chars=304
+[7/21] baseline1 svcomp/237.c
+[16:03:04] LLM start svcomp_237.c_attempt1
+[16:03:08] LLM done svcomp_237.c_attempt1, chars=618
+[16:03:18] LLM start svcomp_237.c_attempt2
+[16:03:21] LLM done svcomp_237.c_attempt2, chars=536
+[16:03:32] LLM start svcomp_237.c_attempt3
+[16:03:35] LLM done svcomp_237.c_attempt3, chars=638
+[16:03:46] LLM start svcomp_237.c_attempt4
+[16:03:49] LLM done svcomp_237.c_attempt4, chars=508
+[16:04:00] LLM start svcomp_237.c_attempt5
+[16:04:05] LLM done svcomp_237.c_attempt5, chars=524
+[8/21] baseline1 svcomp/238.c
+[16:04:16] LLM start svcomp_238.c_attempt1
+[16:04:22] LLM done svcomp_238.c_attempt1, chars=900
+[16:04:33] LLM start svcomp_238.c_attempt2
+[16:04:42] LLM done svcomp_238.c_attempt2, chars=901
+[16:04:53] LLM start svcomp_238.c_attempt3
+[16:05:01] LLM done svcomp_238.c_attempt3, chars=898
+[16:05:12] LLM start svcomp_238.c_attempt4
+[16:05:16] LLM done svcomp_238.c_attempt4, chars=867
+[16:05:26] LLM start svcomp_238.c_attempt5
+[16:05:34] LLM done svcomp_238.c_attempt5, chars=900
+[9/21] baseline1 svcomp/239.c
+[16:05:45] LLM start svcomp_239.c_attempt1
+[16:05:51] LLM done svcomp_239.c_attempt1, chars=634
+[16:06:01] LLM start svcomp_239.c_attempt2
+[16:06:08] LLM done svcomp_239.c_attempt2, chars=830
+[16:06:19] LLM start svcomp_239.c_attempt3
+[16:06:23] LLM done svcomp_239.c_attempt3, chars=571
+[16:06:34] LLM start svcomp_239.c_attempt4
+[16:06:38] LLM done svcomp_239.c_attempt4, chars=774
+[16:06:49] LLM start svcomp_239.c_attempt5
+[16:06:52] LLM done svcomp_239.c_attempt5, chars=631
+[10/21] baseline1 svcomp/240.c
+[16:07:03] LLM start svcomp_240.c_attempt1
+[16:07:10] LLM done svcomp_240.c_attempt1, chars=759
+[16:07:21] LLM start svcomp_240.c_attempt2
+[16:07:27] LLM done svcomp_240.c_attempt2, chars=632
+[16:07:38] LLM start svcomp_240.c_attempt3
+[16:07:45] LLM done svcomp_240.c_attempt3, chars=632
+[16:07:56] LLM start svcomp_240.c_attempt4
+[16:08:06] LLM done svcomp_240.c_attempt4, chars=770
+[16:08:17] LLM start svcomp_240.c_attempt5
+[16:08:23] LLM done svcomp_240.c_attempt5, chars=773
+[11/21] baseline1 svcomp/241.c
+[16:08:34] LLM start svcomp_241.c_attempt1
+[16:08:37] LLM done svcomp_241.c_attempt1, chars=653
+[16:08:38] LLM start svcomp_241.c_attempt2
+[16:08:42] LLM done svcomp_241.c_attempt2, chars=482
+[16:08:52] LLM start svcomp_241.c_attempt3
+[16:08:56] LLM done svcomp_241.c_attempt3, chars=503
+[16:09:06] LLM start svcomp_241.c_attempt4
+[16:09:09] LLM done svcomp_241.c_attempt4, chars=513
+[16:09:10] LLM start svcomp_241.c_attempt5
+[16:09:15] LLM done svcomp_241.c_attempt5, chars=609
+[12/21] baseline1 svcomp/242.c
+[16:09:25] LLM start svcomp_242.c_attempt1
+[16:09:29] LLM done svcomp_242.c_attempt1, chars=444
+[16:09:39] LLM start svcomp_242.c_attempt2
+[16:09:44] LLM done svcomp_242.c_attempt2, chars=557
+[16:09:55] LLM start svcomp_242.c_attempt3
+[16:10:01] LLM done svcomp_242.c_attempt3, chars=584
+[16:10:11] LLM start svcomp_242.c_attempt4
+[16:10:15] LLM done svcomp_242.c_attempt4, chars=673
+[16:10:26] LLM start svcomp_242.c_attempt5
+[16:10:30] LLM done svcomp_242.c_attempt5, chars=582
+[13/21] baseline1 svcomp/243.c
+[16:10:41] LLM start svcomp_243.c_attempt1
+[16:10:46] LLM done svcomp_243.c_attempt1, chars=584
+[16:10:57] LLM start svcomp_243.c_attempt2
+[16:11:02] LLM done svcomp_243.c_attempt2, chars=504
+[16:11:12] LLM start svcomp_243.c_attempt3
+[16:11:16] LLM done svcomp_243.c_attempt3, chars=543
+[16:11:27] LLM start svcomp_243.c_attempt4
+[16:11:33] LLM done svcomp_243.c_attempt4, chars=509
+[16:11:44] LLM start svcomp_243.c_attempt5
+[16:11:47] LLM done svcomp_243.c_attempt5, chars=584
+[14/21] baseline1 svcomp/244.c
+[16:11:49] LLM start svcomp_244.c_attempt1
+[16:11:56] LLM done svcomp_244.c_attempt1, chars=1050
+[16:12:08] LLM start svcomp_244.c_attempt2
+[16:12:12] LLM done svcomp_244.c_attempt2, chars=1003
+[16:12:23] LLM start svcomp_244.c_attempt3
+[16:12:27] LLM done svcomp_244.c_attempt3, chars=823
+[16:12:38] LLM start svcomp_244.c_attempt4
+[16:12:42] LLM done svcomp_244.c_attempt4, chars=902
+[16:12:53] LLM start svcomp_244.c_attempt5
+[16:12:57] LLM done svcomp_244.c_attempt5, chars=833
+[15/21] baseline1 svcomp/245.c
+[16:13:08] LLM start svcomp_245.c_attempt1
+[16:13:15] LLM done svcomp_245.c_attempt1, chars=719
+[16:13:15] LLM start svcomp_245.c_attempt2
+[16:13:23] LLM done svcomp_245.c_attempt2, chars=709
+[16:13:23] LLM start svcomp_245.c_attempt3
+[16:13:28] LLM done svcomp_245.c_attempt3, chars=604
+[16:13:28] LLM start svcomp_245.c_attempt4
+[16:13:34] LLM done svcomp_245.c_attempt4, chars=557
+[16:13:34] LLM start svcomp_245.c_attempt5
+[16:13:39] LLM done svcomp_245.c_attempt5, chars=746
+[16/21] baseline1 svcomp/246.c
+[16:13:39] LLM start svcomp_246.c_attempt1
+[16:13:43] LLM done svcomp_246.c_attempt1, chars=1125
+[16:13:56] LLM start svcomp_246.c_attempt2
+[16:14:08] LLM done svcomp_246.c_attempt2, chars=1056
+[16:14:20] LLM start svcomp_246.c_attempt3
+[16:14:28] LLM done svcomp_246.c_attempt3, chars=1327
+[16:14:40] LLM start svcomp_246.c_attempt4
+[16:14:45] LLM done svcomp_246.c_attempt4, chars=1168
+[16:14:58] LLM start svcomp_246.c_attempt5
+[16:15:02] LLM done svcomp_246.c_attempt5, chars=1235
+[17/21] baseline1 svcomp/247.c
+[16:15:14] LLM start svcomp_247.c_attempt1
+[16:15:20] LLM done svcomp_247.c_attempt1, chars=947
+[16:15:30] LLM start svcomp_247.c_attempt2
+[16:15:37] LLM done svcomp_247.c_attempt2, chars=1165
+[16:15:48] LLM start svcomp_247.c_attempt3
+[16:15:52] LLM done svcomp_247.c_attempt3, chars=1020
+[16:16:03] LLM start svcomp_247.c_attempt4
+[16:16:08] LLM done svcomp_247.c_attempt4, chars=932
+[16:16:18] LLM start svcomp_247.c_attempt5
+[16:16:24] LLM done svcomp_247.c_attempt5, chars=947
+[18/21] baseline1 svcomp/248.c
+[16:16:34] LLM start svcomp_248.c_attempt1
+[16:16:38] LLM done svcomp_248.c_attempt1, chars=953
+[16:16:38] LLM start svcomp_248.c_attempt2
+[16:16:41] LLM done svcomp_248.c_attempt2, chars=902
+[16:16:52] LLM start svcomp_248.c_attempt3
+[16:17:01] LLM done svcomp_248.c_attempt3, chars=1020
+[16:17:01] LLM start svcomp_248.c_attempt4
+[16:17:08] LLM done svcomp_248.c_attempt4, chars=899
+[16:17:19] LLM start svcomp_248.c_attempt5
+[16:17:27] LLM done svcomp_248.c_attempt5, chars=1031
+[19/21] baseline1 svcomp/249.c
+[16:17:39] LLM start svcomp_249.c_attempt1
+[16:17:46] LLM done svcomp_249.c_attempt1, chars=683
+[16:17:46] LLM start svcomp_249.c_attempt2
+[16:17:55] LLM done svcomp_249.c_attempt2, chars=608
+[16:18:05] LLM start svcomp_249.c_attempt3
+[16:18:11] LLM done svcomp_249.c_attempt3, chars=497
+[16:18:21] LLM start svcomp_249.c_attempt4
+[16:18:27] LLM done svcomp_249.c_attempt4, chars=561
+[16:18:37] LLM start svcomp_249.c_attempt5
+[16:18:43] LLM done svcomp_249.c_attempt5, chars=601
+[20/21] baseline1 svcomp/250.c
+[16:18:43] LLM start svcomp_250.c_attempt1
+[16:18:48] LLM done svcomp_250.c_attempt1, chars=610
+[16:18:59] LLM start svcomp_250.c_attempt2
+[16:19:04] LLM done svcomp_250.c_attempt2, chars=481
+[16:19:14] LLM start svcomp_250.c_attempt3
+[16:19:19] LLM done svcomp_250.c_attempt3, chars=582
+[16:19:30] LLM start svcomp_250.c_attempt4
+[16:19:34] LLM done svcomp_250.c_attempt4, chars=447
+[16:19:44] LLM start svcomp_250.c_attempt5
+[16:19:48] LLM done svcomp_250.c_attempt5, chars=443
+[21/21] baseline1 svcomp/251.c
+[16:19:49] LLM start svcomp_251.c_attempt1
+[16:19:53] LLM done svcomp_251.c_attempt1, chars=595
+[16:20:04] LLM start svcomp_251.c_attempt2
+[16:20:14] LLM done svcomp_251.c_attempt2, chars=804
+[16:20:14] LLM start svcomp_251.c_attempt3
+[16:20:20] LLM done svcomp_251.c_attempt3, chars=758
+[16:20:31] LLM start svcomp_251.c_attempt4
+[16:20:38] LLM done svcomp_251.c_attempt4, chars=747
+[16:20:49] LLM start svcomp_251.c_attempt5
+[16:20:53] LLM done svcomp_251.c_attempt5, chars=608
+Summary: /home/wangpeijie/wpj_2010215/spec_generation_abduction/results/baseline1_llm_direct/baseline1_summary.md
+Successful files: /home/wangpeijie/wpj_2010215/spec_generation_abduction/results/baseline1_llm_direct/successful_files
+Failed cases: /home/wangpeijie/wpj_2010215/spec_generation_abduction/results/baseline1_llm_direct/failed_cases
+Console log: /home/wangpeijie/wpj_2010215/spec_generation_abduction/results/baseline1_llm_direct/baseline1_console.txt

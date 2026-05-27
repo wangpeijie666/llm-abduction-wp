@@ -1,0 +1,111 @@
+Dataset: svcomp
+File: 243.c
+Source: /home/wangpeijie/wpj_2010215/spec_generation_abduction/data/AutoBench/svcomp/243.c
+Final status: Fail
+Best attempt: 3
+Best result: Fail_8_9
+
+Command:
+frama-c -wp -wp-precond-weakening -wp-no-callee-precond -wp-prover Alt-Ergo,Z3 -wp-prop=-@terminates,-@variant,-@decreases -wp-print -wp-timeout 8 /tmp/baseline1_ep9bjmv4/generated_specs/attempt_03.c
+
+WP stdout:
+[kernel] Parsing /tmp/baseline1_ep9bjmv4/generated_specs/attempt_03.c (with preprocessing)
+[wp] Running WP plugin...
+[wp] Warning: Missing RTE guards
+[wp] 8 goals scheduled
+[wp] [Timeout] typed_main_loop_invariant_established (Qed 6ms) (Z3)
+[wp] Proved goals:    8 / 9
+  Unreachable:     1
+  Qed:             5 (6ms-6ms-22ms)
+  Z3 4.8.12:       2 (70ms-108ms)
+  Timeout:         1
+------------------------------------------------------------
+  Function main
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline1_ep9bjmv4/generated_specs/attempt_03.c, line 10):
+Assume {
+  Type: is_sint32(j) /\ is_sint32(x) /\ is_sint32(y) /\ is_sint32(x - 1) /\
+      is_sint32(j + x - y).
+  (* Invariant *)
+  Have: y <= (j + x).
+  (* Invariant *)
+  Have: 0 <= x.
+  (* Invariant *)
+  Have: y <= j.
+  (* Then *)
+  Have: x != 0.
+}
+Prove: 0 < x.
+Prover Alt-Ergo 2.2.0 returns Failed
+unrecognized prover answer
+Prover Z3 4.8.12 returns Valid (Qed:20ms) (108ms) (25492)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline1_ep9bjmv4/generated_specs/attempt_03.c, line 10):
+Assume { Type: is_sint32(x). }
+Prove: 0 <= x.
+Prover Alt-Ergo 2.2.0 returns Failed
+unrecognized prover answer
+Prover Z3 4.8.12 returns Timeout (Qed:6ms) (8s)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline1_ep9bjmv4/generated_specs/attempt_03.c, line 11):
+Assume {
+  Type: is_sint32(j) /\ is_sint32(x) /\ is_sint32(y) /\ is_sint32(x - 1) /\
+      is_sint32(y - 1) /\ is_sint32(j + x - y).
+  (* Invariant *)
+  Have: y <= (j + x).
+  (* Invariant *)
+  Have: 0 <= x.
+  (* Invariant *)
+  Have: y <= j.
+  (* Then *)
+  Have: x != 0.
+  (* Invariant *)
+  Have: 0 < x.
+}
+Prove: y <= (1 + j).
+Prover Alt-Ergo 2.2.0 returns Failed
+unrecognized prover answer
+Prover Z3 4.8.12 returns Valid (Qed:22ms) (70ms) (25921)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline1_ep9bjmv4/generated_specs/attempt_03.c, line 11):
+Prove: true.
+Prover Qed returns Valid (4ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline1_ep9bjmv4/generated_specs/attempt_03.c, line 12):
+Prove: true.
+Prover Qed returns Valid (11ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline1_ep9bjmv4/generated_specs/attempt_03.c, line 12):
+Prove: true.
+Prover Qed returns Valid (4ms)
+
+------------------------------------------------------------
+
+Goal Assertion (file /tmp/baseline1_ep9bjmv4/generated_specs/attempt_03.c, line 21):
+Prove: true.
+Prover Qed returns Valid (8ms)
+
+------------------------------------------------------------
+
+Goal Loop assigns (file /tmp/baseline1_ep9bjmv4/generated_specs/attempt_03.c, line 13):
+Prove: true.
+Prover Qed returns Valid
+
+------------------------------------------------------------
+[wp:pedantic-assigns] /tmp/baseline1_ep9bjmv4/generated_specs/attempt_03.c:3: Warning: 
+  No 'assigns' specification for function 'main'.
+  Callers assumptions might be imprecise.
+
+
+WP stderr:

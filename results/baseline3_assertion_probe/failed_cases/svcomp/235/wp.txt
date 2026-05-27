@@ -1,0 +1,118 @@
+Dataset: svcomp
+File: 235.c
+Source: /home/wangpeijie/wpj_2010215/spec_generation_abduction/data/AutoBench/svcomp/235.c
+Final status: Fail
+Best attempt: 4
+Best result: Fail_12_13
+
+Command:
+frama-c -wp -wp-precond-weakening -wp-no-callee-precond -wp-prover Alt-Ergo,Z3 -wp-prop=-@terminates,-@variant,-@decreases -wp-print -wp-timeout 8 /tmp/baseline3_zh7nbc5e/attempt_04_repair_03/repair_03_01_01_add_invariant.c
+
+WP stdout:
+[kernel] Parsing /tmp/baseline3_zh7nbc5e/attempt_04_repair_03/repair_03_01_01_add_invariant.c (with preprocessing)
+[wp] Running WP plugin...
+[wp] Warning: Missing RTE guards
+[wp] 12 goals scheduled
+[wp] [Timeout] typed_main_loop_invariant_5_preserved (Qed 15ms) (Z3)
+[wp] Proved goals:   12 / 13
+  Unreachable:     1
+  Qed:            11 (1ms)
+  Timeout:         1
+------------------------------------------------------------
+  Function main
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline3_zh7nbc5e/attempt_04_repair_03/repair_03_01_01_add_invariant.c, line 12):
+Prove: true.
+Prover Qed returns Valid (14ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline3_zh7nbc5e/attempt_04_repair_03/repair_03_01_01_add_invariant.c, line 12):
+Prove: true.
+Prover Qed returns Valid (3ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline3_zh7nbc5e/attempt_04_repair_03/repair_03_01_01_add_invariant.c, line 13):
+Prove: true.
+Prover Qed returns Valid (8ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline3_zh7nbc5e/attempt_04_repair_03/repair_03_01_01_add_invariant.c, line 13):
+Prove: true.
+Prover Qed returns Valid (2ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline3_zh7nbc5e/attempt_04_repair_03/repair_03_01_01_add_invariant.c, line 14):
+Prove: true.
+Prover Qed returns Valid (13ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline3_zh7nbc5e/attempt_04_repair_03/repair_03_01_01_add_invariant.c, line 14):
+Prove: true.
+Prover Qed returns Valid (2ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline3_zh7nbc5e/attempt_04_repair_03/repair_03_01_01_add_invariant.c, line 15):
+Prove: true.
+Prover Qed returns Valid (7ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline3_zh7nbc5e/attempt_04_repair_03/repair_03_01_01_add_invariant.c, line 15):
+Prove: true.
+Prover Qed returns Valid (2ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline3_zh7nbc5e/attempt_04_repair_03/repair_03_01_01_add_invariant.c, line 16):
+Assume {
+  Type: is_sint32(i) /\ is_sint32(j) /\ is_sint32(j - 1) /\ is_sint32(2 + i).
+  (* Invariant *)
+  Have: (0 < i) /\ (i <= (2 + j)).
+  (* Invariant *)
+  Have: i < j.
+  (* Invariant *)
+  Have: (-1) <= j.
+  (* Invariant *)
+  Have: (4 + i) <= j.
+  (* Invariant *)
+  Have: (7 + i) <= j.
+  (* Invariant *)
+  Have: 0 <= j.
+}
+Prove: (10 + i) <= j.
+Prover Alt-Ergo 2.2.0 returns Failed
+unrecognized prover answer
+Prover Z3 4.8.12 returns Timeout (Qed:15ms) (8s)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline3_zh7nbc5e/attempt_04_repair_03/repair_03_01_01_add_invariant.c, line 16):
+Prove: true.
+Prover Qed returns Valid (2ms)
+
+------------------------------------------------------------
+
+Goal Assertion (file /tmp/baseline3_zh7nbc5e/attempt_04_repair_03/repair_03_01_01_add_invariant.c, line 26):
+Prove: true.
+Prover Qed returns Valid (4ms)
+
+------------------------------------------------------------
+
+Goal Loop assigns (file /tmp/baseline3_zh7nbc5e/attempt_04_repair_03/repair_03_01_01_add_invariant.c, line 17):
+Prove: true.
+Prover Qed returns Valid
+
+------------------------------------------------------------
+[wp:pedantic-assigns] /tmp/baseline3_zh7nbc5e/attempt_04_repair_03/repair_03_01_01_add_invariant.c:7: Warning: 
+  No 'assigns' specification for function 'main'.
+  Callers assumptions might be imprecise.
+
+
+WP stderr:

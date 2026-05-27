@@ -1,0 +1,156 @@
+Dataset: svcomp
+File: 238.c
+Source: /home/wangpeijie/wpj_2010215/spec_generation_abduction/data/AutoBench/svcomp/238.c
+Final status: Fail
+Best attempt: 1
+Best result: Fail_10_12
+
+Command:
+frama-c -wp -wp-precond-weakening -wp-no-callee-precond -wp-prover Alt-Ergo,Z3 -wp-prop=-@terminates,-@variant,-@decreases -wp-print -wp-timeout 8 /tmp/baseline1_kdnw3weq/generated_specs/attempt_01.c
+
+WP stdout:
+[kernel] Parsing /tmp/baseline1_kdnw3weq/generated_specs/attempt_01.c (with preprocessing)
+[kernel:typing:no-proto] /tmp/baseline1_kdnw3weq/generated_specs/attempt_01.c:9: Warning: 
+  Function unknown_int is declared without prototype.
+  Its formals will be inferred from actual arguments at first call.
+  Declare it as unknown_int(void) if the function does not take any parameters.
+[wp] Running WP plugin...
+[kernel:annot:missing-spec] /tmp/baseline1_kdnw3weq/generated_specs/attempt_01.c:9: Warning: 
+  Neither code nor explicit exits, assigns and terminates for function unknown_int,
+   generating default clauses. See -generated-spec-* options for more info
+[wp] Warning: Missing RTE guards
+[wp] 12 goals scheduled
+[wp] [Timeout] typed_main_loop_invariant_4_preserved (Qed 178ms) (Z3)
+[wp] [Timeout] typed_main_assert (Qed 46ms) (Z3)
+[wp] Proved goals:   10 / 12
+  Qed:            10 (46ms-19ms-178ms)
+  Timeout:         2
+------------------------------------------------------------
+  Function main
+------------------------------------------------------------
+
+Goal Exit-condition (generated) in 'main':
+Prove: true.
+Prover Qed returns Valid
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline1_kdnw3weq/generated_specs/attempt_01.c, line 24):
+Prove: true.
+Prover Qed returns Valid (16ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline1_kdnw3weq/generated_specs/attempt_01.c, line 24):
+Prove: true.
+Prover Qed returns Valid (5ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline1_kdnw3weq/generated_specs/attempt_01.c, line 25):
+Prove: true.
+Prover Qed returns Valid (16ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline1_kdnw3weq/generated_specs/attempt_01.c, line 25):
+Prove: true.
+Prover Qed returns Valid (6ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline1_kdnw3weq/generated_specs/attempt_01.c, line 26):
+Prove: true.
+Prover Qed returns Valid (17ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline1_kdnw3weq/generated_specs/attempt_01.c, line 26):
+Prove: true.
+Prover Qed returns Valid (13ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline1_kdnw3weq/generated_specs/attempt_01.c, line 27):
+Assume {
+  Type: is_uint32(a) /\ is_uint32(b) /\ is_uint32(i) /\ is_uint32(i_1) /\
+      is_uint32(j) /\ is_uint32(j_1) /\ is_uint32(j_2) /\ is_uint32(j_3) /\
+      is_sint32(flag_0) /\ is_sint32(tmp_0_0).
+  (* Call 'unknown_int' *)
+  Have: ((-2147483648) <= flag_0) /\ (flag_0 <= 2147483647).
+  If flag_0 != 0
+  Then { Have: i_1 = 0. }
+  Else { Have: i_1 = 1. }
+  (* Invariant *)
+  Have: 0 <= i_1.
+  (* Invariant *)
+  Have: 0 <= a.
+  (* Invariant *)
+  Have: 0 <= b.
+  (* Invariant *)
+  Have: 0 <= i.
+  (* Invariant *)
+  Have: 0 < j_3.
+  (* Call 'unknown_int' *)
+  Have: ((-2147483648) <= tmp_0_0) /\ (tmp_0_0 <= 2147483647).
+  (* Then *)
+  Have: tmp_0_0 != 0.
+  If to_uint32(to_uint32(2 + i) % 2) = 0
+  Then { Have: j_3 = j_1. Have: to_uint32(2 + j_1) = j. }
+  Else { Have: j_3 = j_2. Have: to_uint32(1 + j_2) = j. }
+}
+Prove: 0 < j.
+Prover Alt-Ergo 2.2.0 returns Failed
+unrecognized prover answer
+Prover Z3 4.8.12 returns Timeout (Qed:178ms) (8s)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline1_kdnw3weq/generated_specs/attempt_01.c, line 27):
+Prove: true.
+Prover Qed returns Valid (8ms)
+
+------------------------------------------------------------
+
+Goal Assertion (file /tmp/baseline1_kdnw3weq/generated_specs/attempt_01.c, line 42):
+Assume {
+  Type: is_uint32(a) /\ is_uint32(b) /\ is_uint32(i) /\ is_uint32(j) /\
+      is_sint32(flag_0).
+  (* Call 'unknown_int' *)
+  Have: ((-2147483648) <= flag_0) /\ (flag_0 <= 2147483647).
+  (* Invariant *)
+  Have: 0 <= a.
+  (* Invariant *)
+  Have: 0 <= b.
+  (* Invariant *)
+  Have: 0 <= i.
+  (* Invariant *)
+  Have: 0 < j.
+  (* Then *)
+  Have: flag_0 != 0.
+}
+Prove: b = a.
+Prover Alt-Ergo 2.2.0 returns Failed
+unrecognized prover answer
+Prover Z3 4.8.12 returns Timeout (Qed:46ms) (8s)
+
+------------------------------------------------------------
+
+Goal Loop assigns (file /tmp/baseline1_kdnw3weq/generated_specs/attempt_01.c, line 28) (1/2):
+Prove: true.
+Prover Qed returns Valid
+
+------------------------------------------------------------
+
+Goal Loop assigns (file /tmp/baseline1_kdnw3weq/generated_specs/attempt_01.c, line 28) (2/2):
+Call Result at line 30
+Prove: true.
+Prover Qed returns Valid (23ms)
+
+------------------------------------------------------------
+[wp:pedantic-assigns] /tmp/baseline1_kdnw3weq/generated_specs/attempt_01.c:11: Warning: 
+  No 'assigns' specification for function 'main'.
+  Callers assumptions might be imprecise.
+
+
+WP stderr:

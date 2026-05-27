@@ -1,0 +1,255 @@
+Dataset: svcomp
+File: 246.c
+Source: /home/wangpeijie/wpj_2010215/spec_generation_abduction/data/AutoBench/svcomp/246.c
+Final status: Fail
+Best attempt: 2
+Best result: Fail_16_18
+
+Command:
+frama-c -wp -wp-precond-weakening -wp-no-callee-precond -wp-prover Alt-Ergo,Z3 -wp-prop=-@terminates,-@variant,-@decreases -wp-print -wp-timeout 8 /tmp/baseline3_tu7roox5/generated_specs/attempt_02.c
+
+WP stdout:
+[kernel] Parsing /tmp/baseline3_tu7roox5/generated_specs/attempt_02.c (with preprocessing)
+[kernel:typing:no-proto] /tmp/baseline3_tu7roox5/generated_specs/attempt_02.c:6: Warning: 
+  Function unknown_int is declared without prototype.
+  Its formals will be inferred from actual arguments at first call.
+  Declare it as unknown_int(void) if the function does not take any parameters.
+[wp] Running WP plugin...
+[kernel:annot:missing-spec] /tmp/baseline3_tu7roox5/generated_specs/attempt_02.c:6: Warning: 
+  Neither code nor explicit exits and terminates for function unknown_int,
+   generating default clauses. See -generated-spec-* options for more info
+[wp] Warning: Missing RTE guards
+[wp] 18 goals scheduled
+[wp] [Timeout] typed_main_loop_invariant_established (Qed 8ms) (Z3)
+[wp] [Timeout] typed_main_loop_invariant_3_established (Qed 23ms) (Z3)
+[wp] Proved goals:   16 / 18
+  Qed:            13 (8ms-14ms-120ms)
+  Z3 4.8.12:       3 (95ms-116ms)
+  Timeout:         2
+------------------------------------------------------------
+  Function main
+------------------------------------------------------------
+
+Goal Exit-condition (generated) in 'main':
+Prove: true.
+Prover Qed returns Valid
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline3_tu7roox5/generated_specs/attempt_02.c, line 20):
+Prove: true.
+Prover Qed returns Valid (25ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline3_tu7roox5/generated_specs/attempt_02.c, line 20):
+Assume {
+  Type: is_sint32(n).
+  (* Call 'unknown_int' *)
+  Have: ((-2147483648) <= n) /\ (n <= 2147483647).
+}
+Prove: 0 <= n.
+Prover Alt-Ergo 2.2.0 returns Failed
+unrecognized prover answer
+Prover Z3 4.8.12 returns Timeout (Qed:8ms) (8s)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline3_tu7roox5/generated_specs/attempt_02.c, line 22):
+Prove: true.
+Prover Qed returns Valid (13ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline3_tu7roox5/generated_specs/attempt_02.c, line 22):
+Prove: true.
+Prover Qed returns Valid (5ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline3_tu7roox5/generated_specs/attempt_02.c, line 28):
+Let x = 2 * i.
+Let x_1 = 1 + j.
+Assume {
+  Type: is_sint32(i) /\ is_sint32(j) /\ is_sint32(k) /\ is_sint32(n) /\
+      is_sint32(tmp_0) /\ is_sint32(x) /\ is_sint32(x_1).
+  (* Call 'unknown_int' *)
+  Have: ((-2147483648) <= n) /\ (n <= 2147483647).
+  (* Invariant *)
+  Have: 0 <= n.
+  (* Invariant *)
+  Have: (0 <= i) /\ (i <= n).
+  (* Then *)
+  Have: i < n.
+  (* Invariant *)
+  Have: x <= n.
+  (* Invariant *)
+  Have: (j <= n) /\ (x <= j).
+  (* Then *)
+  Have: j < n.
+  (* Call 'unknown_int' *)
+  Have: ((-2147483648) <= tmp_0) /\ (tmp_0 <= 2147483647).
+  If tmp_0 != 0
+  Then { (* Invariant *) Have: (j <= k) /\ (k <= n). (* Else *) Have: n <= k.
+  }
+}
+Prove: x <= x_1.
+Prover Alt-Ergo 2.2.0 returns Failed
+unrecognized prover answer
+Prover Z3 4.8.12 returns Valid (Qed:120ms) (97ms) (27115)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline3_tu7roox5/generated_specs/attempt_02.c, line 28):
+Let x = 2 * i.
+Assume {
+  Type: is_sint32(i) /\ is_sint32(n) /\ is_sint32(x).
+  (* Call 'unknown_int' *)
+  Have: ((-2147483648) <= n) /\ (n <= 2147483647).
+  (* Invariant *)
+  Have: 0 <= n.
+  (* Invariant *)
+  Have: (0 <= i) /\ (i <= n).
+  (* Then *)
+  Have: i < n.
+}
+Prove: x <= n.
+Prover Alt-Ergo 2.2.0 returns Failed
+unrecognized prover answer
+Prover Z3 4.8.12 returns Timeout (Qed:23ms) (8s)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline3_tu7roox5/generated_specs/attempt_02.c, line 30):
+Prove: true.
+Prover Qed returns Valid (122ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline3_tu7roox5/generated_specs/attempt_02.c, line 30):
+Prove: true.
+Prover Qed returns Valid (10ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline3_tu7roox5/generated_specs/attempt_02.c, line 37):
+Let x = 2 * i.
+Let x_1 = 1 + k.
+Assume {
+  Type: is_sint32(i) /\ is_sint32(j) /\ is_sint32(k) /\ is_sint32(n) /\
+      is_sint32(tmp_0) /\ is_sint32(x) /\ is_sint32(x_1).
+  (* Call 'unknown_int' *)
+  Have: ((-2147483648) <= n) /\ (n <= 2147483647).
+  (* Invariant *)
+  Have: 0 <= n.
+  (* Invariant *)
+  Have: (0 <= i) /\ (i <= n).
+  (* Then *)
+  Have: i < n.
+  (* Invariant *)
+  Have: x <= n.
+  (* Invariant *)
+  Have: (j <= n) /\ (x <= j).
+  (* Then *)
+  Have: j < n.
+  (* Call 'unknown_int' *)
+  Have: ((-2147483648) <= tmp_0) /\ (tmp_0 <= 2147483647).
+  (* Then *)
+  Have: tmp_0 != 0.
+  (* Invariant *)
+  Have: (j <= k) /\ (k <= n).
+  (* Then *)
+  Have: k < n.
+  (* Assertion *)
+  Have: x <= k.
+}
+Prove: j <= x_1.
+Prover Alt-Ergo 2.2.0 returns Failed
+unrecognized prover answer
+Prover Z3 4.8.12 returns Valid (Qed:49ms) (95ms) (27189)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline3_tu7roox5/generated_specs/attempt_02.c, line 37):
+Prove: true.
+Prover Qed returns Valid (16ms)
+
+------------------------------------------------------------
+
+Goal Assertion (file /tmp/baseline3_tu7roox5/generated_specs/attempt_02.c, line 43):
+Let x = 2 * i.
+Assume {
+  Type: is_sint32(i) /\ is_sint32(j) /\ is_sint32(k) /\ is_sint32(n) /\
+      is_sint32(tmp_0) /\ is_sint32(x).
+  (* Call 'unknown_int' *)
+  Have: ((-2147483648) <= n) /\ (n <= 2147483647).
+  (* Invariant *)
+  Have: 0 <= n.
+  (* Invariant *)
+  Have: (0 <= i) /\ (i <= n).
+  (* Then *)
+  Have: i < n.
+  (* Invariant *)
+  Have: x <= n.
+  (* Invariant *)
+  Have: (j <= n) /\ (x <= j).
+  (* Then *)
+  Have: j < n.
+  (* Call 'unknown_int' *)
+  Have: ((-2147483648) <= tmp_0) /\ (tmp_0 <= 2147483647).
+  (* Then *)
+  Have: tmp_0 != 0.
+  (* Invariant *)
+  Have: (j <= k) /\ (k <= n).
+  (* Then *)
+  Have: k < n.
+}
+Prove: x <= k.
+Prover Alt-Ergo 2.2.0 returns Failed
+unrecognized prover answer
+Prover Z3 4.8.12 returns Valid (Qed:43ms) (116ms) (27124)
+
+------------------------------------------------------------
+
+Goal Assertion (file /tmp/baseline3_tu7roox5/generated_specs/attempt_02.c, line 46):
+Prove: true.
+Prover Qed returns Valid (35ms)
+
+------------------------------------------------------------
+
+Goal Assertion (file /tmp/baseline3_tu7roox5/generated_specs/attempt_02.c, line 47):
+Prove: true.
+Prover Qed returns Valid (36ms)
+
+------------------------------------------------------------
+
+Goal Loop assigns (file /tmp/baseline3_tu7roox5/generated_specs/attempt_02.c, line 21):
+Prove: true.
+Prover Qed returns Valid
+
+------------------------------------------------------------
+
+Goal Loop assigns (file /tmp/baseline3_tu7roox5/generated_specs/attempt_02.c, line 29) (1/2):
+Prove: true.
+Prover Qed returns Valid
+
+------------------------------------------------------------
+
+Goal Loop assigns (file /tmp/baseline3_tu7roox5/generated_specs/attempt_02.c, line 29) (2/2):
+Call Result at line 35
+Prove: true.
+Prover Qed returns Valid (24ms)
+
+------------------------------------------------------------
+
+Goal Loop assigns (file /tmp/baseline3_tu7roox5/generated_specs/attempt_02.c, line 38):
+Prove: true.
+Prover Qed returns Valid
+
+------------------------------------------------------------
+[wp:pedantic-assigns] /tmp/baseline3_tu7roox5/generated_specs/attempt_02.c:8: Warning: 
+  No 'assigns' specification for function 'main'.
+  Callers assumptions might be imprecise.
+
+
+WP stderr:

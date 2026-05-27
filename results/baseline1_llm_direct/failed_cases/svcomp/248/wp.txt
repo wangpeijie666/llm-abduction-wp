@@ -1,0 +1,313 @@
+Dataset: svcomp
+File: 248.c
+Source: /home/wangpeijie/wpj_2010215/spec_generation_abduction/data/AutoBench/svcomp/248.c
+Final status: Fail
+Best attempt: 5
+Best result: Fail_20_23
+
+Command:
+frama-c -wp -wp-precond-weakening -wp-no-callee-precond -wp-prover Alt-Ergo,Z3 -wp-prop=-@terminates,-@variant,-@decreases -wp-print -wp-timeout 8 /tmp/baseline1_jdi3x3c_/generated_specs/attempt_05.c
+
+WP stdout:
+[kernel] Parsing /tmp/baseline1_jdi3x3c_/generated_specs/attempt_05.c (with preprocessing)
+[kernel:typing:no-proto] /tmp/baseline1_jdi3x3c_/generated_specs/attempt_05.c:5: Warning: 
+  Function unknown_int is declared without prototype.
+  Its formals will be inferred from actual arguments at first call.
+  Declare it as unknown_int(void) if the function does not take any parameters.
+[wp] Running WP plugin...
+[kernel:annot:missing-spec] /tmp/baseline1_jdi3x3c_/generated_specs/attempt_05.c:5: Warning: 
+  Neither code nor explicit exits, assigns and terminates for function unknown_int,
+   generating default clauses. See -generated-spec-* options for more info
+[wp] Warning: Missing RTE guards
+[wp] 23 goals scheduled
+[wp] [Timeout] typed_main_loop_invariant_2_established (Qed 9ms) (Z3)
+[wp] [Timeout] typed_main_loop_invariant_5_established (Qed 17ms) (Z3)
+[wp] [Timeout] typed_main_assert (Qed 62ms) (Z3)
+[wp] Proved goals:   20 / 23
+  Qed:            18 (9ms-7ms-62ms)
+  Z3 4.8.12:       2 (82ms)
+  Timeout:         3
+------------------------------------------------------------
+  Function main
+------------------------------------------------------------
+
+Goal Exit-condition (generated) in 'main':
+Prove: true.
+Prover Qed returns Valid (0.52ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline1_jdi3x3c_/generated_specs/attempt_05.c, line 16):
+Prove: true.
+Prover Qed returns Valid (19ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline1_jdi3x3c_/generated_specs/attempt_05.c, line 16):
+Prove: true.
+Prover Qed returns Valid (5ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline1_jdi3x3c_/generated_specs/attempt_05.c, line 17):
+Prove: true.
+Prover Qed returns Valid (9ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline1_jdi3x3c_/generated_specs/attempt_05.c, line 17):
+Assume {
+  Type: is_sint32(n0_0) /\ is_sint32(n1_0).
+  (* Call 'unknown_int' *)
+  Have: ((-2147483648) <= n0_0) /\ (n0_0 <= 2147483647).
+  (* Call 'unknown_int' *)
+  Have: ((-2147483648) <= n1_0) /\ (n1_0 <= 2147483647).
+}
+Prove: 0 <= n0_0.
+Prover Alt-Ergo 2.2.0 returns Failed
+unrecognized prover answer
+Prover Z3 4.8.12 returns Timeout (Qed:9ms) (8s)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline1_jdi3x3c_/generated_specs/attempt_05.c, line 18):
+Prove: true.
+Prover Qed returns Valid (10ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline1_jdi3x3c_/generated_specs/attempt_05.c, line 18):
+Prove: true.
+Prover Qed returns Valid (5ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline1_jdi3x3c_/generated_specs/attempt_05.c, line 28):
+Prove: true.
+Prover Qed returns Valid (27ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline1_jdi3x3c_/generated_specs/attempt_05.c, line 28):
+Prove: true.
+Prover Qed returns Valid (8ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline1_jdi3x3c_/generated_specs/attempt_05.c, line 29):
+Prove: true.
+Prover Qed returns Valid (13ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline1_jdi3x3c_/generated_specs/attempt_05.c, line 29):
+Assume {
+  Type: is_sint32(i0_0) /\ is_sint32(k) /\ is_sint32(n0_0) /\
+      is_sint32(n1_0).
+  (* Call 'unknown_int' *)
+  Have: ((-2147483648) <= n0_0) /\ (n0_0 <= 2147483647).
+  (* Call 'unknown_int' *)
+  Have: ((-2147483648) <= n1_0) /\ (n1_0 <= 2147483647).
+  (* Invariant *)
+  Have: 0 <= n0_0.
+  (* Invariant *)
+  Have: 0 <= i0_0.
+  (* Invariant *)
+  Have: i0_0 <= n0_0.
+  (* Invariant *)
+  Have: i0_0 <= k.
+  (* Else *)
+  Have: n0_0 <= i0_0.
+}
+Prove: 0 <= n1_0.
+Prover Alt-Ergo 2.2.0 returns Failed
+unrecognized prover answer
+Prover Z3 4.8.12 returns Timeout (Qed:17ms) (8s)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline1_jdi3x3c_/generated_specs/attempt_05.c, line 30):
+Prove: true.
+Prover Qed returns Valid (24ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline1_jdi3x3c_/generated_specs/attempt_05.c, line 30):
+Prove: true.
+Prover Qed returns Valid (15ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline1_jdi3x3c_/generated_specs/attempt_05.c, line 40):
+Prove: true.
+Prover Qed returns Valid (43ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline1_jdi3x3c_/generated_specs/attempt_05.c, line 40):
+Prove: true.
+Prover Qed returns Valid (14ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline1_jdi3x3c_/generated_specs/attempt_05.c, line 41):
+Prove: true.
+Prover Qed returns Valid (21ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline1_jdi3x3c_/generated_specs/attempt_05.c, line 41):
+Let x = i0_0 + i1_0.
+Assume {
+  Type: is_sint32(i0_0) /\ is_sint32(i1_0) /\ is_sint32(k) /\
+      is_sint32(k_1) /\ is_sint32(n0_0) /\ is_sint32(n1_0).
+  (* Call 'unknown_int' *)
+  Have: ((-2147483648) <= n0_0) /\ (n0_0 <= 2147483647).
+  (* Call 'unknown_int' *)
+  Have: ((-2147483648) <= n1_0) /\ (n1_0 <= 2147483647).
+  (* Invariant *)
+  Have: 0 <= n0_0.
+  (* Invariant *)
+  Have: 0 <= i0_0.
+  (* Invariant *)
+  Have: i0_0 <= n0_0.
+  (* Invariant *)
+  Have: i0_0 <= k_1.
+  (* Else *)
+  Have: n0_0 <= i0_0.
+  (* Invariant *)
+  Have: 0 <= n1_0.
+  (* Invariant *)
+  Have: 0 <= i1_0.
+  (* Invariant *)
+  Have: i1_0 <= n1_0.
+  (* Invariant *)
+  Have: x <= k.
+  (* Else *)
+  Have: n1_0 <= i1_0.
+}
+Prove: 0 <= x.
+Prover Alt-Ergo 2.2.0 returns Failed
+unrecognized prover answer
+Prover Z3 4.8.12 returns Valid (Qed:29ms) (80ms) (26616)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline1_jdi3x3c_/generated_specs/attempt_05.c, line 42):
+Prove: true.
+Prover Qed returns Valid (22ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline1_jdi3x3c_/generated_specs/attempt_05.c, line 42):
+Let x = i0_0 + i1_0.
+Assume {
+  Type: is_sint32(i0_0) /\ is_sint32(i1_0) /\ is_sint32(k) /\
+      is_sint32(k_1) /\ is_sint32(n0_0) /\ is_sint32(n1_0).
+  (* Call 'unknown_int' *)
+  Have: ((-2147483648) <= n0_0) /\ (n0_0 <= 2147483647).
+  (* Call 'unknown_int' *)
+  Have: ((-2147483648) <= n1_0) /\ (n1_0 <= 2147483647).
+  (* Invariant *)
+  Have: 0 <= n0_0.
+  (* Invariant *)
+  Have: 0 <= i0_0.
+  (* Invariant *)
+  Have: i0_0 <= n0_0.
+  (* Invariant *)
+  Have: i0_0 <= k_1.
+  (* Else *)
+  Have: n0_0 <= i0_0.
+  (* Invariant *)
+  Have: 0 <= n1_0.
+  (* Invariant *)
+  Have: 0 <= i1_0.
+  (* Invariant *)
+  Have: i1_0 <= n1_0.
+  (* Invariant *)
+  Have: x <= k.
+  (* Else *)
+  Have: n1_0 <= i1_0.
+  (* Invariant *)
+  Have: 0 <= x.
+}
+Prove: 0 <= k.
+Prover Alt-Ergo 2.2.0 returns Failed
+unrecognized prover answer
+Prover Z3 4.8.12 returns Valid (Qed:36ms) (84ms) (26697)
+
+------------------------------------------------------------
+
+Goal Assertion (file /tmp/baseline1_jdi3x3c_/generated_specs/attempt_05.c, line 46):
+Let x = i0_0 + i1_0.
+Assume {
+  Type: is_sint32(i0_0) /\ is_sint32(i1_0) /\ is_sint32(j1_0) /\
+      is_sint32(k) /\ is_sint32(k_1) /\ is_sint32(k_2) /\ is_sint32(n0_0) /\
+      is_sint32(n1_0).
+  (* Call 'unknown_int' *)
+  Have: ((-2147483648) <= n0_0) /\ (n0_0 <= 2147483647).
+  (* Call 'unknown_int' *)
+  Have: ((-2147483648) <= n1_0) /\ (n1_0 <= 2147483647).
+  (* Invariant *)
+  Have: 0 <= n0_0.
+  (* Invariant *)
+  Have: 0 <= i0_0.
+  (* Invariant *)
+  Have: i0_0 <= n0_0.
+  (* Invariant *)
+  Have: i0_0 <= k_2.
+  (* Else *)
+  Have: n0_0 <= i0_0.
+  (* Invariant *)
+  Have: 0 <= n1_0.
+  (* Invariant *)
+  Have: 0 <= i1_0.
+  (* Invariant *)
+  Have: i1_0 <= n1_0.
+  (* Invariant *)
+  Have: x <= k_1.
+  (* Else *)
+  Have: n1_0 <= i1_0.
+  (* Invariant *)
+  Have: 0 <= x.
+  (* Invariant *)
+  Have: 0 <= k_1.
+  (* Invariant *)
+  Have: 0 <= j1_0.
+  (* Invariant *)
+  Have: j1_0 <= x.
+  (* Invariant *)
+  Have: 0 <= k.
+  (* Then *)
+  Have: j1_0 < x.
+}
+Prove: 0 < k.
+Prover Alt-Ergo 2.2.0 returns Failed
+unrecognized prover answer
+Prover Z3 4.8.12 returns Timeout (Qed:62ms) (8s)
+
+------------------------------------------------------------
+
+Goal Loop assigns (file /tmp/baseline1_jdi3x3c_/generated_specs/attempt_05.c, line 19):
+Prove: true.
+Prover Qed returns Valid
+
+------------------------------------------------------------
+
+Goal Loop assigns (file /tmp/baseline1_jdi3x3c_/generated_specs/attempt_05.c, line 31):
+Prove: true.
+Prover Qed returns Valid
+
+------------------------------------------------------------
+
+Goal Loop assigns (file /tmp/baseline1_jdi3x3c_/generated_specs/attempt_05.c, line 43):
+Prove: true.
+Prover Qed returns Valid
+
+------------------------------------------------------------
+[wp:pedantic-assigns] /tmp/baseline1_jdi3x3c_/generated_specs/attempt_05.c:7: Warning: 
+  No 'assigns' specification for function 'main'.
+  Callers assumptions might be imprecise.
+
+
+WP stderr:

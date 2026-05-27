@@ -1,0 +1,19 @@
+Dataset: svcomp
+File: 232.c
+Source: /home/wangpeijie/wpj_2010215/spec_generation_abduction/data/AutoBench/svcomp/232.c
+Final status: Invalid
+Best attempt: 1
+Best result: Invalid
+
+Command:
+frama-c -wp -wp-precond-weakening -wp-no-callee-precond -wp-prover Alt-Ergo,Z3 -wp-prop=-@terminates,-@variant,-@decreases -wp-print -wp-timeout 8 /tmp/baseline2_2vp621e0/generated_specs/round_01.c
+
+WP stdout:
+[kernel] Parsing /tmp/baseline2_2vp621e0/generated_specs/round_01.c (with preprocessing)
+[kernel:annot-error] /tmp/baseline2_2vp621e0/generated_specs/round_01.c:6: Warning: 
+  unbound logic variable A. Ignoring logic specification of function main
+[kernel] User Error: warning annot-error treated as fatal error.
+[kernel] Frama-C aborted: invalid user input.
+
+
+WP stderr:

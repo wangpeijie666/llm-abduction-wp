@@ -1,0 +1,85 @@
+Dataset: svcomp
+File: 249.c
+Source: /home/wangpeijie/wpj_2010215/spec_generation_abduction/data/AutoBench/svcomp/249.c
+Final status: Fail
+Best attempt: 2
+Best result: Fail_6_7
+
+Command:
+frama-c -wp -wp-precond-weakening -wp-no-callee-precond -wp-prover Alt-Ergo,Z3 -wp-prop=-@terminates,-@variant,-@decreases -wp-print -wp-timeout 8 /tmp/baseline1_zsa63d24/generated_specs/attempt_02.c
+
+WP stdout:
+[kernel] Parsing /tmp/baseline1_zsa63d24/generated_specs/attempt_02.c (with preprocessing)
+[kernel:typing:no-proto] /tmp/baseline1_zsa63d24/generated_specs/attempt_02.c:7: Warning: 
+  Function unknown_int is declared without prototype.
+  Its formals will be inferred from actual arguments at first call.
+  Declare it as unknown_int(void) if the function does not take any parameters.
+[wp] Running WP plugin...
+[wp] Warning: Missing RTE guards
+[wp] 6 goals scheduled
+[wp] [Timeout] typed_main_loop_invariant_established (Qed 4ms) (Z3)
+[wp] Proved goals:    6 / 7
+  Unreachable:     1
+  Qed:             4 (4ms-4ms-17ms)
+  Z3 4.8.12:       1 (101ms)
+  Timeout:         1
+------------------------------------------------------------
+  Function main
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline1_zsa63d24/generated_specs/attempt_02.c, line 15):
+Prove: true.
+Prover Qed returns Valid (9ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline1_zsa63d24/generated_specs/attempt_02.c, line 15):
+Assume { Type: is_sint32(n). }
+Prove: 0 <= n.
+Prover Alt-Ergo 2.2.0 returns Failed
+unrecognized prover answer
+Prover Z3 4.8.12 returns Timeout (Qed:4ms) (8s)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline1_zsa63d24/generated_specs/attempt_02.c, line 16):
+Prove: true.
+Prover Qed returns Valid (7ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline1_zsa63d24/generated_specs/attempt_02.c, line 16):
+Prove: true.
+Prover Qed returns Valid (3ms)
+
+------------------------------------------------------------
+
+Goal Assertion (file /tmp/baseline1_zsa63d24/generated_specs/attempt_02.c, line 23):
+Let x = 1 + n.
+Assume {
+  Type: is_sint32(i) /\ is_sint32(n) /\ is_sint32((2 * i) - 2).
+  (* Invariant *)
+  Have: 0 <= n.
+  (* Invariant *)
+  Have: (0 < i) /\ (i <= x).
+  (* Else *)
+  Have: n < i.
+}
+Prove: (i = 1) \/ (x = i).
+Prover Alt-Ergo 2.2.0 returns Failed
+unrecognized prover answer
+Prover Z3 4.8.12 returns Valid (Qed:17ms) (101ms) (25215)
+
+------------------------------------------------------------
+
+Goal Loop assigns (file /tmp/baseline1_zsa63d24/generated_specs/attempt_02.c, line 17):
+Prove: true.
+Prover Qed returns Valid
+
+------------------------------------------------------------
+[wp:pedantic-assigns] /tmp/baseline1_zsa63d24/generated_specs/attempt_02.c:9: Warning: 
+  No 'assigns' specification for function 'main'.
+  Callers assumptions might be imprecise.
+
+
+WP stderr:

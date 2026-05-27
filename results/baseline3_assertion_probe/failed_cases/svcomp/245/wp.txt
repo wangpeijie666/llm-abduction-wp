@@ -1,0 +1,17 @@
+Dataset: svcomp
+File: 245.c
+Source: /home/wangpeijie/wpj_2010215/spec_generation_abduction/data/AutoBench/svcomp/245.c
+Final status: Error
+Best attempt: 1
+Best result: Error
+
+Command:
+
+
+Attempt error:
+GeneratedCodeError: LLM changed executable C code; only ACSL/comments are allowed
+
+WP stdout:
+
+
+WP stderr:

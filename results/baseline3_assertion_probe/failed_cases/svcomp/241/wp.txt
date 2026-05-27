@@ -1,0 +1,80 @@
+Dataset: svcomp
+File: 241.c
+Source: /home/wangpeijie/wpj_2010215/spec_generation_abduction/data/AutoBench/svcomp/241.c
+Final status: Fail
+Best attempt: 1
+Best result: Fail_8_9
+
+Command:
+frama-c -wp -wp-precond-weakening -wp-no-callee-precond -wp-prover Alt-Ergo,Z3 -wp-prop=-@terminates,-@variant,-@decreases -wp-print -wp-timeout 8 /tmp/baseline3_g37jzzeo/generated_specs/attempt_01.c
+
+WP stdout:
+[kernel] Parsing /tmp/baseline3_g37jzzeo/generated_specs/attempt_01.c (with preprocessing)
+[wp] Running WP plugin...
+[wp] Warning: Missing RTE guards
+[wp] 8 goals scheduled
+[wp] [Timeout] typed_main_loop_invariant_established (Qed 4ms) (Z3)
+[wp] Proved goals:    8 / 9
+  Unreachable:     1
+  Qed:             7 (0.54ms)
+  Timeout:         1
+------------------------------------------------------------
+  Function main
+------------------------------------------------------------
+
+Goal Pre-condition (file /tmp/baseline3_g37jzzeo/generated_specs/attempt_01.c, line 4) in 'main':
+Prove: true.
+Prover Qed returns Valid
+
+------------------------------------------------------------
+
+Goal Post-condition (file /tmp/baseline3_g37jzzeo/generated_specs/attempt_01.c, line 5) in 'main':
+Prove: true.
+Prover Qed returns Valid (9ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline3_g37jzzeo/generated_specs/attempt_01.c, line 17):
+Prove: true.
+Prover Qed returns Valid (8ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline3_g37jzzeo/generated_specs/attempt_01.c, line 17):
+Assume { Type: is_sint32(cnt_0). }
+Prove: 0 <= cnt_0.
+Prover Alt-Ergo 2.2.0 returns Failed
+unrecognized prover answer
+Prover Z3 4.8.12 returns Timeout (Qed:4ms) (8s)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline3_g37jzzeo/generated_specs/attempt_01.c, line 18):
+Prove: true.
+Prover Qed returns Valid (12ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline3_g37jzzeo/generated_specs/attempt_01.c, line 18):
+Prove: true.
+Prover Qed returns Valid (6ms)
+
+------------------------------------------------------------
+
+Goal Assertion (file /tmp/baseline3_g37jzzeo/generated_specs/attempt_01.c, line 29):
+Prove: true.
+Prover Qed returns Valid (15ms)
+
+------------------------------------------------------------
+
+Goal Loop assigns (file /tmp/baseline3_g37jzzeo/generated_specs/attempt_01.c, line 19):
+Prove: true.
+Prover Qed returns Valid
+
+------------------------------------------------------------
+[wp:pedantic-assigns] /tmp/baseline3_g37jzzeo/generated_specs/attempt_01.c:7: Warning: 
+  No 'assigns' specification for function 'main'.
+  Callers assumptions might be imprecise.
+
+
+WP stderr:

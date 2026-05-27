@@ -1,0 +1,96 @@
+Dataset: svcomp
+File: 237.c
+Source: /home/wangpeijie/wpj_2010215/spec_generation_abduction/data/AutoBench/svcomp/237.c
+Final status: Fail
+Best attempt: 2
+Best result: Fail_8_9
+
+Command:
+frama-c -wp -wp-precond-weakening -wp-no-callee-precond -wp-prover Alt-Ergo,Z3 -wp-prop=-@terminates,-@variant,-@decreases -wp-print -wp-timeout 8 /tmp/baseline1_ys5t88qw/generated_specs/attempt_02.c
+
+WP stdout:
+[kernel] Parsing /tmp/baseline1_ys5t88qw/generated_specs/attempt_02.c (with preprocessing)
+[kernel:typing:no-proto] /tmp/baseline1_ys5t88qw/generated_specs/attempt_02.c:6: Warning: 
+  Function unknown_int is declared without prototype.
+  Its formals will be inferred from actual arguments at first call.
+  Declare it as unknown_int(void) if the function does not take any parameters.
+[wp] Running WP plugin...
+[kernel:annot:missing-spec] /tmp/baseline1_ys5t88qw/generated_specs/attempt_02.c:6: Warning: 
+  Neither code nor explicit exits, assigns and terminates for function unknown_int,
+   generating default clauses. See -generated-spec-* options for more info
+[wp] Warning: Missing RTE guards
+[wp] 9 goals scheduled
+[wp] [Timeout] typed_main_loop_invariant_2_established (Qed 6ms) (Z3)
+[wp] Proved goals:    8 / 9
+  Qed:             8 (0.64ms)
+  Timeout:         1
+------------------------------------------------------------
+  Function main
+------------------------------------------------------------
+
+Goal Exit-condition (generated) in 'main':
+Prove: true.
+Prover Qed returns Valid
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline1_ys5t88qw/generated_specs/attempt_02.c, line 15):
+Prove: true.
+Prover Qed returns Valid (5ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline1_ys5t88qw/generated_specs/attempt_02.c, line 15):
+Prove: true.
+Prover Qed returns Valid (3ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline1_ys5t88qw/generated_specs/attempt_02.c, line 16):
+Prove: true.
+Prover Qed returns Valid (5ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline1_ys5t88qw/generated_specs/attempt_02.c, line 16):
+Assume {
+  Type: is_sint32(k).
+  (* Call 'unknown_int' *)
+  Have: (0 <= k) /\ (k <= 1).
+}
+Prove: k = (-1).
+Prover Alt-Ergo 2.2.0 returns Failed
+unrecognized prover answer
+Prover Z3 4.8.12 returns Timeout (Qed:6ms) (8s)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline1_ys5t88qw/generated_specs/attempt_02.c, line 17):
+Prove: true.
+Prover Qed returns Valid (5ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline1_ys5t88qw/generated_specs/attempt_02.c, line 17):
+Prove: true.
+Prover Qed returns Valid (3ms)
+
+------------------------------------------------------------
+
+Goal Assertion (file /tmp/baseline1_ys5t88qw/generated_specs/attempt_02.c, line 24):
+Prove: true.
+Prover Qed returns Valid (4ms)
+
+------------------------------------------------------------
+
+Goal Loop assigns (file /tmp/baseline1_ys5t88qw/generated_specs/attempt_02.c, line 18):
+Prove: true.
+Prover Qed returns Valid
+
+------------------------------------------------------------
+[wp:pedantic-assigns] /tmp/baseline1_ys5t88qw/generated_specs/attempt_02.c:8: Warning: 
+  No 'assigns' specification for function 'main'.
+  Callers assumptions might be imprecise.
+
+
+WP stderr:

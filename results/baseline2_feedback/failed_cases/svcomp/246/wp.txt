@@ -1,0 +1,314 @@
+Dataset: svcomp
+File: 246.c
+Source: /home/wangpeijie/wpj_2010215/spec_generation_abduction/data/AutoBench/svcomp/246.c
+Final status: Fail
+Best attempt: 2
+Best result: Fail_16_20
+
+Command:
+frama-c -wp -wp-precond-weakening -wp-no-callee-precond -wp-prover Alt-Ergo,Z3 -wp-prop=-@terminates,-@variant,-@decreases -wp-print -wp-timeout 8 /tmp/baseline2_yhne8cr5/generated_specs/round_02.c
+
+WP stdout:
+[kernel] Parsing /tmp/baseline2_yhne8cr5/generated_specs/round_02.c (with preprocessing)
+[kernel:typing:no-proto] /tmp/baseline2_yhne8cr5/generated_specs/round_02.c:5: Warning: 
+  Function unknown_int is declared without prototype.
+  Its formals will be inferred from actual arguments at first call.
+  Declare it as unknown_int(void) if the function does not take any parameters.
+[wp] Running WP plugin...
+[kernel:annot:missing-spec] /tmp/baseline2_yhne8cr5/generated_specs/round_02.c:5: Warning: 
+  Neither code nor explicit exits, assigns and terminates for function unknown_int,
+   generating default clauses. See -generated-spec-* options for more info
+[wp] Warning: Missing RTE guards
+[wp] 20 goals scheduled
+[wp] [Timeout] typed_main_loop_invariant_established (Qed 8ms) (Z3)
+[wp] [Timeout] typed_main_loop_invariant_3_established (Qed 23ms) (Z3)
+[wp] [Timeout] typed_main_assert_2 (Qed 53ms) (Z3)
+[wp] [Timeout] typed_main_assert_3 (Qed 36ms) (Z3)
+[wp] Proved goals:   16 / 20
+  Qed:            13 (8ms-17ms-117ms)
+  Z3 4.8.12:       3 (71ms-112ms)
+  Timeout:         4
+------------------------------------------------------------
+  Function main
+------------------------------------------------------------
+
+Goal Exit-condition (generated) in 'main':
+Prove: true.
+Prover Qed returns Valid
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline2_yhne8cr5/generated_specs/round_02.c, line 18):
+Prove: true.
+Prover Qed returns Valid (25ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline2_yhne8cr5/generated_specs/round_02.c, line 18):
+Assume {
+  Type: is_sint32(n).
+  (* Call 'unknown_int' *)
+  Have: ((-2147483648) <= n) /\ (n <= 2147483647).
+}
+Prove: 0 <= n.
+Prover Alt-Ergo 2.2.0 returns Failed
+unrecognized prover answer
+Prover Z3 4.8.12 returns Timeout (Qed:8ms) (8s)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline2_yhne8cr5/generated_specs/round_02.c, line 19):
+Prove: true.
+Prover Qed returns Valid (12ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline2_yhne8cr5/generated_specs/round_02.c, line 19):
+Prove: true.
+Prover Qed returns Valid (6ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline2_yhne8cr5/generated_specs/round_02.c, line 25):
+Let x = 2 * i.
+Let x_1 = 1 + j.
+Assume {
+  Type: is_sint32(i) /\ is_sint32(j) /\ is_sint32(k) /\ is_sint32(k_1) /\
+      is_sint32(n) /\ is_sint32(tmp_0) /\ is_sint32(x) /\ is_sint32(x_1).
+  (* Call 'unknown_int' *)
+  Have: ((-2147483648) <= n) /\ (n <= 2147483647).
+  (* Invariant *)
+  Have: 0 <= n.
+  (* Invariant *)
+  Have: (0 <= i) /\ (i <= n).
+  (* Then *)
+  Have: i < n.
+  (* Invariant *)
+  Have: x <= n.
+  (* Invariant *)
+  Have: (j <= n) /\ (x <= j).
+  (* Then *)
+  Have: j < n.
+  (* Call 'unknown_int' *)
+  Have: ((-2147483648) <= tmp_0) /\ (tmp_0 <= 2147483647).
+  If tmp_0 != 0
+  Then { (* Invariant *) Have: (j <= k) /\ (k <= n). (* Else *) Have: n <= k.
+  }
+  Else { (* Assertion *) Have: n <= k_1. (* Assertion *) Have: k_1 <= n. }
+}
+Prove: x <= x_1.
+Prover Alt-Ergo 2.2.0 returns Failed
+unrecognized prover answer
+Prover Z3 4.8.12 returns Valid (Qed:117ms) (89ms) (27551)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline2_yhne8cr5/generated_specs/round_02.c, line 25):
+Let x = 2 * i.
+Assume {
+  Type: is_sint32(i) /\ is_sint32(n) /\ is_sint32(x).
+  (* Call 'unknown_int' *)
+  Have: ((-2147483648) <= n) /\ (n <= 2147483647).
+  (* Invariant *)
+  Have: 0 <= n.
+  (* Invariant *)
+  Have: (0 <= i) /\ (i <= n).
+  (* Then *)
+  Have: i < n.
+}
+Prove: x <= n.
+Prover Alt-Ergo 2.2.0 returns Failed
+unrecognized prover answer
+Prover Z3 4.8.12 returns Timeout (Qed:23ms) (8s)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline2_yhne8cr5/generated_specs/round_02.c, line 26):
+Prove: true.
+Prover Qed returns Valid (55ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline2_yhne8cr5/generated_specs/round_02.c, line 26):
+Prove: true.
+Prover Qed returns Valid (15ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline2_yhne8cr5/generated_specs/round_02.c, line 33):
+Let x = 2 * i.
+Let x_1 = 1 + k.
+Assume {
+  Type: is_sint32(i) /\ is_sint32(j) /\ is_sint32(k) /\ is_sint32(n) /\
+      is_sint32(tmp_0) /\ is_sint32(x) /\ is_sint32(x_1).
+  (* Call 'unknown_int' *)
+  Have: ((-2147483648) <= n) /\ (n <= 2147483647).
+  (* Invariant *)
+  Have: 0 <= n.
+  (* Invariant *)
+  Have: (0 <= i) /\ (i <= n).
+  (* Then *)
+  Have: i < n.
+  (* Invariant *)
+  Have: x <= n.
+  (* Invariant *)
+  Have: (j <= n) /\ (x <= j).
+  (* Then *)
+  Have: j < n.
+  (* Call 'unknown_int' *)
+  Have: ((-2147483648) <= tmp_0) /\ (tmp_0 <= 2147483647).
+  (* Then *)
+  Have: tmp_0 != 0.
+  (* Invariant *)
+  Have: (j <= k) /\ (k <= n).
+  (* Then *)
+  Have: k < n.
+  (* Assertion *)
+  Have: x <= k.
+}
+Prove: j <= x_1.
+Prover Alt-Ergo 2.2.0 returns Failed
+unrecognized prover answer
+Prover Z3 4.8.12 returns Valid (Qed:52ms) (71ms) (27189)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline2_yhne8cr5/generated_specs/round_02.c, line 33):
+Prove: true.
+Prover Qed returns Valid (15ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline2_yhne8cr5/generated_specs/round_02.c, line 34):
+Prove: true.
+Prover Qed returns Valid (20ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline2_yhne8cr5/generated_specs/round_02.c, line 34):
+Prove: true.
+Prover Qed returns Valid (15ms)
+
+------------------------------------------------------------
+
+Goal Assertion (file /tmp/baseline2_yhne8cr5/generated_specs/round_02.c, line 39):
+Let x = 2 * i.
+Assume {
+  Type: is_sint32(i) /\ is_sint32(j) /\ is_sint32(k) /\ is_sint32(n) /\
+      is_sint32(tmp_0) /\ is_sint32(x).
+  (* Call 'unknown_int' *)
+  Have: ((-2147483648) <= n) /\ (n <= 2147483647).
+  (* Invariant *)
+  Have: 0 <= n.
+  (* Invariant *)
+  Have: (0 <= i) /\ (i <= n).
+  (* Then *)
+  Have: i < n.
+  (* Invariant *)
+  Have: x <= n.
+  (* Invariant *)
+  Have: (j <= n) /\ (x <= j).
+  (* Then *)
+  Have: j < n.
+  (* Call 'unknown_int' *)
+  Have: ((-2147483648) <= tmp_0) /\ (tmp_0 <= 2147483647).
+  (* Then *)
+  Have: tmp_0 != 0.
+  (* Invariant *)
+  Have: (j <= k) /\ (k <= n).
+  (* Then *)
+  Have: k < n.
+}
+Prove: x <= k.
+Prover Alt-Ergo 2.2.0 returns Failed
+unrecognized prover answer
+Prover Z3 4.8.12 returns Valid (Qed:46ms) (112ms) (27124)
+
+------------------------------------------------------------
+
+Goal Assertion (file /tmp/baseline2_yhne8cr5/generated_specs/round_02.c, line 42):
+Let x = 2 * i.
+Assume {
+  Type: is_sint32(i) /\ is_sint32(j) /\ is_sint32(k) /\ is_sint32(n) /\
+      is_sint32(x).
+  (* Call 'unknown_int' *)
+  Have: ((-2147483648) <= n) /\ (n <= 2147483647).
+  (* Invariant *)
+  Have: 0 <= n.
+  (* Invariant *)
+  Have: (0 <= i) /\ (i <= n).
+  (* Then *)
+  Have: i < n.
+  (* Invariant *)
+  Have: x <= n.
+  (* Invariant *)
+  Have: (j <= n) /\ (x <= j).
+  (* Then *)
+  Have: j < n.
+}
+Prove: n <= k.
+Prover Alt-Ergo 2.2.0 returns Failed
+unrecognized prover answer
+Prover Z3 4.8.12 returns Timeout (Qed:53ms) (8s)
+
+------------------------------------------------------------
+
+Goal Assertion (file /tmp/baseline2_yhne8cr5/generated_specs/round_02.c, line 43):
+Let x = 2 * i.
+Assume {
+  Type: is_sint32(i) /\ is_sint32(j) /\ is_sint32(k) /\ is_sint32(n) /\
+      is_sint32(x).
+  (* Call 'unknown_int' *)
+  Have: ((-2147483648) <= n) /\ (n <= 2147483647).
+  (* Invariant *)
+  Have: 0 <= n.
+  (* Invariant *)
+  Have: (0 <= i) /\ (i <= n).
+  (* Then *)
+  Have: i < n.
+  (* Invariant *)
+  Have: x <= n.
+  (* Invariant *)
+  Have: (j <= n) /\ (x <= j).
+  (* Then *)
+  Have: j < n.
+  (* Assertion *)
+  Have: n <= k.
+}
+Prove: k <= n.
+Prover Alt-Ergo 2.2.0 returns Failed
+unrecognized prover answer
+Prover Z3 4.8.12 returns Timeout (Qed:36ms) (8s)
+
+------------------------------------------------------------
+
+Goal Loop assigns (file /tmp/baseline2_yhne8cr5/generated_specs/round_02.c, line 20):
+Prove: true.
+Prover Qed returns Valid
+
+------------------------------------------------------------
+
+Goal Loop assigns (file /tmp/baseline2_yhne8cr5/generated_specs/round_02.c, line 27) (1/2):
+Prove: true.
+Prover Qed returns Valid
+
+------------------------------------------------------------
+
+Goal Loop assigns (file /tmp/baseline2_yhne8cr5/generated_specs/round_02.c, line 27) (2/2):
+Call Result at line 31
+Prove: true.
+Prover Qed returns Valid (34ms)
+
+------------------------------------------------------------
+
+Goal Loop assigns (file /tmp/baseline2_yhne8cr5/generated_specs/round_02.c, line 35):
+Prove: true.
+Prover Qed returns Valid
+
+------------------------------------------------------------
+[wp:pedantic-assigns] /tmp/baseline2_yhne8cr5/generated_specs/round_02.c:7: Warning: 
+  No 'assigns' specification for function 'main'.
+  Callers assumptions might be imprecise.
+
+
+WP stderr:

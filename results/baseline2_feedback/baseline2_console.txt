@@ -1,0 +1,213 @@
+[1/21] baseline2 svcomp/231.c
+[20:43:33] LLM start svcomp_231.c_round1
+[20:43:50] LLM done svcomp_231.c_round1, chars=359
+[2/21] baseline2 svcomp/232.c
+[20:43:53] LLM start svcomp_232.c_round1
+[20:43:59] LLM done svcomp_232.c_round1, chars=578
+[20:44:00] LLM start svcomp_232.c_round2
+[20:44:07] LLM done svcomp_232.c_round2, chars=773
+[20:44:08] LLM start svcomp_232.c_round3
+[20:44:19] LLM done svcomp_232.c_round3, chars=728
+[20:44:19] LLM start svcomp_232.c_round4
+[20:44:22] LLM done svcomp_232.c_round4, chars=691
+[20:44:22] LLM start svcomp_232.c_round5
+[20:44:27] LLM done svcomp_232.c_round5, chars=591
+[3/21] baseline2 svcomp/233.c
+[20:44:27] LLM start svcomp_233.c_round1
+[20:44:32] LLM done svcomp_233.c_round1, chars=449
+[4/21] baseline2 svcomp/234.c
+[20:44:34] LLM start svcomp_234.c_round1
+[20:44:38] LLM done svcomp_234.c_round1, chars=924
+[20:44:39] LLM start svcomp_234.c_round2
+[20:44:45] LLM done svcomp_234.c_round2, chars=948
+[20:44:46] LLM start svcomp_234.c_round3
+[20:44:51] LLM done svcomp_234.c_round3, chars=1039
+[20:44:52] LLM start svcomp_234.c_round4
+[20:44:58] LLM done svcomp_234.c_round4, chars=1069
+[20:44:59] LLM start svcomp_234.c_round5
+[20:45:05] LLM done svcomp_234.c_round5, chars=945
+[5/21] baseline2 svcomp/235.c
+[20:45:06] LLM start svcomp_235.c_round1
+[20:45:15] LLM done svcomp_235.c_round1, chars=702
+[20:45:25] LLM start svcomp_235.c_round2
+[20:45:28] LLM done svcomp_235.c_round2, chars=587
+[20:45:39] LLM start svcomp_235.c_round3
+[20:45:42] LLM done svcomp_235.c_round3, chars=725
+[20:45:53] LLM start svcomp_235.c_round4
+[20:45:58] LLM done svcomp_235.c_round4, chars=771
+[20:46:08] LLM start svcomp_235.c_round5
+[20:46:18] LLM done svcomp_235.c_round5, chars=617
+[6/21] baseline2 svcomp/236.c
+[20:46:28] LLM start svcomp_236.c_round1
+[20:46:35] LLM done svcomp_236.c_round1, chars=456
+[20:46:36] LLM start svcomp_236.c_round2
+[20:46:41] LLM done svcomp_236.c_round2, chars=467
+[7/21] baseline2 svcomp/237.c
+[20:46:42] LLM start svcomp_237.c_round1
+[20:46:47] LLM done svcomp_237.c_round1, chars=546
+[20:46:58] LLM start svcomp_237.c_round2
+[20:47:02] LLM done svcomp_237.c_round2, chars=581
+[20:47:13] LLM start svcomp_237.c_round3
+[20:47:20] LLM done svcomp_237.c_round3, chars=587
+[20:47:30] LLM start svcomp_237.c_round4
+[20:47:35] LLM done svcomp_237.c_round4, chars=589
+[20:47:46] LLM start svcomp_237.c_round5
+[20:47:52] LLM done svcomp_237.c_round5, chars=700
+[8/21] baseline2 svcomp/238.c
+[20:48:02] LLM start svcomp_238.c_round1
+[20:48:23] LLM done svcomp_238.c_round1, chars=729
+[20:48:33] LLM start svcomp_238.c_round2
+[20:48:39] LLM done svcomp_238.c_round2, chars=773
+[20:48:50] LLM start svcomp_238.c_round3
+[20:48:56] LLM done svcomp_238.c_round3, chars=826
+[20:49:07] LLM start svcomp_238.c_round4
+[20:49:11] LLM done svcomp_238.c_round4, chars=879
+[20:49:23] LLM start svcomp_238.c_round5
+[20:49:28] LLM done svcomp_238.c_round5, chars=916
+[9/21] baseline2 svcomp/239.c
+[20:49:29] LLM start svcomp_239.c_round1
+[20:49:34] LLM done svcomp_239.c_round1, chars=676
+[20:49:44] LLM start svcomp_239.c_round2
+[20:49:53] LLM done svcomp_239.c_round2, chars=622
+[20:49:53] LLM start svcomp_239.c_round3
+[20:50:00] LLM done svcomp_239.c_round3, chars=662
+[20:50:10] LLM start svcomp_239.c_round4
+[20:50:15] LLM done svcomp_239.c_round4, chars=666
+[20:50:26] LLM start svcomp_239.c_round5
+[20:50:31] LLM done svcomp_239.c_round5, chars=705
+[10/21] baseline2 svcomp/240.c
+[20:50:32] LLM start svcomp_240.c_round1
+[20:50:37] LLM done svcomp_240.c_round1, chars=615
+[20:50:48] LLM start svcomp_240.c_round2
+[20:50:53] LLM done svcomp_240.c_round2, chars=653
+[20:51:04] LLM start svcomp_240.c_round3
+[20:51:10] LLM done svcomp_240.c_round3, chars=685
+[20:51:21] LLM start svcomp_240.c_round4
+[20:51:27] LLM done svcomp_240.c_round4, chars=723
+[20:51:38] LLM start svcomp_240.c_round5
+[20:51:41] LLM done svcomp_240.c_round5, chars=701
+[11/21] baseline2 svcomp/241.c
+[20:51:42] LLM start svcomp_241.c_round1
+[20:51:53] LLM done svcomp_241.c_round1, chars=490
+[20:52:03] LLM start svcomp_241.c_round2
+[20:52:09] LLM done svcomp_241.c_round2, chars=640
+[20:52:19] LLM start svcomp_241.c_round3
+[20:52:25] LLM done svcomp_241.c_round3, chars=624
+[20:52:35] LLM start svcomp_241.c_round4
+[20:52:40] LLM done svcomp_241.c_round4, chars=676
+[20:52:51] LLM start svcomp_241.c_round5
+[20:52:55] LLM done svcomp_241.c_round5, chars=475
+[12/21] baseline2 svcomp/242.c
+[20:53:05] LLM start svcomp_242.c_round1
+[20:53:13] LLM done svcomp_242.c_round1, chars=502
+[20:53:23] LLM start svcomp_242.c_round2
+[20:53:35] LLM done svcomp_242.c_round2, chars=708
+[20:53:45] LLM start svcomp_242.c_round3
+[20:53:57] LLM done svcomp_242.c_round3, chars=688
+[20:54:07] LLM start svcomp_242.c_round4
+[20:54:14] LLM done svcomp_242.c_round4, chars=593
+[20:54:24] LLM start svcomp_242.c_round5
+[20:54:29] LLM done svcomp_242.c_round5, chars=778
+[13/21] baseline2 svcomp/243.c
+[20:54:39] LLM start svcomp_243.c_round1
+[20:54:42] LLM done svcomp_243.c_round1, chars=480
+[20:54:53] LLM start svcomp_243.c_round2
+[20:54:58] LLM done svcomp_243.c_round2, chars=458
+[20:55:09] LLM start svcomp_243.c_round3
+[20:55:15] LLM done svcomp_243.c_round3, chars=504
+[20:55:25] LLM start svcomp_243.c_round4
+[20:55:29] LLM done svcomp_243.c_round4, chars=359
+[20:55:39] LLM start svcomp_243.c_round5
+[20:55:45] LLM done svcomp_243.c_round5, chars=487
+[14/21] baseline2 svcomp/244.c
+[20:55:55] LLM start svcomp_244.c_round1
+[20:56:14] LLM done svcomp_244.c_round1, chars=1000
+[20:56:25] LLM start svcomp_244.c_round2
+[20:56:30] LLM done svcomp_244.c_round2, chars=896
+[20:56:41] LLM start svcomp_244.c_round3
+[20:56:48] LLM done svcomp_244.c_round3, chars=896
+[20:56:59] LLM start svcomp_244.c_round4
+[20:57:04] LLM done svcomp_244.c_round4, chars=1005
+[20:57:15] LLM start svcomp_244.c_round5
+[20:57:22] LLM done svcomp_244.c_round5, chars=1173
+[15/21] baseline2 svcomp/245.c
+[20:57:34] LLM start svcomp_245.c_round1
+[20:57:40] LLM done svcomp_245.c_round1, chars=619
+[20:57:40] LLM start svcomp_245.c_round2
+[20:57:48] LLM done svcomp_245.c_round2, chars=606
+[20:57:48] LLM start svcomp_245.c_round3
+[20:57:53] LLM done svcomp_245.c_round3, chars=606
+[20:57:53] LLM start svcomp_245.c_round4
+[20:57:56] LLM done svcomp_245.c_round4, chars=606
+[20:57:56] LLM start svcomp_245.c_round5
+[20:58:00] LLM done svcomp_245.c_round5, chars=606
+[16/21] baseline2 svcomp/246.c
+[20:58:00] LLM start svcomp_246.c_round1
+[20:58:03] LLM done svcomp_246.c_round1, chars=1028
+[20:58:15] LLM start svcomp_246.c_round2
+[20:58:25] LLM done svcomp_246.c_round2, chars=1134
+[20:58:37] LLM start svcomp_246.c_round3
+[20:58:42] LLM done svcomp_246.c_round3, chars=1134
+[20:58:54] LLM start svcomp_246.c_round4
+[20:58:58] LLM done svcomp_246.c_round4, chars=1134
+[20:59:10] LLM start svcomp_246.c_round5
+[20:59:19] LLM done svcomp_246.c_round5, chars=1134
+[17/21] baseline2 svcomp/247.c
+[20:59:31] LLM start svcomp_247.c_round1
+[20:59:43] LLM done svcomp_247.c_round1, chars=863
+[20:59:54] LLM start svcomp_247.c_round2
+[21:00:00] LLM done svcomp_247.c_round2, chars=863
+[21:00:12] LLM start svcomp_247.c_round3
+[21:00:17] LLM done svcomp_247.c_round3, chars=1000
+[21:00:29] LLM start svcomp_247.c_round4
+[21:00:33] LLM done svcomp_247.c_round4, chars=901
+[21:00:44] LLM start svcomp_247.c_round5
+[21:00:49] LLM done svcomp_247.c_round5, chars=1158
+[18/21] baseline2 svcomp/248.c
+[21:01:01] LLM start svcomp_248.c_round1
+[21:01:10] LLM done svcomp_248.c_round1, chars=857
+[21:01:20] LLM start svcomp_248.c_round2
+[21:01:31] LLM done svcomp_248.c_round2, chars=1063
+[21:01:32] LLM start svcomp_248.c_round3
+[21:01:41] LLM done svcomp_248.c_round3, chars=1077
+[21:01:42] LLM start svcomp_248.c_round4
+[21:01:53] LLM done svcomp_248.c_round4, chars=939
+[21:01:55] LLM start svcomp_248.c_round5
+[21:02:02] LLM done svcomp_248.c_round5, chars=1066
+[19/21] baseline2 svcomp/249.c
+[21:02:04] LLM start svcomp_249.c_round1
+[21:02:07] LLM done svcomp_249.c_round1, chars=637
+[21:02:07] LLM start svcomp_249.c_round2
+[21:02:11] LLM done svcomp_249.c_round2, chars=467
+[21:02:11] LLM start svcomp_249.c_round3
+[21:02:19] LLM done svcomp_249.c_round3, chars=481
+[21:02:19] LLM start svcomp_249.c_round4
+[21:02:22] LLM done svcomp_249.c_round4, chars=466
+[21:02:22] LLM start svcomp_249.c_round5
+[21:02:26] LLM done svcomp_249.c_round5, chars=481
+[20/21] baseline2 svcomp/250.c
+[21:02:26] LLM start svcomp_250.c_round1
+[21:02:35] LLM done svcomp_250.c_round1, chars=516
+[21:02:36] LLM start svcomp_250.c_round2
+[21:02:40] LLM done svcomp_250.c_round2, chars=611
+[21:02:41] LLM start svcomp_250.c_round3
+[21:02:46] LLM done svcomp_250.c_round3, chars=637
+[21:02:47] LLM start svcomp_250.c_round4
+[21:02:52] LLM done svcomp_250.c_round4, chars=657
+[21:02:53] LLM start svcomp_250.c_round5
+[21:02:57] LLM done svcomp_250.c_round5, chars=516
+[21/21] baseline2 svcomp/251.c
+[21:02:58] LLM start svcomp_251.c_round1
+[21:03:08] LLM done svcomp_251.c_round1, chars=565
+[21:03:18] LLM start svcomp_251.c_round2
+[21:03:22] LLM done svcomp_251.c_round2, chars=709
+[21:03:23] LLM start svcomp_251.c_round3
+[21:03:30] LLM done svcomp_251.c_round3, chars=778
+[21:03:31] LLM start svcomp_251.c_round4
+[21:03:40] LLM done svcomp_251.c_round4, chars=636
+[21:03:41] LLM start svcomp_251.c_round5
+[21:03:47] LLM done svcomp_251.c_round5, chars=761
+Summary: /home/wangpeijie/wpj_2010215/spec_generation_abduction/results/baseline2_feedback/baseline2_summary.md
+Successful files: /home/wangpeijie/wpj_2010215/spec_generation_abduction/results/baseline2_feedback/successful_files
+Failed cases: /home/wangpeijie/wpj_2010215/spec_generation_abduction/results/baseline2_feedback/failed_cases
+Console log: /home/wangpeijie/wpj_2010215/spec_generation_abduction/results/baseline2_feedback/baseline2_console.txt

@@ -1,0 +1,212 @@
+Dataset: svcomp
+File: 244.c
+Source: /home/wangpeijie/wpj_2010215/spec_generation_abduction/data/AutoBench/svcomp/244.c
+Final status: Fail
+Best attempt: 4
+Best result: Fail_15_16
+
+Command:
+frama-c -wp -wp-precond-weakening -wp-no-callee-precond -wp-prover Alt-Ergo,Z3 -wp-prop=-@terminates,-@variant,-@decreases -wp-print -wp-timeout 8 /tmp/baseline1_ne45ctvd/generated_specs/attempt_04.c
+
+WP stdout:
+[kernel] Parsing /tmp/baseline1_ne45ctvd/generated_specs/attempt_04.c (with preprocessing)
+[kernel:typing:no-proto] /tmp/baseline1_ne45ctvd/generated_specs/attempt_04.c:6: Warning: 
+  Function unknown_int is declared without prototype.
+  Its formals will be inferred from actual arguments at first call.
+  Declare it as unknown_int(void) if the function does not take any parameters.
+[kernel:typing:no-proto] /tmp/baseline1_ne45ctvd/generated_specs/attempt_04.c:11: Warning: 
+  Function unknown_int1 is declared without prototype.
+  Its formals will be inferred from actual arguments at first call.
+  Declare it as unknown_int1(void) if the function does not take any parameters.
+[wp] Running WP plugin...
+[kernel:annot:missing-spec] /tmp/baseline1_ne45ctvd/generated_specs/attempt_04.c:6: Warning: 
+  Neither code nor explicit exits, assigns and terminates for function unknown_int,
+   generating default clauses. See -generated-spec-* options for more info
+[kernel:annot:missing-spec] /tmp/baseline1_ne45ctvd/generated_specs/attempt_04.c:11: Warning: 
+  Neither code nor explicit exits, assigns and terminates for function unknown_int1,
+   generating default clauses. See -generated-spec-* options for more info
+[wp] Warning: Missing RTE guards
+[wp] 16 goals scheduled
+[wp] [Timeout] typed_main_assert (Qed 37ms) (Z3)
+[wp] Proved goals:   15 / 16
+  Qed:            13 (24ms-11ms-118ms)
+  Z3 4.8.12:       2 (80ms-112ms)
+  Timeout:         1
+------------------------------------------------------------
+  Function main
+------------------------------------------------------------
+
+Goal Exit-condition (generated) in 'main':
+Prove: true.
+Prover Qed returns Valid
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline1_ne45ctvd/generated_specs/attempt_04.c, line 25):
+Prove: true.
+Prover Qed returns Valid (18ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline1_ne45ctvd/generated_specs/attempt_04.c, line 25):
+Prove: true.
+Prover Qed returns Valid (4ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline1_ne45ctvd/generated_specs/attempt_04.c, line 26):
+Prove: true.
+Prover Qed returns Valid (8ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline1_ne45ctvd/generated_specs/attempt_04.c, line 26):
+Prove: true.
+Prover Qed returns Valid (5ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline1_ne45ctvd/generated_specs/attempt_04.c, line 27):
+Let x = 2000 * i.
+Let x_1 = 4000 * i.
+Let x_2 = 10000 * i.
+Assume {
+  Type: is_sint32(i) /\ is_sint32(k) /\ is_sint32(k_1) /\ is_sint32(k_2) /\
+      is_sint32(k_3) /\ is_sint32(k_4) /\ is_sint32(n) /\
+      is_sint32(unknown_int1_0) /\ is_sint32(1 + i).
+  (* Call 'unknown_int' *)
+  Have: (0 <= n) /\ (n <= 10).
+  (* Invariant *)
+  Have: 0 <= i.
+  (* Invariant *)
+  Have: i <= n.
+  (* Invariant *)
+  Have: (x <= k_4) \/ (x_1 <= k_4) \/ (x_2 <= k_4).
+  (* Then *)
+  Have: i < n.
+  (* Call 'unknown_int1' *)
+  Have: (0 <= unknown_int1_0) /\ (unknown_int1_0 <= 1).
+  If unknown_int1_0 = 0
+  Then { Have: k_4 = k_1. Have: (4000 + k_1) = k. }
+  Else {
+    Have: k_4 = k_5.
+    If unknown_int1_0 = 1
+    Then { Have: k_5 = k_2. Have: (2000 + k_2) = k. }
+    Else { Have: k_5 = k_3. Have: (10000 + k_3) = k. }
+  }
+  (* Invariant *)
+  Have: (-1) <= i.
+}
+Prove: ((2000 + x) <= k) \/ ((4000 + x_1) <= k) \/ ((10000 + x_2) <= k).
+Prover Alt-Ergo 2.2.0 returns Failed
+unrecognized prover answer
+Prover Z3 4.8.12 returns Valid (Qed:118ms) (80ms) (29338)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline1_ne45ctvd/generated_specs/attempt_04.c, line 27):
+Prove: true.
+Prover Qed returns Valid (6ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline1_ne45ctvd/generated_specs/attempt_04.c, line 43):
+Prove: true.
+Prover Qed returns Valid (26ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline1_ne45ctvd/generated_specs/attempt_04.c, line 43):
+Prove: true.
+Prover Qed returns Valid (13ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline1_ne45ctvd/generated_specs/attempt_04.c, line 44):
+Prove: true.
+Prover Qed returns Valid (18ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline1_ne45ctvd/generated_specs/attempt_04.c, line 44):
+Prove: true.
+Prover Qed returns Valid (14ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline1_ne45ctvd/generated_specs/attempt_04.c, line 45):
+Prove: true.
+Prover Qed returns Valid (19ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline1_ne45ctvd/generated_specs/attempt_04.c, line 45):
+Assume {
+  Type: is_sint32(i) /\ is_sint32(k) /\ is_sint32(n).
+  (* Call 'unknown_int' *)
+  Have: (0 <= n) /\ (n <= 10).
+  (* Invariant *)
+  Have: 0 <= i.
+  (* Invariant *)
+  Have: i <= n.
+  (* Invariant *)
+  Have: ((2000 * i) <= k) \/ ((4000 * i) <= k) \/ ((10000 * i) <= k).
+  (* Else *)
+  Have: n <= i.
+}
+Prove: 0 <= k.
+Prover Alt-Ergo 2.2.0 returns Failed
+unrecognized prover answer
+Prover Z3 4.8.12 returns Valid (Qed:24ms) (112ms) (25640)
+
+------------------------------------------------------------
+
+Goal Assertion (file /tmp/baseline1_ne45ctvd/generated_specs/attempt_04.c, line 49):
+Assume {
+  Type: is_sint32(i) /\ is_sint32(j) /\ is_sint32(k) /\ is_sint32(k_1) /\
+      is_sint32(n).
+  (* Call 'unknown_int' *)
+  Have: (0 <= n) /\ (n <= 10).
+  (* Invariant *)
+  Have: 0 <= i.
+  (* Invariant *)
+  Have: i <= n.
+  (* Invariant *)
+  Have: ((2000 * i) <= k_1) \/ ((4000 * i) <= k_1) \/ ((10000 * i) <= k_1).
+  (* Else *)
+  Have: n <= i.
+  (* Invariant *)
+  Have: 0 <= k_1.
+  (* Invariant *)
+  Have: 0 <= j.
+  (* Invariant *)
+  Have: j <= i.
+  (* Invariant *)
+  Have: 0 <= k.
+  (* Then *)
+  Have: j < i.
+}
+Prove: 0 < k.
+Prover Alt-Ergo 2.2.0 returns Failed
+unrecognized prover answer
+Prover Z3 4.8.12 returns Timeout (Qed:37ms) (8s)
+
+------------------------------------------------------------
+
+Goal Loop assigns (file /tmp/baseline1_ne45ctvd/generated_specs/attempt_04.c, line 28):
+Prove: true.
+Prover Qed returns Valid
+
+------------------------------------------------------------
+
+Goal Loop assigns (file /tmp/baseline1_ne45ctvd/generated_specs/attempt_04.c, line 46):
+Prove: true.
+Prover Qed returns Valid
+
+------------------------------------------------------------
+[wp:pedantic-assigns] /tmp/baseline1_ne45ctvd/generated_specs/attempt_04.c:13: Warning: 
+  No 'assigns' specification for function 'main'.
+  Callers assumptions might be imprecise.
+
+
+WP stderr:

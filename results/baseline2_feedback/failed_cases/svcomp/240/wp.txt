@@ -1,0 +1,209 @@
+Dataset: svcomp
+File: 240.c
+Source: /home/wangpeijie/wpj_2010215/spec_generation_abduction/data/AutoBench/svcomp/240.c
+Final status: Fail
+Best attempt: 4
+Best result: Fail_14_18
+
+Command:
+frama-c -wp -wp-precond-weakening -wp-no-callee-precond -wp-prover Alt-Ergo,Z3 -wp-prop=-@terminates,-@variant,-@decreases -wp-print -wp-timeout 8 /tmp/baseline2_k96sh9ag/generated_specs/round_04.c
+
+WP stdout:
+[kernel] Parsing /tmp/baseline2_k96sh9ag/generated_specs/round_04.c (with preprocessing)
+[kernel:typing:no-proto] /tmp/baseline2_k96sh9ag/generated_specs/round_04.c:5: Warning: 
+  Function unknown_int is declared without prototype.
+  Its formals will be inferred from actual arguments at first call.
+  Declare it as unknown_int(void) if the function does not take any parameters.
+[wp] Running WP plugin...
+[kernel:annot:missing-spec] /tmp/baseline2_k96sh9ag/generated_specs/round_04.c:5: Warning: 
+  Neither code nor explicit exits, assigns and terminates for function unknown_int,
+   generating default clauses. See -generated-spec-* options for more info
+[wp] Warning: Missing RTE guards
+[wp] 18 goals scheduled
+[wp] [Timeout] typed_main_loop_invariant_2_preserved (Qed 25ms) (Z3)
+[wp] [Timeout] typed_main_loop_invariant_established (Qed 6ms) (Z3)
+[wp] [Timeout] typed_main_loop_invariant_preserved (Qed 21ms) (Z3)
+[wp] [Timeout] typed_main_loop_invariant_6_established (Qed 27ms) (Z3)
+[wp] Proved goals:   14 / 18
+  Qed:            14 (6ms-4ms-27ms)
+  Timeout:         4
+------------------------------------------------------------
+  Function main
+------------------------------------------------------------
+
+Goal Exit-condition (generated) in 'main':
+Prove: true.
+Prover Qed returns Valid
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline2_k96sh9ag/generated_specs/round_04.c, line 14):
+Let x = -k.
+Let x_1 = n - k.
+Assume {
+  Type: is_sint32(k) /\ is_sint32(n) /\ is_sint32(x_1) /\
+      is_sint32(2 + n - k).
+  (* Call 'unknown_int' *)
+  Have: ((-2147483648) <= n) /\ (n <= 2147483647).
+  (* Invariant *)
+  Have: 0 <= n.
+  (* Invariant *)
+  Have: (0 <= k) /\ (k <= n).
+  (* Invariant *)
+  Have: (x_1 % 2) = 0.
+  (* Then *)
+  Have: 0 < k.
+}
+Prove: (2 <= k) /\ (k <= (2 + n)).
+Prover Alt-Ergo 2.2.0 returns Failed
+unrecognized prover answer
+Prover Z3 4.8.12 returns Timeout (Qed:21ms) (8s)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline2_k96sh9ag/generated_specs/round_04.c, line 14):
+Assume {
+  Type: is_sint32(n).
+  (* Call 'unknown_int' *)
+  Have: ((-2147483648) <= n) /\ (n <= 2147483647).
+}
+Prove: 0 <= n.
+Prover Alt-Ergo 2.2.0 returns Failed
+unrecognized prover answer
+Prover Z3 4.8.12 returns Timeout (Qed:6ms) (8s)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline2_k96sh9ag/generated_specs/round_04.c, line 15):
+Let x = -k.
+Let x_1 = n - k.
+Assume {
+  Type: is_sint32(k) /\ is_sint32(n) /\ is_sint32(k - 1) /\ is_sint32(x_1) /\
+      is_sint32(2 + n - k).
+  (* Call 'unknown_int' *)
+  Have: ((-2147483648) <= n) /\ (n <= 2147483647).
+  (* Invariant *)
+  Have: 0 <= n.
+  (* Invariant *)
+  Have: (0 <= k) /\ (k <= n).
+  (* Invariant *)
+  Have: (x_1 % 2) = 0.
+  (* Then *)
+  Have: 0 < k.
+  (* Invariant *)
+  Have: (2 <= k) /\ (k <= (2 + n)).
+}
+Prove: false.
+Prover Alt-Ergo 2.2.0 returns Failed
+unrecognized prover answer
+Prover Z3 4.8.12 returns Timeout (Qed:25ms) (8s)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline2_k96sh9ag/generated_specs/round_04.c, line 15):
+Prove: true.
+Prover Qed returns Valid (6ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline2_k96sh9ag/generated_specs/round_04.c, line 16):
+Prove: true.
+Prover Qed returns Valid (9ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline2_k96sh9ag/generated_specs/round_04.c, line 16):
+Prove: true.
+Prover Qed returns Valid (4ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline2_k96sh9ag/generated_specs/round_04.c, line 17):
+Prove: true.
+Prover Qed returns Valid (7ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline2_k96sh9ag/generated_specs/round_04.c, line 17):
+Prove: true.
+Prover Qed returns Valid (4ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline2_k96sh9ag/generated_specs/round_04.c, line 29):
+Prove: true.
+Prover Qed returns Valid (21ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline2_k96sh9ag/generated_specs/round_04.c, line 29):
+Prove: true.
+Prover Qed returns Valid (12ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline2_k96sh9ag/generated_specs/round_04.c, line 30):
+Prove: true.
+Prover Qed returns Valid (23ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline2_k96sh9ag/generated_specs/round_04.c, line 30):
+Let x = n - k.
+Assume {
+  Type: is_sint32(k) /\ is_sint32(n) /\ is_sint32(x).
+  (* Call 'unknown_int' *)
+  Have: ((-2147483648) <= n) /\ (n <= 2147483647).
+  (* Invariant *)
+  Have: 0 <= n.
+  (* Invariant *)
+  Have: (0 <= k) /\ (k <= n).
+  (* Invariant *)
+  Have: (x % 2) = 0.
+  (* Else *)
+  Have: k <= 0.
+  (* Invariant *)
+  Have: (-1) <= n.
+}
+Prove: n = 0.
+Prover Alt-Ergo 2.2.0 returns Failed
+unrecognized prover answer
+Prover Z3 4.8.12 returns Timeout (Qed:27ms) (8s)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline2_k96sh9ag/generated_specs/round_04.c, line 31):
+Prove: true.
+Prover Qed returns Valid (16ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline2_k96sh9ag/generated_specs/round_04.c, line 31):
+Prove: true.
+Prover Qed returns Valid (13ms)
+
+------------------------------------------------------------
+
+Goal Assertion (file /tmp/baseline2_k96sh9ag/generated_specs/round_04.c, line 36):
+Prove: true.
+Prover Qed returns Valid (26ms)
+
+------------------------------------------------------------
+
+Goal Loop assigns (file /tmp/baseline2_k96sh9ag/generated_specs/round_04.c, line 18):
+Prove: true.
+Prover Qed returns Valid
+
+------------------------------------------------------------
+
+Goal Loop assigns (file /tmp/baseline2_k96sh9ag/generated_specs/round_04.c, line 32):
+Prove: true.
+Prover Qed returns Valid
+
+------------------------------------------------------------
+[wp:pedantic-assigns] /tmp/baseline2_k96sh9ag/generated_specs/round_04.c:7: Warning: 
+  No 'assigns' specification for function 'main'.
+  Callers assumptions might be imprecise.
+
+
+WP stderr:
