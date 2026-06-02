@@ -1,0 +1,236 @@
+Dataset: frama-c-problem
+File: 208.c
+Source: /home/wangpeijie/wpj_2010215/spec_generation_abduction/data/AutoBench/frama-c-problem/208.c
+Final status: Fail
+Best attempt: 3
+Best result: Fail_13_16
+
+Command:
+frama-c -wp -wp-precond-weakening -wp-no-callee-precond -wp-prover Alt-Ergo,Z3 -wp-prop=-@terminates,-@variant,-@decreases -wp-print -wp-timeout 8 /tmp/baseline3_yqfo90a3/generated_specs/attempt_03.c
+
+WP stdout:
+[kernel] Parsing /tmp/baseline3_yqfo90a3/generated_specs/attempt_03.c (with preprocessing)
+[wp] Running WP plugin...
+[kernel:annot:missing-spec] FRAMAC_SHARE/libc/math.h:1217: Warning: 
+  Neither code nor explicit exits and terminates for function pow,
+   generating default clauses. See -generated-spec-* options for more info
+[wp] Warning: Missing RTE guards
+[wp] FRAMAC_SHARE/libc/math.h:1207: Warning: 
+  Builtin pow(float64,float64) not defined
+[wp] 16 goals scheduled
+[wp] [Timeout] typed_fun_loop_invariant_preserved (Qed 16ms) (Z3) (Stronger)
+[wp] [Timeout] typed_fun_ensures (Qed 15ms) (Z3)
+[wp] [Timeout] typed_fun_call_pow_requires_finite_logic_res (Qed 15ms) (Z3) (Stronger)
+[wp] Proved goals:   13 / 16
+  Qed:            11 (15ms-6ms-24ms)
+  Z3 4.8.12:       2 (3.9s-4.6s)
+  Timeout:         3
+------------------------------------------------------------
+  Function fun
+------------------------------------------------------------
+
+Goal Post-condition (file /tmp/baseline3_yqfo90a3/generated_specs/attempt_03.c, line 6) in 'fun':
+Assume {
+  Type: is_sint32(n).
+  (* Invariant *)
+  Have: of_f64(i) = .0.
+  (* Invariant *)
+  Have: of_f64(y) = .0.
+  (* Else *)
+  Have: !le_f64(i, to_f64(real_of_int(n))).
+}
+Prove: false.
+Prover Alt-Ergo 2.2.0 returns Failed
+unrecognized prover answer
+Prover Z3 4.8.12 returns Timeout (Qed:15ms) (7s)
+
+------------------------------------------------------------
+
+Goal Exit-condition (generated) in 'fun':
+FRAMAC_SHARE/libc/math.h:1207: warning from wp:
+ - Warning: Hide sub-term definition
+   Reason: Builtin pow(float64,float64) not defined
+Prove: true.
+Prover Qed returns Valid (0.55ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline3_yqfo90a3/generated_specs/attempt_03.c, line 13):
+FRAMAC_SHARE/libc/math.h:1207: warning from wp:
+ - Warning: Hide sub-term definition
+   Reason: Builtin pow(float64,float64) not defined
+Assume {
+  Type: is_sint32(fc_errno_0) /\ is_sint32(fc_errno_1) /\ is_sint32(n).
+  (* Invariant *)
+  Have: of_f64(i) = .0.
+  (* Invariant *)
+  Have: of_f64(y) = .0.
+  (* Then *)
+  Have: le_f64(i, to_f64(real_of_int(n))).
+  (* Call 'pow' *)
+  Have: is_finite_f64(pow_0) /\
+      ((fc_errno_1 = 34) \/ (fc_errno_1 = fc_errno_0)).
+}
+Prove: of_f64(add_f64(i, to_f64(1.0))) = .0.
+Prover Alt-Ergo 2.2.0 returns Failed
+unrecognized prover answer
+Prover Z3 4.8.12 returns Timeout (Qed:16ms) (6.9s)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline3_yqfo90a3/generated_specs/attempt_03.c, line 13):
+Prove: true.
+Prover Qed returns Valid (2ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline3_yqfo90a3/generated_specs/attempt_03.c, line 14):
+FRAMAC_SHARE/libc/math.h:1207: warning from wp:
+ - Warning: Hide sub-term definition
+   Reason: Builtin pow(float64,float64) not defined
+Assume {
+  Type: is_sint32(fc_errno_0) /\ is_sint32(fc_errno_1) /\ is_sint32(n).
+  (* Invariant *)
+  Have: of_f64(i) = .0.
+  (* Invariant *)
+  Have: of_f64(y) = .0.
+  (* Then *)
+  Have: le_f64(i, to_f64(real_of_int(n))).
+  (* Call 'pow' *)
+  Have: is_finite_f64(pow_0) /\
+      ((fc_errno_1 = 34) \/ (fc_errno_1 = fc_errno_0)).
+  (* Invariant *)
+  Have: of_f64(add_f64(i, to_f64(1.0))) = .0.
+}
+Prove: of_f64(add_f64(y, pow_0)) = .0.
+Prover Alt-Ergo 2.2.0 returns Failed
+unrecognized prover answer
+Prover Z3 4.8.12 returns Valid (Qed:18ms) (4.6s) (667867)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline3_yqfo90a3/generated_specs/attempt_03.c, line 14):
+Prove: true.
+Prover Qed returns Valid (3ms)
+
+------------------------------------------------------------
+
+Goal Loop assigns (file /tmp/baseline3_yqfo90a3/generated_specs/attempt_03.c, line 15) (1/3):
+FRAMAC_SHARE/libc/math.h:1207: warning from wp:
+ - Warning: Hide sub-term definition
+   Reason: Builtin pow(float64,float64) not defined
+Prove: true.
+Prover Qed returns Valid
+
+------------------------------------------------------------
+
+Goal Loop assigns (file /tmp/baseline3_yqfo90a3/generated_specs/attempt_03.c, line 15) (2/3):
+Call Effect at line 20
+FRAMAC_SHARE/libc/math.h:1207: warning from wp:
+ - Warning: Hide sub-term definition
+   Reason: Builtin pow(float64,float64) not defined
+Assume {
+  Type: is_sint32(fc_errno_0) /\ is_sint32(fc_errno_1) /\ is_sint32(n).
+  (* Invariant *)
+  Have: of_f64(i) = .0.
+  (* Invariant *)
+  Have: of_f64(y) = .0.
+  (* Then *)
+  Have: le_f64(i, to_f64(real_of_int(n))).
+  (* Call 'pow' *)
+  Have: is_finite_f64(pow_0) /\
+      ((fc_errno_1 = 34) \/ (fc_errno_1 = fc_errno_0)).
+  (* Invariant *)
+  Have: of_f64(add_f64(i, to_f64(1.0))) = .0.
+  (* Invariant *)
+  Have: of_f64(add_f64(y, pow_0)) = .0.
+}
+Prove: false.
+Prover Alt-Ergo 2.2.0 returns Failed
+unrecognized prover answer
+Prover Z3 4.8.12 returns Valid (Qed:24ms) (3.9s) (631487)
+
+------------------------------------------------------------
+
+Goal Loop assigns (file /tmp/baseline3_yqfo90a3/generated_specs/attempt_03.c, line 15) (3/3):
+Call Result at line 20
+FRAMAC_SHARE/libc/math.h:1207: warning from wp:
+ - Warning: Hide sub-term definition
+   Reason: Builtin pow(float64,float64) not defined
+Prove: true.
+Prover Qed returns Valid (8ms)
+
+------------------------------------------------------------
+
+Goal Assigns nothing in 'fun' (1/2):
+Effect at line 18
+Prove: true.
+Prover Qed returns Valid (6ms)
+
+------------------------------------------------------------
+
+Goal Assigns nothing in 'fun' (2/2):
+Call Effect at line 20
+FRAMAC_SHARE/libc/math.h:1207: warning from wp:
+ - Warning: Hide sub-term definition
+   Reason: Builtin pow(float64,float64) not defined
+Prove: true.
+Prover Qed returns Valid (0.89ms)
+
+------------------------------------------------------------
+
+Goal Assigns nothing in 'fun' (1/2):
+Effect at line 18
+Prove: true.
+Prover Qed returns Valid (5ms)
+
+------------------------------------------------------------
+
+Goal Assigns nothing in 'fun' (2/2):
+Effect at line 23
+Prove: true.
+Prover Qed returns Valid (8ms)
+
+------------------------------------------------------------
+
+Goal Instance of 'Pre-condition 'finite_logic_res' in 'pow'' in 'fun' at call 'pow' (file /tmp/baseline3_yqfo90a3/generated_specs/attempt_03.c, line 20)
+:
+FRAMAC_SHARE/libc/math.h:1207: warning from wp:
+ - Warning: Hide sub-term definition
+   Reason: Builtin pow(float64,float64) not defined
+Assume {
+  Type: is_sint32(n).
+  (* Invariant *)
+  Have: of_f64(i) = .0.
+  (* Invariant *)
+  Have: of_f64(y) = .0.
+  (* Then *)
+  Have: le_f64(i, to_f64(real_of_int(n))).
+}
+Prove: is_finite_f64(w).
+Prover Alt-Ergo 2.2.0 returns Failed
+unrecognized prover answer
+Prover Z3 4.8.12 returns Timeout (Qed:15ms) (6.9s)
+
+------------------------------------------------------------
+------------------------------------------------------------
+  Function main
+------------------------------------------------------------
+
+Goal Exit-condition (generated) in 'main':
+Prove: true.
+Prover Qed returns Valid
+
+------------------------------------------------------------
+
+Goal Assertion (file /tmp/baseline3_yqfo90a3/generated_specs/attempt_03.c, line 28):
+Prove: true.
+Prover Qed returns Valid (3ms)
+
+------------------------------------------------------------
+[wp:pedantic-assigns] /tmp/baseline3_yqfo90a3/generated_specs/attempt_03.c:26: Warning: 
+  No 'assigns' specification for function 'main'.
+  Callers assumptions might be imprecise.
+
+
+WP stderr:

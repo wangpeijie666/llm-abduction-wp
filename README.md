@@ -273,11 +273,16 @@ probe 或 rewrite 后的整个文件 WP Pass 才算通过。
 python3 scripts/run_baseline3.py \
   --datasets SyGuS,frama-c-problem,svcomp,46_fib \
   --model gpt-4o \
-  --attempts 5 \
+  --attempts 3 \
+  --max-repair-rounds 7 \
+  --max-invalid-repairs 4 \
   --max-llm-candidates 5 \
   --wp-timeout 8 \
   --resume
 ```
+
+当前 baseline3 默认每题最多 3 次独立初始生成；每次初始生成后最多 7 轮 repair；
+Invalid 输入最多尝试 4 次 invalid-specific repair。
 
 默认输出：
 
@@ -288,9 +293,21 @@ results/baseline3_assertion_probe/
 重要文件：
 
 - `baseline3_summary.md`: 总体、分数据集、逐题统计。
-- `baseline3_console.txt`: 命令行进度输出留痕，包括每题编号和 LLM start/done/error。
+- `baseline3_console_<dataset>.txt`: 命令行进度输出留痕，包括每题编号和 LLM start/done/error；多数据集同跑时 dataset 名用 `__` 连接。
 - `successful_files/<dataset>/<file>.c`: 通过 WP 的最终文件，可能是初始生成文件、插入 successful assertion probe 后的文件，或 successful spec rewrite 后的文件。
 - `failed_cases/<dataset>/<case>/`: 未通过题目的输出目录，包含最佳失败 attempt 的 C 文件和 `wp.txt`。
+
+如需保存每个 case 的中间步骤，可以加 `--trace-steps`。默认关闭；打开后会额外写入：
+
+```text
+results/baseline3_assertion_probe/traces/<dataset>/<case>/
+```
+
+trace 目录包含 initial 文件、每轮 current/next C 文件、WP stdout/stderr/result、diagnosis、assertion probe candidates、repair proposals 和 repair application 结果。
+
+
+
+### Experiment
 
 
 

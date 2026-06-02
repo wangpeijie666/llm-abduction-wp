@@ -1,0 +1,39 @@
+{
+  "po_name": "typed_main_assert",
+  "po_status": "Timeout",
+  "goal_kind": "assertion",
+  "goal_header": "Goal Assertion (file /tmp/baseline3_p28s3nm2/attempt_01_repair_03/repair_03_01_wrong_spec_01_rewrite_annotation.c, line 29):",
+  "assumptions": "Type: is_sint32(j) /\\ is_sint32(21 - (2 * j)).\n  (* Invariant *)\n  Have: j <= 10.\n  (* Invariant *)\n  Have: 0 <= j.\n  (* Else *)\n  Have: j <= 6.",
+  "prove_statement": "j = 6.",
+  "prover_output": "Prover Alt-Ergo 2.2.0 returns Failed\nunrecognized prover answer\nProver Z3 4.8.12 returns Timeout (Qed:8ms) (8s)",
+  "source_file": "/tmp/baseline3_p28s3nm2/attempt_01_repair_03/repair_03_01_wrong_spec_01_rewrite_annotation.c",
+  "source_line": 29,
+  "goal_text": "Goal Assertion (file /tmp/baseline3_p28s3nm2/attempt_01_repair_03/repair_03_01_wrong_spec_01_rewrite_annotation.c, line 29):\nAssume {\n  Type: is_sint32(j) /\\ is_sint32(21 - (2 * j)).\n  (* Invariant *)\n  Have: j <= 10.\n  (* Invariant *)\n  Have: 0 <= j.\n  (* Else *)\n  Have: j <= 6.\n}\nProve: j = 6.\nProver Alt-Ergo 2.2.0 returns Failed\nunrecognized prover answer\nProver Z3 4.8.12 returns Timeout (Qed:8ms) (8s)",
+  "source_visible_identifiers": [
+    "i",
+    "j"
+  ],
+  "forbidden_wp_internal_identifiers": [
+    "attempt_01_repair_03"
+  ],
+  "marker_loop_contexts": [
+    {
+      "marker": "loop1_before",
+      "marker_line": 23,
+      "marker_raw_line": "    /* PROBE_HERE:loop1_before */",
+      "enclosing_loop_line": null,
+      "enclosing_loop": "",
+      "preceding_acsl_block": "",
+      "integration_hint": "Facts needed across loop iterations usually belong in the preceding loop invariant block."
+    },
+    {
+      "marker": "loop1_body_entry",
+      "marker_line": 25,
+      "marker_raw_line": "        /* PROBE_HERE:loop1_body_entry */",
+      "enclosing_loop_line": 24,
+      "enclosing_loop": "while (j >= i) {",
+      "preceding_acsl_block": "",
+      "integration_hint": "Facts needed across loop iterations usually belong in the preceding loop invariant block."
+    }
+  ]
+}

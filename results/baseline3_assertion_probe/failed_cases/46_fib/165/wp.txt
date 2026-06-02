@@ -1,0 +1,152 @@
+Dataset: 46_fib
+File: 165.c
+Source: /home/wangpeijie/wpj_2010215/spec_generation_abduction/data/AutoBench/46_fib/165.c
+Final status: Fail
+Best attempt: 2
+Best result: Fail_10_11
+
+Command:
+frama-c -wp -wp-precond-weakening -wp-no-callee-precond -wp-prover Alt-Ergo,Z3 -wp-prop=-@terminates,-@variant,-@decreases -wp-print -wp-timeout 8 /tmp/baseline3_a6anfp_u/attempt_02_repair_03/repair_03_01_wrong_spec_01_rewrite_annotation.c
+
+WP stdout:
+[kernel] Parsing /tmp/baseline3_a6anfp_u/attempt_02_repair_03/repair_03_01_wrong_spec_01_rewrite_annotation.c (with preprocessing)
+[wp] Running WP plugin...
+[wp] Warning: Missing RTE guards
+[wp] 10 goals scheduled
+[wp] [Timeout] typed_main_loop_invariant_3_preserved (Qed 69ms) (Z3)
+[wp] Proved goals:   10 / 11
+  Unreachable:     1
+  Qed:             7 (17ms-17ms-82ms)
+  Z3 4.8.12:       2 (77ms-84ms)
+  Timeout:         1
+------------------------------------------------------------
+  Function main
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline3_a6anfp_u/attempt_02_repair_03/repair_03_01_wrong_spec_01_rewrite_annotation.c, line 15):
+Prove: true.
+Prover Qed returns Valid (19ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline3_a6anfp_u/attempt_02_repair_03/repair_03_01_wrong_spec_01_rewrite_annotation.c, line 15):
+Prove: true.
+Prover Qed returns Valid (3ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline3_a6anfp_u/attempt_02_repair_03/repair_03_01_wrong_spec_01_rewrite_annotation.c, line 16):
+Prove: true.
+Prover Qed returns Valid
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline3_a6anfp_u/attempt_02_repair_03/repair_03_01_wrong_spec_01_rewrite_annotation.c, line 16):
+Prove: true.
+Prover Qed returns Valid
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline3_a6anfp_u/attempt_02_repair_03/repair_03_01_wrong_spec_01_rewrite_annotation.c, line 17):
+Let x = n % 2.
+Let x_1 = 1 + n.
+Assume {
+  Type: is_sint32(b) /\ is_sint32(i) /\ is_sint32(i_1) /\ is_sint32(i_2) /\
+      is_sint32(j) /\ is_sint32(j_1) /\ is_sint32(j_2) /\ is_sint32(n) /\
+      is_sint32(x_1).
+  (* Goal *)
+  When: (x_1 % 2) = 0.
+  (* Invariant *)
+  Have: (0 <= n) /\ (n <= 200).
+  (* Invariant *)
+  Have: ((x = 0) -> (j_2 = i_2)).
+  (* Invariant *)
+  Have: ((x = 1) -> (((1 + i_2) = j_2) \/ ((1 + j_2) = i_2))).
+  (* Then *)
+  Have: n <= 199.
+  If b != 0
+  Then { Have: (i_2 = i_1) /\ (j_2 = j). Have: (1 + i_1) = i. }
+  Else { Have: (i_2 = i) /\ (j_2 = j_1). Have: (1 + j_1) = j. }
+  (* Invariant *)
+  Have: (-1) <= n.
+}
+Prove: j = i.
+Prover Alt-Ergo 2.2.0 returns Failed
+unrecognized prover answer
+Prover Z3 4.8.12 returns Timeout (Qed:69ms) (8s)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline3_a6anfp_u/attempt_02_repair_03/repair_03_01_wrong_spec_01_rewrite_annotation.c, line 17):
+Prove: true.
+Prover Qed returns Valid (3ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline3_a6anfp_u/attempt_02_repair_03/repair_03_01_wrong_spec_01_rewrite_annotation.c, line 18):
+Let x = n % 2.
+Let x_1 = 1 + n.
+Assume {
+  Type: is_sint32(b) /\ is_sint32(i) /\ is_sint32(i_1) /\ is_sint32(i_2) /\
+      is_sint32(j) /\ is_sint32(j_1) /\ is_sint32(j_2) /\ is_sint32(n) /\
+      is_sint32(x_1).
+  (* Goal *)
+  When: (x_1 % 2) = 1.
+  (* Invariant *)
+  Have: (0 <= n) /\ (n <= 200).
+  (* Invariant *)
+  Have: ((x = 0) -> (j_2 = i_2)).
+  (* Invariant *)
+  Have: ((x = 1) -> (((1 + i_2) = j_2) \/ ((1 + j_2) = i_2))).
+  (* Then *)
+  Have: n <= 199.
+  If b != 0
+  Then { Have: (i_2 = i_1) /\ (j_2 = j). Have: (1 + i_1) = i. }
+  Else { Have: (i_2 = i) /\ (j_2 = j_1). Have: (1 + j_1) = j. }
+  (* Invariant *)
+  Have: (-1) <= n.
+}
+Prove: ((1 + i) = j) \/ ((1 + j) = i).
+Prover Alt-Ergo 2.2.0 returns Failed
+unrecognized prover answer
+Prover Z3 4.8.12 returns Valid (Qed:82ms) (77ms) (31286)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline3_a6anfp_u/attempt_02_repair_03/repair_03_01_wrong_spec_01_rewrite_annotation.c, line 18):
+Prove: true.
+Prover Qed returns Valid (2ms)
+
+------------------------------------------------------------
+
+Goal Assertion (file /tmp/baseline3_a6anfp_u/attempt_02_repair_03/repair_03_01_wrong_spec_01_rewrite_annotation.c, line 31):
+Let x = n % 2.
+Assume {
+  Type: is_sint32(i) /\ is_sint32(j) /\ is_sint32(n).
+  (* Invariant *)
+  Have: (0 <= n) /\ (n <= 200).
+  (* Invariant *)
+  Have: ((x = 0) -> (j = i)).
+  (* Invariant *)
+  Have: ((x = 1) -> (((1 + i) = j) \/ ((1 + j) = i))).
+  (* Else *)
+  Have: 200 <= n.
+}
+Prove: j = i.
+Prover Alt-Ergo 2.2.0 returns Failed
+unrecognized prover answer
+Prover Z3 4.8.12 returns Valid (Qed:17ms) (84ms) (26126)
+
+------------------------------------------------------------
+
+Goal Loop assigns (file /tmp/baseline3_a6anfp_u/attempt_02_repair_03/repair_03_01_wrong_spec_01_rewrite_annotation.c, line 19):
+Prove: true.
+Prover Qed returns Valid
+
+------------------------------------------------------------
+[wp:pedantic-assigns] /tmp/baseline3_a6anfp_u/attempt_02_repair_03/repair_03_01_wrong_spec_01_rewrite_annotation.c:7: Warning: 
+  No 'assigns' specification for function 'main'.
+  Callers assumptions might be imprecise.
+
+
+WP stderr:

@@ -1,0 +1,536 @@
+Dataset: frama-c-problem
+File: 214.c
+Source: /home/wangpeijie/wpj_2010215/spec_generation_abduction/data/AutoBench/frama-c-problem/214.c
+Final status: Fail
+Best attempt: 1
+Best result: Fail_22_23
+
+Command:
+frama-c -wp -wp-precond-weakening -wp-no-callee-precond -wp-prover Alt-Ergo,Z3 -wp-prop=-@terminates,-@variant,-@decreases -wp-print -wp-timeout 8 /tmp/baseline3_odym6dv5/attempt_01_repair_03/repair_03_01_missing_spec_01_add_invariant.c
+
+WP stdout:
+[kernel] Parsing /tmp/baseline3_odym6dv5/attempt_01_repair_03/repair_03_01_missing_spec_01_add_invariant.c (with preprocessing)
+[wp] Running WP plugin...
+[wp] Warning: Missing RTE guards
+[wp] 22 goals scheduled
+[wp] [Unknown] typed_array_max_advanced_ensures_2 (Qed 53ms) (Z3)
+[wp] Proved goals:   22 / 23
+  Unreachable:     1
+  Qed:            11 (16ms-29ms-130ms)
+  Z3 4.8.12:      10 (64ms-92ms-134ms)
+  Unknown:         1
+------------------------------------------------------------
+  Function array_max_advanced
+------------------------------------------------------------
+
+Goal Post-condition (file /tmp/baseline3_odym6dv5/attempt_01_repair_03/repair_03_01_missing_spec_01_add_invariant.c, line 9) in 'array_max_advanced':
+Let x = Mint_0[shift_sint32(arr_0, i_1)].
+Let a = shift_sint32(arr_0, 0).
+Let x_1 = Mint_0[a].
+Let x_2 = Mint_0[shift_sint32(arr_0, i_3)].
+Assume {
+  Type: is_sint32(i_2) /\ is_sint32(n) /\ is_sint32(x_1) /\ is_sint32(x) /\
+      is_sint32(x_2).
+  (* Heap *)
+  Type: (region(arr_0.base) <= 0) /\ linked(Malloc_0).
+  (* Goal *)
+  When: (0 <= i) /\ (i < n).
+  (* Pre-condition *)
+  Have: 0 < n.
+  (* Pre-condition *)
+  Have: valid_rd(Malloc_0, a, n).
+  (* Initializer *)
+  Init: x_2 = x_1.
+  (* Invariant *)
+  Have: (i_3 <= 0) /\ (0 <= i_3).
+  (* Invariant *)
+  Have: (0 <= i_2) /\ (i_2 <= n).
+  (* Invariant *)
+  Have: forall i_4 : Z. ((0 <= i_4) -> ((i_4 < i_2) ->
+      (Mint_0[shift_sint32(arr_0, i_4)] <= x))).
+  (* Invariant *)
+  Have: (i_1 <= i_2) /\ (0 <= i_1).
+  (* Invariant *)
+  Have: x_1 <= x.
+  (* Invariant *)
+  Have: ((n = i_2) ->
+      (forall i_4 : Z. ((0 <= i_4) -> ((i_4 < n) ->
+       (Mint_0[shift_sint32(arr_0, i_4)] <= x))))).
+  (* Else *)
+  Have: n <= i_2.
+}
+Prove: Mint_0[shift_sint32(arr_0, i)] <= x.
+Prover Alt-Ergo 2.2.0 returns Failed
+unrecognized prover answer
+Prover Z3 4.8.12 returns Valid (Qed:56ms) (121ms) (42895)
+
+------------------------------------------------------------
+
+Goal Post-condition (file /tmp/baseline3_odym6dv5/attempt_01_repair_03/repair_03_01_missing_spec_01_add_invariant.c, line 10) in 'array_max_advanced':
+Let x = Mint_0[shift_sint32(arr_0, i)].
+Let a = shift_sint32(arr_0, 0).
+Let x_1 = Mint_0[a].
+Let x_2 = Mint_0[shift_sint32(arr_0, i_2)].
+Assume {
+  Type: is_sint32(i_1) /\ is_sint32(n) /\ is_sint32(x_1) /\ is_sint32(x) /\
+      is_sint32(x_2).
+  (* Heap *)
+  Type: (region(arr_0.base) <= 0) /\ linked(Malloc_0).
+  (* Pre-condition *)
+  Have: 0 < n.
+  (* Pre-condition *)
+  Have: valid_rd(Malloc_0, a, n).
+  (* Initializer *)
+  Init: x_2 = x_1.
+  (* Invariant *)
+  Have: (i_2 <= 0) /\ (0 <= i_2).
+  (* Invariant *)
+  Have: (0 <= i_1) /\ (i_1 <= n).
+  (* Invariant *)
+  Have: forall i_3 : Z. ((0 <= i_3) -> ((i_3 < i_1) ->
+      (Mint_0[shift_sint32(arr_0, i_3)] <= x))).
+  (* Invariant *)
+  Have: (i <= i_1) /\ (0 <= i).
+  (* Invariant *)
+  Have: x_1 <= x.
+  (* Invariant *)
+  Have: ((n = i_1) ->
+      (forall i_3 : Z. ((0 <= i_3) -> ((i_3 < n) ->
+       (Mint_0[shift_sint32(arr_0, i_3)] <= x))))).
+  (* Else *)
+  Have: n <= i_1.
+}
+Prove: exists i_3 : Z. (Mint_0[shift_sint32(arr_0, i_3)] = x) /\
+    (0 <= i_3) /\ (i_3 < i_1).
+Prover Alt-Ergo 2.2.0 returns Failed
+unrecognized prover answer
+Prover Z3 4.8.12 returns Unknown (Qed:53ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline3_odym6dv5/attempt_01_repair_03/repair_03_01_missing_spec_01_add_invariant.c, line 15):
+Prove: true.
+Prover Qed returns Valid (46ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline3_odym6dv5/attempt_01_repair_03/repair_03_01_missing_spec_01_add_invariant.c, line 15):
+Prove: true.
+Prover Qed returns Valid (5ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline3_odym6dv5/attempt_01_repair_03/repair_03_01_missing_spec_01_add_invariant.c, line 16):
+Let x = Mint_0[shift_sint32(arr_0, i_2)].
+Let x_1 = Mint_0[shift_sint32(arr_0, i_1)].
+Let a = shift_sint32(arr_0, 0).
+Let x_2 = Mint_0[a].
+Let x_3 = Mint_0[shift_sint32(arr_0, i_3)].
+Assume {
+  Type: is_sint32(i_1) /\ is_sint32(max_0) /\ is_sint32(n) /\
+      is_sint32(1 + i_1) /\ is_sint32(x_2) /\ is_sint32(x_1) /\
+      is_sint32(x) /\ is_sint32(x_3).
+  (* Heap *)
+  Type: (region(arr_0.base) <= 0) /\ linked(Malloc_0).
+  (* Goal *)
+  When: (0 <= i) /\ (i <= i_1).
+  (* Pre-condition *)
+  Have: 0 < n.
+  (* Pre-condition *)
+  Have: valid_rd(Malloc_0, a, n).
+  (* Initializer *)
+  Init: x_3 = x_2.
+  (* Invariant *)
+  Have: (i_3 <= 0) /\ (0 <= i_3).
+  (* Invariant *)
+  Have: (0 <= i_1) /\ (i_1 <= n).
+  (* Invariant *)
+  Have: forall i_4 : Z. ((0 <= i_4) -> ((i_4 < i_1) ->
+      (Mint_0[shift_sint32(arr_0, i_4)] <= x))).
+  (* Invariant *)
+  Have: (i_2 <= i_1) /\ (0 <= i_2).
+  (* Invariant *)
+  Have: x_2 <= x.
+  (* Invariant *)
+  Have: ((n = i_1) ->
+      (forall i_4 : Z. ((0 <= i_4) -> ((i_4 < n) ->
+       (Mint_0[shift_sint32(arr_0, i_4)] <= x))))).
+  (* Then *)
+  Have: i_1 < n.
+  If x < x_1
+  Then { Have: x_1 = max_0. }
+  Else { Have: x = max_0. }
+  (* Invariant *)
+  Have: (-1) <= i_1.
+}
+Prove: Mint_0[shift_sint32(arr_0, i)] <= max_0.
+Prover Alt-Ergo 2.2.0 returns Failed
+unrecognized prover answer
+Prover Z3 4.8.12 returns Valid (Qed:122ms) (83ms) (46710)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline3_odym6dv5/attempt_01_repair_03/repair_03_01_missing_spec_01_add_invariant.c, line 16):
+Prove: true.
+Prover Qed returns Valid (1ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline3_odym6dv5/attempt_01_repair_03/repair_03_01_missing_spec_01_add_invariant.c, line 17):
+Let x = Mint_0[shift_sint32(arr_0, i_1)].
+Let x_1 = Mint_0[shift_sint32(arr_0, i)].
+Let a = shift_sint32(arr_0, 0).
+Let x_2 = Mint_0[a].
+Let x_3 = Mint_0[shift_sint32(arr_0, i_2)].
+Let x_4 = 1 + i.
+Assume {
+  Type: is_sint32(i) /\ is_sint32(max_0) /\ is_sint32(n) /\ is_sint32(x_4) /\
+      is_sint32(x_2) /\ is_sint32(x_1) /\ is_sint32(x) /\ is_sint32(x_3).
+  (* Heap *)
+  Type: (region(arr_0.base) <= 0) /\ linked(Malloc_0).
+  (* Pre-condition *)
+  Have: 0 < n.
+  (* Pre-condition *)
+  Have: valid_rd(Malloc_0, a, n).
+  (* Initializer *)
+  Init: x_3 = x_2.
+  (* Invariant *)
+  Have: (i_2 <= 0) /\ (0 <= i_2).
+  (* Invariant *)
+  Have: (0 <= i) /\ (i <= n).
+  (* Invariant *)
+  Have: forall i_3 : Z. ((0 <= i_3) -> ((i_3 < i) ->
+      (Mint_0[shift_sint32(arr_0, i_3)] <= x))).
+  (* Invariant *)
+  Have: (i_1 <= i) /\ (0 <= i_1).
+  (* Invariant *)
+  Have: x_2 <= x.
+  (* Invariant *)
+  Have: ((n = i) ->
+      (forall i_3 : Z. ((0 <= i_3) -> ((i_3 < n) ->
+       (Mint_0[shift_sint32(arr_0, i_3)] <= x))))).
+  (* Then *)
+  Have: i < n.
+  If x < x_1
+  Then { Have: x_1 = max_0. }
+  Else { Have: x = max_0. }
+  (* Invariant *)
+  Have: (-1) <= i.
+  (* Invariant *)
+  Have: forall i_3 : Z. ((i_3 <= i) -> ((0 <= i_3) ->
+      (Mint_0[shift_sint32(arr_0, i_3)] <= max_0))).
+}
+Prove: exists i_3 : Z. (Mint_0[shift_sint32(arr_0, i_3)] = max_0) /\
+    (0 <= i_3) /\ (i_3 <= x_4).
+Prover Alt-Ergo 2.2.0 returns Failed
+unrecognized prover answer
+Prover Z3 4.8.12 returns Valid (Qed:130ms) (82ms) (44945)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline3_odym6dv5/attempt_01_repair_03/repair_03_01_missing_spec_01_add_invariant.c, line 17):
+Prove: true.
+Prover Qed returns Valid (13ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline3_odym6dv5/attempt_01_repair_03/repair_03_01_missing_spec_01_add_invariant.c, line 18):
+Let x = 1 + i_1.
+Let x_1 = Mint_0[shift_sint32(arr_0, i)].
+Let x_2 = Mint_0[shift_sint32(arr_0, i_2)].
+Let x_3 = Mint_0[shift_sint32(arr_0, i_1)].
+Let a = shift_sint32(arr_0, 0).
+Let x_4 = Mint_0[a].
+Let x_5 = Mint_0[shift_sint32(arr_0, i_3)].
+Assume {
+  Type: is_sint32(i_1) /\ is_sint32(n) /\ is_sint32(x) /\ is_sint32(x_4) /\
+      is_sint32(x_1) /\ is_sint32(x_3) /\ is_sint32(x_2) /\ is_sint32(x_5).
+  (* Heap *)
+  Type: (region(arr_0.base) <= 0) /\ linked(Malloc_0).
+  (* Pre-condition *)
+  Have: 0 < n.
+  (* Pre-condition *)
+  Have: valid_rd(Malloc_0, a, n).
+  (* Initializer *)
+  Init: x_5 = x_4.
+  (* Invariant *)
+  Have: (i_3 <= 0) /\ (0 <= i_3).
+  (* Invariant *)
+  Have: (0 <= i_1) /\ (i_1 <= n).
+  (* Invariant *)
+  Have: forall i_4 : Z. ((0 <= i_4) -> ((i_4 < i_1) ->
+      (Mint_0[shift_sint32(arr_0, i_4)] <= x_2))).
+  (* Invariant *)
+  Have: (i_2 <= i_1) /\ (0 <= i_2).
+  (* Invariant *)
+  Have: x_4 <= x_2.
+  (* Invariant *)
+  Have: ((n = i_1) ->
+      (forall i_4 : Z. ((0 <= i_4) -> ((i_4 < n) ->
+       (Mint_0[shift_sint32(arr_0, i_4)] <= x_2))))).
+  (* Then *)
+  Have: i_1 < n.
+  If x_2 < x_3
+  Then { Have: x_3 = x_1. }
+  Else { Have: x_2 = x_1. }
+  (* Invariant *)
+  Have: (-1) <= i_1.
+  (* Invariant *)
+  Have: forall i_4 : Z. ((i_4 <= i_1) -> ((0 <= i_4) ->
+      (Mint_0[shift_sint32(arr_0, i_4)] <= x_1))).
+  (* Invariant *)
+  Have: (0 <= i) /\ (i <= x).
+}
+Prove: x_4 <= x_1.
+Prover Alt-Ergo 2.2.0 returns Failed
+unrecognized prover answer
+Prover Z3 4.8.12 returns Valid (Qed:92ms) (87ms) (45070)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline3_odym6dv5/attempt_01_repair_03/repair_03_01_missing_spec_01_add_invariant.c, line 18):
+Prove: true.
+Prover Qed returns Valid (6ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline3_odym6dv5/attempt_01_repair_03/repair_03_01_missing_spec_01_add_invariant.c, line 19):
+Let a = shift_sint32(arr_0, 0).
+Let x = Mint_0[a].
+Let x_1 = Mint_0[shift_sint32(arr_0, i_1)].
+Let x_2 = Mint_0[shift_sint32(arr_0, i_2)].
+Let x_3 = n - 1.
+Let x_4 = Mint_0[shift_sint32(arr_0, x_3)].
+Let x_5 = Mint_0[shift_sint32(arr_0, i_3)].
+Assume {
+  Type: is_sint32(n) /\ is_sint32(x_3) /\ is_sint32(x) /\ is_sint32(x_1) /\
+      is_sint32(x_2) /\ is_sint32(x_5) /\ is_sint32(x_4).
+  (* Heap *)
+  Type: (region(arr_0.base) <= 0) /\ linked(Malloc_0).
+  (* Goal *)
+  When: (0 <= i) /\ (i < n).
+  (* Pre-condition *)
+  Have: 0 < n.
+  (* Pre-condition *)
+  Have: valid_rd(Malloc_0, a, n).
+  (* Initializer *)
+  Init: x_5 = x.
+  (* Invariant *)
+  Have: (i_3 <= 0) /\ (0 <= i_3).
+  (* Invariant *)
+  Have: forall i_4 : Z. ((0 <= i_4) -> (((2 + i_4) <= n) ->
+      (Mint_0[shift_sint32(arr_0, i_4)] <= x_2))).
+  (* Invariant *)
+  Have: (0 <= i_2) /\ (i_2 < n).
+  (* Invariant *)
+  Have: x <= x_2.
+  If x_2 < x_4
+  Then { Have: x_4 = x_1. }
+  Else { Have: x_2 = x_1. }
+  (* Invariant *)
+  Have: forall i_4 : Z. ((0 <= i_4) -> ((i_4 < n) ->
+      (Mint_0[shift_sint32(arr_0, i_4)] <= x_1))).
+  (* Invariant *)
+  Have: (0 <= i_1) /\ (i_1 <= n).
+  (* Invariant *)
+  Have: x <= x_1.
+}
+Prove: Mint_0[shift_sint32(arr_0, i)] <= x_1.
+Prover Alt-Ergo 2.2.0 returns Failed
+unrecognized prover answer
+Prover Z3 4.8.12 returns Valid (Qed:97ms) (134ms) (44161)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline3_odym6dv5/attempt_01_repair_03/repair_03_01_missing_spec_01_add_invariant.c, line 19):
+Prove: true.
+Prover Qed returns Valid (4ms)
+
+------------------------------------------------------------
+
+Goal Loop assigns (file /tmp/baseline3_odym6dv5/attempt_01_repair_03/repair_03_01_missing_spec_01_add_invariant.c, line 20):
+Prove: true.
+Prover Qed returns Valid
+
+------------------------------------------------------------
+
+Goal Assigns nothing in 'array_max_advanced':
+Effect at line 23
+Prove: true.
+Prover Qed returns Valid (8ms)
+
+------------------------------------------------------------
+------------------------------------------------------------
+  Function main
+------------------------------------------------------------
+
+Goal Exit-condition (generated) in 'main':
+Prove: true.
+Prover Qed returns Valid
+
+------------------------------------------------------------
+
+Goal Assertion (file /tmp/baseline3_odym6dv5/attempt_01_repair_03/repair_03_01_missing_spec_01_add_invariant.c, line 36):
+Let x = arr_0[i].
+Assume {
+  Type: is_sint32(x).
+  (* Initializer *)
+  Init: arr_0[0] = 1.
+  (* Initializer *)
+  Init: arr_0[1] = 2.
+  (* Initializer *)
+  Init: arr_0[2] = 3.
+  (* Initializer *)
+  Init: arr_0[3] = 4.
+  (* Initializer *)
+  Init: arr_0[4] = 5.
+  (* Call 'array_max_advanced' *)
+  Have: (0 <= i) /\ (i <= 4) /\
+      (forall i_1 : Z. ((0 <= i_1) -> ((i_1 <= 4) -> (arr_0[i_1] <= x)))).
+}
+Prove: 0 < x.
+Prover Alt-Ergo 2.2.0 returns Failed
+unrecognized prover answer
+Prover Z3 4.8.12 returns Valid (Qed:18ms) (64ms) (25849)
+
+------------------------------------------------------------
+
+Goal Assertion (file /tmp/baseline3_odym6dv5/attempt_01_repair_03/repair_03_01_missing_spec_01_add_invariant.c, line 37):
+Let x = arr_0[i].
+Assume {
+  Type: is_sint32(x).
+  (* Initializer *)
+  Init: arr_0[0] = 1.
+  (* Initializer *)
+  Init: arr_0[1] = 2.
+  (* Initializer *)
+  Init: arr_0[2] = 3.
+  (* Initializer *)
+  Init: arr_0[3] = 4.
+  (* Initializer *)
+  Init: arr_0[4] = 5.
+  (* Call 'array_max_advanced' *)
+  Have: (0 <= i) /\ (i <= 4) /\
+      (forall i_1 : Z. ((0 <= i_1) -> ((i_1 <= 4) -> (arr_0[i_1] <= x)))).
+  (* Assertion *)
+  Have: 0 < x.
+}
+Prove: 2 <= x.
+Prover Alt-Ergo 2.2.0 returns Failed
+unrecognized prover answer
+Prover Z3 4.8.12 returns Valid (Qed:16ms) (85ms) (25932)
+
+------------------------------------------------------------
+
+Goal Assertion (file /tmp/baseline3_odym6dv5/attempt_01_repair_03/repair_03_01_missing_spec_01_add_invariant.c, line 38):
+Let x = arr_0[i].
+Assume {
+  Type: is_sint32(x).
+  (* Initializer *)
+  Init: arr_0[0] = 1.
+  (* Initializer *)
+  Init: arr_0[1] = 2.
+  (* Initializer *)
+  Init: arr_0[2] = 3.
+  (* Initializer *)
+  Init: arr_0[3] = 4.
+  (* Initializer *)
+  Init: arr_0[4] = 5.
+  (* Call 'array_max_advanced' *)
+  Have: (0 <= i) /\ (i <= 4) /\
+      (forall i_1 : Z. ((0 <= i_1) -> ((i_1 <= 4) -> (arr_0[i_1] <= x)))).
+  (* Assertion *)
+  Have: 0 < x.
+  (* Assertion *)
+  Have: 2 <= x.
+}
+Prove: 3 <= x.
+Prover Alt-Ergo 2.2.0 returns Failed
+unrecognized prover answer
+Prover Z3 4.8.12 returns Valid (Qed:16ms) (65ms) (26007)
+
+------------------------------------------------------------
+
+Goal Assertion (file /tmp/baseline3_odym6dv5/attempt_01_repair_03/repair_03_01_missing_spec_01_add_invariant.c, line 39):
+Let x = arr_0[i].
+Assume {
+  Type: is_sint32(x).
+  (* Initializer *)
+  Init: arr_0[0] = 1.
+  (* Initializer *)
+  Init: arr_0[1] = 2.
+  (* Initializer *)
+  Init: arr_0[2] = 3.
+  (* Initializer *)
+  Init: arr_0[3] = 4.
+  (* Initializer *)
+  Init: arr_0[4] = 5.
+  (* Call 'array_max_advanced' *)
+  Have: (0 <= i) /\ (i <= 4) /\
+      (forall i_1 : Z. ((0 <= i_1) -> ((i_1 <= 4) -> (arr_0[i_1] <= x)))).
+  (* Assertion *)
+  Have: 0 < x.
+  (* Assertion *)
+  Have: 2 <= x.
+  (* Assertion *)
+  Have: 3 <= x.
+}
+Prove: 4 <= x.
+Prover Alt-Ergo 2.2.0 returns Failed
+unrecognized prover answer
+Prover Z3 4.8.12 returns Valid (Qed:17ms) (97ms) (26084)
+
+------------------------------------------------------------
+
+Goal Assertion (file /tmp/baseline3_odym6dv5/attempt_01_repair_03/repair_03_01_missing_spec_01_add_invariant.c, line 40):
+Let x = arr_0[i].
+Assume {
+  Type: is_sint32(x).
+  (* Initializer *)
+  Init: arr_0[0] = 1.
+  (* Initializer *)
+  Init: arr_0[1] = 2.
+  (* Initializer *)
+  Init: arr_0[2] = 3.
+  (* Initializer *)
+  Init: arr_0[3] = 4.
+  (* Initializer *)
+  Init: arr_0[4] = 5.
+  (* Call 'array_max_advanced' *)
+  Have: (0 <= i) /\ (i <= 4) /\
+      (forall i_1 : Z. ((0 <= i_1) -> ((i_1 <= 4) -> (arr_0[i_1] <= x)))).
+  (* Assertion *)
+  Have: 0 < x.
+  (* Assertion *)
+  Have: 2 <= x.
+  (* Assertion *)
+  Have: 3 <= x.
+  (* Assertion *)
+  Have: 4 <= x.
+}
+Prove: 5 <= x.
+Prover Alt-Ergo 2.2.0 returns Failed
+unrecognized prover answer
+Prover Z3 4.8.12 returns Valid (Qed:25ms) (105ms) (26161)
+
+------------------------------------------------------------
+
+Goal Instance of 'Pre-condition (file /tmp/baseline3_odym6dv5/attempt_01_repair_03/repair_03_01_missing_spec_01_add_invariant.c, line 6) in 'array_max_advanced'' in 'main' at initialization of 'max' (file /tmp/baseline3_odym6dv5/attempt_01_repair_03/repair_03_01_missing_spec_01_add_invariant.c, line 35)
+:
+Prove: true.
+Prover Qed returns Valid
+
+------------------------------------------------------------
+
+Goal Instance of 'Pre-condition (file /tmp/baseline3_odym6dv5/attempt_01_repair_03/repair_03_01_missing_spec_01_add_invariant.c, line 7) in 'array_max_advanced'' in 'main' at initialization of 'max' (file /tmp/baseline3_odym6dv5/attempt_01_repair_03/repair_03_01_missing_spec_01_add_invariant.c, line 35)
+:
+Prove: true.
+Prover Qed returns Valid (0.98ms)
+
+------------------------------------------------------------
+[wp:pedantic-assigns] /tmp/baseline3_odym6dv5/attempt_01_repair_03/repair_03_01_missing_spec_01_add_invariant.c:33: Warning: 
+  No 'assigns' specification for function 'main'.
+  Callers assumptions might be imprecise.
+
+
+WP stderr:

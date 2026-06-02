@@ -1,0 +1,17 @@
+[
+  {
+    "name": "typed_main_assert",
+    "status": "Timeout",
+    "raw_line": "[wp] [Timeout] typed_main_assert (Qed 8ms) (Z3)",
+    "line_no": 5,
+    "failure_mode": "timeout",
+    "profile": "(Qed 8ms) (Z3)",
+    "goal_header": "Goal Assertion (file /tmp/baseline3_p28s3nm2/attempt_01_repair_03/repair_03_01_wrong_spec_01_rewrite_annotation.c, line 29):",
+    "goal_text": "Goal Assertion (file /tmp/baseline3_p28s3nm2/attempt_01_repair_03/repair_03_01_wrong_spec_01_rewrite_annotation.c, line 29):\nAssume {\n  Type: is_sint32(j) /\\ is_sint32(21 - (2 * j)).\n  (* Invariant *)\n  Have: j <= 10.\n  (* Invariant *)\n  Have: 0 <= j.\n  (* Else *)\n  Have: j <= 6.\n}\nProve: j = 6.\nProver Alt-Ergo 2.2.0 returns Failed\nunrecognized prover answer\nProver Z3 4.8.12 returns Timeout (Qed:8ms) (8s)",
+    "assumptions": "Type: is_sint32(j) /\\ is_sint32(21 - (2 * j)).\n  (* Invariant *)\n  Have: j <= 10.\n  (* Invariant *)\n  Have: 0 <= j.\n  (* Else *)\n  Have: j <= 6.",
+    "prove_statement": "j = 6.",
+    "prover_output": "Prover Alt-Ergo 2.2.0 returns Failed\nunrecognized prover answer\nProver Z3 4.8.12 returns Timeout (Qed:8ms) (8s)",
+    "source_file": "/tmp/baseline3_p28s3nm2/attempt_01_repair_03/repair_03_01_wrong_spec_01_rewrite_annotation.c",
+    "source_line": 29
+  }
+]

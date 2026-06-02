@@ -17,7 +17,7 @@ import re
 import shutil
 import tempfile
 from collections import Counter
-from dataclasses import asdict, dataclass
+from dataclasses import asdict, dataclass, is_dataclass
 from pathlib import Path
 from typing import Any, Dict, Iterable, List, Optional, Sequence, Tuple
 
@@ -28,6 +28,7 @@ from spec_abduction.llm import LLMClient, extract_code_response
 from spec_abduction.logging import RunLogger
 from spec_abduction.outputs import (
     case_record,
+    failed_case_dir,
     failed_file_path,
     failure_wp_output_path,
     save_failed_file,
@@ -123,6 +124,15 @@ class RepairProposal:
     risk: str
     raw: Dict[str, Any]
 
+
+@dataclass
+class RepairApplicationResult:
+
+    path: Optional[Path]
+    reason: str
+    details: List[str]
+    applied_index: Optional[int] = None
+
 """
     源码中一段 ACSL annotation 的位置和属性。
     Invalid 修复时需要从 Frama-C 报错行号反查附近 annotation。这个结构记录annotation 的起止行、原文、粗粒度类型，以及它是否属于原始 benchmark 的target assertion。target assertion 不能被删除，只允许格式修复或等价重写。
@@ -213,10 +223,10 @@ def parse_args(argv: Optional[Sequence[str]] = None) -> argparse.Namespace:
     parser.add_argument("--datasets", default="SyGuS,frama-c-problem,svcomp,46_fib", help="Comma-separated dataset names, or all.")
     parser.add_argument("--model", "--override-model", dest="model", default="gpt-4o", help="Model name in config.")
     parser.add_argument("--override-base-url", help="Runtime base_url override.")
-    parser.add_argument("--attempts", type=int, default=5, help="Initial LLM spec generations per case.")
+    parser.add_argument("--attempts", type=int, default=3, help="Initial LLM spec generations per case.")
     parser.add_argument("--max-llm-candidates", type=int, default=5, help="Assertion candidates per failed PO.")
-    parser.add_argument("--max-repair-rounds", type=int, default=3, help="Repair rounds after each initial generation.")
-    parser.add_argument("--max-invalid-repairs", type=int, default=2, help="Maximum invalid-input repairs per initial generation.")
+    parser.add_argument("--max-repair-rounds", type=int, default=7, help="Repair rounds after each initial generation.")
+    parser.add_argument("--max-invalid-repairs", type=int, default=4, help="Maximum invalid-input repairs per initial generation.")
     parser.add_argument("--delete-invalid-after-fail", action="store_true", help="Allow deleting generated invalid annotations after repair fails.")
     parser.add_argument("--limit", type=int, default=0, help="Global case limit; 0 means no limit.")
     parser.add_argument("--dataset-limit", type=int, default=0, help="Per-dataset case limit; 0 means no limit.")
@@ -229,7 +239,75 @@ def parse_args(argv: Optional[Sequence[str]] = None) -> argparse.Namespace:
     parser.add_argument("--resume", action="store_true", help="Skip cases with existing final output.")
     parser.add_argument("--overwrite", action="store_true", help="Remove out-root before running.")
     parser.add_argument("--dry-run", action="store_true", help="Print selected cases without LLM/WP.")
+    parser.add_argument("--trace-steps", action="store_true", help="Save per-case intermediate files, WP results, diagnoses, probes, and repair proposals.")
     return parser.parse_args(argv)
+
+
+def trace_case_dir(out_root: Path, case: Case) -> Path:
+    """返回某个 case 的可选中间步骤保存目录。"""
+
+    return out_root / "traces" / case.dataset / Path(case.filename).stem
+
+
+def jsonable(value: Any) -> Any:
+    """把 dataclass、Path 等对象转成可 JSON 序列化的结构。"""
+
+    if is_dataclass(value):
+        return jsonable(asdict(value))
+    if isinstance(value, Path):
+        return str(value)
+    if isinstance(value, dict):
+        return {str(key): jsonable(item) for key, item in value.items()}
+    if isinstance(value, (list, tuple)):
+        return [jsonable(item) for item in value]
+    return value
+
+
+def write_trace_json(trace_dir: Optional[Path], filename: str, data: Any) -> None:
+    """如果 trace 开启，写一个 JSON 文件。"""
+
+    if trace_dir is None:
+        return
+    trace_dir.mkdir(parents=True, exist_ok=True)
+    (trace_dir / filename).write_text(json.dumps(jsonable(data), indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+
+
+def write_trace_text(trace_dir: Optional[Path], filename: str, text: str) -> None:
+    """如果 trace 开启，写一个文本文件。"""
+
+    if trace_dir is None:
+        return
+    trace_dir.mkdir(parents=True, exist_ok=True)
+    (trace_dir / filename).write_text(text if text.endswith("\n") else text + "\n", encoding="utf-8")
+
+
+def copy_trace_file(trace_dir: Optional[Path], filename: str, source: Path) -> None:
+    """如果 trace 开启，复制一个已生成的文件。"""
+
+    if trace_dir is None or not source.exists():
+        return
+    trace_dir.mkdir(parents=True, exist_ok=True)
+    shutil.copyfile(source, trace_dir / filename)
+
+
+def write_trace_wp(trace_dir: Optional[Path], wp: WPResult) -> None:
+    """保存一次 WP 调用的命令、结果和 stdout/stderr。"""
+
+    if trace_dir is None:
+        return
+    write_trace_json(
+        trace_dir,
+        "wp_result.json",
+        {
+            "result_type": wp.result_type,
+            "elapsed_sec": wp.elapsed_sec,
+            "command": wp.command,
+            "stdout_path": wp.stdout_path,
+            "stderr_path": wp.stderr_path,
+        },
+    )
+    write_trace_text(trace_dir, "wp_stdout.txt", wp.stdout)
+    write_trace_text(trace_dir, "wp_stderr.txt", wp.stderr or "")
 
 
 def clip_text(text: str, limit: int = FEEDBACK_CHAR_LIMIT) -> str:
@@ -803,6 +881,7 @@ def generate_assertion_candidates(
     max_candidates: int,
     temperature: float,
     max_tokens: int,
+    trace_dir: Optional[Path] = None,
 ) -> List[AssertionCandidate]:
 
     # 从 ProofObligation 中取出已解析好的 Goal block 信息，包括 assumptions、prove_statement、prover_output 等，作为 LLM 生成中间事实的主要依据。
@@ -811,6 +890,7 @@ def generate_assertion_candidates(
     visible = source_visible_identifiers(source_code, markers)
     # 构造 assertion candidate prompt。prompt 会要求 LLM 只输出 JSON array，每项是一条可插入的 ACSL assertion。
     messages = build_assertion_candidate_prompt(source_code, target, goal_context, visible, markers, max_candidates, baseline_wp, clip_text)
+    write_trace_json(trace_dir, "assertion_candidate_prompt.json", messages)
     # 调 LLM 生成候选 assertion。
     raw = client.chat(
         messages,
@@ -818,8 +898,10 @@ def generate_assertion_candidates(
         max_tokens,
         f"baseline3_candidates_{target.name}",
     )
+    write_trace_text(trace_dir, "assertion_candidate_raw.txt", raw)
     # LLM 应返回 JSON array；解析失败时 parse_json_array 会返回空列表。
     parsed = parse_json_array(raw)
+    write_trace_json(trace_dir, "assertion_candidate_parsed.json", parsed)
     candidates: List[AssertionCandidate] = []
     for item in parsed:
         candidate = parse_assertion_candidate_item(item, visible)
@@ -829,6 +911,7 @@ def generate_assertion_candidates(
         if len(candidates) >= max_candidates:
             # 防止 LLM 返回过多 candidate 导致 WP probe 数量失控。
             break
+    write_trace_json(trace_dir, "assertion_candidates.json", candidates)
     return candidates
 
 """
@@ -870,11 +953,16 @@ def generate_wrong_spec_repair_proposals(
     goal_context: Dict[str, Any],
     wp_text: str,
     args: argparse.Namespace,
+    trace_dir: Optional[Path] = None,
 ) -> List[RepairProposal]:
 
     messages = build_wrong_spec_repair_prompt(source_code, target, diagnosis, goal_context, wp_text, original_source, clip_text)
+    write_trace_json(trace_dir, "wrong_spec_prompt.json", messages)
     raw = client.chat(messages, args.candidate_temperature, args.max_tokens, f"baseline3_wrong_spec_{target.name}")
-    return parse_repair_proposals(raw)
+    write_trace_text(trace_dir, "wrong_spec_raw.txt", raw)
+    proposals = parse_repair_proposals(raw)
+    write_trace_json(trace_dir, "wrong_spec_proposals.json", proposals)
+    return proposals
 
 """
 让 LLM 针对“缺少 spec”生成补充型提案。
@@ -891,12 +979,17 @@ def generate_missing_spec_repair_proposals(
     markers: List[ProbeMarker],
     probe_evidence: List[Dict[str, Any]],
     args: argparse.Namespace,
+    trace_dir: Optional[Path] = None,
 ) -> List[RepairProposal]:
 
     marker_context = extract_marker_loop_context(source_code, markers)
     messages = build_missing_spec_prompt(source_code, target, diagnosis, goal_context, marker_context, probe_evidence, original_source, clip_text)
+    write_trace_json(trace_dir, "missing_spec_prompt.json", messages)
     raw = client.chat(messages, args.candidate_temperature, args.max_tokens, f"baseline3_missing_spec_{target.name}")
-    return parse_repair_proposals(raw)
+    write_trace_text(trace_dir, "missing_spec_raw.txt", raw)
+    proposals = parse_repair_proposals(raw)
+    write_trace_json(trace_dir, "missing_spec_proposals.json", proposals)
+    return proposals
 
 """
 让 LLM 对报错行的 Invalid annotation 做最小修复。LLM 负责判断删除该 ACSL 行还是生成替代 ACSL 语句。
@@ -907,6 +1000,7 @@ def generate_invalid_repair_proposal(
     original_source: str,
     diagnosis: FailureDiagnosis,
     args: argparse.Namespace,
+    trace_dir: Optional[Path] = None,
 ) -> Optional[RepairProposal]:
 
     span = None
@@ -920,8 +1014,11 @@ def generate_invalid_repair_proposal(
             bool(data.get("is_original_target", False)),
         )
     messages = build_invalid_repair_prompt(diagnosis.source_line or 0, diagnosis.reason, span, source_code, original_source, clip_text)
+    write_trace_json(trace_dir, "invalid_repair_prompt.json", messages)
     raw = client.chat(messages, args.candidate_temperature, args.max_tokens, "baseline3_invalid_repair")
+    write_trace_text(trace_dir, "invalid_repair_raw.txt", raw)
     proposals = parse_repair_proposals(raw)
+    write_trace_json(trace_dir, "invalid_repair_proposals.json", proposals)
     return proposals[0] if proposals else None
 
 
@@ -1074,6 +1171,7 @@ def collect_assertion_probe_evidence(
     baseline_wp: WPResult,
     goal_context: Dict[str, Any],
     temp_dir: Path,
+    trace_dir: Optional[Path] = None,
 ) -> List[ProbeResult]:
 
     # 先找当前源码里可插入 probe assertion 的占位符。
@@ -1095,6 +1193,7 @@ def collect_assertion_probe_evidence(
             args.max_llm_candidates,
             args.candidate_temperature,
             args.max_tokens,
+            trace_dir,
         )
     except Exception:
         candidates = []
@@ -1113,6 +1212,9 @@ def collect_assertion_probe_evidence(
         create_temp_file_with_assertion(source_code, candidate, marker, label, probe_file)
         # 对插入 probe assertion 后的临时文件重新跑 WP。
         probe_wp = run_wp(args.frama_c, probe_file, temp_dir / "wp_logs", f"probe_{target_index + 1}_{candidate_index + 1}", args.wp_timeout, args.provers)
+        probe_trace_dir = trace_dir / f"probe_{candidate_index + 1:02d}" if trace_dir is not None else None
+        copy_trace_file(probe_trace_dir, "probe.c", probe_file)
+        write_trace_wp(probe_trace_dir, probe_wp)
         probe_feedback = probe_wp.stdout + "\n" + probe_wp.stderr
         # 判断 probe assertion 本身是否被证明：
         # 如果 WP 输出里没有该 label 对应的失败 PO,就认为 assertion 已证明。
@@ -1136,6 +1238,8 @@ def collect_assertion_probe_evidence(
         )
         # 保存完整 probe 结果，包括临时文件、WP 结果、candidate、marker 和 evidence。
         results.append(ProbeResult(probe_file, probe_wp, candidate, marker, classification, evidence))
+        write_trace_json(probe_trace_dir, "probe_result.json", results[-1])
+    write_trace_json(trace_dir, "probe_results.json", results)
     return results
 
 """
@@ -1165,6 +1269,7 @@ def repair_invalid_annotation(
     temp_dir: Path,
     repair_round: int,
     invalid_repairs: int,
+    trace_dir: Optional[Path] = None,
 ) -> Optional[Path]:
     if invalid_repairs >= args.max_invalid_repairs:
         return None
@@ -1183,7 +1288,7 @@ def repair_invalid_annotation(
         return None
     try:
         #交给llm进行delete或者rewrite
-        llm_proposal = generate_invalid_repair_proposal(client, current_code, original_source, diagnosis, args)
+        llm_proposal = generate_invalid_repair_proposal(client, current_code, original_source, diagnosis, args, trace_dir)
     except Exception:
         return None
     if llm_proposal is None:
@@ -1211,6 +1316,8 @@ def repair_invalid_annotation(
     repair_file = temp_dir / f"invalid_repair_{repair_round:02d}_01.c"
     repair_file.parent.mkdir(parents=True, exist_ok=True)
     repair_file.write_text(rewritten if rewritten.endswith("\n") else rewritten + "\n", encoding="utf-8")
+    write_trace_json(trace_dir, "invalid_repair_applied.json", llm_proposal)
+    copy_trace_file(trace_dir, "invalid_repaired.c", repair_file)
     return repair_file
 
 """
@@ -1227,10 +1334,12 @@ def handle_invalid(
     temp_dir: Path,
     repair_round: int,
     invalid_repairs: int,
+    trace_dir: Optional[Path] = None,
 ) -> Optional[Path]:
 
     diagnosis = diagnose_invalid(current_code, original_source, wp)
-    return repair_invalid_annotation(original_source, current_code, diagnosis, client, args, temp_dir, repair_round, invalid_repairs)
+    write_trace_json(trace_dir, "invalid_diagnosis.json", diagnosis)
+    return repair_invalid_annotation(original_source, current_code, diagnosis, client, args, temp_dir, repair_round, invalid_repairs, trace_dir)
 
 
 def try_repair_proposals(
@@ -1239,17 +1348,23 @@ def try_repair_proposals(
     proposals: List[RepairProposal],
     temp_dir: Path,
     prefix: str,
-) -> Optional[Path]:
-    """按顺序尝试应用一组 repair proposals，返回第一个可应用的临时文件。"""
+) -> RepairApplicationResult:
+    """按顺序尝试应用一组 repair proposals，并记录不可应用原因。"""
 
+    if not proposals:
+        return RepairApplicationResult(None, "no_proposals", [])
+    details: List[str] = []
     for index, proposal in enumerate(proposals, 1):
         if proposal.action == "regenerate" or not proposal.original_text:
+            details.append(f"#{index} skipped: action={proposal.action!r}, missing exact original_text or regenerate")
             continue
         count = current_code.count(proposal.original_text)
         if count != 1:
+            details.append(f"#{index} skipped: action={proposal.action!r}, original_text_count={count}")
             continue
         if proposal.action in {"delete_annotation", "delete"}:
             if line_in_original_target_assertion(original_source, proposal.original_text):
+                details.append(f"#{index} skipped: refuses to delete original target assertion")
                 continue
             replacement = ""
         else:
@@ -1257,14 +1372,28 @@ def try_repair_proposals(
         rewritten = current_code.replace(proposal.original_text, replacement, 1)
         try:
             validate_generated_code(original_source, rewritten)
-        except GeneratedCodeError:
+        except GeneratedCodeError as exc:
+            details.append(f"#{index} skipped: generated code rejected: {exc}")
             continue
         safe_action = re.sub(r"[^A-Za-z0-9_]+", "_", proposal.action).strip("_") or "repair"
         repair_file = temp_dir / f"{prefix}_{index:02d}_{safe_action}.c"
         repair_file.parent.mkdir(parents=True, exist_ok=True)
         repair_file.write_text(rewritten if rewritten.endswith("\n") else rewritten + "\n", encoding="utf-8")
-        return repair_file
-    return None
+        details.append(f"#{index} applied: action={proposal.action!r}, file={repair_file.name}")
+        return RepairApplicationResult(repair_file, "applied", details, index)
+    return RepairApplicationResult(None, "no_applicable_repair", details)
+
+
+def log_repair_application(client: LLMClient, label: str, result: RepairApplicationResult, max_details: int = 4) -> None:
+    if result.path is not None:
+        client.log(f"baseline3 repair {label}: applied proposal #{result.applied_index} -> {result.path.name}")
+        return
+    client.log(f"baseline3 repair {label}: not applied ({result.reason})")
+    for detail in result.details[:max_details]:
+        client.log(f"  {detail}")
+    remaining = len(result.details) - max_details
+    if remaining > 0:
+        client.log(f"  ... {remaining} more skipped proposal(s)")
 
 """
 Fail 分支入口
@@ -1284,32 +1413,38 @@ def handle_fail(
     wp: WPResult,
     temp_dir: Path,
     repair_round: int,
+    trace_dir: Optional[Path] = None,
 ) -> Optional[Path]:
 
     feedback_text = wp.stdout + "\n" + wp.stderr
     #WP 日志解析失败目标PO
     failed_pos = extract_failed_proof_obligations(feedback_text)
+    write_trace_json(trace_dir, "failed_pos.json", failed_pos)
     if not failed_pos:
         return None
     markers = find_probe_markers(current_code)
     #每轮只处理当前 WP 反馈中的第一个 failed PO。生成 repair 后外层会重新跑 WP，避免继续使用过期的证明上下文
     po_index = 0
     po = failed_pos[po_index]
+    write_trace_json(trace_dir, "selected_po.json", po)
     #提取当前 PO 的 goal context
     goal_context = goal_context_from_po(po)
     #补充源码可见变量和 marker 上下文
     goal_context["source_visible_identifiers"] = source_visible_identifiers(current_code, markers)
     goal_context["forbidden_wp_internal_identifiers"] = extract_wp_internal_identifiers(goal_context.get("goal_text", ""), goal_context["source_visible_identifiers"])
     goal_context["marker_loop_contexts"] = extract_marker_loop_context(current_code, markers)
+    write_trace_json(trace_dir, "goal_context.json", goal_context)
     #诊断失败类型
     diagnosis = diagnose_failed_po(client, current_code, original_source, po, goal_context, markers, feedback_text, args)
+    write_trace_json(trace_dir, "diagnosis.json", diagnosis)
     probe_results: List[ProbeResult] = []
     successful_probe: Optional[Tuple[Path, WPResult]] = None
     #对部分类型例如proof_gap和missing_spec，说明可能缺一个中间事实
     if diagnosis.category in {"proof_gap", "missing_spec", "ambiguous"}:
         #让 LLM 生成一些候选 assertion，插到 PROBE_HERE marker 位置，跑 WP 看有没有帮助
         #符号的abduction是加在这一步的！！！！
-        probe_results = collect_assertion_probe_evidence(args, client, current_code, po, po_index, wp, goal_context, temp_dir / f"round_{repair_round:02d}_probe")
+        probe_trace_dir = trace_dir / "probes" if trace_dir is not None else None
+        probe_results = collect_assertion_probe_evidence(args, client, current_code, po, po_index, wp, goal_context, temp_dir / f"round_{repair_round:02d}_probe", probe_trace_dir)
         #插到 PROBE_HERE marker 位置，跑 WP 看有没有帮助
         successful_probe = apply_successful_probe_or_promote(probe_results)
         #如果诊断是 proof_gap，并且某个 probe 文件直接让目标通过，就直接返回这个 probe 文件作为下一轮验证文件
@@ -1320,29 +1455,40 @@ def handle_fail(
     #- useful_but_unproved: probe 自身可能没完全证明，但对目标有帮助。
     #- proved_but_only_improves: probe 能证明，且让结果有所改善但没完全解决。
     probe_evidence = [result.evidence for result in probe_results if result.classification in {"successful_probe", "useful_but_unproved", "proved_but_only_improves"}]
-    #根据 diagnosis.category 生成 repair proposals
-    proposals: List[RepairProposal] = []
-    try:
-        #调 generate_wrong_spec_repair_proposals()，让 LLM 改已有 annotation，比如rewrite/delete 错误 invariant、assigns、contract
-        if diagnosis.category == "wrong_spec":
-            proposals = generate_wrong_spec_repair_proposals(client, current_code, original_source, po, diagnosis, goal_context, feedback_text, args)
-        #调 generate_missing_spec_repair_proposals()，让 LLM 补 spec，比如 add invariant、add contract、add assertion
-        elif diagnosis.category == "missing_spec":
-            proposals = generate_missing_spec_repair_proposals(client, current_code, original_source, po, diagnosis, goal_context, markers, probe_evidence, args)
-        #如果 probe 已经成功，直接返回 probe 文件；否则也走 missing-spec repair
-        elif diagnosis.category == "proof_gap":
-            if successful_probe is not None:
-                return successful_probe[0]
-            proposals = generate_missing_spec_repair_proposals(client, current_code, original_source, po, diagnosis, goal_context, markers, probe_evidence, args)
-        #ambiguous 或其他先试 missing-spec repair；如果没有 proposal，再试 wrong-spec repair
-        else:
-            proposals = generate_missing_spec_repair_proposals(client, current_code, original_source, po, diagnosis, goal_context, markers, probe_evidence, args)
-            if not proposals:
-                proposals = generate_wrong_spec_repair_proposals(client, current_code, original_source, po, diagnosis, goal_context, feedback_text, args)
-    except Exception:
-        proposals = []
-    #尝试应用 proposals
-    return try_repair_proposals(original_source, current_code, proposals, temp_dir, f"repair_{repair_round:02d}_{po_index + 1:02d}")
+    write_trace_json(trace_dir, "probe_evidence_used.json", probe_evidence)
+    repair_prefix = f"repair_{repair_round:02d}_{po_index + 1:02d}"
+
+    def run_repair_kind(kind: str) -> RepairApplicationResult:
+        kind_trace_dir = trace_dir / kind if trace_dir is not None else None
+        try:
+            if kind == "wrong_spec":
+                proposals = generate_wrong_spec_repair_proposals(client, current_code, original_source, po, diagnosis, goal_context, feedback_text, args, kind_trace_dir)
+            else:
+                proposals = generate_missing_spec_repair_proposals(client, current_code, original_source, po, diagnosis, goal_context, markers, probe_evidence, args, kind_trace_dir)
+        except Exception as exc:
+            result = RepairApplicationResult(None, "proposal_generation_error", [f"{type(exc).__name__}: {exc}"])
+            write_trace_json(kind_trace_dir, "repair_application.json", result)
+            log_repair_application(client, f"{kind}_{po.name}", result)
+            return result
+        result = try_repair_proposals(original_source, current_code, proposals, temp_dir, f"{repair_prefix}_{kind}")
+        write_trace_json(kind_trace_dir, "repair_application.json", result)
+        if result.path is not None:
+            copy_trace_file(kind_trace_dir, "repaired.c", result.path)
+        log_repair_application(client, f"{kind}_{po.name}", result)
+        return result
+
+    # 根据诊断选择主 repair 分支；主分支 proposal 不可应用时，再试另一类 repair，避免一次 exact-text 失败就结束 attempt。
+    if diagnosis.category == "wrong_spec":
+        repair_order = ["wrong_spec", "missing_spec"]
+    else:
+        repair_order = ["missing_spec", "wrong_spec"]
+
+    primary_result = run_repair_kind(repair_order[0])
+    if primary_result.path is not None:
+        return primary_result.path
+    client.log(f"baseline3 repair fallback: trying {repair_order[1]} after {repair_order[0]} failed")
+    fallback_result = run_repair_kind(repair_order[1])
+    return fallback_result.path
 
 
 def resumed_record(case: Case, out_root: Path) -> Optional[Dict[str, Any]]:
@@ -1403,10 +1549,19 @@ def run_case(args: argparse.Namespace, client: LLMClient, case: Case, out_root: 
     if args.resume:
         record = resumed_record(case, out_root)
         if record is not None:
+            trace_dir = trace_case_dir(out_root, case)
+            if trace_dir.exists():
+                record["trace_dir"] = str(trace_dir)
             return record
     original_source = case.source_path.read_text(encoding="utf-8", errors="replace")
     best: Optional[AttemptRecord] = None
     successful_file = ""
+    case_trace_dir = trace_case_dir(out_root, case) if args.trace_steps else None
+    if case_trace_dir is not None:
+        if case_trace_dir.exists():
+            shutil.rmtree(case_trace_dir)
+        write_trace_text(case_trace_dir, "00_original.c", original_source)
+        write_trace_json(case_trace_dir, "case.json", case)
     with tempfile.TemporaryDirectory(prefix="baseline3_") as temp_dir_name:
         temp_dir = Path(temp_dir_name)
         generated_dir = temp_dir / "generated_specs"
@@ -1415,16 +1570,20 @@ def run_case(args: argparse.Namespace, client: LLMClient, case: Case, out_root: 
         wp_dir.mkdir(parents=True, exist_ok=True)
         #每个case最多args.attempts次尝试
         for attempt in range(1, args.attempts + 1):
+            attempt_trace_dir = case_trace_dir / f"attempt_{attempt:02d}" if case_trace_dir is not None else None
             generated_file = generated_dir / f"attempt_{attempt:02d}.c"
             try:
                 #复用 baseline1 的 direct generation
                 code = generate_initial_code(client, case, attempt, args.temperature, args.max_tokens)
                 generated_file.write_text(code, encoding="utf-8")
+                write_trace_text(attempt_trace_dir, "initial.c", code)
                 current_code = code
                 current_file = generated_file
                 invalid_repairs = 0
                 #每次尝试最多repair次数为max_repair_rounds次
                 for repair_round in range(0, args.max_repair_rounds + 1):
+                    round_trace_dir = attempt_trace_dir / f"round_{repair_round:02d}" if attempt_trace_dir is not None else None
+                    copy_trace_file(round_trace_dir, "current.c", current_file)
                     # repair_round == 0 表示初始生成文件的第一次 WP 检查；
                     # 后续 round 使用上一轮 repair 产出的 current_file。
                     wp = run_wp(
@@ -1435,6 +1594,7 @@ def run_case(args: argparse.Namespace, client: LLMClient, case: Case, out_root: 
                         args.wp_timeout,
                         args.provers,
                     )
+                    write_trace_wp(round_trace_dir, wp)
                     #得到status是fail还是pass还是invalid
                     status = attempt_status(wp.result_type)
                     record = AttemptRecord(
@@ -1461,8 +1621,10 @@ def run_case(args: argparse.Namespace, client: LLMClient, case: Case, out_root: 
                         target.parent.mkdir(parents=True, exist_ok=True)
                         shutil.copyfile(current_file, target)
                         successful_file = str(target)
+                        write_trace_json(round_trace_dir, "status.json", {"status": status, "result_type": wp.result_type, "saved_file": successful_file})
                         break
                     if repair_round >= args.max_repair_rounds:
+                        write_trace_json(round_trace_dir, "status.json", {"status": status, "result_type": wp.result_type, "stop_reason": "max_repair_rounds"})
                         break
                     repair_dir = temp_dir / f"attempt_{attempt:02d}_repair_{repair_round + 1:02d}"
                     #2. 如果是invalid，表示Frama-C连当前C+ACSL文件都不能接受，通常是ACSL语法、类型、未绑定变量等、非法annotation等问题
@@ -1477,6 +1639,7 @@ def run_case(args: argparse.Namespace, client: LLMClient, case: Case, out_root: 
                             repair_dir,
                             repair_round + 1,
                             invalid_repairs,
+                            round_trace_dir / "invalid_repair" if round_trace_dir is not None else None,
                         )
                         invalid_repairs += 1
                     #3. 如果是fail
@@ -1491,11 +1654,15 @@ def run_case(args: argparse.Namespace, client: LLMClient, case: Case, out_root: 
                             wp,
                             repair_dir,
                             repair_round + 1,
+                            round_trace_dir / "fail_repair" if round_trace_dir is not None else None,
                         )
                     if repaired_file is None:
                         # 当前 WP 结果无法产生可应用 repair，结束该 attempt，
                         # 进入下一次独立 initial generation。
+                        write_trace_json(round_trace_dir, "status.json", {"status": status, "result_type": wp.result_type, "stop_reason": "no_repair"})
                         break
+                    copy_trace_file(round_trace_dir, "next.c", repaired_file)
+                    write_trace_json(round_trace_dir, "status.json", {"status": status, "result_type": wp.result_type, "next_file": str(repaired_file)})
                     current_file = repaired_file
                     current_code = current_file.read_text(encoding="utf-8", errors="replace")
                 if successful_file:
@@ -1520,12 +1687,17 @@ def run_case(args: argparse.Namespace, client: LLMClient, case: Case, out_root: 
                 )
                 if best is None or record.score > best.score:
                     best = record
+                write_trace_json(attempt_trace_dir, "error.json", {"type": type(exc).__name__, "message": str(exc), "code": code})
     failure_wp_output = ""
     failed_file = ""
     if best and best.status != "Pass":
         failed_file = save_failed_file(out_root, case, best)
         failure_wp_output = save_failure_wp_output(out_root, case, best)
-    return case_record(case, best, False, successful_file, failed_file, failure_wp_output)
+    record = case_record(case, best, False, successful_file, failed_file, failure_wp_output)
+    if case_trace_dir is not None:
+        record["trace_dir"] = str(case_trace_dir)
+        write_trace_json(case_trace_dir, "final_record.json", record)
+    return record
 
 
 def write_reports(out_root: Path, records: List[Dict[str, Any]]) -> None:
@@ -1540,23 +1712,59 @@ def write_reports(out_root: Path, records: List[Dict[str, Any]]) -> None:
     for dataset, counter in sorted(dataset_counts.items()):
         total = sum(counter.values())
         lines.append(f"| {dataset} | {counter.get('Pass', 0)} | {counter.get('Fail', 0)} | {counter.get('Invalid', 0)} | {counter.get('Error', 0)} | {total} |")
-    lines.extend(["", "## Per Case", "", "| Dataset | File | Status | Best Attempt | Best Result | C File | WP Output |", "| --- | --- | --- | ---: | --- | --- | --- |"])
+    lines.extend(["", "## Per Case", "", "| Dataset | File | Status | Best Attempt | Best Result | C File | WP Output | Trace |", "| --- | --- | --- | ---: | --- | --- | --- | --- |"])
     for record in records:
         c_file = record.get("successful_saved_file") or record.get("failed_saved_file", "")
         wp_output = record.get("failure_wp_output", "")
-        lines.append(f"| {record['dataset']} | {record['filename']} | {record['final_status']} | {record.get('best_attempt', '')} | {record.get('best_result_type', '')} | {c_file} | {wp_output} |")
+        trace_dir = record.get("trace_dir", "")
+        lines.append(f"| {record['dataset']} | {record['filename']} | {record['final_status']} | {record.get('best_attempt', '')} | {record.get('best_result_type', '')} | {c_file} | {wp_output} | {trace_dir} |")
     (out_root / "baseline3_summary.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
-def clean_output(out_root: Path) -> None:
-    for directory_name in ("successful_files", "failed_cases", "failed_files", "wp_outputs", "generated_specs", "wp_logs", "cases", "llm_logs", "best_files"):
-        directory = out_root / directory_name
-        if directory.exists():
-            shutil.rmtree(directory)
-    for file_name in ("baseline3_summary.md", "baseline3_console.txt"):
-        file_path = out_root / file_name
-        if file_path.exists():
-            file_path.unlink()
+def clean_case_output(out_root: Path, case: Case) -> None:
+    """Remove only the saved final output for one selected case."""
+
+    success_file = successful_file_path(out_root, case)
+    if success_file.exists():
+        success_file.unlink()
+    failure_dir = failed_case_dir(out_root, case)
+    if failure_dir.exists():
+        shutil.rmtree(failure_dir)
+    trace_dir = trace_case_dir(out_root, case)
+    if trace_dir.exists():
+        shutil.rmtree(trace_dir)
+
+
+def selected_dataset_label(cases: Iterable[Case]) -> str:
+    """Return a stable filename label for the datasets included in one run."""
+
+    datasets = sorted({case.dataset for case in cases})
+    if not datasets:
+        return "none"
+    return "__".join(re.sub(r"[^A-Za-z0-9_.-]+", "_", dataset) for dataset in datasets)
+
+
+def baseline3_console_path(out_root: Path, cases: Iterable[Case]) -> Path:
+    """Console logs are scoped by dataset selection, not shared globally."""
+
+    return out_root / f"baseline3_console_{selected_dataset_label(cases)}.txt"
+
+
+def existing_output_records(autobench_dir: Path, out_root: Path, current_cases: Iterable[Case]) -> List[Dict[str, Any]]:
+    """Load existing saved records for cases that were not part of this run."""
+
+    current = {(case.dataset, case.filename) for case in current_cases}
+    records: List[Dict[str, Any]] = []
+    for case in discover_cases(autobench_dir, "all", 0, 0):
+        if (case.dataset, case.filename) in current:
+            continue
+        record = resumed_record(case, out_root)
+        if record is not None:
+            trace_dir = trace_case_dir(out_root, case)
+            if trace_dir.exists():
+                record["trace_dir"] = str(trace_dir)
+            records.append(record)
+    return records
 
 
 def main(argv: Optional[Sequence[str]] = None) -> int:
@@ -1571,14 +1779,16 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
         for dataset, count in sorted(Counter(case.dataset for case in cases).items()):
             print(f"{dataset}: {count}")
         return 0
-    if args.overwrite and out_root.exists():
-        shutil.rmtree(out_root)
     out_root.mkdir(parents=True, exist_ok=True)
-    if not args.resume:
-        clean_output(out_root)
-    with RunLogger(out_root / "baseline3_console.txt") as logger:
+    console_path = baseline3_console_path(out_root, cases)
+    if args.overwrite or not args.resume:
+        for case in cases:
+            clean_case_output(out_root, case)
+        if console_path.exists():
+            console_path.unlink()
+    with RunLogger(console_path) as logger:
         client = LLMClient(load_model_config(Path(args.config).resolve(), args.model, args.override_base_url), logger.log)
-        records: List[Dict[str, Any]] = []
+        records: List[Dict[str, Any]] = existing_output_records(autobench_dir, out_root, cases)
         for index, case in enumerate(cases, 1):
             logger.log(f"[{index}/{len(cases)}] baseline3 {case.dataset}/{case.filename}")
             #每个case调用run_case函数
@@ -1588,7 +1798,7 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
         logger.log(f"Summary: {out_root / 'baseline3_summary.md'}")
         logger.log(f"Successful files: {out_root / 'successful_files'}")
         logger.log(f"Failed cases: {out_root / 'failed_cases'}")
-        logger.log(f"Console log: {out_root / 'baseline3_console.txt'}")
+        logger.log(f"Console log: {console_path}")
     return 0
 
 

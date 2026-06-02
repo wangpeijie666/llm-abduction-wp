@@ -1,0 +1,1617 @@
+[1/51] baseline3 frama-c-problem/180.c
+[16:35:36] LLM start frama-c-problem_180.c_initial1
+[16:35:57] LLM done frama-c-problem_180.c_initial1, chars=423
+[2/51] baseline3 frama-c-problem/181.c
+[16:35:58] LLM start frama-c-problem_181.c_initial1
+[16:36:07] LLM done frama-c-problem_181.c_initial1, chars=969
+[3/51] baseline3 frama-c-problem/182.c
+[16:36:12] LLM start frama-c-problem_182.c_initial1
+[16:36:20] LLM done frama-c-problem_182.c_initial1, chars=824
+[16:36:30] LLM start baseline3_diagnose_typed_func_a_zero_ensures
+[16:36:35] LLM done baseline3_diagnose_typed_func_a_zero_ensures, chars=573
+[16:36:35] LLM start baseline3_wrong_spec_typed_func_a_zero_ensures
+[16:36:40] LLM done baseline3_wrong_spec_typed_func_a_zero_ensures, chars=643
+baseline3 repair wrong_spec_typed_func_a_zero_ensures: applied proposal #1 -> repair_01_01_wrong_spec_01_rewrite_annotation.c
+[16:36:41] LLM start frama-c-problem_182.c_initial2
+[16:36:48] LLM done frama-c-problem_182.c_initial2, chars=713
+[16:36:58] LLM start baseline3_diagnose_typed_func_a_zero_ensures
+[16:37:03] LLM done baseline3_diagnose_typed_func_a_zero_ensures, chars=549
+[16:37:03] LLM start baseline3_wrong_spec_typed_func_a_zero_ensures
+[16:37:08] LLM done baseline3_wrong_spec_typed_func_a_zero_ensures, chars=580
+baseline3 repair wrong_spec_typed_func_a_zero_ensures: applied proposal #1 -> repair_01_01_wrong_spec_01_rewrite_annotation.c
+[16:37:09] LLM start frama-c-problem_182.c_initial3
+[16:37:16] LLM done frama-c-problem_182.c_initial3, chars=696
+[16:37:26] LLM start baseline3_diagnose_typed_func_a_zero_ensures
+[16:37:32] LLM done baseline3_diagnose_typed_func_a_zero_ensures, chars=653
+[16:37:32] LLM start baseline3_wrong_spec_typed_func_a_zero_ensures
+[16:37:38] LLM done baseline3_wrong_spec_typed_func_a_zero_ensures, chars=736
+baseline3 repair wrong_spec_typed_func_a_zero_ensures: applied proposal #1 -> repair_01_01_wrong_spec_01_rewrite_annotation.c
+[16:37:48] LLM start baseline3_diagnose_typed_func_complete_a_nonzero_a_zero
+[16:37:52] LLM done baseline3_diagnose_typed_func_complete_a_nonzero_a_zero, chars=505
+[16:37:52] LLM start baseline3_wrong_spec_typed_func_complete_a_nonzero_a_zero
+[16:37:57] LLM done baseline3_wrong_spec_typed_func_complete_a_nonzero_a_zero, chars=686
+baseline3 repair wrong_spec_typed_func_complete_a_nonzero_a_zero: applied proposal #1 -> repair_02_01_wrong_spec_01_rewrite_annotation.c
+[4/51] baseline3 frama-c-problem/183.c
+[16:37:58] LLM start frama-c-problem_183.c_initial1
+[16:38:06] LLM done frama-c-problem_183.c_initial1, chars=837
+[16:38:16] LLM start baseline3_diagnose_typed_test_loop_invariant_established
+[16:38:21] LLM done baseline3_diagnose_typed_test_loop_invariant_established, chars=559
+[16:38:21] LLM start baseline3_wrong_spec_typed_test_loop_invariant_established
+[16:38:26] LLM done baseline3_wrong_spec_typed_test_loop_invariant_established, chars=568
+baseline3 repair wrong_spec_typed_test_loop_invariant_established: applied proposal #1 -> repair_01_01_wrong_spec_01_rewrite_annotation.c
+[5/51] baseline3 frama-c-problem/184.c
+[16:38:28] LLM start frama-c-problem_184.c_initial1
+[16:38:35] LLM done frama-c-problem_184.c_initial1, chars=721
+[16:38:36] LLM start baseline3_invalid_repair
+[16:38:42] LLM done baseline3_invalid_repair, chars=354
+[16:38:45] LLM start baseline3_diagnose_typed_fun_assert
+[16:38:52] LLM done baseline3_diagnose_typed_fun_assert, chars=707
+[16:38:52] LLM start baseline3_wrong_spec_typed_fun_assert
+[16:38:56] LLM done baseline3_wrong_spec_typed_fun_assert, chars=519
+baseline3 repair wrong_spec_typed_fun_assert: not applied (no_applicable_repair)
+  #1 skipped: generated code rejected: LLM removed or changed original ACSL assertions: ['d==0']
+baseline3 repair fallback: trying missing_spec after wrong_spec failed
+[16:38:56] LLM start baseline3_missing_spec_typed_fun_assert
+[16:39:03] LLM done baseline3_missing_spec_typed_fun_assert, chars=689
+baseline3 repair missing_spec_typed_fun_assert: applied proposal #1 -> repair_02_01_missing_spec_01_add_ensures.c
+[16:39:04] LLM start frama-c-problem_184.c_initial2
+[16:39:11] LLM done frama-c-problem_184.c_initial2, chars=675
+[16:39:14] LLM start baseline3_diagnose_typed_fun_assert_missing_return
+[16:39:19] LLM done baseline3_diagnose_typed_fun_assert_missing_return, chars=664
+[16:39:19] LLM start baseline3_wrong_spec_typed_fun_assert_missing_return
+[16:39:25] LLM done baseline3_wrong_spec_typed_fun_assert_missing_return, chars=741
+baseline3 repair wrong_spec_typed_fun_assert_missing_return: applied proposal #1 -> repair_01_01_wrong_spec_01_add_contract.c
+[16:39:26] LLM start baseline3_invalid_repair
+[16:39:29] LLM done baseline3_invalid_repair, chars=448
+[16:39:32] LLM start baseline3_diagnose_typed_fun_assert_missing_return
+[16:39:38] LLM done baseline3_diagnose_typed_fun_assert_missing_return, chars=672
+[16:39:38] LLM start baseline3_wrong_spec_typed_fun_assert_missing_return
+[16:39:43] LLM done baseline3_wrong_spec_typed_fun_assert_missing_return, chars=659
+baseline3 repair wrong_spec_typed_fun_assert_missing_return: applied proposal #1 -> repair_03_01_wrong_spec_01_add_contract.c
+[16:39:44] LLM start baseline3_invalid_repair
+[16:39:48] LLM done baseline3_invalid_repair, chars=468
+[16:39:49] LLM start frama-c-problem_184.c_initial3
+[16:39:55] LLM done frama-c-problem_184.c_initial3, chars=650
+[16:39:58] LLM start baseline3_diagnose_typed_fun_assert_missing_return
+[16:40:04] LLM done baseline3_diagnose_typed_fun_assert_missing_return, chars=845
+[16:40:04] LLM start baseline3_wrong_spec_typed_fun_assert_missing_return
+[16:40:09] LLM done baseline3_wrong_spec_typed_fun_assert_missing_return, chars=530
+baseline3 repair wrong_spec_typed_fun_assert_missing_return: not applied (no_applicable_repair)
+  #1 skipped: generated code rejected: LLM removed or changed original ACSL assertions: ['d==0']
+baseline3 repair fallback: trying missing_spec after wrong_spec failed
+[16:40:09] LLM start baseline3_missing_spec_typed_fun_assert_missing_return
+[16:40:16] LLM done baseline3_missing_spec_typed_fun_assert_missing_return, chars=814
+baseline3 repair missing_spec_typed_fun_assert_missing_return: applied proposal #1 -> repair_01_01_missing_spec_01_add_contract.c
+[16:40:17] LLM start baseline3_invalid_repair
+[16:40:20] LLM done baseline3_invalid_repair, chars=342
+[6/51] baseline3 frama-c-problem/185.c
+[16:40:20] LLM start frama-c-problem_185.c_initial1
+[16:40:27] LLM done frama-c-problem_185.c_initial1, chars=575
+[16:40:38] LLM start baseline3_diagnose_typed_foo_call_abs_3_requires
+[16:40:42] LLM done baseline3_diagnose_typed_foo_call_abs_3_requires, chars=479
+[16:40:42] LLM start baseline3_missing_spec_typed_foo_call_abs_3_requires
+[16:40:47] LLM done baseline3_missing_spec_typed_foo_call_abs_3_requires, chars=561
+baseline3 repair missing_spec_typed_foo_call_abs_3_requires: applied proposal #1 -> repair_01_01_missing_spec_01_add_requires.c
+[16:40:58] LLM start baseline3_diagnose_typed_foo_call_abs_4_requires
+[16:41:02] LLM done baseline3_diagnose_typed_foo_call_abs_4_requires, chars=584
+[16:41:02] LLM start baseline3_wrong_spec_typed_foo_call_abs_4_requires
+[16:41:07] LLM done baseline3_wrong_spec_typed_foo_call_abs_4_requires, chars=645
+baseline3 repair wrong_spec_typed_foo_call_abs_4_requires: applied proposal #1 -> repair_02_01_wrong_spec_01_delete_annotation.c
+[16:41:18] LLM start baseline3_diagnose_typed_foo_call_abs_4_requires
+[16:41:23] LLM done baseline3_diagnose_typed_foo_call_abs_4_requires, chars=587
+[16:41:23] LLM start baseline3_missing_spec_typed_foo_call_abs_4_requires
+[16:41:27] LLM done baseline3_missing_spec_typed_foo_call_abs_4_requires, chars=599
+baseline3 repair missing_spec_typed_foo_call_abs_4_requires: applied proposal #1 -> repair_03_01_missing_spec_01_add_requires.c
+[16:41:28] LLM start baseline3_invalid_repair
+[16:41:32] LLM done baseline3_invalid_repair, chars=396
+[16:41:32] LLM start frama-c-problem_185.c_initial2
+[16:41:38] LLM done frama-c-problem_185.c_initial2, chars=627
+[16:41:49] LLM start baseline3_diagnose_typed_foo_call_abs_4_requires
+[16:42:58] LLM done baseline3_diagnose_typed_foo_call_abs_4_requires, chars=591
+[16:42:58] LLM start baseline3_missing_spec_typed_foo_call_abs_4_requires
+[16:43:03] LLM done baseline3_missing_spec_typed_foo_call_abs_4_requires, chars=537
+baseline3 repair missing_spec_typed_foo_call_abs_4_requires: applied proposal #1 -> repair_01_01_missing_spec_01_add_requires.c
+[16:43:04] LLM start baseline3_invalid_repair
+[16:43:08] LLM done baseline3_invalid_repair, chars=517
+[16:43:08] LLM start frama-c-problem_185.c_initial3
+[16:43:15] LLM done frama-c-problem_185.c_initial3, chars=716
+[16:43:25] LLM start baseline3_diagnose_typed_foo_call_abs_4_neg_requires
+[16:43:31] LLM done baseline3_diagnose_typed_foo_call_abs_4_neg_requires, chars=665
+[16:43:31] LLM start baseline3_wrong_spec_typed_foo_call_abs_4_neg_requires
+[16:43:36] LLM done baseline3_wrong_spec_typed_foo_call_abs_4_neg_requires, chars=806
+baseline3 repair wrong_spec_typed_foo_call_abs_4_neg_requires: applied proposal #1 -> repair_01_01_wrong_spec_01_rewrite_annotation.c
+[7/51] baseline3 frama-c-problem/186.c
+[16:43:38] LLM start frama-c-problem_186.c_initial1
+[16:43:42] LLM done frama-c-problem_186.c_initial1, chars=370
+[8/51] baseline3 frama-c-problem/187.c
+[16:43:44] LLM start frama-c-problem_187.c_initial1
+[16:43:49] LLM done frama-c-problem_187.c_initial1, chars=502
+[16:44:00] LLM start baseline3_diagnose_typed_main_assert
+[16:44:05] LLM done baseline3_diagnose_typed_main_assert, chars=530
+[16:44:05] LLM start baseline3_wrong_spec_typed_main_assert
+[16:44:10] LLM done baseline3_wrong_spec_typed_main_assert, chars=636
+baseline3 repair wrong_spec_typed_main_assert: applied proposal #1 -> repair_01_01_wrong_spec_01_add_contract.c
+[16:44:21] LLM start baseline3_diagnose_typed_fun_ensures
+[16:44:28] LLM done baseline3_diagnose_typed_fun_ensures, chars=956
+[16:44:28] LLM start baseline3_wrong_spec_typed_fun_ensures
+[16:44:33] LLM done baseline3_wrong_spec_typed_fun_ensures, chars=598
+baseline3 repair wrong_spec_typed_fun_ensures: applied proposal #1 -> repair_02_01_wrong_spec_01_rewrite_annotation.c
+[16:44:44] LLM start baseline3_diagnose_typed_main_assert
+[16:44:48] LLM done baseline3_diagnose_typed_main_assert, chars=460
+[16:44:48] LLM start baseline3_wrong_spec_typed_main_assert
+[16:44:52] LLM done baseline3_wrong_spec_typed_main_assert, chars=465
+baseline3 repair wrong_spec_typed_main_assert: not applied (no_applicable_repair)
+  #1 skipped: generated code rejected: LLM removed or changed original ACSL assertions: ['a==3']
+baseline3 repair fallback: trying missing_spec after wrong_spec failed
+[16:44:52] LLM start baseline3_missing_spec_typed_main_assert
+[16:45:15] LLM done baseline3_missing_spec_typed_main_assert, chars=554
+baseline3 repair missing_spec_typed_main_assert: applied proposal #1 -> repair_03_01_missing_spec_01_add_ensures.c
+[16:45:25] LLM start baseline3_diagnose_typed_fun_ensures
+[16:45:32] LLM done baseline3_diagnose_typed_fun_ensures, chars=988
+[16:45:32] LLM start baseline3_wrong_spec_typed_fun_ensures
+[16:45:37] LLM done baseline3_wrong_spec_typed_fun_ensures, chars=530
+baseline3 repair wrong_spec_typed_fun_ensures: applied proposal #1 -> repair_04_01_wrong_spec_01_rewrite_annotation.c
+[16:45:48] LLM start baseline3_diagnose_typed_main_assert
+[16:45:52] LLM done baseline3_diagnose_typed_main_assert, chars=415
+[16:45:52] LLM start baseline3_candidates_typed_main_assert
+[16:46:04] LLM done baseline3_candidates_typed_main_assert, chars=2016
+[16:46:15] LLM start baseline3_missing_spec_typed_main_assert
+[16:46:22] LLM done baseline3_missing_spec_typed_main_assert, chars=708
+baseline3 repair missing_spec_typed_main_assert: applied proposal #1 -> repair_05_01_missing_spec_01_add_invariant.c
+[16:46:34] LLM start baseline3_diagnose_typed_fun_loop_invariant_3_established
+[16:46:39] LLM done baseline3_diagnose_typed_fun_loop_invariant_3_established, chars=473
+[16:46:39] LLM start baseline3_wrong_spec_typed_fun_loop_invariant_3_established
+[16:46:43] LLM done baseline3_wrong_spec_typed_fun_loop_invariant_3_established, chars=588
+baseline3 repair wrong_spec_typed_fun_loop_invariant_3_established: applied proposal #1 -> repair_06_01_wrong_spec_01_rewrite_annotation.c
+[16:46:54] LLM start baseline3_diagnose_typed_main_assert
+[16:46:58] LLM done baseline3_diagnose_typed_main_assert, chars=429
+[16:46:58] LLM start baseline3_candidates_typed_main_assert
+[16:47:03] LLM done baseline3_candidates_typed_main_assert, chars=424
+[16:47:03] LLM start baseline3_missing_spec_typed_main_assert
+[16:47:09] LLM done baseline3_missing_spec_typed_main_assert, chars=550
+baseline3 repair missing_spec_typed_main_assert: applied proposal #1 -> repair_07_01_missing_spec_01_add_ensures.c
+[16:47:19] LLM start frama-c-problem_187.c_initial2
+[16:47:27] LLM done frama-c-problem_187.c_initial2, chars=528
+[16:47:37] LLM start baseline3_diagnose_typed_main_assert
+[16:47:42] LLM done baseline3_diagnose_typed_main_assert, chars=478
+[16:47:42] LLM start baseline3_wrong_spec_typed_main_assert
+[16:47:52] LLM done baseline3_wrong_spec_typed_main_assert, chars=1694
+baseline3 repair wrong_spec_typed_main_assert: not applied (no_applicable_repair)
+  #1 skipped: generated code rejected: LLM removed or changed original ACSL assertions: ['a==3']
+  #2 skipped: generated code rejected: LLM removed or changed original ACSL assertions: ['a==3']
+baseline3 repair fallback: trying missing_spec after wrong_spec failed
+[16:47:52] LLM start baseline3_missing_spec_typed_main_assert
+[16:48:01] LLM done baseline3_missing_spec_typed_main_assert, chars=1098
+baseline3 repair missing_spec_typed_main_assert: applied proposal #1 -> repair_01_01_missing_spec_01_add_ensures.c
+[16:48:11] LLM start baseline3_diagnose_typed_main_assert
+[16:48:19] LLM done baseline3_diagnose_typed_main_assert, chars=505
+[16:48:19] LLM start baseline3_wrong_spec_typed_main_assert
+[16:48:24] LLM done baseline3_wrong_spec_typed_main_assert, chars=606
+baseline3 repair wrong_spec_typed_main_assert: applied proposal #1 -> repair_02_01_wrong_spec_01_rewrite_annotation.c
+[16:48:35] LLM start baseline3_diagnose_typed_fun_ensures_2
+[16:48:42] LLM done baseline3_diagnose_typed_fun_ensures_2, chars=989
+[16:48:42] LLM start baseline3_wrong_spec_typed_fun_ensures_2
+[16:48:48] LLM done baseline3_wrong_spec_typed_fun_ensures_2, chars=712
+baseline3 repair wrong_spec_typed_fun_ensures_2: applied proposal #1 -> repair_03_01_wrong_spec_01_rewrite_annotation.c
+[16:48:58] LLM start baseline3_diagnose_typed_fun_ensures
+[16:49:04] LLM done baseline3_diagnose_typed_fun_ensures, chars=671
+[16:49:04] LLM start baseline3_candidates_typed_fun_ensures
+[16:49:14] LLM done baseline3_candidates_typed_fun_ensures, chars=1558
+[16:49:26] LLM start baseline3_missing_spec_typed_fun_ensures
+[16:49:32] LLM done baseline3_missing_spec_typed_fun_ensures, chars=881
+baseline3 repair missing_spec_typed_fun_ensures: applied proposal #1 -> repair_04_01_missing_spec_01_add_invariant.c
+[9/51] baseline3 frama-c-problem/188.c
+[16:49:35] LLM start frama-c-problem_188.c_initial1
+[16:49:39] LLM done frama-c-problem_188.c_initial1, chars=350
+[10/51] baseline3 frama-c-problem/189.c
+[16:49:41] LLM start frama-c-problem_189.c_initial1
+[16:49:48] LLM done frama-c-problem_189.c_initial1, chars=840
+[16:49:49] LLM start baseline3_invalid_repair
+[16:49:53] LLM done baseline3_invalid_repair, chars=330
+[16:49:54] LLM start baseline3_invalid_repair
+[16:49:58] LLM done baseline3_invalid_repair, chars=342
+[16:49:59] LLM start baseline3_invalid_repair
+[16:50:04] LLM done baseline3_invalid_repair, chars=501
+[16:50:05] LLM start baseline3_invalid_repair
+[16:50:09] LLM done baseline3_invalid_repair, chars=467
+[16:50:10] LLM start frama-c-problem_189.c_initial2
+[16:50:19] LLM done frama-c-problem_189.c_initial2, chars=1082
+[16:50:20] LLM start baseline3_invalid_repair
+[16:50:24] LLM done baseline3_invalid_repair, chars=469
+[16:50:25] LLM start baseline3_invalid_repair
+[16:50:29] LLM done baseline3_invalid_repair, chars=399
+[16:50:30] LLM start baseline3_invalid_repair
+[16:50:34] LLM done baseline3_invalid_repair, chars=454
+[16:50:35] LLM start baseline3_invalid_repair
+[16:50:39] LLM done baseline3_invalid_repair, chars=457
+[16:50:40] LLM start frama-c-problem_189.c_initial3
+[16:50:47] LLM done frama-c-problem_189.c_initial3, chars=882
+[16:50:48] LLM start baseline3_invalid_repair
+[16:50:56] LLM done baseline3_invalid_repair, chars=380
+[16:50:57] LLM start baseline3_invalid_repair
+[16:51:02] LLM done baseline3_invalid_repair, chars=358
+[16:51:04] LLM start baseline3_invalid_repair
+[16:51:08] LLM done baseline3_invalid_repair, chars=547
+[16:51:09] LLM start baseline3_invalid_repair
+[16:51:13] LLM done baseline3_invalid_repair, chars=412
+[11/51] baseline3 frama-c-problem/190.c
+[16:51:14] LLM start frama-c-problem_190.c_initial1
+[16:51:20] LLM done frama-c-problem_190.c_initial1, chars=548
+[12/51] baseline3 frama-c-problem/191.c
+[16:51:22] LLM start frama-c-problem_191.c_initial1
+[16:51:28] LLM done frama-c-problem_191.c_initial1, chars=656
+[16:51:40] LLM start baseline3_diagnose_typed_pdt_loop_invariant_preserved
+[16:51:46] LLM done baseline3_diagnose_typed_pdt_loop_invariant_preserved, chars=672
+[16:51:46] LLM start baseline3_wrong_spec_typed_pdt_loop_invariant_preserved
+[16:51:52] LLM done baseline3_wrong_spec_typed_pdt_loop_invariant_preserved, chars=550
+baseline3 repair wrong_spec_typed_pdt_loop_invariant_preserved: applied proposal #1 -> repair_01_01_wrong_spec_01_rewrite_annotation.c
+[16:52:04] LLM start baseline3_diagnose_typed_main_assert
+[16:52:09] LLM done baseline3_diagnose_typed_main_assert, chars=560
+[16:52:09] LLM start baseline3_wrong_spec_typed_main_assert
+[16:52:16] LLM done baseline3_wrong_spec_typed_main_assert, chars=576
+baseline3 repair wrong_spec_typed_main_assert: not applied (no_applicable_repair)
+  #1 skipped: generated code rejected: LLM removed or changed original ACSL assertions: ['p==1']
+baseline3 repair fallback: trying missing_spec after wrong_spec failed
+[16:52:16] LLM start baseline3_missing_spec_typed_main_assert
+[16:52:22] LLM done baseline3_missing_spec_typed_main_assert, chars=707
+baseline3 repair missing_spec_typed_main_assert: applied proposal #1 -> repair_02_01_missing_spec_01_add_ensures.c
+[16:52:23] LLM start baseline3_invalid_repair
+[16:52:27] LLM done baseline3_invalid_repair, chars=454
+[16:52:27] LLM start frama-c-problem_191.c_initial2
+[16:52:34] LLM done frama-c-problem_191.c_initial2, chars=795
+[16:52:47] LLM start baseline3_diagnose_typed_pdt_loop_invariant_established
+[16:52:52] LLM done baseline3_diagnose_typed_pdt_loop_invariant_established, chars=474
+[16:52:52] LLM start baseline3_wrong_spec_typed_pdt_loop_invariant_established
+[16:52:56] LLM done baseline3_wrong_spec_typed_pdt_loop_invariant_established, chars=443
+baseline3 repair wrong_spec_typed_pdt_loop_invariant_established: applied proposal #1 -> repair_01_01_wrong_spec_01_rewrite_annotation.c
+[16:53:08] LLM start baseline3_diagnose_typed_pdt_loop_invariant_3_preserved
+[16:53:14] LLM done baseline3_diagnose_typed_pdt_loop_invariant_3_preserved, chars=673
+[16:53:14] LLM start baseline3_wrong_spec_typed_pdt_loop_invariant_3_preserved
+[16:53:19] LLM done baseline3_wrong_spec_typed_pdt_loop_invariant_3_preserved, chars=558
+baseline3 repair wrong_spec_typed_pdt_loop_invariant_3_preserved: applied proposal #1 -> repair_02_01_wrong_spec_01_rewrite_annotation.c
+[16:53:31] LLM start baseline3_diagnose_typed_pdt_loop_invariant_3_preserved
+[16:53:36] LLM done baseline3_diagnose_typed_pdt_loop_invariant_3_preserved, chars=526
+[16:53:36] LLM start baseline3_wrong_spec_typed_pdt_loop_invariant_3_preserved
+[16:53:41] LLM done baseline3_wrong_spec_typed_pdt_loop_invariant_3_preserved, chars=621
+baseline3 repair wrong_spec_typed_pdt_loop_invariant_3_preserved: applied proposal #1 -> repair_03_01_wrong_spec_01_rewrite_annotation.c
+[16:53:52] LLM start baseline3_diagnose_typed_main_assert
+[16:53:56] LLM done baseline3_diagnose_typed_main_assert, chars=498
+[16:53:56] LLM start baseline3_wrong_spec_typed_main_assert
+[16:54:01] LLM done baseline3_wrong_spec_typed_main_assert, chars=559
+baseline3 repair wrong_spec_typed_main_assert: not applied (no_applicable_repair)
+  #1 skipped: generated code rejected: LLM removed or changed original ACSL assertions: ['p==1']
+baseline3 repair fallback: trying missing_spec after wrong_spec failed
+[16:54:01] LLM start baseline3_missing_spec_typed_main_assert
+[16:54:08] LLM done baseline3_missing_spec_typed_main_assert, chars=594
+baseline3 repair missing_spec_typed_main_assert: applied proposal #1 -> repair_04_01_missing_spec_01_add_contract.c
+[16:54:09] LLM start baseline3_invalid_repair
+[16:54:13] LLM done baseline3_invalid_repair, chars=499
+[16:54:13] LLM start frama-c-problem_191.c_initial3
+[16:54:20] LLM done frama-c-problem_191.c_initial3, chars=693
+[16:54:33] LLM start baseline3_diagnose_typed_pdt_loop_invariant_established
+[16:55:26] LLM done baseline3_diagnose_typed_pdt_loop_invariant_established, chars=502
+[16:55:26] LLM start baseline3_wrong_spec_typed_pdt_loop_invariant_established
+[16:55:31] LLM done baseline3_wrong_spec_typed_pdt_loop_invariant_established, chars=492
+baseline3 repair wrong_spec_typed_pdt_loop_invariant_established: applied proposal #1 -> repair_01_01_wrong_spec_01_rewrite_annotation.c
+[16:55:43] LLM start baseline3_diagnose_typed_pdt_loop_invariant_3_preserved
+[16:55:48] LLM done baseline3_diagnose_typed_pdt_loop_invariant_3_preserved, chars=630
+[16:55:48] LLM start baseline3_candidates_typed_pdt_loop_invariant_3_preserved
+[16:55:58] LLM done baseline3_candidates_typed_pdt_loop_invariant_3_preserved, chars=1087
+[16:56:11] LLM start baseline3_missing_spec_typed_pdt_loop_invariant_3_preserved
+[16:56:17] LLM done baseline3_missing_spec_typed_pdt_loop_invariant_3_preserved, chars=699
+baseline3 repair missing_spec_typed_pdt_loop_invariant_3_preserved: applied proposal #1 -> repair_02_01_missing_spec_01_add_invariant.c
+[16:56:29] LLM start baseline3_diagnose_typed_pdt_loop_invariant_4_preserved
+[16:56:34] LLM done baseline3_diagnose_typed_pdt_loop_invariant_4_preserved, chars=551
+[16:56:34] LLM start baseline3_candidates_typed_pdt_loop_invariant_4_preserved
+[16:56:44] LLM done baseline3_candidates_typed_pdt_loop_invariant_4_preserved, chars=1288
+[16:57:20] LLM start baseline3_missing_spec_typed_pdt_loop_invariant_4_preserved
+[16:57:31] LLM done baseline3_missing_spec_typed_pdt_loop_invariant_4_preserved, chars=668
+baseline3 repair missing_spec_typed_pdt_loop_invariant_4_preserved: applied proposal #1 -> repair_03_01_missing_spec_01_add_invariant.c
+[16:57:43] LLM start baseline3_diagnose_typed_pdt_loop_invariant_5_preserved
+[16:57:52] LLM done baseline3_diagnose_typed_pdt_loop_invariant_5_preserved, chars=718
+[16:57:52] LLM start baseline3_candidates_typed_pdt_loop_invariant_5_preserved
+[16:58:05] LLM done baseline3_candidates_typed_pdt_loop_invariant_5_preserved, chars=1484
+[16:58:42] LLM start baseline3_missing_spec_typed_pdt_loop_invariant_5_preserved
+[16:58:49] LLM done baseline3_missing_spec_typed_pdt_loop_invariant_5_preserved, chars=782
+baseline3 repair missing_spec_typed_pdt_loop_invariant_5_preserved: applied proposal #1 -> repair_04_01_missing_spec_01_add_invariant.c
+[16:59:01] LLM start baseline3_diagnose_typed_pdt_loop_invariant_6_preserved
+[16:59:07] LLM done baseline3_diagnose_typed_pdt_loop_invariant_6_preserved, chars=747
+[16:59:07] LLM start baseline3_wrong_spec_typed_pdt_loop_invariant_6_preserved
+[16:59:15] LLM done baseline3_wrong_spec_typed_pdt_loop_invariant_6_preserved, chars=1209
+baseline3 repair wrong_spec_typed_pdt_loop_invariant_6_preserved: applied proposal #1 -> repair_05_01_wrong_spec_01_delete_annotation.c
+[16:59:27] LLM start baseline3_diagnose_typed_pdt_loop_invariant_5_preserved
+[16:59:32] LLM done baseline3_diagnose_typed_pdt_loop_invariant_5_preserved, chars=568
+[16:59:32] LLM start baseline3_wrong_spec_typed_pdt_loop_invariant_5_preserved
+[16:59:37] LLM done baseline3_wrong_spec_typed_pdt_loop_invariant_5_preserved, chars=430
+baseline3 repair wrong_spec_typed_pdt_loop_invariant_5_preserved: applied proposal #1 -> repair_06_01_wrong_spec_01_delete_annotation.c
+[16:59:49] LLM start baseline3_diagnose_typed_pdt_loop_invariant_4_preserved
+[16:59:56] LLM done baseline3_diagnose_typed_pdt_loop_invariant_4_preserved, chars=806
+[16:59:56] LLM start baseline3_wrong_spec_typed_pdt_loop_invariant_4_preserved
+[17:00:01] LLM done baseline3_wrong_spec_typed_pdt_loop_invariant_4_preserved, chars=730
+baseline3 repair wrong_spec_typed_pdt_loop_invariant_4_preserved: not applied (no_applicable_repair)
+  #1 skipped: generated code rejected: LLM changed executable C code; only ACSL/comments are allowed
+baseline3 repair fallback: trying missing_spec after wrong_spec failed
+[17:00:01] LLM start baseline3_missing_spec_typed_pdt_loop_invariant_4_preserved
+[17:00:10] LLM done baseline3_missing_spec_typed_pdt_loop_invariant_4_preserved, chars=1083
+baseline3 repair missing_spec_typed_pdt_loop_invariant_4_preserved: applied proposal #1 -> repair_07_01_missing_spec_01_add_contract.c
+[13/51] baseline3 frama-c-problem/192.c
+[17:00:23] LLM start frama-c-problem_192.c_initial1
+[17:00:28] LLM done frama-c-problem_192.c_initial1, chars=398
+[14/51] baseline3 frama-c-problem/193.c
+[17:00:29] LLM start frama-c-problem_193.c_initial1
+[17:00:35] LLM done frama-c-problem_193.c_initial1, chars=338
+[17:00:46] LLM start baseline3_diagnose_typed_main_assert
+[17:01:07] LLM done baseline3_diagnose_typed_main_assert, chars=452
+[17:01:07] LLM start baseline3_missing_spec_typed_main_assert
+[17:01:12] LLM done baseline3_missing_spec_typed_main_assert, chars=601
+baseline3 repair missing_spec_typed_main_assert: applied proposal #1 -> repair_01_01_missing_spec_01_add_contract.c
+[15/51] baseline3 frama-c-problem/194.c
+[17:01:14] LLM start frama-c-problem_194.c_initial1
+[17:01:22] LLM done frama-c-problem_194.c_initial1, chars=728
+[17:01:23] LLM start baseline3_invalid_repair
+[17:01:28] LLM done baseline3_invalid_repair, chars=482
+[17:01:29] LLM start baseline3_invalid_repair
+[17:01:34] LLM done baseline3_invalid_repair, chars=477
+[17:01:35] LLM start baseline3_invalid_repair
+[17:01:45] LLM done baseline3_invalid_repair, chars=379
+[17:01:46] LLM start baseline3_invalid_repair
+[17:01:50] LLM done baseline3_invalid_repair, chars=325
+[17:01:51] LLM start frama-c-problem_194.c_initial2
+[17:01:58] LLM done frama-c-problem_194.c_initial2, chars=765
+[17:01:59] LLM start baseline3_invalid_repair
+[17:02:03] LLM done baseline3_invalid_repair, chars=450
+[17:02:04] LLM start baseline3_invalid_repair
+[17:02:08] LLM done baseline3_invalid_repair, chars=359
+[17:02:09] LLM start baseline3_invalid_repair
+[17:02:14] LLM done baseline3_invalid_repair, chars=462
+[17:02:15] LLM start baseline3_invalid_repair
+[17:02:19] LLM done baseline3_invalid_repair, chars=404
+[17:02:20] LLM start frama-c-problem_194.c_initial3
+[17:02:26] LLM done frama-c-problem_194.c_initial3, chars=702
+[17:02:27] LLM start baseline3_invalid_repair
+[17:02:32] LLM done baseline3_invalid_repair, chars=463
+[17:02:33] LLM start baseline3_invalid_repair
+[17:02:37] LLM done baseline3_invalid_repair, chars=374
+[17:02:38] LLM start baseline3_invalid_repair
+[17:02:43] LLM done baseline3_invalid_repair, chars=309
+[17:02:44] LLM start baseline3_invalid_repair
+[17:02:49] LLM done baseline3_invalid_repair, chars=518
+[16/51] baseline3 frama-c-problem/195.c
+[17:02:50] LLM start frama-c-problem_195.c_initial1
+[17:02:56] LLM done frama-c-problem_195.c_initial1, chars=615
+[17/51] baseline3 frama-c-problem/196.c
+[17:02:57] LLM start frama-c-problem_196.c_initial1
+[17:03:02] LLM done frama-c-problem_196.c_initial1, chars=480
+[17:03:13] LLM start baseline3_diagnose_typed_function_assert
+[17:03:18] LLM done baseline3_diagnose_typed_function_assert, chars=627
+[17:03:18] LLM start baseline3_wrong_spec_typed_function_assert
+[17:03:24] LLM done baseline3_wrong_spec_typed_function_assert, chars=656
+baseline3 repair wrong_spec_typed_function_assert: not applied (no_applicable_repair)
+  #1 skipped: generated code rejected: LLM removed or changed original ACSL assertions: ['-15<=res<=5']
+baseline3 repair fallback: trying missing_spec after wrong_spec failed
+[17:03:24] LLM start baseline3_missing_spec_typed_function_assert
+[17:03:29] LLM done baseline3_missing_spec_typed_function_assert, chars=621
+baseline3 repair missing_spec_typed_function_assert: applied proposal #1 -> repair_01_01_missing_spec_01_add_requires.c
+[17:03:30] LLM start baseline3_invalid_repair
+[17:03:34] LLM done baseline3_invalid_repair, chars=495
+[17:03:34] LLM start frama-c-problem_196.c_initial2
+[17:03:40] LLM done frama-c-problem_196.c_initial2, chars=562
+[17:03:51] LLM start baseline3_diagnose_typed_function_assert
+[17:03:56] LLM done baseline3_diagnose_typed_function_assert, chars=558
+[17:03:56] LLM start baseline3_wrong_spec_typed_function_assert
+[17:04:01] LLM done baseline3_wrong_spec_typed_function_assert, chars=559
+baseline3 repair wrong_spec_typed_function_assert: applied proposal #1 -> repair_01_01_wrong_spec_01_rewrite_annotation.c
+[17:04:11] LLM start baseline3_diagnose_typed_function_assert
+[17:04:20] LLM done baseline3_diagnose_typed_function_assert, chars=498
+[17:04:20] LLM start baseline3_wrong_spec_typed_function_assert
+[17:04:29] LLM done baseline3_wrong_spec_typed_function_assert, chars=524
+baseline3 repair wrong_spec_typed_function_assert: not applied (no_applicable_repair)
+  #1 skipped: generated code rejected: LLM removed or changed original ACSL assertions: ['-15<=res<=5']
+baseline3 repair fallback: trying missing_spec after wrong_spec failed
+[17:04:29] LLM start baseline3_missing_spec_typed_function_assert
+[17:04:39] LLM done baseline3_missing_spec_typed_function_assert, chars=483
+baseline3 repair missing_spec_typed_function_assert: not applied (no_applicable_repair)
+  #1 skipped: generated code rejected: LLM removed or changed original ACSL assertions: ['-15<=res<=5']
+[17:04:39] LLM start frama-c-problem_196.c_initial3
+[17:04:48] LLM done frama-c-problem_196.c_initial3, chars=463
+[17:04:50] LLM start baseline3_invalid_repair
+[17:04:55] LLM done baseline3_invalid_repair, chars=485
+[17:04:56] LLM start baseline3_invalid_repair
+[17:05:06] LLM done baseline3_invalid_repair, chars=338
+[17:05:18] LLM start baseline3_diagnose_typed_main_assert
+[17:05:29] LLM done baseline3_diagnose_typed_main_assert, chars=685
+[17:05:29] LLM start baseline3_wrong_spec_typed_main_assert
+[17:05:38] LLM done baseline3_wrong_spec_typed_main_assert, chars=461
+baseline3 repair wrong_spec_typed_main_assert: not applied (no_applicable_repair)
+  #1 skipped: generated code rejected: LLM removed or changed original ACSL assertions: ['-15<=res<=5']
+baseline3 repair fallback: trying missing_spec after wrong_spec failed
+[17:05:38] LLM start baseline3_missing_spec_typed_main_assert
+[17:05:48] LLM done baseline3_missing_spec_typed_main_assert, chars=725
+baseline3 repair missing_spec_typed_main_assert: applied proposal #1 -> repair_03_01_missing_spec_01_add_contract.c
+[17:05:49] LLM start baseline3_invalid_repair
+[17:05:54] LLM done baseline3_invalid_repair, chars=420
+[17:05:55] LLM start baseline3_invalid_repair
+[17:06:03] LLM done baseline3_invalid_repair, chars=431
+[18/51] baseline3 frama-c-problem/197.c
+[17:06:04] LLM start frama-c-problem_197.c_initial1
+[17:06:14] LLM done frama-c-problem_197.c_initial1, chars=734
+[17:06:15] LLM start baseline3_invalid_repair
+[17:06:30] LLM done baseline3_invalid_repair, chars=407
+[17:06:31] LLM start baseline3_invalid_repair
+[17:06:37] LLM done baseline3_invalid_repair, chars=452
+[17:06:38] LLM start baseline3_invalid_repair
+[17:06:43] LLM done baseline3_invalid_repair, chars=415
+[17:06:44] LLM start baseline3_invalid_repair
+[17:06:49] LLM done baseline3_invalid_repair, chars=457
+[17:06:51] LLM start frama-c-problem_197.c_initial2
+[17:06:59] LLM done frama-c-problem_197.c_initial2, chars=722
+[17:07:00] LLM start baseline3_invalid_repair
+[17:07:44] LLM done baseline3_invalid_repair, chars=465
+[17:07:45] LLM start baseline3_invalid_repair
+[17:07:51] LLM done baseline3_invalid_repair, chars=402
+[17:07:52] LLM start baseline3_invalid_repair
+[17:08:12] LLM done baseline3_invalid_repair, chars=422
+[17:08:13] LLM start baseline3_invalid_repair
+[17:08:17] LLM done baseline3_invalid_repair, chars=421
+[17:08:29] LLM start baseline3_diagnose_typed_sumArray_loop_invariant_2_preserved
+[17:08:36] LLM done baseline3_diagnose_typed_sumArray_loop_invariant_2_preserved, chars=544
+[17:08:36] LLM start baseline3_wrong_spec_typed_sumArray_loop_invariant_2_preserved
+[17:08:44] LLM done baseline3_wrong_spec_typed_sumArray_loop_invariant_2_preserved, chars=768
+baseline3 repair wrong_spec_typed_sumArray_loop_invariant_2_preserved: applied proposal #1 -> repair_05_01_wrong_spec_01_rewrite_annotation.c
+[17:08:56] LLM start baseline3_diagnose_typed_sumArray_loop_invariant_established
+[17:09:06] LLM done baseline3_diagnose_typed_sumArray_loop_invariant_established, chars=1243
+[17:09:06] LLM start baseline3_wrong_spec_typed_sumArray_loop_invariant_established
+[17:09:17] LLM done baseline3_wrong_spec_typed_sumArray_loop_invariant_established, chars=1305
+baseline3 repair wrong_spec_typed_sumArray_loop_invariant_established: applied proposal #1 -> repair_06_01_wrong_spec_01_rewrite_annotation.c
+[17:09:27] LLM start baseline3_diagnose_typed_main_assert
+[17:09:34] LLM done baseline3_diagnose_typed_main_assert, chars=608
+[17:09:34] LLM start baseline3_candidates_typed_main_assert
+[17:09:39] LLM done baseline3_candidates_typed_main_assert, chars=501
+[17:09:52] LLM start baseline3_missing_spec_typed_main_assert
+[17:09:59] LLM done baseline3_missing_spec_typed_main_assert, chars=788
+baseline3 repair missing_spec_typed_main_assert: applied proposal #1 -> repair_07_01_missing_spec_01_add_ensures.c
+[17:10:02] LLM start frama-c-problem_197.c_initial3
+[17:10:27] LLM done frama-c-problem_197.c_initial3, chars=723
+[17:10:28] LLM start baseline3_invalid_repair
+[17:10:33] LLM done baseline3_invalid_repair, chars=416
+[17:10:34] LLM start baseline3_invalid_repair
+[17:10:39] LLM done baseline3_invalid_repair, chars=452
+[17:10:40] LLM start baseline3_invalid_repair
+[17:10:45] LLM done baseline3_invalid_repair, chars=450
+[17:10:46] LLM start baseline3_invalid_repair
+[17:10:51] LLM done baseline3_invalid_repair, chars=471
+[19/51] baseline3 frama-c-problem/198.c
+[17:10:52] LLM start frama-c-problem_198.c_initial1
+[17:11:02] LLM done frama-c-problem_198.c_initial1, chars=971
+[17:11:03] LLM start baseline3_invalid_repair
+[17:11:08] LLM done baseline3_invalid_repair, chars=334
+[17:11:09] LLM start baseline3_invalid_repair
+[17:11:18] LLM done baseline3_invalid_repair, chars=475
+[17:11:19] LLM start baseline3_invalid_repair
+[17:11:28] LLM done baseline3_invalid_repair, chars=307
+[17:11:29] LLM start baseline3_invalid_repair
+[17:11:35] LLM done baseline3_invalid_repair, chars=473
+[17:11:36] LLM start frama-c-problem_198.c_initial2
+[17:11:43] LLM done frama-c-problem_198.c_initial2, chars=860
+[17:11:56] LLM start baseline3_diagnose_typed_binarysearch_loop_invariant_2_preserved
+[17:12:10] LLM done baseline3_diagnose_typed_binarysearch_loop_invariant_2_preserved, chars=466
+[17:12:10] LLM start baseline3_candidates_typed_binarysearch_loop_invariant_2_preserved
+[17:12:23] LLM done baseline3_candidates_typed_binarysearch_loop_invariant_2_preserved, chars=1993
+[17:13:02] LLM start baseline3_missing_spec_typed_binarysearch_loop_invariant_2_preserved
+[17:13:10] LLM done baseline3_missing_spec_typed_binarysearch_loop_invariant_2_preserved, chars=2
+baseline3 repair missing_spec_typed_binarysearch_loop_invariant_2_preserved: not applied (no_proposals)
+baseline3 repair fallback: trying wrong_spec after missing_spec failed
+[17:13:10] LLM start baseline3_wrong_spec_typed_binarysearch_loop_invariant_2_preserved
+[17:13:23] LLM done baseline3_wrong_spec_typed_binarysearch_loop_invariant_2_preserved, chars=1001
+baseline3 repair wrong_spec_typed_binarysearch_loop_invariant_2_preserved: not applied (no_applicable_repair)
+  #1 skipped: action='regenerate', missing exact original_text or regenerate
+[17:13:23] LLM start frama-c-problem_198.c_initial3
+[17:13:33] LLM done frama-c-problem_198.c_initial3, chars=884
+[17:13:43] LLM start baseline3_diagnose_typed_main_assert
+[17:13:48] LLM done baseline3_diagnose_typed_main_assert, chars=505
+[17:13:48] LLM start baseline3_wrong_spec_typed_main_assert
+[17:13:54] LLM done baseline3_wrong_spec_typed_main_assert, chars=555
+baseline3 repair wrong_spec_typed_main_assert: not applied (no_applicable_repair)
+  #1 skipped: generated code rejected: LLM removed or changed original ACSL assertions: ['arr[sum]==3']
+baseline3 repair fallback: trying missing_spec after wrong_spec failed
+[17:13:54] LLM start baseline3_missing_spec_typed_main_assert
+[17:14:12] LLM done baseline3_missing_spec_typed_main_assert, chars=2467
+baseline3 repair missing_spec_typed_main_assert: applied proposal #1 -> repair_01_01_missing_spec_01_add_contract.c
+[17:14:23] LLM start baseline3_diagnose_typed_binarysearch_assigns_part1
+[17:14:30] LLM done baseline3_diagnose_typed_binarysearch_assigns_part1, chars=654
+[17:14:30] LLM start baseline3_wrong_spec_typed_binarysearch_assigns_part1
+[17:14:36] LLM done baseline3_wrong_spec_typed_binarysearch_assigns_part1, chars=652
+baseline3 repair wrong_spec_typed_binarysearch_assigns_part1: applied proposal #1 -> repair_02_01_wrong_spec_01_rewrite_assigns.c
+[17:14:47] LLM start baseline3_diagnose_typed_binarysearch_assigns_part1
+[17:14:54] LLM done baseline3_diagnose_typed_binarysearch_assigns_part1, chars=522
+[17:14:54] LLM start baseline3_wrong_spec_typed_binarysearch_assigns_part1
+[17:14:57] LLM done baseline3_wrong_spec_typed_binarysearch_assigns_part1, chars=300
+baseline3 repair wrong_spec_typed_binarysearch_assigns_part1: applied proposal #1 -> repair_03_01_wrong_spec_01_rewrite_assigns.c
+[17:15:09] LLM start baseline3_diagnose_typed_binarysearch_assigns_part1
+[17:15:15] LLM done baseline3_diagnose_typed_binarysearch_assigns_part1, chars=725
+[17:15:15] LLM start baseline3_wrong_spec_typed_binarysearch_assigns_part1
+[17:15:39] LLM done baseline3_wrong_spec_typed_binarysearch_assigns_part1, chars=951
+baseline3 repair wrong_spec_typed_binarysearch_assigns_part1: applied proposal #1 -> repair_04_01_wrong_spec_01_add_contract.c
+[17:15:51] LLM start baseline3_diagnose_typed_binarysearch_loop_invariant_3_preserved
+[17:15:59] LLM done baseline3_diagnose_typed_binarysearch_loop_invariant_3_preserved, chars=584
+[17:15:59] LLM start baseline3_candidates_typed_binarysearch_loop_invariant_3_preserved
+[17:16:10] LLM done baseline3_candidates_typed_binarysearch_loop_invariant_3_preserved, chars=697
+[17:16:23] LLM start baseline3_missing_spec_typed_binarysearch_loop_invariant_3_preserved
+[17:16:33] LLM done baseline3_missing_spec_typed_binarysearch_loop_invariant_3_preserved, chars=683
+baseline3 repair missing_spec_typed_binarysearch_loop_invariant_3_preserved: applied proposal #1 -> repair_05_01_missing_spec_01_add_invariant.c
+[20/51] baseline3 frama-c-problem/199.c
+[17:16:34] LLM start frama-c-problem_199.c_initial1
+[17:16:47] LLM done frama-c-problem_199.c_initial1, chars=874
+[21/51] baseline3 frama-c-problem/200.c
+[17:16:51] LLM start frama-c-problem_200.c_initial1
+[17:17:04] LLM done frama-c-problem_200.c_initial1, chars=1062
+[17:17:05] LLM start baseline3_invalid_repair
+[17:17:12] LLM done baseline3_invalid_repair, chars=355
+[17:17:13] LLM start baseline3_invalid_repair
+[17:17:19] LLM done baseline3_invalid_repair, chars=420
+[17:17:20] LLM start baseline3_invalid_repair
+[17:17:25] LLM done baseline3_invalid_repair, chars=539
+[17:17:26] LLM start baseline3_invalid_repair
+[17:17:31] LLM done baseline3_invalid_repair, chars=328
+[17:17:32] LLM start frama-c-problem_200.c_initial2
+[17:17:42] LLM done frama-c-problem_200.c_initial2, chars=1098
+[17:17:43] LLM start baseline3_invalid_repair
+[17:17:48] LLM done baseline3_invalid_repair, chars=327
+[17:17:49] LLM start baseline3_invalid_repair
+[17:17:55] LLM done baseline3_invalid_repair, chars=455
+[17:17:56] LLM start baseline3_invalid_repair
+[17:18:00] LLM done baseline3_invalid_repair, chars=355
+[17:18:01] LLM start baseline3_invalid_repair
+[17:18:06] LLM done baseline3_invalid_repair, chars=364
+[17:18:07] LLM start frama-c-problem_200.c_initial3
+[17:18:17] LLM done frama-c-problem_200.c_initial3, chars=1086
+[17:18:18] LLM start baseline3_invalid_repair
+[17:18:24] LLM done baseline3_invalid_repair, chars=373
+[17:18:25] LLM start baseline3_invalid_repair
+[17:18:29] LLM done baseline3_invalid_repair, chars=389
+[17:18:30] LLM start baseline3_invalid_repair
+[17:18:34] LLM done baseline3_invalid_repair, chars=331
+[17:18:35] LLM start baseline3_invalid_repair
+[17:18:39] LLM done baseline3_invalid_repair, chars=397
+[22/51] baseline3 frama-c-problem/201.c
+[17:18:40] LLM start frama-c-problem_201.c_initial1
+[17:18:48] LLM done frama-c-problem_201.c_initial1, chars=851
+[17:18:49] LLM start baseline3_invalid_repair
+[17:18:54] LLM done baseline3_invalid_repair, chars=442
+[17:18:55] LLM start baseline3_invalid_repair
+[17:19:00] LLM done baseline3_invalid_repair, chars=389
+[17:19:01] LLM start baseline3_invalid_repair
+[17:19:05] LLM done baseline3_invalid_repair, chars=414
+[17:19:15] LLM start baseline3_diagnose_typed_main_assert
+[17:19:20] LLM done baseline3_diagnose_typed_main_assert, chars=531
+[17:19:20] LLM start baseline3_candidates_typed_main_assert
+[17:19:28] LLM done baseline3_candidates_typed_main_assert, chars=1047
+[17:19:32] LLM start baseline3_missing_spec_typed_main_assert
+[17:19:55] LLM done baseline3_missing_spec_typed_main_assert, chars=664
+baseline3 repair missing_spec_typed_main_assert: applied proposal #1 -> repair_04_01_missing_spec_01_add_contract.c
+[17:19:58] LLM start baseline3_diagnose_typed_func_loop_invariant_established
+[17:20:03] LLM done baseline3_diagnose_typed_func_loop_invariant_established, chars=565
+[17:20:03] LLM start baseline3_candidates_typed_func_loop_invariant_established
+[17:20:08] LLM done baseline3_candidates_typed_func_loop_invariant_established, chars=526
+[17:20:09] LLM start baseline3_missing_spec_typed_func_loop_invariant_established
+[17:20:16] LLM done baseline3_missing_spec_typed_func_loop_invariant_established, chars=723
+baseline3 repair missing_spec_typed_func_loop_invariant_established: applied proposal #1 -> repair_05_01_missing_spec_01_add_requires.c
+[23/51] baseline3 frama-c-problem/202.c
+[17:20:19] LLM start frama-c-problem_202.c_initial1
+[17:20:25] LLM done frama-c-problem_202.c_initial1, chars=576
+[17:20:35] LLM start baseline3_diagnose_typed_fun_loop_invariant_preserved
+[17:20:42] LLM done baseline3_diagnose_typed_fun_loop_invariant_preserved, chars=708
+[17:20:42] LLM start baseline3_wrong_spec_typed_fun_loop_invariant_preserved
+[17:20:48] LLM done baseline3_wrong_spec_typed_fun_loop_invariant_preserved, chars=630
+baseline3 repair wrong_spec_typed_fun_loop_invariant_preserved: applied proposal #1 -> repair_01_01_wrong_spec_01_rewrite_annotation.c
+[17:20:59] LLM start baseline3_diagnose_typed_fun_assert
+[17:21:06] LLM done baseline3_diagnose_typed_fun_assert, chars=835
+[17:21:06] LLM start baseline3_wrong_spec_typed_fun_assert
+[17:21:11] LLM done baseline3_wrong_spec_typed_fun_assert, chars=639
+baseline3 repair wrong_spec_typed_fun_assert: not applied (no_applicable_repair)
+  #1 skipped: generated code rejected: LLM removed or changed original ACSL assertions: ['r+d*y==x']
+baseline3 repair fallback: trying missing_spec after wrong_spec failed
+[17:21:11] LLM start baseline3_missing_spec_typed_fun_assert
+[17:21:17] LLM done baseline3_missing_spec_typed_fun_assert, chars=630
+baseline3 repair missing_spec_typed_fun_assert: applied proposal #1 -> repair_02_01_missing_spec_01_add_invariant.c
+[17:21:28] LLM start baseline3_diagnose_typed_fun_assert
+[17:21:34] LLM done baseline3_diagnose_typed_fun_assert, chars=621
+[17:21:34] LLM start baseline3_wrong_spec_typed_fun_assert
+[17:22:04] LLM done baseline3_wrong_spec_typed_fun_assert, chars=543
+baseline3 repair wrong_spec_typed_fun_assert: applied proposal #1 -> repair_03_01_wrong_spec_01_delete_annotation.c
+[17:22:15] LLM start baseline3_diagnose_typed_fun_assert
+[17:22:21] LLM done baseline3_diagnose_typed_fun_assert, chars=853
+[17:22:21] LLM start baseline3_wrong_spec_typed_fun_assert
+[17:22:27] LLM done baseline3_wrong_spec_typed_fun_assert, chars=537
+baseline3 repair wrong_spec_typed_fun_assert: not applied (no_applicable_repair)
+  #1 skipped: generated code rejected: LLM removed or changed original ACSL assertions: ['r+d*y==x']
+baseline3 repair fallback: trying missing_spec after wrong_spec failed
+[17:22:27] LLM start baseline3_missing_spec_typed_fun_assert
+[17:22:32] LLM done baseline3_missing_spec_typed_fun_assert, chars=547
+baseline3 repair missing_spec_typed_fun_assert: not applied (no_applicable_repair)
+  #1 skipped: generated code rejected: LLM removed or changed original ACSL assertions: ['r+d*y==x']
+[17:22:32] LLM start frama-c-problem_202.c_initial2
+[17:22:54] LLM done frama-c-problem_202.c_initial2, chars=387
+[24/51] baseline3 frama-c-problem/203.c
+[17:22:56] LLM start frama-c-problem_203.c_initial1
+[17:23:04] LLM done frama-c-problem_203.c_initial1, chars=875
+[17:23:05] LLM start frama-c-problem_203.c_initial2
+[17:23:13] LLM done frama-c-problem_203.c_initial2, chars=759
+[17:23:14] LLM start frama-c-problem_203.c_initial3
+[17:23:23] LLM done frama-c-problem_203.c_initial3, chars=877
+[25/51] baseline3 frama-c-problem/204.c
+[17:23:24] LLM start frama-c-problem_204.c_initial1
+[17:23:32] LLM done frama-c-problem_204.c_initial1, chars=956
+[17:23:33] LLM start frama-c-problem_204.c_initial2
+[17:23:41] LLM done frama-c-problem_204.c_initial2, chars=601
+[17:23:53] LLM start baseline3_diagnose_typed_arraySearch_loop_invariant_established
+[17:23:59] LLM done baseline3_diagnose_typed_arraySearch_loop_invariant_established, chars=824
+[17:23:59] LLM start baseline3_wrong_spec_typed_arraySearch_loop_invariant_established
+[17:24:08] LLM done baseline3_wrong_spec_typed_arraySearch_loop_invariant_established, chars=1188
+baseline3 repair wrong_spec_typed_arraySearch_loop_invariant_established: applied proposal #1 -> repair_01_01_wrong_spec_01_add_contract.c
+[17:24:20] LLM start baseline3_diagnose_typed_arraySearch_loop_invariant_established
+[17:24:43] LLM done baseline3_diagnose_typed_arraySearch_loop_invariant_established, chars=559
+[17:24:43] LLM start baseline3_wrong_spec_typed_arraySearch_loop_invariant_established
+[17:24:48] LLM done baseline3_wrong_spec_typed_arraySearch_loop_invariant_established, chars=593
+baseline3 repair wrong_spec_typed_arraySearch_loop_invariant_established: applied proposal #1 -> repair_02_01_wrong_spec_01_rewrite_annotation.c
+[17:24:59] LLM start baseline3_diagnose_typed_main_assert
+[17:25:07] LLM done baseline3_diagnose_typed_main_assert, chars=972
+[17:25:07] LLM start baseline3_candidates_typed_main_assert
+[17:25:12] LLM done baseline3_candidates_typed_main_assert, chars=426
+[17:25:12] LLM start baseline3_missing_spec_typed_main_assert
+[17:25:19] LLM done baseline3_missing_spec_typed_main_assert, chars=893
+baseline3 repair missing_spec_typed_main_assert: applied proposal #1 -> repair_03_01_missing_spec_01_add_contract.c
+[17:25:20] LLM start baseline3_invalid_repair
+[17:25:24] LLM done baseline3_invalid_repair, chars=387
+[17:25:25] LLM start baseline3_invalid_repair
+[17:25:30] LLM done baseline3_invalid_repair, chars=372
+[17:25:31] LLM start baseline3_invalid_repair
+[17:25:36] LLM done baseline3_invalid_repair, chars=441
+[17:25:37] LLM start baseline3_invalid_repair
+[17:25:41] LLM done baseline3_invalid_repair, chars=345
+[17:25:42] LLM start frama-c-problem_204.c_initial3
+[17:25:52] LLM done frama-c-problem_204.c_initial3, chars=943
+[26/51] baseline3 frama-c-problem/205.c
+[17:25:53] LLM start frama-c-problem_205.c_initial1
+[17:25:58] LLM done frama-c-problem_205.c_initial1, chars=264
+[27/51] baseline3 frama-c-problem/206.c
+[17:25:59] LLM start frama-c-problem_206.c_initial1
+[17:26:07] LLM done frama-c-problem_206.c_initial1, chars=690
+[28/51] baseline3 frama-c-problem/207.c
+[17:26:10] LLM start frama-c-problem_207.c_initial1
+[17:26:16] LLM done frama-c-problem_207.c_initial1, chars=578
+[17:26:27] LLM start baseline3_diagnose_typed_func_ensures_2
+[17:26:34] LLM done baseline3_diagnose_typed_func_ensures_2, chars=768
+[17:26:34] LLM start baseline3_wrong_spec_typed_func_ensures_2
+[17:26:40] LLM done baseline3_wrong_spec_typed_func_ensures_2, chars=669
+baseline3 repair wrong_spec_typed_func_ensures_2: applied proposal #1 -> repair_01_01_wrong_spec_01_rewrite_annotation.c
+[17:26:51] LLM start baseline3_diagnose_typed_func_ensures
+[17:26:58] LLM done baseline3_diagnose_typed_func_ensures, chars=688
+[17:26:58] LLM start baseline3_wrong_spec_typed_func_ensures
+[17:27:03] LLM done baseline3_wrong_spec_typed_func_ensures, chars=703
+baseline3 repair wrong_spec_typed_func_ensures: applied proposal #1 -> repair_02_01_wrong_spec_01_rewrite_annotation.c
+[17:27:14] LLM start baseline3_diagnose_typed_func_ensures_3
+[17:27:23] LLM done baseline3_diagnose_typed_func_ensures_3, chars=1087
+[17:27:23] LLM start baseline3_wrong_spec_typed_func_ensures_3
+[17:27:29] LLM done baseline3_wrong_spec_typed_func_ensures_3, chars=711
+baseline3 repair wrong_spec_typed_func_ensures_3: applied proposal #1 -> repair_03_01_wrong_spec_01_rewrite_annotation.c
+[17:27:40] LLM start baseline3_diagnose_typed_func_ensures
+[17:27:46] LLM done baseline3_diagnose_typed_func_ensures, chars=583
+[17:27:46] LLM start baseline3_wrong_spec_typed_func_ensures
+[17:27:54] LLM done baseline3_wrong_spec_typed_func_ensures, chars=649
+baseline3 repair wrong_spec_typed_func_ensures: applied proposal #1 -> repair_04_01_wrong_spec_01_rewrite_annotation.c
+[17:28:05] LLM start baseline3_diagnose_typed_func_ensures_2
+[17:28:11] LLM done baseline3_diagnose_typed_func_ensures_2, chars=640
+[17:28:11] LLM start baseline3_wrong_spec_typed_func_ensures_2
+[17:28:17] LLM done baseline3_wrong_spec_typed_func_ensures_2, chars=729
+baseline3 repair wrong_spec_typed_func_ensures_2: applied proposal #1 -> repair_05_01_wrong_spec_01_rewrite_annotation.c
+[17:28:28] LLM start baseline3_diagnose_typed_func_ensures_4
+[17:30:31] LLM done baseline3_diagnose_typed_func_ensures_4, chars=838
+[17:30:31] LLM start baseline3_wrong_spec_typed_func_ensures_4
+[17:31:03] LLM done baseline3_wrong_spec_typed_func_ensures_4, chars=1460
+baseline3 repair wrong_spec_typed_func_ensures_4: applied proposal #1 -> repair_06_01_wrong_spec_01_delete_annotation.c
+[17:31:14] LLM start baseline3_diagnose_typed_func_ensures_3
+[17:31:23] LLM done baseline3_diagnose_typed_func_ensures_3, chars=744
+[17:31:23] LLM start baseline3_wrong_spec_typed_func_ensures_3
+[17:31:30] LLM done baseline3_wrong_spec_typed_func_ensures_3, chars=734
+baseline3 repair wrong_spec_typed_func_ensures_3: applied proposal #1 -> repair_07_01_wrong_spec_01_rewrite_annotation.c
+[17:31:40] LLM start frama-c-problem_207.c_initial2
+[17:31:46] LLM done frama-c-problem_207.c_initial2, chars=619
+[17:31:57] LLM start baseline3_diagnose_typed_func_ensures_2
+[17:32:06] LLM done baseline3_diagnose_typed_func_ensures_2, chars=948
+[17:32:06] LLM start baseline3_wrong_spec_typed_func_ensures_2
+[17:32:16] LLM done baseline3_wrong_spec_typed_func_ensures_2, chars=1406
+baseline3 repair wrong_spec_typed_func_ensures_2: applied proposal #1 -> repair_01_01_wrong_spec_01_rewrite_annotation.c
+[17:32:26] LLM start baseline3_diagnose_typed_func_ensures_2
+[17:32:33] LLM done baseline3_diagnose_typed_func_ensures_2, chars=766
+[17:32:33] LLM start baseline3_wrong_spec_typed_func_ensures_2
+[17:32:40] LLM done baseline3_wrong_spec_typed_func_ensures_2, chars=793
+baseline3 repair wrong_spec_typed_func_ensures_2: applied proposal #1 -> repair_02_01_wrong_spec_01_rewrite_annotation.c
+[17:32:50] LLM start baseline3_diagnose_typed_func_ensures_2
+[17:32:58] LLM done baseline3_diagnose_typed_func_ensures_2, chars=1002
+[17:32:58] LLM start baseline3_wrong_spec_typed_func_ensures_2
+[17:33:04] LLM done baseline3_wrong_spec_typed_func_ensures_2, chars=770
+baseline3 repair wrong_spec_typed_func_ensures_2: applied proposal #1 -> repair_03_01_wrong_spec_01_rewrite_annotation.c
+[17:33:15] LLM start baseline3_diagnose_typed_func_ensures_2
+[17:33:23] LLM done baseline3_diagnose_typed_func_ensures_2, chars=626
+[17:33:23] LLM start baseline3_wrong_spec_typed_func_ensures_2
+[17:33:31] LLM done baseline3_wrong_spec_typed_func_ensures_2, chars=783
+baseline3 repair wrong_spec_typed_func_ensures_2: applied proposal #1 -> repair_04_01_wrong_spec_01_rewrite_annotation.c
+[17:33:41] LLM start baseline3_diagnose_typed_func_ensures
+[17:33:58] LLM done baseline3_diagnose_typed_func_ensures, chars=535
+[17:33:58] LLM start baseline3_wrong_spec_typed_func_ensures
+[17:34:04] LLM done baseline3_wrong_spec_typed_func_ensures, chars=497
+baseline3 repair wrong_spec_typed_func_ensures: applied proposal #1 -> repair_05_01_wrong_spec_01_rewrite_annotation.c
+[17:34:14] LLM start baseline3_diagnose_typed_func_ensures_2
+[17:34:20] LLM done baseline3_diagnose_typed_func_ensures_2, chars=589
+[17:34:20] LLM start baseline3_wrong_spec_typed_func_ensures_2
+[17:34:27] LLM done baseline3_wrong_spec_typed_func_ensures_2, chars=1012
+baseline3 repair wrong_spec_typed_func_ensures_2: not applied (no_applicable_repair)
+  #1 skipped: action='rewrite_annotation', original_text_count=2
+  #2 skipped: action='delete_annotation', original_text_count=2
+baseline3 repair fallback: trying missing_spec after wrong_spec failed
+[17:34:27] LLM start baseline3_missing_spec_typed_func_ensures_2
+[17:34:35] LLM done baseline3_missing_spec_typed_func_ensures_2, chars=942
+baseline3 repair missing_spec_typed_func_ensures_2: applied proposal #1 -> repair_06_01_missing_spec_01_add_contract.c
+[17:34:45] LLM start baseline3_diagnose_typed_func_ensures
+[17:35:01] LLM done baseline3_diagnose_typed_func_ensures, chars=917
+[17:35:01] LLM start baseline3_wrong_spec_typed_func_ensures
+[17:35:08] LLM done baseline3_wrong_spec_typed_func_ensures, chars=677
+baseline3 repair wrong_spec_typed_func_ensures: applied proposal #1 -> repair_07_01_wrong_spec_01_rewrite_annotation.c
+[17:35:18] LLM start frama-c-problem_207.c_initial3
+[17:35:25] LLM done frama-c-problem_207.c_initial3, chars=581
+[17:35:36] LLM start baseline3_diagnose_typed_func_ensures
+[17:35:41] LLM done baseline3_diagnose_typed_func_ensures, chars=501
+[17:35:41] LLM start baseline3_wrong_spec_typed_func_ensures
+[17:35:47] LLM done baseline3_wrong_spec_typed_func_ensures, chars=773
+baseline3 repair wrong_spec_typed_func_ensures: applied proposal #1 -> repair_01_01_wrong_spec_01_rewrite_annotation.c
+[17:35:58] LLM start baseline3_diagnose_typed_func_ensures_4
+[17:36:04] LLM done baseline3_diagnose_typed_func_ensures_4, chars=626
+[17:36:04] LLM start baseline3_wrong_spec_typed_func_ensures_4
+[17:36:09] LLM done baseline3_wrong_spec_typed_func_ensures_4, chars=491
+baseline3 repair wrong_spec_typed_func_ensures_4: applied proposal #1 -> repair_02_01_wrong_spec_01_delete_annotation.c
+[17:36:20] LLM start baseline3_diagnose_typed_func_ensures_3
+[17:36:27] LLM done baseline3_diagnose_typed_func_ensures_3, chars=772
+[17:36:27] LLM start baseline3_wrong_spec_typed_func_ensures_3
+[17:36:35] LLM done baseline3_wrong_spec_typed_func_ensures_3, chars=520
+baseline3 repair wrong_spec_typed_func_ensures_3: applied proposal #1 -> repair_03_01_wrong_spec_01_delete_annotation.c
+[17:36:45] LLM start baseline3_diagnose_typed_func_ensures
+[17:37:07] LLM done baseline3_diagnose_typed_func_ensures, chars=563
+[17:37:07] LLM start baseline3_wrong_spec_typed_func_ensures
+[17:37:17] LLM done baseline3_wrong_spec_typed_func_ensures, chars=779
+baseline3 repair wrong_spec_typed_func_ensures: applied proposal #1 -> repair_04_01_wrong_spec_01_rewrite_annotation.c
+[17:37:28] LLM start baseline3_diagnose_typed_func_ensures_3
+[17:37:34] LLM done baseline3_diagnose_typed_func_ensures_3, chars=721
+[17:37:34] LLM start baseline3_wrong_spec_typed_func_ensures_3
+[17:37:45] LLM done baseline3_wrong_spec_typed_func_ensures_3, chars=2040
+baseline3 repair wrong_spec_typed_func_ensures_3: applied proposal #1 -> repair_05_01_wrong_spec_01_delete_annotation.c
+[17:37:56] LLM start baseline3_diagnose_typed_func_ensures_2
+[17:38:02] LLM done baseline3_diagnose_typed_func_ensures_2, chars=789
+[17:38:02] LLM start baseline3_wrong_spec_typed_func_ensures_2
+[17:38:09] LLM done baseline3_wrong_spec_typed_func_ensures_2, chars=736
+baseline3 repair wrong_spec_typed_func_ensures_2: applied proposal #1 -> repair_06_01_wrong_spec_01_rewrite_annotation.c
+[17:38:20] LLM start baseline3_diagnose_typed_func_ensures
+[17:38:24] LLM done baseline3_diagnose_typed_func_ensures, chars=482
+[17:38:24] LLM start baseline3_wrong_spec_typed_func_ensures
+[17:38:30] LLM done baseline3_wrong_spec_typed_func_ensures, chars=673
+baseline3 repair wrong_spec_typed_func_ensures: applied proposal #1 -> repair_07_01_wrong_spec_01_rewrite_annotation.c
+[29/51] baseline3 frama-c-problem/208.c
+[17:38:41] LLM start frama-c-problem_208.c_initial1
+[17:38:47] LLM done frama-c-problem_208.c_initial1, chars=493
+[17:39:02] LLM start baseline3_diagnose_typed_fun_loop_invariant_preserved
+[17:39:08] LLM done baseline3_diagnose_typed_fun_loop_invariant_preserved, chars=452
+[17:39:08] LLM start baseline3_wrong_spec_typed_fun_loop_invariant_preserved
+[17:39:14] LLM done baseline3_wrong_spec_typed_fun_loop_invariant_preserved, chars=725
+baseline3 repair wrong_spec_typed_fun_loop_invariant_preserved: applied proposal #1 -> repair_01_01_wrong_spec_01_rewrite_annotation.c
+[17:39:29] LLM start baseline3_diagnose_typed_fun_loop_invariant_2_preserved
+[17:39:35] LLM done baseline3_diagnose_typed_fun_loop_invariant_2_preserved, chars=638
+[17:39:35] LLM start baseline3_wrong_spec_typed_fun_loop_invariant_2_preserved
+[17:39:41] LLM done baseline3_wrong_spec_typed_fun_loop_invariant_2_preserved, chars=710
+baseline3 repair wrong_spec_typed_fun_loop_invariant_2_preserved: applied proposal #1 -> repair_02_01_wrong_spec_01_rewrite_annotation.c
+[17:39:57] LLM start baseline3_diagnose_typed_fun_loop_invariant_2_preserved
+[17:40:03] LLM done baseline3_diagnose_typed_fun_loop_invariant_2_preserved, chars=593
+[17:40:03] LLM start baseline3_wrong_spec_typed_fun_loop_invariant_2_preserved
+[17:40:08] LLM done baseline3_wrong_spec_typed_fun_loop_invariant_2_preserved, chars=587
+baseline3 repair wrong_spec_typed_fun_loop_invariant_2_preserved: applied proposal #1 -> repair_03_01_wrong_spec_01_rewrite_annotation.c
+[17:40:22] LLM start baseline3_diagnose_typed_fun_loop_invariant_2_preserved
+[17:40:28] LLM done baseline3_diagnose_typed_fun_loop_invariant_2_preserved, chars=768
+[17:40:28] LLM start baseline3_wrong_spec_typed_fun_loop_invariant_2_preserved
+[17:40:34] LLM done baseline3_wrong_spec_typed_fun_loop_invariant_2_preserved, chars=696
+baseline3 repair wrong_spec_typed_fun_loop_invariant_2_preserved: applied proposal #1 -> repair_04_01_wrong_spec_01_rewrite_annotation.c
+[17:40:48] LLM start baseline3_diagnose_typed_fun_loop_invariant_preserved
+[17:40:53] LLM done baseline3_diagnose_typed_fun_loop_invariant_preserved, chars=539
+[17:40:53] LLM start baseline3_wrong_spec_typed_fun_loop_invariant_preserved
+[17:40:58] LLM done baseline3_wrong_spec_typed_fun_loop_invariant_preserved, chars=584
+baseline3 repair wrong_spec_typed_fun_loop_invariant_preserved: applied proposal #1 -> repair_05_01_wrong_spec_01_rewrite_annotation.c
+[17:41:11] LLM start baseline3_diagnose_typed_fun_loop_assigns_part2
+[17:41:18] LLM done baseline3_diagnose_typed_fun_loop_assigns_part2, chars=933
+[17:41:18] LLM start baseline3_candidates_typed_fun_loop_assigns_part2
+[17:41:25] LLM done baseline3_candidates_typed_fun_loop_assigns_part2, chars=805
+[17:41:39] LLM start baseline3_missing_spec_typed_fun_loop_assigns_part2
+[17:41:45] LLM done baseline3_missing_spec_typed_fun_loop_assigns_part2, chars=682
+baseline3 repair missing_spec_typed_fun_loop_assigns_part2: applied proposal #1 -> repair_06_01_missing_spec_01_add_invariant.c
+[17:41:46] LLM start baseline3_invalid_repair
+[17:41:50] LLM done baseline3_invalid_repair, chars=398
+[17:42:03] LLM start frama-c-problem_208.c_initial2
+[17:42:09] LLM done frama-c-problem_208.c_initial2, chars=608
+[17:42:25] LLM start baseline3_diagnose_typed_fun_loop_invariant_established
+[17:42:30] LLM done baseline3_diagnose_typed_fun_loop_invariant_established, chars=414
+[17:42:30] LLM start baseline3_wrong_spec_typed_fun_loop_invariant_established
+[17:42:34] LLM done baseline3_wrong_spec_typed_fun_loop_invariant_established, chars=506
+baseline3 repair wrong_spec_typed_fun_loop_invariant_established: applied proposal #1 -> repair_01_01_wrong_spec_01_rewrite_annotation.c
+[17:42:50] LLM start baseline3_diagnose_typed_fun_loop_invariant_preserved
+[17:42:58] LLM done baseline3_diagnose_typed_fun_loop_invariant_preserved, chars=541
+[17:42:58] LLM start baseline3_wrong_spec_typed_fun_loop_invariant_preserved
+[17:43:04] LLM done baseline3_wrong_spec_typed_fun_loop_invariant_preserved, chars=661
+baseline3 repair wrong_spec_typed_fun_loop_invariant_preserved: applied proposal #1 -> repair_02_01_wrong_spec_01_rewrite_annotation.c
+[17:43:20] LLM start baseline3_diagnose_typed_fun_loop_invariant_established
+[17:43:28] LLM done baseline3_diagnose_typed_fun_loop_invariant_established, chars=870
+[17:43:28] LLM start baseline3_wrong_spec_typed_fun_loop_invariant_established
+[17:43:33] LLM done baseline3_wrong_spec_typed_fun_loop_invariant_established, chars=552
+baseline3 repair wrong_spec_typed_fun_loop_invariant_established: applied proposal #1 -> repair_03_01_wrong_spec_01_rewrite_annotation.c
+[17:43:49] LLM start baseline3_diagnose_typed_fun_loop_invariant_preserved
+[17:43:54] LLM done baseline3_diagnose_typed_fun_loop_invariant_preserved, chars=678
+[17:43:54] LLM start baseline3_wrong_spec_typed_fun_loop_invariant_preserved
+[17:44:01] LLM done baseline3_wrong_spec_typed_fun_loop_invariant_preserved, chars=808
+baseline3 repair wrong_spec_typed_fun_loop_invariant_preserved: applied proposal #1 -> repair_04_01_wrong_spec_01_rewrite_annotation.c
+[17:44:18] LLM start baseline3_diagnose_typed_fun_loop_invariant_established
+[17:44:24] LLM done baseline3_diagnose_typed_fun_loop_invariant_established, chars=517
+[17:44:24] LLM start baseline3_wrong_spec_typed_fun_loop_invariant_established
+[17:44:30] LLM done baseline3_wrong_spec_typed_fun_loop_invariant_established, chars=579
+baseline3 repair wrong_spec_typed_fun_loop_invariant_established: applied proposal #1 -> repair_05_01_wrong_spec_01_rewrite_annotation.c
+[17:44:46] LLM start baseline3_diagnose_typed_fun_loop_invariant_preserved
+[17:44:52] LLM done baseline3_diagnose_typed_fun_loop_invariant_preserved, chars=785
+[17:44:52] LLM start baseline3_wrong_spec_typed_fun_loop_invariant_preserved
+[17:44:58] LLM done baseline3_wrong_spec_typed_fun_loop_invariant_preserved, chars=606
+baseline3 repair wrong_spec_typed_fun_loop_invariant_preserved: applied proposal #1 -> repair_06_01_wrong_spec_01_rewrite_annotation.c
+[17:45:13] LLM start baseline3_diagnose_typed_fun_loop_invariant_preserved
+[17:45:19] LLM done baseline3_diagnose_typed_fun_loop_invariant_preserved, chars=611
+[17:45:19] LLM start baseline3_wrong_spec_typed_fun_loop_invariant_preserved
+[17:45:25] LLM done baseline3_wrong_spec_typed_fun_loop_invariant_preserved, chars=638
+baseline3 repair wrong_spec_typed_fun_loop_invariant_preserved: not applied (no_applicable_repair)
+  #1 skipped: generated code rejected: LLM changed executable C code; only ACSL/comments are allowed
+baseline3 repair fallback: trying missing_spec after wrong_spec failed
+[17:45:25] LLM start baseline3_missing_spec_typed_fun_loop_invariant_preserved
+[17:45:32] LLM done baseline3_missing_spec_typed_fun_loop_invariant_preserved, chars=776
+baseline3 repair missing_spec_typed_fun_loop_invariant_preserved: applied proposal #1 -> repair_07_01_missing_spec_01_add_invariant.c
+[17:45:49] LLM start frama-c-problem_208.c_initial3
+[17:45:56] LLM done frama-c-problem_208.c_initial3, chars=566
+[17:46:10] LLM start baseline3_diagnose_typed_fun_loop_invariant_preserved
+[17:46:16] LLM done baseline3_diagnose_typed_fun_loop_invariant_preserved, chars=559
+[17:46:16] LLM start baseline3_wrong_spec_typed_fun_loop_invariant_preserved
+[17:46:21] LLM done baseline3_wrong_spec_typed_fun_loop_invariant_preserved, chars=532
+baseline3 repair wrong_spec_typed_fun_loop_invariant_preserved: applied proposal #1 -> repair_01_01_wrong_spec_01_rewrite_annotation.c
+[17:46:35] LLM start baseline3_diagnose_typed_fun_loop_invariant_preserved
+[17:46:41] LLM done baseline3_diagnose_typed_fun_loop_invariant_preserved, chars=709
+[17:46:41] LLM start baseline3_wrong_spec_typed_fun_loop_invariant_preserved
+[17:46:45] LLM done baseline3_wrong_spec_typed_fun_loop_invariant_preserved, chars=548
+baseline3 repair wrong_spec_typed_fun_loop_invariant_preserved: applied proposal #1 -> repair_02_01_wrong_spec_01_rewrite_annotation.c
+[17:46:59] LLM start baseline3_diagnose_typed_fun_loop_invariant_preserved
+[17:47:04] LLM done baseline3_diagnose_typed_fun_loop_invariant_preserved, chars=686
+[17:47:04] LLM start baseline3_wrong_spec_typed_fun_loop_invariant_preserved
+[17:47:10] LLM done baseline3_wrong_spec_typed_fun_loop_invariant_preserved, chars=644
+baseline3 repair wrong_spec_typed_fun_loop_invariant_preserved: applied proposal #1 -> repair_03_01_wrong_spec_01_rewrite_annotation.c
+[17:47:24] LLM start baseline3_diagnose_typed_fun_loop_invariant_preserved
+[17:47:28] LLM done baseline3_diagnose_typed_fun_loop_invariant_preserved, chars=441
+[17:47:28] LLM start baseline3_wrong_spec_typed_fun_loop_invariant_preserved
+[17:47:33] LLM done baseline3_wrong_spec_typed_fun_loop_invariant_preserved, chars=511
+baseline3 repair wrong_spec_typed_fun_loop_invariant_preserved: applied proposal #1 -> repair_04_01_wrong_spec_01_rewrite_annotation.c
+[17:47:46] LLM start baseline3_diagnose_typed_fun_ensures
+[17:48:03] LLM done baseline3_diagnose_typed_fun_ensures, chars=774
+[17:48:03] LLM start baseline3_wrong_spec_typed_fun_ensures
+[17:48:08] LLM done baseline3_wrong_spec_typed_fun_ensures, chars=573
+baseline3 repair wrong_spec_typed_fun_ensures: applied proposal #1 -> repair_05_01_wrong_spec_01_rewrite_annotation.c
+[17:48:22] LLM start baseline3_diagnose_typed_fun_loop_assigns_part2
+[17:48:28] LLM done baseline3_diagnose_typed_fun_loop_assigns_part2, chars=796
+[17:48:28] LLM start baseline3_candidates_typed_fun_loop_assigns_part2
+[17:48:33] LLM done baseline3_candidates_typed_fun_loop_assigns_part2, chars=636
+[17:48:33] LLM start baseline3_missing_spec_typed_fun_loop_assigns_part2
+[17:48:40] LLM done baseline3_missing_spec_typed_fun_loop_assigns_part2, chars=729
+baseline3 repair missing_spec_typed_fun_loop_assigns_part2: applied proposal #1 -> repair_06_01_missing_spec_01_add_invariant.c
+[17:48:54] LLM start baseline3_diagnose_typed_fun_loop_assigns_part2
+[17:49:02] LLM done baseline3_diagnose_typed_fun_loop_assigns_part2, chars=1200
+[17:49:02] LLM start baseline3_candidates_typed_fun_loop_assigns_part2
+[17:49:11] LLM done baseline3_candidates_typed_fun_loop_assigns_part2, chars=1413
+[17:49:27] LLM start baseline3_missing_spec_typed_fun_loop_assigns_part2
+[17:49:33] LLM done baseline3_missing_spec_typed_fun_loop_assigns_part2, chars=715
+baseline3 repair missing_spec_typed_fun_loop_assigns_part2: applied proposal #1 -> repair_07_01_missing_spec_01_rewrite_assigns.c
+[30/51] baseline3 frama-c-problem/209.c
+[17:49:35] LLM start frama-c-problem_209.c_initial1
+[17:49:45] LLM done frama-c-problem_209.c_initial1, chars=717
+[17:49:46] LLM start baseline3_invalid_repair
+[17:49:50] LLM done baseline3_invalid_repair, chars=488
+[17:49:52] LLM start baseline3_invalid_repair
+[17:49:56] LLM done baseline3_invalid_repair, chars=376
+[17:49:57] LLM start baseline3_invalid_repair
+[17:50:01] LLM done baseline3_invalid_repair, chars=416
+[17:50:02] LLM start baseline3_invalid_repair
+[17:50:06] LLM done baseline3_invalid_repair, chars=414
+[17:50:07] LLM start frama-c-problem_209.c_initial2
+[17:50:15] LLM done frama-c-problem_209.c_initial2, chars=789
+[17:50:26] LLM start baseline3_diagnose_typed_factorial_ensures_2
+[17:50:33] LLM done baseline3_diagnose_typed_factorial_ensures_2, chars=1066
+[17:50:33] LLM start baseline3_wrong_spec_typed_factorial_ensures_2
+[17:50:38] LLM done baseline3_wrong_spec_typed_factorial_ensures_2, chars=750
+baseline3 repair wrong_spec_typed_factorial_ensures_2: applied proposal #1 -> repair_01_01_wrong_spec_01_rewrite_annotation.c
+[17:50:49] LLM start baseline3_diagnose_typed_factorial_ensures_2
+[17:50:55] LLM done baseline3_diagnose_typed_factorial_ensures_2, chars=786
+[17:50:55] LLM start baseline3_wrong_spec_typed_factorial_ensures_2
+[17:51:01] LLM done baseline3_wrong_spec_typed_factorial_ensures_2, chars=647
+baseline3 repair wrong_spec_typed_factorial_ensures_2: applied proposal #1 -> repair_02_01_wrong_spec_01_rewrite_annotation.c
+[17:51:12] LLM start baseline3_diagnose_typed_factorial_ensures_2
+[17:51:29] LLM done baseline3_diagnose_typed_factorial_ensures_2, chars=659
+[17:51:29] LLM start baseline3_wrong_spec_typed_factorial_ensures_2
+[17:51:34] LLM done baseline3_wrong_spec_typed_factorial_ensures_2, chars=523
+baseline3 repair wrong_spec_typed_factorial_ensures_2: applied proposal #1 -> repair_03_01_wrong_spec_01_delete_annotation.c
+[31/51] baseline3 frama-c-problem/210.c
+[17:51:37] LLM start frama-c-problem_210.c_initial1
+[17:51:42] LLM done frama-c-problem_210.c_initial1, chars=547
+[17:51:53] LLM start baseline3_diagnose_typed_mul_loop_invariant_established
+[17:51:57] LLM done baseline3_diagnose_typed_mul_loop_invariant_established, chars=493
+[17:51:57] LLM start baseline3_wrong_spec_typed_mul_loop_invariant_established
+[17:52:02] LLM done baseline3_wrong_spec_typed_mul_loop_invariant_established, chars=537
+baseline3 repair wrong_spec_typed_mul_loop_invariant_established: applied proposal #1 -> repair_01_01_wrong_spec_01_rewrite_annotation.c
+[17:52:13] LLM start baseline3_diagnose_typed_mul_ensures
+[17:52:18] LLM done baseline3_diagnose_typed_mul_ensures, chars=554
+[17:52:18] LLM start baseline3_wrong_spec_typed_mul_ensures
+[17:52:24] LLM done baseline3_wrong_spec_typed_mul_ensures, chars=648
+baseline3 repair wrong_spec_typed_mul_ensures: applied proposal #1 -> repair_02_01_wrong_spec_01_rewrite_annotation.c
+[17:52:35] LLM start baseline3_diagnose_typed_mul_ensures
+[17:52:43] LLM done baseline3_diagnose_typed_mul_ensures, chars=929
+[17:52:43] LLM start baseline3_wrong_spec_typed_mul_ensures
+[17:52:51] LLM done baseline3_wrong_spec_typed_mul_ensures, chars=586
+baseline3 repair wrong_spec_typed_mul_ensures: applied proposal #1 -> repair_03_01_wrong_spec_01_rewrite_annotation.c
+[17:53:02] LLM start baseline3_diagnose_typed_mul_ensures
+[17:53:08] LLM done baseline3_diagnose_typed_mul_ensures, chars=766
+[17:53:08] LLM start baseline3_wrong_spec_typed_mul_ensures
+[17:53:17] LLM done baseline3_wrong_spec_typed_mul_ensures, chars=1187
+baseline3 repair wrong_spec_typed_mul_ensures: applied proposal #1 -> repair_04_01_wrong_spec_01_rewrite_annotation.c
+[17:53:18] LLM start frama-c-problem_210.c_initial2
+[17:53:26] LLM done frama-c-problem_210.c_initial2, chars=720
+[17:53:37] LLM start baseline3_diagnose_typed_mul_loop_invariant_established
+[17:53:44] LLM done baseline3_diagnose_typed_mul_loop_invariant_established, chars=929
+[17:53:44] LLM start baseline3_wrong_spec_typed_mul_loop_invariant_established
+[17:53:49] LLM done baseline3_wrong_spec_typed_mul_loop_invariant_established, chars=565
+baseline3 repair wrong_spec_typed_mul_loop_invariant_established: applied proposal #1 -> repair_01_01_wrong_spec_01_rewrite_annotation.c
+[32/51] baseline3 frama-c-problem/211.c
+[17:53:52] LLM start frama-c-problem_211.c_initial1
+[17:53:57] LLM done frama-c-problem_211.c_initial1, chars=559
+[17:53:58] LLM start baseline3_invalid_repair
+[17:54:02] LLM done baseline3_invalid_repair, chars=398
+[17:54:13] LLM start baseline3_diagnose_typed_main_assert
+[17:54:18] LLM done baseline3_diagnose_typed_main_assert, chars=469
+[17:54:18] LLM start baseline3_candidates_typed_main_assert
+[17:54:22] LLM done baseline3_candidates_typed_main_assert, chars=481
+[17:54:22] LLM start baseline3_missing_spec_typed_main_assert
+[17:54:35] LLM done baseline3_missing_spec_typed_main_assert, chars=651
+baseline3 repair missing_spec_typed_main_assert: applied proposal #1 -> repair_02_01_missing_spec_01_add_contract.c
+[17:54:45] LLM start baseline3_diagnose_typed_func_ensures
+[17:54:52] LLM done baseline3_diagnose_typed_func_ensures, chars=658
+[17:54:52] LLM start baseline3_wrong_spec_typed_func_ensures
+[17:54:58] LLM done baseline3_wrong_spec_typed_func_ensures, chars=668
+baseline3 repair wrong_spec_typed_func_ensures: applied proposal #1 -> repair_03_01_wrong_spec_01_rewrite_annotation.c
+[17:55:08] LLM start baseline3_diagnose_typed_func_ensures
+[17:55:17] LLM done baseline3_diagnose_typed_func_ensures, chars=695
+[17:55:17] LLM start baseline3_wrong_spec_typed_func_ensures
+[17:55:23] LLM done baseline3_wrong_spec_typed_func_ensures, chars=586
+baseline3 repair wrong_spec_typed_func_ensures: applied proposal #1 -> repair_04_01_wrong_spec_01_rewrite_annotation.c
+[17:55:34] LLM start baseline3_diagnose_typed_main_assert
+[17:55:38] LLM done baseline3_diagnose_typed_main_assert, chars=482
+[17:55:38] LLM start baseline3_candidates_typed_main_assert
+[17:55:50] LLM done baseline3_candidates_typed_main_assert, chars=2017
+[17:56:05] LLM start baseline3_missing_spec_typed_main_assert
+[17:56:10] LLM done baseline3_missing_spec_typed_main_assert, chars=617
+baseline3 repair missing_spec_typed_main_assert: applied proposal #1 -> repair_05_01_missing_spec_01_add_contract.c
+[17:56:20] LLM start baseline3_diagnose_typed_func_ensures_2
+[17:56:25] LLM done baseline3_diagnose_typed_func_ensures_2, chars=516
+[17:56:25] LLM start baseline3_wrong_spec_typed_func_ensures_2
+[17:56:30] LLM done baseline3_wrong_spec_typed_func_ensures_2, chars=532
+baseline3 repair wrong_spec_typed_func_ensures_2: applied proposal #1 -> repair_06_01_wrong_spec_01_rewrite_annotation.c
+[17:56:40] LLM start baseline3_diagnose_typed_func_ensures_2
+[17:56:49] LLM done baseline3_diagnose_typed_func_ensures_2, chars=602
+[17:56:49] LLM start baseline3_wrong_spec_typed_func_ensures_2
+[17:56:56] LLM done baseline3_wrong_spec_typed_func_ensures_2, chars=737
+baseline3 repair wrong_spec_typed_func_ensures_2: applied proposal #1 -> repair_07_01_wrong_spec_01_rewrite_annotation.c
+[17:57:08] LLM start frama-c-problem_211.c_initial2
+[17:57:14] LLM done frama-c-problem_211.c_initial2, chars=527
+[17:57:26] LLM start baseline3_diagnose_typed_func_loop_invariant_established
+[17:57:32] LLM done baseline3_diagnose_typed_func_loop_invariant_established, chars=857
+[17:57:32] LLM start baseline3_wrong_spec_typed_func_loop_invariant_established
+[17:57:37] LLM done baseline3_wrong_spec_typed_func_loop_invariant_established, chars=637
+baseline3 repair wrong_spec_typed_func_loop_invariant_established: applied proposal #1 -> repair_01_01_wrong_spec_01_rewrite_annotation.c
+[17:57:49] LLM start baseline3_diagnose_typed_main_assert
+[17:57:53] LLM done baseline3_diagnose_typed_main_assert, chars=472
+[17:57:53] LLM start baseline3_candidates_typed_main_assert
+[17:57:58] LLM done baseline3_candidates_typed_main_assert, chars=556
+[17:57:58] LLM start baseline3_missing_spec_typed_main_assert
+[17:58:03] LLM done baseline3_missing_spec_typed_main_assert, chars=587
+baseline3 repair missing_spec_typed_main_assert: applied proposal #1 -> repair_02_01_missing_spec_01_add_contract.c
+[17:58:14] LLM start baseline3_diagnose_typed_func_ensures
+[17:58:19] LLM done baseline3_diagnose_typed_func_ensures, chars=625
+[17:58:19] LLM start baseline3_wrong_spec_typed_func_ensures
+[17:58:24] LLM done baseline3_wrong_spec_typed_func_ensures, chars=563
+baseline3 repair wrong_spec_typed_func_ensures: applied proposal #1 -> repair_03_01_wrong_spec_01_rewrite_annotation.c
+[17:58:34] LLM start baseline3_diagnose_typed_func_ensures
+[17:58:40] LLM done baseline3_diagnose_typed_func_ensures, chars=794
+[17:58:40] LLM start baseline3_wrong_spec_typed_func_ensures
+[17:59:02] LLM done baseline3_wrong_spec_typed_func_ensures, chars=738
+baseline3 repair wrong_spec_typed_func_ensures: applied proposal #1 -> repair_04_01_wrong_spec_01_rewrite_annotation.c
+[17:59:14] LLM start baseline3_diagnose_typed_main_assert
+[17:59:19] LLM done baseline3_diagnose_typed_main_assert, chars=578
+[17:59:19] LLM start baseline3_candidates_typed_main_assert
+[17:59:54] LLM done baseline3_candidates_typed_main_assert, chars=1048
+[17:59:56] LLM start baseline3_missing_spec_typed_main_assert
+[18:00:01] LLM done baseline3_missing_spec_typed_main_assert, chars=609
+baseline3 repair missing_spec_typed_main_assert: applied proposal #1 -> repair_05_01_missing_spec_01_add_contract.c
+[18:00:12] LLM start baseline3_diagnose_typed_func_ensures_2
+[18:00:19] LLM done baseline3_diagnose_typed_func_ensures_2, chars=593
+[18:00:19] LLM start baseline3_wrong_spec_typed_func_ensures_2
+[18:00:24] LLM done baseline3_wrong_spec_typed_func_ensures_2, chars=513
+baseline3 repair wrong_spec_typed_func_ensures_2: applied proposal #1 -> repair_06_01_wrong_spec_01_rewrite_annotation.c
+[18:00:34] LLM start baseline3_diagnose_typed_func_ensures_2
+[18:00:40] LLM done baseline3_diagnose_typed_func_ensures_2, chars=667
+[18:00:40] LLM start baseline3_wrong_spec_typed_func_ensures_2
+[18:00:49] LLM done baseline3_wrong_spec_typed_func_ensures_2, chars=1624
+baseline3 repair wrong_spec_typed_func_ensures_2: applied proposal #1 -> repair_07_01_wrong_spec_01_rewrite_annotation.c
+[18:01:00] LLM start frama-c-problem_211.c_initial3
+[18:01:05] LLM done frama-c-problem_211.c_initial3, chars=489
+[18:01:17] LLM start baseline3_diagnose_typed_func_loop_invariant_2_established
+[18:01:23] LLM done baseline3_diagnose_typed_func_loop_invariant_2_established, chars=851
+[18:01:23] LLM start baseline3_wrong_spec_typed_func_loop_invariant_2_established
+[18:01:28] LLM done baseline3_wrong_spec_typed_func_loop_invariant_2_established, chars=566
+baseline3 repair wrong_spec_typed_func_loop_invariant_2_established: applied proposal #1 -> repair_01_01_wrong_spec_01_delete_annotation.c
+[18:01:39] LLM start baseline3_diagnose_typed_main_assert
+[18:01:44] LLM done baseline3_diagnose_typed_main_assert, chars=505
+[18:01:44] LLM start baseline3_candidates_typed_main_assert
+[18:02:07] LLM done baseline3_candidates_typed_main_assert, chars=630
+[18:02:08] LLM start baseline3_missing_spec_typed_main_assert
+[18:02:13] LLM done baseline3_missing_spec_typed_main_assert, chars=572
+baseline3 repair missing_spec_typed_main_assert: applied proposal #1 -> repair_02_01_missing_spec_01_add_contract.c
+[18:02:24] LLM start baseline3_diagnose_typed_func_ensures
+[18:02:29] LLM done baseline3_diagnose_typed_func_ensures, chars=612
+[18:02:29] LLM start baseline3_candidates_typed_func_ensures
+[18:02:38] LLM done baseline3_candidates_typed_func_ensures, chars=1645
+[18:02:41] LLM start baseline3_missing_spec_typed_func_ensures
+[18:02:47] LLM done baseline3_missing_spec_typed_func_ensures, chars=884
+baseline3 repair missing_spec_typed_func_ensures: applied proposal #1 -> repair_03_01_missing_spec_01_add_invariant.c
+[18:02:58] LLM start baseline3_diagnose_typed_func_ensures
+[18:03:05] LLM done baseline3_diagnose_typed_func_ensures, chars=772
+[18:03:05] LLM start baseline3_wrong_spec_typed_func_ensures
+[18:03:18] LLM done baseline3_wrong_spec_typed_func_ensures, chars=687
+baseline3 repair wrong_spec_typed_func_ensures: applied proposal #1 -> repair_04_01_wrong_spec_01_rewrite_annotation.c
+[18:03:29] LLM start baseline3_diagnose_typed_func_ensures
+[18:03:34] LLM done baseline3_diagnose_typed_func_ensures, chars=561
+[18:03:34] LLM start baseline3_wrong_spec_typed_func_ensures
+[18:03:39] LLM done baseline3_wrong_spec_typed_func_ensures, chars=558
+baseline3 repair wrong_spec_typed_func_ensures: applied proposal #1 -> repair_05_01_wrong_spec_01_rewrite_annotation.c
+[18:03:49] LLM start baseline3_diagnose_typed_func_ensures
+[18:04:04] LLM done baseline3_diagnose_typed_func_ensures, chars=667
+[18:04:04] LLM start baseline3_candidates_typed_func_ensures
+[18:04:15] LLM done baseline3_candidates_typed_func_ensures, chars=1916
+[18:04:18] LLM start baseline3_missing_spec_typed_func_ensures
+[18:04:25] LLM done baseline3_missing_spec_typed_func_ensures, chars=952
+baseline3 repair missing_spec_typed_func_ensures: applied proposal #1 -> repair_06_01_missing_spec_01_add_invariant.c
+[18:04:36] LLM start baseline3_diagnose_typed_func_ensures
+[18:04:42] LLM done baseline3_diagnose_typed_func_ensures, chars=911
+[18:04:42] LLM start baseline3_wrong_spec_typed_func_ensures
+[18:04:48] LLM done baseline3_wrong_spec_typed_func_ensures, chars=632
+baseline3 repair wrong_spec_typed_func_ensures: applied proposal #1 -> repair_07_01_wrong_spec_01_rewrite_annotation.c
+[33/51] baseline3 frama-c-problem/212.c
+[18:04:59] LLM start frama-c-problem_212.c_initial1
+[18:05:13] LLM done frama-c-problem_212.c_initial1, chars=449
+[18:05:25] LLM start baseline3_diagnose_typed_main_assert
+[18:05:35] LLM done baseline3_diagnose_typed_main_assert, chars=725
+[18:05:35] LLM start baseline3_candidates_typed_main_assert
+[18:05:49] LLM done baseline3_candidates_typed_main_assert, chars=2558
+[18:06:04] LLM start baseline3_missing_spec_typed_main_assert
+[18:06:10] LLM done baseline3_missing_spec_typed_main_assert, chars=654
+baseline3 repair missing_spec_typed_main_assert: applied proposal #1 -> repair_01_01_missing_spec_01_add_contract.c
+[18:06:21] LLM start baseline3_diagnose_typed_func_ensures
+[18:06:27] LLM done baseline3_diagnose_typed_func_ensures, chars=881
+[18:06:27] LLM start baseline3_candidates_typed_func_ensures
+[18:06:38] LLM done baseline3_candidates_typed_func_ensures, chars=1479
+[18:06:41] LLM start baseline3_missing_spec_typed_func_ensures
+[18:06:47] LLM done baseline3_missing_spec_typed_func_ensures, chars=578
+baseline3 repair missing_spec_typed_func_ensures: applied proposal #1 -> repair_02_01_missing_spec_01_add_invariant.c
+[34/51] baseline3 frama-c-problem/213.c
+[18:06:49] LLM start frama-c-problem_213.c_initial1
+[18:06:58] LLM done frama-c-problem_213.c_initial1, chars=1013
+[35/51] baseline3 frama-c-problem/214.c
+[18:07:02] LLM start frama-c-problem_214.c_initial1
+[18:07:12] LLM done frama-c-problem_214.c_initial1, chars=1227
+[18:07:17] LLM start baseline3_diagnose_typed_array_max_advanced_loop_invariant_3_established
+[18:07:32] LLM done baseline3_diagnose_typed_array_max_advanced_loop_invariant_3_established, chars=767
+[18:07:32] LLM start baseline3_wrong_spec_typed_array_max_advanced_loop_invariant_3_established
+[18:07:38] LLM done baseline3_wrong_spec_typed_array_max_advanced_loop_invariant_3_established, chars=747
+baseline3 repair wrong_spec_typed_array_max_advanced_loop_invariant_3_established: applied proposal #1 -> repair_01_01_wrong_spec_01_rewrite_annotation.c
+[18:07:49] LLM start baseline3_diagnose_typed_array_max_advanced_ensures_2
+[18:07:55] LLM done baseline3_diagnose_typed_array_max_advanced_ensures_2, chars=504
+[18:07:55] LLM start baseline3_candidates_typed_array_max_advanced_ensures_2
+[18:08:01] LLM done baseline3_candidates_typed_array_max_advanced_ensures_2, chars=671
+[18:08:02] LLM start baseline3_missing_spec_typed_array_max_advanced_ensures_2
+[18:08:41] LLM done baseline3_missing_spec_typed_array_max_advanced_ensures_2, chars=1040
+baseline3 repair missing_spec_typed_array_max_advanced_ensures_2: applied proposal #1 -> repair_02_01_missing_spec_01_add_invariant.c
+[18:08:47] LLM start baseline3_diagnose_typed_array_max_advanced_ensures_2
+[18:08:57] LLM done baseline3_diagnose_typed_array_max_advanced_ensures_2, chars=1372
+[18:08:57] LLM start baseline3_candidates_typed_array_max_advanced_ensures_2
+[18:09:04] LLM done baseline3_candidates_typed_array_max_advanced_ensures_2, chars=653
+[18:09:05] LLM start baseline3_missing_spec_typed_array_max_advanced_ensures_2
+[18:09:13] LLM done baseline3_missing_spec_typed_array_max_advanced_ensures_2, chars=1045
+baseline3 repair missing_spec_typed_array_max_advanced_ensures_2: applied proposal #1 -> repair_03_01_missing_spec_01_add_invariant.c
+[18:09:19] LLM start baseline3_diagnose_typed_array_max_advanced_ensures_2
+[18:09:26] LLM done baseline3_diagnose_typed_array_max_advanced_ensures_2, chars=585
+[18:09:26] LLM start baseline3_candidates_typed_array_max_advanced_ensures_2
+[18:09:33] LLM done baseline3_candidates_typed_array_max_advanced_ensures_2, chars=715
+[18:09:34] LLM start baseline3_missing_spec_typed_array_max_advanced_ensures_2
+[18:09:39] LLM done baseline3_missing_spec_typed_array_max_advanced_ensures_2, chars=2
+baseline3 repair missing_spec_typed_array_max_advanced_ensures_2: not applied (no_proposals)
+baseline3 repair fallback: trying wrong_spec after missing_spec failed
+[18:09:39] LLM start baseline3_wrong_spec_typed_array_max_advanced_ensures_2
+[18:09:45] LLM done baseline3_wrong_spec_typed_array_max_advanced_ensures_2, chars=646
+baseline3 repair wrong_spec_typed_array_max_advanced_ensures_2: not applied (no_applicable_repair)
+  #1 skipped: action='regenerate', missing exact original_text or regenerate
+[18:09:45] LLM start frama-c-problem_214.c_initial2
+[18:09:54] LLM done frama-c-problem_214.c_initial2, chars=1229
+[18:09:58] LLM start baseline3_diagnose_typed_array_max_advanced_loop_invariant_3_established
+[18:10:03] LLM done baseline3_diagnose_typed_array_max_advanced_loop_invariant_3_established, chars=514
+[18:10:03] LLM start baseline3_wrong_spec_typed_array_max_advanced_loop_invariant_3_established
+[18:10:09] LLM done baseline3_wrong_spec_typed_array_max_advanced_loop_invariant_3_established, chars=593
+baseline3 repair wrong_spec_typed_array_max_advanced_loop_invariant_3_established: applied proposal #1 -> repair_01_01_wrong_spec_01_rewrite_annotation.c
+[18:10:14] LLM start baseline3_diagnose_typed_array_max_advanced_loop_invariant_3_preserved
+[18:10:28] LLM done baseline3_diagnose_typed_array_max_advanced_loop_invariant_3_preserved, chars=708
+[18:10:28] LLM start baseline3_candidates_typed_array_max_advanced_loop_invariant_3_preserved
+[18:10:42] LLM done baseline3_candidates_typed_array_max_advanced_loop_invariant_3_preserved, chars=2167
+[18:10:42] LLM start baseline3_missing_spec_typed_array_max_advanced_loop_invariant_3_preserved
+[18:10:45] LLM done baseline3_missing_spec_typed_array_max_advanced_loop_invariant_3_preserved, chars=2
+baseline3 repair missing_spec_typed_array_max_advanced_loop_invariant_3_preserved: not applied (no_proposals)
+baseline3 repair fallback: trying wrong_spec after missing_spec failed
+[18:10:45] LLM start baseline3_wrong_spec_typed_array_max_advanced_loop_invariant_3_preserved
+[18:10:52] LLM done baseline3_wrong_spec_typed_array_max_advanced_loop_invariant_3_preserved, chars=726
+baseline3 repair wrong_spec_typed_array_max_advanced_loop_invariant_3_preserved: not applied (no_applicable_repair)
+  #1 skipped: action='regenerate', missing exact original_text or regenerate
+[18:10:52] LLM start frama-c-problem_214.c_initial3
+[18:11:01] LLM done frama-c-problem_214.c_initial3, chars=1253
+[18:11:06] LLM start baseline3_diagnose_typed_array_max_advanced_loop_invariant_3_established
+[18:11:13] LLM done baseline3_diagnose_typed_array_max_advanced_loop_invariant_3_established, chars=713
+[18:11:13] LLM start baseline3_wrong_spec_typed_array_max_advanced_loop_invariant_3_established
+[18:11:22] LLM done baseline3_wrong_spec_typed_array_max_advanced_loop_invariant_3_established, chars=605
+baseline3 repair wrong_spec_typed_array_max_advanced_loop_invariant_3_established: applied proposal #1 -> repair_01_01_wrong_spec_01_rewrite_annotation.c
+[18:11:33] LLM start baseline3_diagnose_typed_array_max_advanced_ensures_2
+[18:11:41] LLM done baseline3_diagnose_typed_array_max_advanced_ensures_2, chars=767
+[18:11:41] LLM start baseline3_wrong_spec_typed_array_max_advanced_ensures_2
+[18:11:47] LLM done baseline3_wrong_spec_typed_array_max_advanced_ensures_2, chars=764
+baseline3 repair wrong_spec_typed_array_max_advanced_ensures_2: applied proposal #1 -> repair_02_01_wrong_spec_01_rewrite_annotation.c
+[18:11:52] LLM start baseline3_diagnose_typed_array_max_advanced_loop_invariant_3_established
+[18:11:58] LLM done baseline3_diagnose_typed_array_max_advanced_loop_invariant_3_established, chars=743
+[18:11:58] LLM start baseline3_wrong_spec_typed_array_max_advanced_loop_invariant_3_established
+[18:12:08] LLM done baseline3_wrong_spec_typed_array_max_advanced_loop_invariant_3_established, chars=1585
+baseline3 repair wrong_spec_typed_array_max_advanced_loop_invariant_3_established: applied proposal #1 -> repair_03_01_wrong_spec_01_rewrite_annotation.c
+[18:12:12] LLM start baseline3_diagnose_typed_array_max_advanced_loop_invariant_3_established
+[18:12:18] LLM done baseline3_diagnose_typed_array_max_advanced_loop_invariant_3_established, chars=653
+[18:12:18] LLM start baseline3_wrong_spec_typed_array_max_advanced_loop_invariant_3_established
+[18:12:24] LLM done baseline3_wrong_spec_typed_array_max_advanced_loop_invariant_3_established, chars=675
+baseline3 repair wrong_spec_typed_array_max_advanced_loop_invariant_3_established: applied proposal #1 -> repair_04_01_wrong_spec_01_rewrite_annotation.c
+[18:12:35] LLM start baseline3_diagnose_typed_array_max_advanced_ensures_2
+[18:12:42] LLM done baseline3_diagnose_typed_array_max_advanced_ensures_2, chars=747
+[18:12:42] LLM start baseline3_wrong_spec_typed_array_max_advanced_ensures_2
+[18:12:47] LLM done baseline3_wrong_spec_typed_array_max_advanced_ensures_2, chars=592
+baseline3 repair wrong_spec_typed_array_max_advanced_ensures_2: applied proposal #1 -> repair_05_01_wrong_spec_01_rewrite_annotation.c
+[18:12:51] LLM start baseline3_diagnose_typed_array_max_advanced_loop_invariant_3_established
+[18:12:56] LLM done baseline3_diagnose_typed_array_max_advanced_loop_invariant_3_established, chars=503
+[18:12:56] LLM start baseline3_wrong_spec_typed_array_max_advanced_loop_invariant_3_established
+[18:13:01] LLM done baseline3_wrong_spec_typed_array_max_advanced_loop_invariant_3_established, chars=589
+baseline3 repair wrong_spec_typed_array_max_advanced_loop_invariant_3_established: not applied (no_applicable_repair)
+  #1 skipped: action='rewrite_annotation', original_text_count=0
+baseline3 repair fallback: trying missing_spec after wrong_spec failed
+[18:13:01] LLM start baseline3_missing_spec_typed_array_max_advanced_loop_invariant_3_established
+[18:13:07] LLM done baseline3_missing_spec_typed_array_max_advanced_loop_invariant_3_established, chars=605
+baseline3 repair missing_spec_typed_array_max_advanced_loop_invariant_3_established: not applied (no_applicable_repair)
+  #1 skipped: action='add_invariant', original_text_count=0
+[36/51] baseline3 frama-c-problem/215.c
+[18:13:07] LLM start frama-c-problem_215.c_initial1
+[18:13:15] LLM done frama-c-problem_215.c_initial1, chars=883
+[37/51] baseline3 frama-c-problem/216.c
+[18:13:18] LLM start frama-c-problem_216.c_initial1
+[18:13:27] LLM done frama-c-problem_216.c_initial1, chars=1030
+[18:13:28] LLM start frama-c-problem_216.c_initial2
+[18:13:36] LLM done frama-c-problem_216.c_initial2, chars=1007
+[18:13:37] LLM start frama-c-problem_216.c_initial3
+[18:13:47] LLM done frama-c-problem_216.c_initial3, chars=1122
+[38/51] baseline3 frama-c-problem/217.c
+[18:13:48] LLM start frama-c-problem_217.c_initial1
+[18:14:05] LLM done frama-c-problem_217.c_initial1, chars=539
+[39/51] baseline3 frama-c-problem/218.c
+[18:14:06] LLM start frama-c-problem_218.c_initial1
+[18:14:14] LLM done frama-c-problem_218.c_initial1, chars=724
+[18:14:15] LLM start baseline3_invalid_repair
+[18:14:19] LLM done baseline3_invalid_repair, chars=450
+[18:14:20] LLM start baseline3_invalid_repair
+[18:14:24] LLM done baseline3_invalid_repair, chars=404
+[18:14:25] LLM start baseline3_invalid_repair
+[18:14:29] LLM done baseline3_invalid_repair, chars=306
+[18:14:30] LLM start baseline3_invalid_repair
+[18:14:34] LLM done baseline3_invalid_repair, chars=397
+[18:14:35] LLM start frama-c-problem_218.c_initial2
+[18:14:44] LLM done frama-c-problem_218.c_initial2, chars=1009
+[18:14:45] LLM start frama-c-problem_218.c_initial3
+[18:14:52] LLM done frama-c-problem_218.c_initial3, chars=872
+[18:14:53] LLM start baseline3_invalid_repair
+[18:14:57] LLM done baseline3_invalid_repair, chars=333
+[18:14:58] LLM start baseline3_invalid_repair
+[18:15:07] LLM done baseline3_invalid_repair, chars=389
+[18:15:08] LLM start baseline3_invalid_repair
+[18:15:12] LLM done baseline3_invalid_repair, chars=390
+[18:15:13] LLM start baseline3_invalid_repair
+[18:15:16] LLM done baseline3_invalid_repair, chars=366
+[40/51] baseline3 frama-c-problem/219.c
+[18:15:17] LLM start frama-c-problem_219.c_initial1
+[18:15:25] LLM done frama-c-problem_219.c_initial1, chars=690
+[18:15:26] LLM start frama-c-problem_219.c_initial2
+[18:15:34] LLM done frama-c-problem_219.c_initial2, chars=948
+[18:15:35] LLM start frama-c-problem_219.c_initial3
+[18:15:45] LLM done frama-c-problem_219.c_initial3, chars=1000
+[41/51] baseline3 frama-c-problem/220.c
+[18:15:46] LLM start frama-c-problem_220.c_initial1
+[18:15:55] LLM done frama-c-problem_220.c_initial1, chars=977
+[18:15:55] LLM start baseline3_invalid_repair
+[18:16:02] LLM done baseline3_invalid_repair, chars=519
+[18:16:03] LLM start baseline3_invalid_repair
+[18:16:09] LLM done baseline3_invalid_repair, chars=455
+[18:16:10] LLM start baseline3_invalid_repair
+[18:16:15] LLM done baseline3_invalid_repair, chars=556
+[42/51] baseline3 frama-c-problem/221.c
+[18:16:21] LLM start frama-c-problem_221.c_initial1
+[18:16:31] LLM done frama-c-problem_221.c_initial1, chars=986
+[18:16:32] LLM start frama-c-problem_221.c_initial2
+[18:16:41] LLM done frama-c-problem_221.c_initial2, chars=977
+[18:16:54] LLM start baseline3_diagnose_typed_main_assert
+[18:17:02] LLM done baseline3_diagnose_typed_main_assert, chars=821
+[18:17:02] LLM start baseline3_candidates_typed_main_assert
+[18:17:13] LLM done baseline3_candidates_typed_main_assert, chars=1581
+[18:17:13] LLM start baseline3_missing_spec_typed_main_assert
+[18:17:27] LLM done baseline3_missing_spec_typed_main_assert, chars=728
+baseline3 repair missing_spec_typed_main_assert: applied proposal #1 -> repair_01_01_missing_spec_01_add_contract.c
+[43/51] baseline3 frama-c-problem/222.c
+[18:17:33] LLM start frama-c-problem_222.c_initial1
+[18:17:45] LLM done frama-c-problem_222.c_initial1, chars=1319
+[18:17:59] LLM start baseline3_diagnose_typed_main_assert
+[18:18:05] LLM done baseline3_diagnose_typed_main_assert, chars=485
+[18:18:05] LLM start baseline3_candidates_typed_main_assert
+[18:18:13] LLM done baseline3_candidates_typed_main_assert, chars=1251
+[18:18:13] LLM start baseline3_missing_spec_typed_main_assert
+[18:18:19] LLM done baseline3_missing_spec_typed_main_assert, chars=643
+baseline3 repair missing_spec_typed_main_assert: applied proposal #1 -> repair_01_01_missing_spec_01_add_ensures.c
+[44/51] baseline3 frama-c-problem/224.c
+[18:18:26] LLM start frama-c-problem_224.c_initial1
+[18:18:32] LLM done frama-c-problem_224.c_initial1, chars=609
+[45/51] baseline3 frama-c-problem/225.c
+[18:18:34] LLM start frama-c-problem_225.c_initial1
+[18:18:40] LLM done frama-c-problem_225.c_initial1, chars=662
+[46/51] baseline3 frama-c-problem/226.c
+[18:18:42] LLM start frama-c-problem_226.c_initial1
+[18:18:53] LLM done frama-c-problem_226.c_initial1, chars=642
+[18:19:03] LLM start baseline3_diagnose_typed_main_assert_2
+[18:19:08] LLM done baseline3_diagnose_typed_main_assert_2, chars=713
+[18:19:08] LLM start baseline3_missing_spec_typed_main_assert_2
+[18:19:19] LLM done baseline3_missing_spec_typed_main_assert_2, chars=1240
+baseline3 repair missing_spec_typed_main_assert_2: applied proposal #1 -> repair_01_01_missing_spec_01_add_contract.c
+[18:19:20] LLM start baseline3_invalid_repair
+[18:19:24] LLM done baseline3_invalid_repair, chars=449
+[18:19:34] LLM start baseline3_diagnose_typed_main_assert_2
+[18:19:41] LLM done baseline3_diagnose_typed_main_assert_2, chars=998
+[18:19:41] LLM start baseline3_missing_spec_typed_main_assert_2
+[18:19:50] LLM done baseline3_missing_spec_typed_main_assert_2, chars=1166
+baseline3 repair missing_spec_typed_main_assert_2: applied proposal #1 -> repair_03_01_missing_spec_01_add_contract.c
+[18:20:00] LLM start baseline3_diagnose_typed_main_assert_2
+[18:20:06] LLM done baseline3_diagnose_typed_main_assert_2, chars=554
+[18:20:06] LLM start baseline3_wrong_spec_typed_main_assert_2
+[18:20:16] LLM done baseline3_wrong_spec_typed_main_assert_2, chars=1106
+baseline3 repair wrong_spec_typed_main_assert_2: not applied (no_applicable_repair)
+  #1 skipped: action='regenerate', missing exact original_text or regenerate
+baseline3 repair fallback: trying missing_spec after wrong_spec failed
+[18:20:16] LLM start baseline3_missing_spec_typed_main_assert_2
+[18:20:23] LLM done baseline3_missing_spec_typed_main_assert_2, chars=760
+baseline3 repair missing_spec_typed_main_assert_2: applied proposal #1 -> repair_04_01_missing_spec_01_add_contract.c
+[18:20:33] LLM start baseline3_diagnose_typed_div_rem_ensures
+[18:20:40] LLM done baseline3_diagnose_typed_div_rem_ensures, chars=749
+[18:20:40] LLM start baseline3_missing_spec_typed_div_rem_ensures
+[18:20:46] LLM done baseline3_missing_spec_typed_div_rem_ensures, chars=740
+baseline3 repair missing_spec_typed_div_rem_ensures: applied proposal #1 -> repair_05_01_missing_spec_01_add_ensures.c
+[18:20:47] LLM start baseline3_invalid_repair
+[18:20:51] LLM done baseline3_invalid_repair, chars=374
+[18:21:01] LLM start baseline3_diagnose_typed_div_rem_ensures_2
+[18:21:08] LLM done baseline3_diagnose_typed_div_rem_ensures_2, chars=543
+[18:21:08] LLM start baseline3_wrong_spec_typed_div_rem_ensures_2
+[18:21:14] LLM done baseline3_wrong_spec_typed_div_rem_ensures_2, chars=519
+baseline3 repair wrong_spec_typed_div_rem_ensures_2: applied proposal #1 -> repair_07_01_wrong_spec_01_delete_annotation.c
+[18:21:25] LLM start frama-c-problem_226.c_initial2
+[18:21:42] LLM done frama-c-problem_226.c_initial2, chars=490
+[18:21:52] LLM start baseline3_diagnose_typed_main_assert_2
+[18:21:57] LLM done baseline3_diagnose_typed_main_assert_2, chars=401
+[18:21:57] LLM start baseline3_missing_spec_typed_main_assert_2
+[18:22:04] LLM done baseline3_missing_spec_typed_main_assert_2, chars=807
+baseline3 repair missing_spec_typed_main_assert_2: applied proposal #1 -> repair_01_01_missing_spec_01_add_contract.c
+[18:22:07] LLM start baseline3_diagnose_typed_div_rem_ensures
+[18:22:11] LLM done baseline3_diagnose_typed_div_rem_ensures, chars=496
+[18:22:11] LLM start baseline3_missing_spec_typed_div_rem_ensures
+[18:22:17] LLM done baseline3_missing_spec_typed_div_rem_ensures, chars=747
+baseline3 repair missing_spec_typed_div_rem_ensures: applied proposal #1 -> repair_02_01_missing_spec_01_add_contract.c
+[18:22:20] LLM start baseline3_diagnose_typed_div_rem_ensures
+[18:22:26] LLM done baseline3_diagnose_typed_div_rem_ensures, chars=630
+[18:22:26] LLM start baseline3_wrong_spec_typed_div_rem_ensures
+[18:22:34] LLM done baseline3_wrong_spec_typed_div_rem_ensures, chars=1086
+baseline3 repair wrong_spec_typed_div_rem_ensures: applied proposal #1 -> repair_03_01_wrong_spec_01_rewrite_annotation.c
+[18:22:37] LLM start baseline3_diagnose_typed_div_rem_ensures
+[18:22:42] LLM done baseline3_diagnose_typed_div_rem_ensures, chars=661
+[18:22:42] LLM start baseline3_wrong_spec_typed_div_rem_ensures
+[18:22:48] LLM done baseline3_wrong_spec_typed_div_rem_ensures, chars=681
+baseline3 repair wrong_spec_typed_div_rem_ensures: applied proposal #1 -> repair_04_01_wrong_spec_01_rewrite_annotation.c
+[18:22:50] LLM start baseline3_diagnose_typed_div_rem_ensures
+[18:22:55] LLM done baseline3_diagnose_typed_div_rem_ensures, chars=632
+[18:22:55] LLM start baseline3_wrong_spec_typed_div_rem_ensures
+[18:23:00] LLM done baseline3_wrong_spec_typed_div_rem_ensures, chars=575
+baseline3 repair wrong_spec_typed_div_rem_ensures: applied proposal #1 -> repair_05_01_wrong_spec_01_rewrite_annotation.c
+[18:23:03] LLM start baseline3_diagnose_typed_div_rem_ensures
+[18:23:08] LLM done baseline3_diagnose_typed_div_rem_ensures, chars=645
+[18:23:08] LLM start baseline3_wrong_spec_typed_div_rem_ensures
+[18:23:13] LLM done baseline3_wrong_spec_typed_div_rem_ensures, chars=614
+baseline3 repair wrong_spec_typed_div_rem_ensures: applied proposal #1 -> repair_06_01_wrong_spec_01_rewrite_annotation.c
+[18:23:16] LLM start baseline3_diagnose_typed_div_rem_ensures
+[18:23:33] LLM done baseline3_diagnose_typed_div_rem_ensures, chars=573
+[18:23:33] LLM start baseline3_missing_spec_typed_div_rem_ensures
+[18:23:39] LLM done baseline3_missing_spec_typed_div_rem_ensures, chars=713
+baseline3 repair missing_spec_typed_div_rem_ensures: applied proposal #1 -> repair_07_01_missing_spec_01_add_ensures.c
+[18:23:42] LLM start frama-c-problem_226.c_initial3
+[18:23:48] LLM done frama-c-problem_226.c_initial3, chars=628
+[18:23:59] LLM start baseline3_diagnose_typed_main_assert_2
+[18:24:06] LLM done baseline3_diagnose_typed_main_assert_2, chars=1112
+[18:24:06] LLM start baseline3_missing_spec_typed_main_assert_2
+[18:24:11] LLM done baseline3_missing_spec_typed_main_assert_2, chars=882
+baseline3 repair missing_spec_typed_main_assert_2: applied proposal #1 -> repair_01_01_missing_spec_01_add_contract.c
+[18:24:21] LLM start baseline3_diagnose_typed_div_rem_ensures
+[18:24:27] LLM done baseline3_diagnose_typed_div_rem_ensures, chars=653
+[18:24:27] LLM start baseline3_wrong_spec_typed_div_rem_ensures
+[18:24:33] LLM done baseline3_wrong_spec_typed_div_rem_ensures, chars=610
+baseline3 repair wrong_spec_typed_div_rem_ensures: applied proposal #1 -> repair_02_01_wrong_spec_01_rewrite_annotation.c
+[18:24:43] LLM start baseline3_diagnose_typed_div_rem_ensures
+[18:24:49] LLM done baseline3_diagnose_typed_div_rem_ensures, chars=645
+[18:24:49] LLM start baseline3_wrong_spec_typed_div_rem_ensures
+[18:24:54] LLM done baseline3_wrong_spec_typed_div_rem_ensures, chars=625
+baseline3 repair wrong_spec_typed_div_rem_ensures: applied proposal #1 -> repair_03_01_wrong_spec_01_rewrite_annotation.c
+[18:25:05] LLM start baseline3_diagnose_typed_div_rem_ensures
+[18:25:11] LLM done baseline3_diagnose_typed_div_rem_ensures, chars=724
+[18:25:11] LLM start baseline3_missing_spec_typed_div_rem_ensures
+[18:25:19] LLM done baseline3_missing_spec_typed_div_rem_ensures, chars=745
+baseline3 repair missing_spec_typed_div_rem_ensures: applied proposal #1 -> repair_04_01_missing_spec_01_add_requires.c
+[47/51] baseline3 frama-c-problem/227.c
+[18:25:20] LLM start frama-c-problem_227.c_initial1
+[18:25:25] LLM done frama-c-problem_227.c_initial1, chars=363
+[18:25:35] LLM start baseline3_diagnose_typed_main_assert_2
+[18:25:42] LLM done baseline3_diagnose_typed_main_assert_2, chars=878
+[18:25:42] LLM start baseline3_missing_spec_typed_main_assert_2
+[18:25:50] LLM done baseline3_missing_spec_typed_main_assert_2, chars=665
+baseline3 repair missing_spec_typed_main_assert_2: applied proposal #1 -> repair_01_01_missing_spec_01_add_contract.c
+[18:25:54] LLM start baseline3_diagnose_typed_incr_a_by_b_ensures
+[18:26:00] LLM done baseline3_diagnose_typed_incr_a_by_b_ensures, chars=676
+[18:26:00] LLM start baseline3_wrong_spec_typed_incr_a_by_b_ensures
+[18:26:05] LLM done baseline3_wrong_spec_typed_incr_a_by_b_ensures, chars=581
+baseline3 repair wrong_spec_typed_incr_a_by_b_ensures: applied proposal #1 -> repair_02_01_wrong_spec_01_rewrite_annotation.c
+[18:26:09] LLM start baseline3_diagnose_typed_incr_a_by_b_ensures_2
+[18:26:15] LLM done baseline3_diagnose_typed_incr_a_by_b_ensures_2, chars=562
+[18:26:15] LLM start baseline3_wrong_spec_typed_incr_a_by_b_ensures_2
+[18:26:22] LLM done baseline3_wrong_spec_typed_incr_a_by_b_ensures_2, chars=801
+baseline3 repair wrong_spec_typed_incr_a_by_b_ensures_2: applied proposal #1 -> repair_03_01_wrong_spec_01_rewrite_annotation.c
+[48/51] baseline3 frama-c-problem/228.c
+[18:26:25] LLM start frama-c-problem_228.c_initial1
+[18:26:32] LLM done frama-c-problem_228.c_initial1, chars=628
+[49/51] baseline3 frama-c-problem/229.c
+[18:26:34] LLM start frama-c-problem_229.c_initial1
+[18:26:48] LLM done frama-c-problem_229.c_initial1, chars=1381
+[18:26:49] LLM start baseline3_invalid_repair
+[18:26:53] LLM done baseline3_invalid_repair, chars=376
+[18:27:05] LLM start baseline3_diagnose_typed_order_3_ensures_2
+[18:27:12] LLM done baseline3_diagnose_typed_order_3_ensures_2, chars=841
+[18:27:12] LLM start baseline3_wrong_spec_typed_order_3_ensures_2
+[18:27:21] LLM done baseline3_wrong_spec_typed_order_3_ensures_2, chars=1287
+baseline3 repair wrong_spec_typed_order_3_ensures_2: applied proposal #1 -> repair_02_01_wrong_spec_01_rewrite_annotation.c
+[18:27:35] LLM start baseline3_diagnose_typed_order_3_ensures_3
+[18:27:40] LLM done baseline3_diagnose_typed_order_3_ensures_3, chars=504
+[18:27:40] LLM start baseline3_missing_spec_typed_order_3_ensures_3
+[18:27:48] LLM done baseline3_missing_spec_typed_order_3_ensures_3, chars=2
+baseline3 repair missing_spec_typed_order_3_ensures_3: not applied (no_proposals)
+baseline3 repair fallback: trying wrong_spec after missing_spec failed
+[18:27:48] LLM start baseline3_wrong_spec_typed_order_3_ensures_3
+[18:27:53] LLM done baseline3_wrong_spec_typed_order_3_ensures_3, chars=538
+baseline3 repair wrong_spec_typed_order_3_ensures_3: not applied (no_applicable_repair)
+  #1 skipped: action='regenerate', missing exact original_text or regenerate
+[18:27:53] LLM start frama-c-problem_229.c_initial2
+[18:28:06] LLM done frama-c-problem_229.c_initial2, chars=1331
+[18:28:17] LLM start baseline3_diagnose_typed_test_assert_3
+[18:28:23] LLM done baseline3_diagnose_typed_test_assert_3, chars=713
+[18:28:23] LLM start baseline3_missing_spec_typed_test_assert_3
+[18:28:37] LLM done baseline3_missing_spec_typed_test_assert_3, chars=1821
+baseline3 repair missing_spec_typed_test_assert_3: applied proposal #1 -> repair_01_01_missing_spec_01_add_contract.c
+[18:28:48] LLM start baseline3_diagnose_typed_test_assert_3
+[18:28:53] LLM done baseline3_diagnose_typed_test_assert_3, chars=613
+[18:28:53] LLM start baseline3_wrong_spec_typed_test_assert_3
+[18:28:59] LLM done baseline3_wrong_spec_typed_test_assert_3, chars=729
+baseline3 repair wrong_spec_typed_test_assert_3: not applied (no_applicable_repair)
+  #1 skipped: generated code rejected: LLM removed or changed original ACSL assertions: ['a1==3&&b1==4&&c1==5']
+baseline3 repair fallback: trying missing_spec after wrong_spec failed
+[18:28:59] LLM start baseline3_missing_spec_typed_test_assert_3
+[18:29:10] LLM done baseline3_missing_spec_typed_test_assert_3, chars=1099
+baseline3 repair missing_spec_typed_test_assert_3: applied proposal #1 -> repair_02_01_missing_spec_01_add_contract.c
+[18:29:21] LLM start baseline3_diagnose_typed_test_assert_3
+[18:29:27] LLM done baseline3_diagnose_typed_test_assert_3, chars=736
+[18:29:27] LLM start baseline3_wrong_spec_typed_test_assert_3
+[18:29:32] LLM done baseline3_wrong_spec_typed_test_assert_3, chars=581
+baseline3 repair wrong_spec_typed_test_assert_3: not applied (no_applicable_repair)
+  #1 skipped: generated code rejected: LLM removed or changed original ACSL assertions: ['a1==3&&b1==4&&c1==5']
+baseline3 repair fallback: trying missing_spec after wrong_spec failed
+[18:29:32] LLM start baseline3_missing_spec_typed_test_assert_3
+[18:29:40] LLM done baseline3_missing_spec_typed_test_assert_3, chars=926
+baseline3 repair missing_spec_typed_test_assert_3: applied proposal #1 -> repair_03_01_missing_spec_01_add_contract.c
+[18:30:00] LLM start baseline3_diagnose_typed_test_assert_2
+[18:30:06] LLM done baseline3_diagnose_typed_test_assert_2, chars=561
+[18:30:06] LLM start baseline3_wrong_spec_typed_test_assert_2
+[18:30:13] LLM done baseline3_wrong_spec_typed_test_assert_2, chars=542
+baseline3 repair wrong_spec_typed_test_assert_2: not applied (no_applicable_repair)
+  #1 skipped: generated code rejected: LLM removed or changed original ACSL assertions: ['a1==3&&b1==4&&c1==5']
+baseline3 repair fallback: trying missing_spec after wrong_spec failed
+[18:30:13] LLM start baseline3_missing_spec_typed_test_assert_2
+[18:30:15] LLM done baseline3_missing_spec_typed_test_assert_2, chars=2
+baseline3 repair missing_spec_typed_test_assert_2: not applied (no_proposals)
+[18:30:15] LLM start frama-c-problem_229.c_initial3
+[18:30:29] LLM done frama-c-problem_229.c_initial3, chars=1545
+[18:30:40] LLM start baseline3_diagnose_typed_test_assert_3
+[18:30:46] LLM done baseline3_diagnose_typed_test_assert_3, chars=658
+[18:30:46] LLM start baseline3_wrong_spec_typed_test_assert_3
+[18:30:57] LLM done baseline3_wrong_spec_typed_test_assert_3, chars=1587
+baseline3 repair wrong_spec_typed_test_assert_3: applied proposal #1 -> repair_01_01_wrong_spec_01_rewrite_annotation.c
+[18:31:08] LLM start baseline3_diagnose_typed_test_assert_3
+[18:31:21] LLM done baseline3_diagnose_typed_test_assert_3, chars=456
+[18:31:21] LLM start baseline3_missing_spec_typed_test_assert_3
+[18:31:41] LLM done baseline3_missing_spec_typed_test_assert_3, chars=834
+baseline3 repair missing_spec_typed_test_assert_3: applied proposal #1 -> repair_02_01_missing_spec_01_add_ensures.c
+[18:31:52] LLM start baseline3_diagnose_typed_test_assert_3
+[18:31:57] LLM done baseline3_diagnose_typed_test_assert_3, chars=564
+[18:31:57] LLM start baseline3_wrong_spec_typed_test_assert_3
+[18:32:05] LLM done baseline3_wrong_spec_typed_test_assert_3, chars=1098
+baseline3 repair wrong_spec_typed_test_assert_3: applied proposal #1 -> repair_03_01_wrong_spec_01_rewrite_annotation.c
+[18:32:16] LLM start baseline3_diagnose_typed_test_assert_3
+[18:32:24] LLM done baseline3_diagnose_typed_test_assert_3, chars=1038
+[18:32:24] LLM start baseline3_wrong_spec_typed_test_assert_3
+[18:32:29] LLM done baseline3_wrong_spec_typed_test_assert_3, chars=655
+baseline3 repair wrong_spec_typed_test_assert_3: not applied (no_applicable_repair)
+  #1 skipped: generated code rejected: LLM removed or changed original ACSL assertions: ['a1==3&&b1==4&&c1==5']
+baseline3 repair fallback: trying missing_spec after wrong_spec failed
+[18:32:29] LLM start baseline3_missing_spec_typed_test_assert_3
+[18:32:43] LLM done baseline3_missing_spec_typed_test_assert_3, chars=2067
+baseline3 repair missing_spec_typed_test_assert_3: applied proposal #1 -> repair_04_01_missing_spec_01_add_contract.c
+[18:32:54] LLM start baseline3_diagnose_typed_test_assert_3
+[18:32:59] LLM done baseline3_diagnose_typed_test_assert_3, chars=568
+[18:32:59] LLM start baseline3_wrong_spec_typed_test_assert_3
+[18:33:05] LLM done baseline3_wrong_spec_typed_test_assert_3, chars=492
+baseline3 repair wrong_spec_typed_test_assert_3: not applied (no_applicable_repair)
+  #1 skipped: generated code rejected: LLM removed or changed original ACSL assertions: ['a1==3&&b1==4&&c1==5']
+baseline3 repair fallback: trying missing_spec after wrong_spec failed
+[18:33:05] LLM start baseline3_missing_spec_typed_test_assert_3
+[18:33:10] LLM done baseline3_missing_spec_typed_test_assert_3, chars=394
+baseline3 repair missing_spec_typed_test_assert_3: not applied (no_applicable_repair)
+  #1 skipped: generated code rejected: LLM removed or changed original ACSL assertions: ['a1==3&&b1==4&&c1==5']
+[50/51] baseline3 frama-c-problem/230.c
+[18:33:10] LLM start frama-c-problem_230.c_initial1
+[18:33:17] LLM done frama-c-problem_230.c_initial1, chars=696
+[18:33:27] LLM start baseline3_diagnose_typed_main_assert_3
+[18:33:34] LLM done baseline3_diagnose_typed_main_assert_3, chars=795
+[18:33:34] LLM start baseline3_wrong_spec_typed_main_assert_3
+[18:33:39] LLM done baseline3_wrong_spec_typed_main_assert_3, chars=565
+baseline3 repair wrong_spec_typed_main_assert_3: applied proposal #1 -> repair_01_01_wrong_spec_01_rewrite_assigns.c
+[18:33:50] LLM start baseline3_diagnose_typed_main_assert_3
+[18:33:57] LLM done baseline3_diagnose_typed_main_assert_3, chars=961
+[18:33:57] LLM start baseline3_missing_spec_typed_main_assert_3
+[18:34:02] LLM done baseline3_missing_spec_typed_main_assert_3, chars=560
+baseline3 repair missing_spec_typed_main_assert_3: applied proposal #1 -> repair_02_01_missing_spec_01_add_contract.c
+[18:34:13] LLM start baseline3_diagnose_typed_main_assert_3
+[18:34:20] LLM done baseline3_diagnose_typed_main_assert_3, chars=873
+[18:34:20] LLM start baseline3_missing_spec_typed_main_assert_3
+[18:34:25] LLM done baseline3_missing_spec_typed_main_assert_3, chars=584
+baseline3 repair missing_spec_typed_main_assert_3: applied proposal #1 -> repair_03_01_missing_spec_01_rewrite_assigns.c
+[18:34:36] LLM start baseline3_diagnose_typed_main_assert_3
+[18:36:56] LLM done baseline3_diagnose_typed_main_assert_3, chars=912
+[18:36:56] LLM start baseline3_missing_spec_typed_main_assert_3
+[18:37:16] LLM done baseline3_missing_spec_typed_main_assert_3, chars=463
+baseline3 repair missing_spec_typed_main_assert_3: applied proposal #1 -> repair_04_01_missing_spec_01_rewrite_assigns.c
+[18:37:17] LLM start baseline3_invalid_repair
+[18:37:21] LLM done baseline3_invalid_repair, chars=500
+[18:37:32] LLM start baseline3_diagnose_typed_main_assert_3
+[18:37:38] LLM done baseline3_diagnose_typed_main_assert_3, chars=686
+[18:37:38] LLM start baseline3_wrong_spec_typed_main_assert_3
+[18:37:42] LLM done baseline3_wrong_spec_typed_main_assert_3, chars=533
+baseline3 repair wrong_spec_typed_main_assert_3: applied proposal #1 -> repair_06_01_wrong_spec_01_delete_annotation.c
+[18:37:54] LLM start baseline3_diagnose_typed_main_assert_3
+[18:37:59] LLM done baseline3_diagnose_typed_main_assert_3, chars=536
+[18:37:59] LLM start baseline3_wrong_spec_typed_main_assert_3
+[18:38:04] LLM done baseline3_wrong_spec_typed_main_assert_3, chars=489
+baseline3 repair wrong_spec_typed_main_assert_3: not applied (no_applicable_repair)
+  #1 skipped: generated code rejected: LLM removed or changed original ACSL assertions: ['a==5']
+baseline3 repair fallback: trying missing_spec after wrong_spec failed
+[18:38:04] LLM start baseline3_missing_spec_typed_main_assert_3
+[18:38:10] LLM done baseline3_missing_spec_typed_main_assert_3, chars=992
+baseline3 repair missing_spec_typed_main_assert_3: applied proposal #1 -> repair_07_01_missing_spec_01_add_contract.c
+[18:38:22] LLM start frama-c-problem_230.c_initial2
+[18:38:29] LLM done frama-c-problem_230.c_initial2, chars=662
+[18:38:40] LLM start baseline3_diagnose_typed_main_assert_3
+[18:38:45] LLM done baseline3_diagnose_typed_main_assert_3, chars=585
+[18:38:45] LLM start baseline3_missing_spec_typed_main_assert_3
+[18:38:54] LLM done baseline3_missing_spec_typed_main_assert_3, chars=1155
+baseline3 repair missing_spec_typed_main_assert_3: applied proposal #1 -> repair_01_01_missing_spec_01_add_contract.c
+[18:38:59] LLM start baseline3_diagnose_typed_main_assert
+[18:39:05] LLM done baseline3_diagnose_typed_main_assert, chars=821
+[18:39:05] LLM start baseline3_missing_spec_typed_main_assert
+[18:39:14] LLM done baseline3_missing_spec_typed_main_assert, chars=982
+baseline3 repair missing_spec_typed_main_assert: applied proposal #1 -> repair_02_01_missing_spec_01_add_contract.c
+[18:39:16] LLM start baseline3_diagnose_typed_reset_1st_if_2nd_is_true_ensures_2
+[18:39:22] LLM done baseline3_diagnose_typed_reset_1st_if_2nd_is_true_ensures_2, chars=683
+[18:39:22] LLM start baseline3_wrong_spec_typed_reset_1st_if_2nd_is_true_ensures_2
+[18:39:29] LLM done baseline3_wrong_spec_typed_reset_1st_if_2nd_is_true_ensures_2, chars=974
+baseline3 repair wrong_spec_typed_reset_1st_if_2nd_is_true_ensures_2: applied proposal #2 -> repair_03_01_wrong_spec_02_rewrite_annotation.c
+[18:39:32] LLM start baseline3_diagnose_typed_reset_1st_if_2nd_is_true_ensures_2
+[18:39:41] LLM done baseline3_diagnose_typed_reset_1st_if_2nd_is_true_ensures_2, chars=651
+[18:39:41] LLM start baseline3_wrong_spec_typed_reset_1st_if_2nd_is_true_ensures_2
+[18:39:45] LLM done baseline3_wrong_spec_typed_reset_1st_if_2nd_is_true_ensures_2, chars=430
+baseline3 repair wrong_spec_typed_reset_1st_if_2nd_is_true_ensures_2: applied proposal #1 -> repair_04_01_wrong_spec_01_rewrite_annotation.c
+[18:39:47] LLM start baseline3_diagnose_typed_reset_1st_if_2nd_is_true_ensures_2
+[18:39:54] LLM done baseline3_diagnose_typed_reset_1st_if_2nd_is_true_ensures_2, chars=742
+[18:39:54] LLM start baseline3_wrong_spec_typed_reset_1st_if_2nd_is_true_ensures_2
+[18:40:02] LLM done baseline3_wrong_spec_typed_reset_1st_if_2nd_is_true_ensures_2, chars=996
+baseline3 repair wrong_spec_typed_reset_1st_if_2nd_is_true_ensures_2: applied proposal #2 -> repair_05_01_wrong_spec_02_rewrite_annotation.c
+[18:40:04] LLM start baseline3_diagnose_typed_reset_1st_if_2nd_is_true_ensures_2
+[18:40:19] LLM error baseline3_diagnose_typed_reset_1st_if_2nd_is_true_ensures_2: APIConnectionError: Error communicating with OpenAI: HTTPSConnectionPool(host='api.apiplus.org', port=443): Max retries exceeded with url: /v1/chat/completions (Caused by ProxyError('Cannot connect to proxy.', ConnectionResetError(104, 'Connection reset by peer')))
+[18:40:19] LLM start baseline3_missing_spec_typed_reset_1st_if_2nd_is_true_ensures_2
+[18:40:26] LLM done baseline3_missing_spec_typed_reset_1st_if_2nd_is_true_ensures_2, chars=674
+baseline3 repair missing_spec_typed_reset_1st_if_2nd_is_true_ensures_2: applied proposal #1 -> repair_06_01_missing_spec_01_add_ensures.c
+[18:40:29] LLM start baseline3_diagnose_typed_reset_1st_if_2nd_is_true_ensures_3
+[18:40:34] LLM done baseline3_diagnose_typed_reset_1st_if_2nd_is_true_ensures_3, chars=653
+[18:40:34] LLM start baseline3_wrong_spec_typed_reset_1st_if_2nd_is_true_ensures_3
+[18:40:40] LLM done baseline3_wrong_spec_typed_reset_1st_if_2nd_is_true_ensures_3, chars=527
+baseline3 repair wrong_spec_typed_reset_1st_if_2nd_is_true_ensures_3: applied proposal #1 -> repair_07_01_wrong_spec_01_rewrite_annotation.c
+[18:40:43] LLM start frama-c-problem_230.c_initial3
+[18:40:50] LLM done frama-c-problem_230.c_initial3, chars=690
+[18:41:01] LLM start baseline3_diagnose_typed_main_assert_3
+[18:41:07] LLM done baseline3_diagnose_typed_main_assert_3, chars=821
+[18:41:07] LLM start baseline3_wrong_spec_typed_main_assert_3
+[18:41:13] LLM done baseline3_wrong_spec_typed_main_assert_3, chars=619
+baseline3 repair wrong_spec_typed_main_assert_3: applied proposal #1 -> repair_01_01_wrong_spec_01_rewrite_assigns.c
+[18:41:24] LLM start baseline3_diagnose_typed_main_assert_3
+[18:41:29] LLM done baseline3_diagnose_typed_main_assert_3, chars=590
+[18:41:29] LLM start baseline3_wrong_spec_typed_main_assert_3
+[18:41:34] LLM done baseline3_wrong_spec_typed_main_assert_3, chars=537
+baseline3 repair wrong_spec_typed_main_assert_3: applied proposal #1 -> repair_02_01_wrong_spec_01_delete_annotation.c
+[18:41:45] LLM start baseline3_diagnose_typed_main_assert_3
+[18:41:53] LLM done baseline3_diagnose_typed_main_assert_3, chars=1223
+[18:41:53] LLM start baseline3_missing_spec_typed_main_assert_3
+[18:41:59] LLM done baseline3_missing_spec_typed_main_assert_3, chars=781
+baseline3 repair missing_spec_typed_main_assert_3: applied proposal #1 -> repair_03_01_missing_spec_01_add_contract.c
+[18:42:02] LLM start baseline3_diagnose_typed_reset_1st_if_2nd_is_true_ensures_2
+[18:42:17] LLM error baseline3_diagnose_typed_reset_1st_if_2nd_is_true_ensures_2: APIConnectionError: Error communicating with OpenAI: HTTPSConnectionPool(host='api.apiplus.org', port=443): Max retries exceeded with url: /v1/chat/completions (Caused by ProxyError('Cannot connect to proxy.', ConnectionResetError(104, 'Connection reset by peer')))
+[18:42:17] LLM start baseline3_missing_spec_typed_reset_1st_if_2nd_is_true_ensures_2
+[18:42:32] LLM error baseline3_missing_spec_typed_reset_1st_if_2nd_is_true_ensures_2: APIConnectionError: Error communicating with OpenAI: HTTPSConnectionPool(host='api.apiplus.org', port=443): Max retries exceeded with url: /v1/chat/completions (Caused by ProxyError('Cannot connect to proxy.', ConnectionResetError(104, 'Connection reset by peer')))
+baseline3 repair missing_spec_typed_reset_1st_if_2nd_is_true_ensures_2: not applied (proposal_generation_error)
+  APIConnectionError: Error communicating with OpenAI: HTTPSConnectionPool(host='api.apiplus.org', port=443): Max retries exceeded with url: /v1/chat/completions (Caused by ProxyError('Cannot connect to proxy.', ConnectionResetError(104, 'Connection reset by peer')))
+baseline3 repair fallback: trying wrong_spec after missing_spec failed
+[18:42:32] LLM start baseline3_wrong_spec_typed_reset_1st_if_2nd_is_true_ensures_2
+[18:42:47] LLM error baseline3_wrong_spec_typed_reset_1st_if_2nd_is_true_ensures_2: APIConnectionError: Error communicating with OpenAI: HTTPSConnectionPool(host='api.apiplus.org', port=443): Max retries exceeded with url: /v1/chat/completions (Caused by ProxyError('Cannot connect to proxy.', ConnectionResetError(104, 'Connection reset by peer')))
+baseline3 repair wrong_spec_typed_reset_1st_if_2nd_is_true_ensures_2: not applied (proposal_generation_error)
+  APIConnectionError: Error communicating with OpenAI: HTTPSConnectionPool(host='api.apiplus.org', port=443): Max retries exceeded with url: /v1/chat/completions (Caused by ProxyError('Cannot connect to proxy.', ConnectionResetError(104, 'Connection reset by peer')))
+[51/51] baseline3 frama-c-problem/231.c
+[18:42:47] LLM start frama-c-problem_231.c_initial1
+[18:43:02] LLM error frama-c-problem_231.c_initial1: APIConnectionError: Error communicating with OpenAI: HTTPSConnectionPool(host='api.apiplus.org', port=443): Max retries exceeded with url: /v1/chat/completions (Caused by ProxyError('Cannot connect to proxy.', ConnectionResetError(104, 'Connection reset by peer')))
+[18:43:02] LLM start frama-c-problem_231.c_initial2
+[18:43:17] LLM error frama-c-problem_231.c_initial2: APIConnectionError: Error communicating with OpenAI: HTTPSConnectionPool(host='api.apiplus.org', port=443): Max retries exceeded with url: /v1/chat/completions (Caused by ProxyError('Cannot connect to proxy.', ConnectionResetError(104, 'Connection reset by peer')))
+[18:43:17] LLM start frama-c-problem_231.c_initial3
+[18:43:32] LLM error frama-c-problem_231.c_initial3: APIConnectionError: Error communicating with OpenAI: HTTPSConnectionPool(host='api.apiplus.org', port=443): Max retries exceeded with url: /v1/chat/completions (Caused by ProxyError('Cannot connect to proxy.', ConnectionResetError(104, 'Connection reset by peer')))
+Summary: /home/wangpeijie/wpj_2010215/spec_generation_abduction/results/baseline3_assertion_probe/baseline3_summary.md
+Successful files: /home/wangpeijie/wpj_2010215/spec_generation_abduction/results/baseline3_assertion_probe/successful_files
+Failed cases: /home/wangpeijie/wpj_2010215/spec_generation_abduction/results/baseline3_assertion_probe/failed_cases
+Console log: /home/wangpeijie/wpj_2010215/spec_generation_abduction/results/baseline3_assertion_probe/baseline3_console_frama-c-problem.txt

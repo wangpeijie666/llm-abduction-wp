@@ -1,0 +1,16 @@
+[
+  {
+    "action": "rewrite_annotation",
+    "original_text": "      loop invariant i <= j + 2;\n",
+    "replacement_text": "      loop invariant i <= j + 5;\n",
+    "reason": "The invariant `i <= j + 2` is not preserved by the loop body: after `i := i+2` and `j := j-1`, it would require proving `i_old+2 <= (j_old-1)+2`, i.e. `i_old+1 <= j_old`, which is not implied by the loop condition `j_old >= i_old`. Weakening to `i <= j + 5` makes it inductive since preservation becomes `i_old+2 <= (j_old-1)+5` i.e. `i_old <= j_old+2`, which is exactly the pre-state invariant. It also matches the observed reachable final state (e.g., at loop exit `i=11, j=6`, `11 <= 6+5`).",
+    "risk": "low",
+    "raw": {
+      "action": "rewrite_annotation",
+      "original_text": "      loop invariant i <= j + 2;\n",
+      "replacement_text": "      loop invariant i <= j + 5;\n",
+      "reason": "The invariant `i <= j + 2` is not preserved by the loop body: after `i := i+2` and `j := j-1`, it would require proving `i_old+2 <= (j_old-1)+2`, i.e. `i_old+1 <= j_old`, which is not implied by the loop condition `j_old >= i_old`. Weakening to `i <= j + 5` makes it inductive since preservation becomes `i_old+2 <= (j_old-1)+5` i.e. `i_old <= j_old+2`, which is exactly the pre-state invariant. It also matches the observed reachable final state (e.g., at loop exit `i=11, j=6`, `11 <= 6+5`).",
+      "risk": "low"
+    }
+  }
+]

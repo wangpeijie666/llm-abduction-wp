@@ -1,0 +1,27 @@
+Dataset: frama-c-problem
+File: 216.c
+Source: /home/wangpeijie/wpj_2010215/spec_generation_abduction/data/AutoBench/frama-c-problem/216.c
+Final status: Invalid
+Best attempt: 1
+Best result: Invalid
+
+Command:
+frama-c -wp -wp-precond-weakening -wp-no-callee-precond -wp-prover Alt-Ergo,Z3 -wp-prop=-@terminates,-@variant,-@decreases -wp-print -wp-timeout 8 /tmp/baseline3_cpv5yyo0/generated_specs/attempt_01.c
+
+WP stdout:
+[kernel] Parsing /tmp/baseline3_cpv5yyo0/generated_specs/attempt_01.c (with preprocessing)
+[kernel] /tmp/baseline3_cpv5yyo0/generated_specs/attempt_01.c:15: 
+  syntax error:
+  Location: between lines 15 and 16, before or at token: arr
+  13                loop invariant \forall integer j; 0 <= j < i ==> arr[j] == \at(arr[j],Pre) + c;
+  14                loop assigns i, arr[0..n-1];
+  
+  15            */
+  16            arr[i] = arr[i] + c;
+  
+  17        }
+  18    }
+[kernel] Frama-C aborted: invalid user input.
+
+
+WP stderr:

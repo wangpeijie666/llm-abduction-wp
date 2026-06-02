@@ -1,0 +1,19 @@
+Dataset: SyGuS
+File: 24.c
+Source: /home/wangpeijie/wpj_2010215/spec_generation_abduction/data/AutoBench/SyGuS/24.c
+Final status: Invalid
+Best attempt: 1
+Best result: Invalid
+
+Command:
+frama-c -wp -wp-precond-weakening -wp-no-callee-precond -wp-prover Alt-Ergo,Z3 -wp-prop=-@terminates,-@variant,-@decreases -wp-print -wp-timeout 8 /tmp/baseline3_66chd1vr/generated_specs/attempt_01.c
+
+WP stdout:
+[kernel] Parsing /tmp/baseline3_66chd1vr/generated_specs/attempt_01.c (with preprocessing)
+[kernel:annot-error] /tmp/baseline3_66chd1vr/generated_specs/attempt_01.c:4: Warning: 
+  not an assignable left value: i. Ignoring logic specification of function foo
+[kernel] User Error: warning annot-error treated as fatal error.
+[kernel] Frama-C aborted: invalid user input.
+
+
+WP stderr:

@@ -1,0 +1,72 @@
+Dataset: 46_fib
+File: 137.c
+Source: /home/wangpeijie/wpj_2010215/spec_generation_abduction/data/AutoBench/46_fib/137.c
+Final status: Fail
+Best attempt: 1
+Best result: Fail_4_5
+
+Command:
+frama-c -wp -wp-precond-weakening -wp-no-callee-precond -wp-prover Alt-Ergo,Z3 -wp-prop=-@terminates,-@variant,-@decreases -wp-print -wp-timeout 8 /tmp/baseline3_nb5d1lqs/attempt_01_repair_02/repair_02_01_wrong_spec_01_rewrite_annotation.c
+
+WP stdout:
+[kernel] Parsing /tmp/baseline3_nb5d1lqs/attempt_01_repair_02/repair_02_01_wrong_spec_01_rewrite_annotation.c (with preprocessing)
+[kernel:typing:no-proto] /tmp/baseline3_nb5d1lqs/attempt_01_repair_02/repair_02_01_wrong_spec_01_rewrite_annotation.c:2: Warning: 
+  Function unknown1 is declared without prototype.
+  Its formals will be inferred from actual arguments at first call.
+  Declare it as unknown1(void) if the function does not take any parameters.
+[kernel:typing:no-proto] /tmp/baseline3_nb5d1lqs/attempt_01_repair_02/repair_02_01_wrong_spec_01_rewrite_annotation.c:3: Warning: 
+  Function unknown2 is declared without prototype.
+  Its formals will be inferred from actual arguments at first call.
+  Declare it as unknown2(void) if the function does not take any parameters.
+[kernel:typing:no-proto] /tmp/baseline3_nb5d1lqs/attempt_01_repair_02/repair_02_01_wrong_spec_01_rewrite_annotation.c:4: Warning: 
+  Function unknown3 is declared without prototype.
+  Its formals will be inferred from actual arguments at first call.
+  Declare it as unknown3(void) if the function does not take any parameters.
+[kernel:typing:no-proto] /tmp/baseline3_nb5d1lqs/attempt_01_repair_02/repair_02_01_wrong_spec_01_rewrite_annotation.c:5: Warning: 
+  Function unknown4 is declared without prototype.
+  Its formals will be inferred from actual arguments at first call.
+  Declare it as unknown4(void) if the function does not take any parameters.
+[wp] Running WP plugin...
+[wp] Warning: Missing RTE guards
+[wp] 4 goals scheduled
+[wp] [Timeout] typed_main_assert (Qed 4ms) (Z3)
+[wp] Proved goals:    4 / 5
+  Unreachable:     1
+  Qed:             3 (1ms)
+  Timeout:         1
+------------------------------------------------------------
+  Function main
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline3_nb5d1lqs/attempt_01_repair_02/repair_02_01_wrong_spec_01_rewrite_annotation.c, line 15):
+Prove: true.
+Prover Qed returns Valid
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline3_nb5d1lqs/attempt_01_repair_02/repair_02_01_wrong_spec_01_rewrite_annotation.c, line 15):
+Prove: true.
+Prover Qed returns Valid
+
+------------------------------------------------------------
+
+Goal Assertion (file /tmp/baseline3_nb5d1lqs/attempt_01_repair_02/repair_02_01_wrong_spec_01_rewrite_annotation.c, line 24):
+Assume { Type: is_sint32(x) /\ is_sint32(y). (* Else *) Have: 0 <= x. }
+Prove: 0 < y.
+Prover Alt-Ergo 2.2.0 returns Failed
+unrecognized prover answer
+Prover Z3 4.8.12 returns Timeout (Qed:4ms) (8s)
+
+------------------------------------------------------------
+
+Goal Loop assigns (file /tmp/baseline3_nb5d1lqs/attempt_01_repair_02/repair_02_01_wrong_spec_01_rewrite_annotation.c, line 16):
+Prove: true.
+Prover Qed returns Valid
+
+------------------------------------------------------------
+[wp:pedantic-assigns] /tmp/baseline3_nb5d1lqs/attempt_01_repair_02/repair_02_01_wrong_spec_01_rewrite_annotation.c:8: Warning: 
+  No 'assigns' specification for function 'main'.
+  Callers assumptions might be imprecise.
+
+
+WP stderr:

@@ -1,0 +1,168 @@
+Dataset: SyGuS
+File: 21.c
+Source: /home/wangpeijie/wpj_2010215/spec_generation_abduction/data/AutoBench/SyGuS/21.c
+Final status: Fail
+Best attempt: 1
+Best result: Fail_11_12
+
+Command:
+frama-c -wp -wp-precond-weakening -wp-no-callee-precond -wp-prover Alt-Ergo,Z3 -wp-prop=-@terminates,-@variant,-@decreases -wp-print -wp-timeout 8 /tmp/baseline3_nqvnngn0/attempt_01_repair_05/repair_05_01_missing_spec_01_add_invariant.c
+
+WP stdout:
+[kernel] Parsing /tmp/baseline3_nqvnngn0/attempt_01_repair_05/repair_05_01_missing_spec_01_add_invariant.c (with preprocessing)
+[kernel:typing:no-proto] /tmp/baseline3_nqvnngn0/attempt_01_repair_05/repair_05_01_missing_spec_01_add_invariant.c:1: Warning: 
+  Function unknown is declared without prototype.
+  Its formals will be inferred from actual arguments at first call.
+  Declare it as unknown(void) if the function does not take any parameters.
+[wp] Running WP plugin...
+[kernel:annot:missing-spec] /tmp/baseline3_nqvnngn0/attempt_01_repair_05/repair_05_01_missing_spec_01_add_invariant.c:1: Warning: 
+  Neither code nor specification for function unknown,
+   generating default exits, assigns and terminates. See -generated-spec-* options for more info
+[wp] Warning: Missing RTE guards
+[wp] 12 goals scheduled
+[wp] [Timeout] typed_main_loop_invariant_4_established (Qed 4ms) (Z3)
+[wp] Proved goals:   11 / 12
+  Qed:             8 (4ms-9ms-45ms)
+  Z3 4.8.12:       3 (66ms-73ms)
+  Timeout:         1
+------------------------------------------------------------
+  Function main
+------------------------------------------------------------
+
+Goal Exit-condition (generated) in 'main':
+Prove: true.
+Prover Qed returns Valid (0.52ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline3_nqvnngn0/attempt_01_repair_05/repair_05_01_missing_spec_01_add_invariant.c, line 10):
+Prove: true.
+Prover Qed returns Valid (11ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline3_nqvnngn0/attempt_01_repair_05/repair_05_01_missing_spec_01_add_invariant.c, line 10):
+Prove: true.
+Prover Qed returns Valid (2ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline3_nqvnngn0/attempt_01_repair_05/repair_05_01_missing_spec_01_add_invariant.c, line 11):
+Assume {
+  Type: is_sint32(m) /\ is_sint32(n) /\ is_sint32(x) /\ is_sint32(1 + x).
+  (* Invariant *)
+  Have: 0 < n.
+  (* Invariant *)
+  Have: 0 < x.
+  (* Invariant *)
+  Have: (m = 1) \/ ((0 < m) /\ (m < x)).
+  (* Invariant *)
+  Have: m <= x.
+  (* Invariant *)
+  Have: x <= n.
+  (* Then *)
+  Have: x < n.
+}
+Prove: (m = 1) \/ (0 < m).
+Prover Alt-Ergo 2.2.0 returns Failed
+unrecognized prover answer
+Prover Z3 4.8.12 returns Valid (Qed:42ms) (72ms) (25604)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline3_nqvnngn0/attempt_01_repair_05/repair_05_01_missing_spec_01_add_invariant.c, line 11):
+Prove: true.
+Prover Qed returns Valid (2ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline3_nqvnngn0/attempt_01_repair_05/repair_05_01_missing_spec_01_add_invariant.c, line 12):
+Let x_1 = 1 + x.
+Assume {
+  Type: is_sint32(m) /\ is_sint32(n) /\ is_sint32(x) /\ is_sint32(x_1).
+  (* Invariant *)
+  Have: 0 < n.
+  (* Invariant *)
+  Have: 0 < x.
+  (* Invariant *)
+  Have: (m = 1) \/ ((0 < m) /\ (m < x)).
+  (* Invariant *)
+  Have: m <= x.
+  (* Invariant *)
+  Have: x <= n.
+  (* Then *)
+  Have: x < n.
+  (* Invariant *)
+  Have: (m = 1) \/ (0 < m).
+}
+Prove: m <= x_1.
+Prover Alt-Ergo 2.2.0 returns Failed
+unrecognized prover answer
+Prover Z3 4.8.12 returns Valid (Qed:45ms) (73ms) (25865)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline3_nqvnngn0/attempt_01_repair_05/repair_05_01_missing_spec_01_add_invariant.c, line 12):
+Prove: true.
+Prover Qed returns Valid (2ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline3_nqvnngn0/attempt_01_repair_05/repair_05_01_missing_spec_01_add_invariant.c, line 14):
+Prove: true.
+Prover Qed returns Valid (11ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline3_nqvnngn0/attempt_01_repair_05/repair_05_01_missing_spec_01_add_invariant.c, line 14):
+Assume { Type: is_sint32(n). }
+Prove: 0 < n.
+Prover Alt-Ergo 2.2.0 returns Failed
+unrecognized prover answer
+Prover Z3 4.8.12 returns Timeout (Qed:4ms) (8s)
+
+------------------------------------------------------------
+
+Goal Assertion (file /tmp/baseline3_nqvnngn0/attempt_01_repair_05/repair_05_01_missing_spec_01_add_invariant.c, line 28):
+Assume {
+  Type: is_sint32(m) /\ is_sint32(n) /\ is_sint32(x).
+  (* Invariant *)
+  Have: 0 < n.
+  (* Invariant *)
+  Have: 0 < x.
+  (* Invariant *)
+  Have: (m = 1) \/ ((0 < m) /\ (m < x)).
+  (* Invariant *)
+  Have: m <= x.
+  (* Invariant *)
+  Have: x <= n.
+  (* Else *)
+  Have: n <= x.
+  (* Then *)
+  Have: 2 <= n.
+}
+Prove: m < n.
+Prover Alt-Ergo 2.2.0 returns Failed
+unrecognized prover answer
+Prover Z3 4.8.12 returns Valid (Qed:12ms) (66ms) (25770)
+
+------------------------------------------------------------
+
+Goal Loop assigns (file /tmp/baseline3_nqvnngn0/attempt_01_repair_05/repair_05_01_missing_spec_01_add_invariant.c, line 15) (1/2):
+Prove: true.
+Prover Qed returns Valid
+
+------------------------------------------------------------
+
+Goal Loop assigns (file /tmp/baseline3_nqvnngn0/attempt_01_repair_05/repair_05_01_missing_spec_01_add_invariant.c, line 15) (2/2):
+Call Result at line 20
+Prove: true.
+Prover Qed returns Valid (14ms)
+
+------------------------------------------------------------
+[wp:pedantic-assigns] /tmp/baseline3_nqvnngn0/attempt_01_repair_05/repair_05_01_missing_spec_01_add_invariant.c:3: Warning: 
+  No 'assigns' specification for function 'main'.
+  Callers assumptions might be imprecise.
+
+
+WP stderr:

@@ -3,72 +3,122 @@ File: 234.c
 Source: /home/wangpeijie/wpj_2010215/spec_generation_abduction/data/AutoBench/svcomp/234.c
 Final status: Fail
 Best attempt: 1
-Best result: Fail_7_8
+Best result: Fail_15_16
 
 Command:
-frama-c -wp -wp-precond-weakening -wp-no-callee-precond -wp-prover Alt-Ergo,Z3 -wp-prop=-@terminates,-@variant,-@decreases -wp-print -wp-timeout 8 /tmp/baseline3_vasyt54r/generated_specs/attempt_01.c
+frama-c -wp -wp-precond-weakening -wp-no-callee-precond -wp-prover Alt-Ergo,Z3 -wp-prop=-@terminates,-@variant,-@decreases -wp-print -wp-timeout 8 /tmp/baseline3_3egz4cgt/attempt_01_repair_01/repair_01_01_missing_spec_01_add_invariant.c
 
 WP stdout:
-[kernel] Parsing /tmp/baseline3_vasyt54r/generated_specs/attempt_01.c (with preprocessing)
+[kernel] Parsing /tmp/baseline3_3egz4cgt/attempt_01_repair_01/repair_01_01_missing_spec_01_add_invariant.c (with preprocessing)
 [wp] Running WP plugin...
 [wp] Warning: Missing RTE guards
-[wp] 7 goals scheduled
-[wp] [Timeout] typed_main_loop_invariant_established (Qed 5ms) (Z3)
-[wp] Proved goals:    7 / 8
+[wp] 15 goals scheduled
+[wp] [Timeout] typed_main_loop_invariant_3_established (Qed 6ms) (Z3)
+[wp] Proved goals:   15 / 16
   Unreachable:     1
-  Qed:             6 (0.73ms)
+  Qed:            14 (0.43ms)
   Timeout:         1
 ------------------------------------------------------------
   Function main
 ------------------------------------------------------------
 
-Goal Post-condition (file /tmp/baseline3_vasyt54r/generated_specs/attempt_01.c, line 6) in 'main':
-Prove: true.
-Prover Qed returns Valid (10ms)
-
-------------------------------------------------------------
-
-Goal Preservation of Invariant (file /tmp/baseline3_vasyt54r/generated_specs/attempt_01.c, line 13):
-Prove: true.
-Prover Qed returns Valid (17ms)
-
-------------------------------------------------------------
-
-Goal Establishment of Invariant (file /tmp/baseline3_vasyt54r/generated_specs/attempt_01.c, line 13):
-Assume { Type: is_sint32(n). }
-Prove: 0 <= n.
-Prover Alt-Ergo 2.2.0 returns Failed
-unrecognized prover answer
-Prover Z3 4.8.12 returns Timeout (Qed:5ms) (8s)
-
-------------------------------------------------------------
-
-Goal Preservation of Invariant (file /tmp/baseline3_vasyt54r/generated_specs/attempt_01.c, line 14):
-Prove: true.
-Prover Qed returns Valid (94ms)
-
-------------------------------------------------------------
-
-Goal Establishment of Invariant (file /tmp/baseline3_vasyt54r/generated_specs/attempt_01.c, line 14):
+Goal Preservation of Invariant (file /tmp/baseline3_3egz4cgt/attempt_01_repair_01/repair_01_01_missing_spec_01_add_invariant.c, line 12):
 Prove: true.
 Prover Qed returns Valid (4ms)
 
 ------------------------------------------------------------
 
-Goal Assertion (file /tmp/baseline3_vasyt54r/generated_specs/attempt_01.c, line 32):
+Goal Establishment of Invariant (file /tmp/baseline3_3egz4cgt/attempt_01_repair_01/repair_01_01_missing_spec_01_add_invariant.c, line 12):
 Prove: true.
-Prover Qed returns Valid (11ms)
+Prover Qed returns Valid (4ms)
 
 ------------------------------------------------------------
 
-Goal Loop assigns (file /tmp/baseline3_vasyt54r/generated_specs/attempt_01.c, line 15):
+Goal Preservation of Invariant (file /tmp/baseline3_3egz4cgt/attempt_01_repair_01/repair_01_01_missing_spec_01_add_invariant.c, line 13):
+Prove: true.
+Prover Qed returns Valid (45ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline3_3egz4cgt/attempt_01_repair_01/repair_01_01_missing_spec_01_add_invariant.c, line 13):
+Prove: true.
+Prover Qed returns Valid (4ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline3_3egz4cgt/attempt_01_repair_01/repair_01_01_missing_spec_01_add_invariant.c, line 14):
+Prove: true.
+Prover Qed returns Valid (17ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline3_3egz4cgt/attempt_01_repair_01/repair_01_01_missing_spec_01_add_invariant.c, line 14):
+Assume { Type: is_sint32(n). }
+Prove: 0 <= n.
+Prover Alt-Ergo 2.2.0 returns Failed
+unrecognized prover answer
+Prover Z3 4.8.12 returns Timeout (Qed:6ms) (8s)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline3_3egz4cgt/attempt_01_repair_01/repair_01_01_missing_spec_01_add_invariant.c, line 15):
+Prove: true.
+Prover Qed returns Valid (76ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline3_3egz4cgt/attempt_01_repair_01/repair_01_01_missing_spec_01_add_invariant.c, line 15):
+Prove: true.
+Prover Qed returns Valid (4ms)
+
+------------------------------------------------------------
+
+Goal Assertion (file /tmp/baseline3_3egz4cgt/attempt_01_repair_01/repair_01_01_missing_spec_01_add_invariant.c, line 32):
+Prove: true.
+Prover Qed returns Valid (14ms)
+
+------------------------------------------------------------
+
+Goal Loop assigns (file /tmp/baseline3_3egz4cgt/attempt_01_repair_01/repair_01_01_missing_spec_01_add_invariant.c, line 16):
 Prove: true.
 Prover Qed returns Valid
 
 ------------------------------------------------------------
-[wp:pedantic-assigns] /tmp/baseline3_vasyt54r/generated_specs/attempt_01.c:8: Warning: 
-  No 'assigns' specification for function 'main'.
-  Callers assumptions might be imprecise.
+
+Goal Assigns nothing in 'main' (1/5):
+Effect at line 9
+Prove: true.
+Prover Qed returns Valid (2ms)
+
+------------------------------------------------------------
+
+Goal Assigns nothing in 'main' (2/5):
+Effect at line 9
+Prove: true.
+Prover Qed returns Valid (3ms)
+
+------------------------------------------------------------
+
+Goal Assigns nothing in 'main' (3/5):
+Effect at line 9
+Prove: true.
+Prover Qed returns Valid (3ms)
+
+------------------------------------------------------------
+
+Goal Assigns nothing in 'main' (4/5):
+Effect at line 19
+Prove: true.
+Prover Qed returns Valid (5ms)
+
+------------------------------------------------------------
+
+Goal Assigns nothing in 'main' (5/5):
+Effect at line 34
+Prove: true.
+Prover Qed returns Valid (10ms)
+
+------------------------------------------------------------
 
 
 WP stderr:

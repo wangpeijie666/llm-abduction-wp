@@ -1,0 +1,15 @@
+{
+  "category": "wrong_spec",
+  "target_kind": "invariant_preservation",
+  "reason": "Invariant preservation goal reduces to proving 8 <= j from the other invariants (notably 7 <= j). That is not derivable, so the invariant set is inconsistent/non-inductive across the loop body (after i := i+2; j := j-1 the relation i <= j+2 tends to force j to stay >= 8, which is false at loop exit where j==6). This points to an overly-strong/incorrect loop invariant rather than a missing bridge fact.",
+  "suspect_text": "loop invariant i <= j + 2;",
+  "source_line": null,
+  "recommended_action": "rewrite_annotation",
+  "raw": {
+    "category": "wrong_spec",
+    "target_kind": "invariant_preservation",
+    "suspect_text": "loop invariant i <= j + 2;",
+    "reason": "Invariant preservation goal reduces to proving 8 <= j from the other invariants (notably 7 <= j). That is not derivable, so the invariant set is inconsistent/non-inductive across the loop body (after i := i+2; j := j-1 the relation i <= j+2 tends to force j to stay >= 8, which is false at loop exit where j==6). This points to an overly-strong/incorrect loop invariant rather than a missing bridge fact.",
+    "recommended_action": "rewrite_annotation"
+  }
+}

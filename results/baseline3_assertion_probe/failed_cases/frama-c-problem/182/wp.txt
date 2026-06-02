@@ -1,0 +1,137 @@
+Dataset: frama-c-problem
+File: 182.c
+Source: /home/wangpeijie/wpj_2010215/spec_generation_abduction/data/AutoBench/frama-c-problem/182.c
+Final status: Fail
+Best attempt: 1
+Best result: Fail_15_16
+
+Command:
+frama-c -wp -wp-precond-weakening -wp-no-callee-precond -wp-prover Alt-Ergo,Z3 -wp-prop=-@terminates,-@variant,-@decreases -wp-print -wp-timeout 8 /tmp/baseline3_mmg6zla2/generated_specs/attempt_01.c
+
+WP stdout:
+[kernel] Parsing /tmp/baseline3_mmg6zla2/generated_specs/attempt_01.c (with preprocessing)
+[wp] Running WP plugin...
+[wp] Warning: Missing RTE guards
+[wp] 15 goals scheduled
+[wp] [Timeout] typed_func_a_zero_ensures (Qed 12ms) (Z3)
+[wp] Proved goals:   15 / 16
+  Unreachable:     1
+  Qed:            14 (0.83ms)
+  Timeout:         1
+------------------------------------------------------------
+  Function func
+------------------------------------------------------------
+
+Goal Complete behaviors 'a_nonzero', 'a_zero':
+Prove: true.
+Prover Qed returns Valid
+
+------------------------------------------------------------
+
+Goal Disjoint behaviors 'a_nonzero', 'a_zero':
+Prove: true.
+Prover Qed returns Valid
+
+------------------------------------------------------------
+
+Goal Assertion (file /tmp/baseline3_mmg6zla2/generated_specs/attempt_01.c, line 22):
+Prove: true.
+Prover Qed returns Valid (21ms)
+
+------------------------------------------------------------
+
+Goal Assertion (file /tmp/baseline3_mmg6zla2/generated_specs/attempt_01.c, line 23):
+Prove: true.
+Prover Qed returns Valid (5ms)
+
+------------------------------------------------------------
+
+Goal Assigns nothing in 'func' (1/6):
+Effect at line 16
+Prove: true.
+Prover Qed returns Valid (3ms)
+
+------------------------------------------------------------
+
+Goal Assigns nothing in 'func' (2/6):
+Effect at line 16
+Prove: true.
+Prover Qed returns Valid (3ms)
+
+------------------------------------------------------------
+
+Goal Assigns nothing in 'func' (3/6):
+Effect at line 19
+Prove: true.
+Prover Qed returns Valid (3ms)
+
+------------------------------------------------------------
+
+Goal Assigns nothing in 'func' (4/6):
+Effect at line 19
+Prove: true.
+Prover Qed returns Valid (3ms)
+
+------------------------------------------------------------
+
+Goal Assigns nothing in 'func' (5/6):
+Effect at line 21
+Prove: true.
+Prover Qed returns Valid (2ms)
+
+------------------------------------------------------------
+
+Goal Assigns nothing in 'func' (6/6):
+Effect at line 24
+Prove: true.
+Prover Qed returns Valid (8ms)
+
+------------------------------------------------------------
+------------------------------------------------------------
+  Function func with behavior a_nonzero
+------------------------------------------------------------
+
+Goal Post-condition for 'a_nonzero' (file /tmp/baseline3_mmg6zla2/generated_specs/attempt_01.c, line 8) in 'func':
+Prove: true.
+Prover Qed returns Valid (6ms)
+
+------------------------------------------------------------
+------------------------------------------------------------
+  Function func with behavior a_zero
+------------------------------------------------------------
+
+Goal Post-condition for 'a_zero' (file /tmp/baseline3_mmg6zla2/generated_specs/attempt_01.c, line 5) in 'func':
+Let x = 10 / 0. Assume { Type: is_sint32(x). }
+Prove: x = 0.
+Prover Alt-Ergo 2.2.0 returns Failed
+unrecognized prover answer
+Prover Z3 4.8.12 returns Timeout (Qed:12ms) (8s)
+
+------------------------------------------------------------
+------------------------------------------------------------
+  Function main
+------------------------------------------------------------
+
+Goal Post-condition (file /tmp/baseline3_mmg6zla2/generated_specs/attempt_01.c, line 28) in 'main':
+Prove: true.
+Prover Qed returns Valid (2ms)
+
+------------------------------------------------------------
+
+Goal Exit-condition (generated) in 'main':
+Prove: true.
+Prover Qed returns Valid
+
+------------------------------------------------------------
+
+Goal Assertion (file /tmp/baseline3_mmg6zla2/generated_specs/attempt_01.c, line 31):
+Prove: true.
+Prover Qed returns Valid (1ms)
+
+------------------------------------------------------------
+[wp:pedantic-assigns] /tmp/baseline3_mmg6zla2/generated_specs/attempt_01.c:29: Warning: 
+  No 'assigns' specification for function 'main'.
+  Callers assumptions might be imprecise.
+
+
+WP stderr:

@@ -1,0 +1,134 @@
+Dataset: frama-c-problem
+File: 230.c
+Source: /home/wangpeijie/wpj_2010215/spec_generation_abduction/data/AutoBench/frama-c-problem/230.c
+Final status: Fail
+Best attempt: 2
+Best result: Fail_13_14
+
+Command:
+frama-c -wp -wp-precond-weakening -wp-no-callee-precond -wp-prover Alt-Ergo,Z3 -wp-prop=-@terminates,-@variant,-@decreases -wp-print -wp-timeout 8 /tmp/baseline3_o729zyod/attempt_02_repair_07/repair_07_01_wrong_spec_01_rewrite_annotation.c
+
+WP stdout:
+[kernel] Parsing /tmp/baseline3_o729zyod/attempt_02_repair_07/repair_07_01_wrong_spec_01_rewrite_annotation.c (with preprocessing)
+[wp] Running WP plugin...
+[wp] /tmp/baseline3_o729zyod/attempt_02_repair_07/repair_07_01_wrong_spec_01_rewrite_annotation.c:22: Warning: 
+  Statement specifications not yet supported (skipped).
+[wp] Warning: Missing RTE guards
+[wp] /tmp/baseline3_o729zyod/attempt_02_repair_07/repair_07_01_wrong_spec_01_rewrite_annotation.c:17: Warning: 
+  Statement specifications not yet supported (skipped).
+[wp] 13 goals scheduled
+[wp] [Unknown] typed_reset_1st_if_2nd_is_true_ensures_3 (Qed 28ms) (Z3)
+[wp] Proved goals:   13 / 14
+  Unreachable:     1
+  Qed:            12 (2ms)
+  Unknown:         1
+------------------------------------------------------------
+  Function main
+------------------------------------------------------------
+
+Goal Exit-condition (generated) in 'main':
+Prove: true.
+Prover Qed returns Valid (0.60ms)
+
+------------------------------------------------------------
+
+Goal Assertion (file /tmp/baseline3_o729zyod/attempt_02_repair_07/repair_07_01_wrong_spec_01_rewrite_annotation.c, line 25):
+Prove: true.
+Prover Qed returns Valid (4ms)
+
+------------------------------------------------------------
+
+Goal Assertion (file /tmp/baseline3_o729zyod/attempt_02_repair_07/repair_07_01_wrong_spec_01_rewrite_annotation.c, line 26):
+Prove: true.
+Prover Qed returns Valid (5ms)
+
+------------------------------------------------------------
+
+Goal Assertion (file /tmp/baseline3_o729zyod/attempt_02_repair_07/repair_07_01_wrong_spec_01_rewrite_annotation.c, line 30):
+Prove: true.
+Prover Qed returns Valid (6ms)
+
+------------------------------------------------------------
+
+Goal Assertion (file /tmp/baseline3_o729zyod/attempt_02_repair_07/repair_07_01_wrong_spec_01_rewrite_annotation.c, line 31):
+Prove: true.
+Prover Qed returns Valid (6ms)
+
+------------------------------------------------------------
+
+Goal Instance of 'Pre-condition (file /tmp/baseline3_o729zyod/attempt_02_repair_07/repair_07_01_wrong_spec_01_rewrite_annotation.c, line 2) in 'reset_1st_if_2nd_is_true'' in 'main' at call 'reset_1st_if_2nd_is_true' (file /tmp/baseline3_o729zyod/attempt_02_repair_07/repair_07_01_wrong_spec_01_rewrite_annotation.c, line 24)
+:
+Prove: true.
+Prover Qed returns Valid (2ms)
+
+------------------------------------------------------------
+
+Goal Instance of 'Pre-condition (file /tmp/baseline3_o729zyod/attempt_02_repair_07/repair_07_01_wrong_spec_01_rewrite_annotation.c, line 3) in 'reset_1st_if_2nd_is_true'' in 'main' at call 'reset_1st_if_2nd_is_true' (file /tmp/baseline3_o729zyod/attempt_02_repair_07/repair_07_01_wrong_spec_01_rewrite_annotation.c, line 24)
+:
+Prove: true.
+Prover Qed returns Valid (2ms)
+
+------------------------------------------------------------
+
+Goal Instance of 'Pre-condition (file /tmp/baseline3_o729zyod/attempt_02_repair_07/repair_07_01_wrong_spec_01_rewrite_annotation.c, line 2) in 'reset_1st_if_2nd_is_true'' in 'main' at call 'reset_1st_if_2nd_is_true' (file /tmp/baseline3_o729zyod/attempt_02_repair_07/repair_07_01_wrong_spec_01_rewrite_annotation.c, line 29)
+:
+Prove: true.
+Prover Qed returns Valid (3ms)
+
+------------------------------------------------------------
+
+Goal Instance of 'Pre-condition (file /tmp/baseline3_o729zyod/attempt_02_repair_07/repair_07_01_wrong_spec_01_rewrite_annotation.c, line 3) in 'reset_1st_if_2nd_is_true'' in 'main' at call 'reset_1st_if_2nd_is_true' (file /tmp/baseline3_o729zyod/attempt_02_repair_07/repair_07_01_wrong_spec_01_rewrite_annotation.c, line 29)
+:
+Prove: true.
+Prover Qed returns Valid (3ms)
+
+------------------------------------------------------------
+------------------------------------------------------------
+  Function reset_1st_if_2nd_is_true
+------------------------------------------------------------
+
+Goal Post-condition (file /tmp/baseline3_o729zyod/attempt_02_repair_07/repair_07_01_wrong_spec_01_rewrite_annotation.c, line 5) in 'reset_1st_if_2nd_is_true':
+Prove: true.
+Prover Qed returns Valid (13ms)
+
+------------------------------------------------------------
+
+Goal Post-condition (file /tmp/baseline3_o729zyod/attempt_02_repair_07/repair_07_01_wrong_spec_01_rewrite_annotation.c, line 6) in 'reset_1st_if_2nd_is_true':
+Prove: true.
+Prover Qed returns Valid (12ms)
+
+------------------------------------------------------------
+
+Goal Post-condition (file /tmp/baseline3_o729zyod/attempt_02_repair_07/repair_07_01_wrong_spec_01_rewrite_annotation.c, line 7) in 'reset_1st_if_2nd_is_true':
+Let x = Mint_0[b].
+Let x_1 = Mint_0[a <- 0][b].
+Assume {
+  Type: is_sint32(Mint_0[a]) /\ is_sint32(x) /\ is_sint32(x_1).
+  (* Heap *)
+  Type: (region(a.base) <= 0) /\ (region(b.base) <= 0) /\ linked(Malloc_0).
+  (* Residual *)
+  When: x != 0.
+  (* Pre-condition *)
+  Have: valid_rw(Malloc_0, a, 1).
+  (* Pre-condition *)
+  Have: valid_rd(Malloc_0, b, 1).
+}
+Prove: x_1 = x.
+Prover Alt-Ergo 2.2.0 returns Failed
+unrecognized prover answer
+Prover Z3 4.8.12 returns Unknown (Qed:28ms)
+
+------------------------------------------------------------
+
+Goal Assigns (file /tmp/baseline3_o729zyod/attempt_02_repair_07/repair_07_01_wrong_spec_01_rewrite_annotation.c, line 4) in 'reset_1st_if_2nd_is_true':
+Effect at line 17
+Prove: true.
+Prover Qed returns Valid (3ms)
+
+------------------------------------------------------------
+[wp:pedantic-assigns] /tmp/baseline3_o729zyod/attempt_02_repair_07/repair_07_01_wrong_spec_01_rewrite_annotation.c:20: Warning: 
+  No 'assigns' specification for function 'main'.
+  Callers assumptions might be imprecise.
+
+
+WP stderr:

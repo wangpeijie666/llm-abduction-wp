@@ -1,0 +1,15 @@
+{
+  "category": "wrong_spec",
+  "target_kind": "assertion",
+  "reason": "From the available assumptions at the assertion point, WP only knows 0 <= j <= 6 (plus j <= 10). These do not entail j = 6, so the assertion is too strong relative to the current invariants/branch information. Either the program does not guarantee j==6, or the specification is missing crucial facts about loop exit (e.g., j < i) and the invariant i+2*j==21 to derive the exact value. As-is, the PO cannot be proved and Z3 times out.",
+  "suspect_text": "//@ assert(j == 6);",
+  "source_line": null,
+  "recommended_action": "rewrite_annotation",
+  "raw": {
+    "category": "wrong_spec",
+    "target_kind": "assertion",
+    "suspect_text": "//@ assert(j == 6);",
+    "reason": "From the available assumptions at the assertion point, WP only knows 0 <= j <= 6 (plus j <= 10). These do not entail j = 6, so the assertion is too strong relative to the current invariants/branch information. Either the program does not guarantee j==6, or the specification is missing crucial facts about loop exit (e.g., j < i) and the invariant i+2*j==21 to derive the exact value. As-is, the PO cannot be proved and Z3 times out.",
+    "recommended_action": "rewrite_annotation"
+  }
+}

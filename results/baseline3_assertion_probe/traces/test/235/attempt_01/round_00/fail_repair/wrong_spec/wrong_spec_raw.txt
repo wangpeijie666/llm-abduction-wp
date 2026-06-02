@@ -1,0 +1,9 @@
+[
+  {
+    "action": "rewrite_annotation",
+    "original_text": "/*@\n      loop invariant j >= i ==> (i + j == 11);\n      loop invariant j < i ==> (j == 6 && i == 11);\n      loop assigns i, j;\n    */",
+    "replacement_text": "/*@\n      loop invariant j >= i ==> (i + j == 11);\n      loop invariant j < i ==> (i + j == 17);\n      loop assigns i, j;\n    */",
+    "reason": "The invariant `j < i ==> (j == 6 && i == 11)` is not inductive: after one loop iteration, `j<i` can hold with different (i,j) values, making the invariant set inconsistent and leading WP to a `Prove: false` preservation goal. Replacing it with `j < i ==> (i + j == 17)` matches the arithmetic relation at loop exit (from `i+j==11` in-loop and the final update `i+=2, j-=1` giving `i+j==12` at the back-edge; equivalently when the loop stops after failing `j>=i`, the last executed update yields `i+j==17` for this program), providing a consistent, inductive characterization usable to derive `j==6` at the assertion.",
+    "risk": "medium"
+  }
+]

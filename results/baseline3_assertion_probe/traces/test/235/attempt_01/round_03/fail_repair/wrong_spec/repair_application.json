@@ -1,0 +1,8 @@
+{
+  "path": null,
+  "reason": "no_applicable_repair",
+  "details": [
+    "#1 skipped: generated code rejected: LLM removed or changed original ACSL assertions: ['j==6']"
+  ],
+  "applied_index": null
+}

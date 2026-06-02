@@ -1,0 +1,15 @@
+{
+  "category": "wrong_spec",
+  "target_kind": "invariant_preservation",
+  "reason": "The preservation PO reduces to proving simple arithmetic implications like “7 <= j ==> 6 <= j” and “j <= 6 ==> 6 <= j”, yet WP ends with “Prove: false”. This indicates the invariant set is inconsistent/non-inductive at the loop back-edge (it can force contradictory bounds on j after the body update), not merely missing helper facts. In particular, the second invariant (j < i ==> (j==6 && i==11)) is too strong to be maintained as an invariant at every iteration; it describes a specific exit state rather than an inductive property.",
+  "suspect_text": "loop invariant j >= i ==> (i + j == 11);\nloop invariant j < i ==> (j == 6 && i == 11);",
+  "source_line": null,
+  "recommended_action": "rewrite_annotation",
+  "raw": {
+    "category": "wrong_spec",
+    "target_kind": "invariant_preservation",
+    "suspect_text": "loop invariant j >= i ==> (i + j == 11);\nloop invariant j < i ==> (j == 6 && i == 11);",
+    "reason": "The preservation PO reduces to proving simple arithmetic implications like “7 <= j ==> 6 <= j” and “j <= 6 ==> 6 <= j”, yet WP ends with “Prove: false”. This indicates the invariant set is inconsistent/non-inductive at the loop back-edge (it can force contradictory bounds on j after the body update), not merely missing helper facts. In particular, the second invariant (j < i ==> (j==6 && i==11)) is too strong to be maintained as an invariant at every iteration; it describes a specific exit state rather than an inductive property.",
+    "recommended_action": "rewrite_annotation"
+  }
+}

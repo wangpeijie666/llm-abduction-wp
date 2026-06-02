@@ -1,0 +1,613 @@
+[kernel] Parsing out/gpt-5.2/235/235_0001/235_0005/235_merged.c (with preprocessing)
+[wp] Running WP plugin...
+[wp] Warning: Missing RTE guards
+[wp] 58 goals scheduled
+[wp] [Timeout] typed_main_assert (Qed 13ms) (Z3 8s)
+[wp] Proved goals:   57 / 58
+  Qed:            52
+  Alt-Ergo :       1 (85ms)
+  Z3 4.8.12:       4 (80ms-1.7s-8s)
+  Timeout:         1
+------------------------------------------------------------
+  Function main
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file out/gpt-5.2/235/235_0001/235_0005/235_merged.c, line 12):
+Prove: true.
+Prover Qed returns Valid (13ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file out/gpt-5.2/235/235_0001/235_0005/235_merged.c, line 12):
+Prove: true.
+Prover Qed returns Valid (3ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file out/gpt-5.2/235/235_0001/235_0005/235_merged.c, line 13):
+Prove: true.
+Prover Qed returns Valid (10ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file out/gpt-5.2/235/235_0001/235_0005/235_merged.c, line 13):
+Prove: true.
+Prover Qed returns Valid (2ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file out/gpt-5.2/235/235_0001/235_0005/235_merged.c, line 14):
+Prove: true.
+Prover Qed returns Valid (21ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file out/gpt-5.2/235/235_0001/235_0005/235_merged.c, line 14):
+Prove: true.
+Prover Qed returns Valid (2ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file out/gpt-5.2/235/235_0001/235_0005/235_merged.c, line 15):
+Prove: true.
+Prover Qed returns Valid (9ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file out/gpt-5.2/235/235_0001/235_0005/235_merged.c, line 15):
+Prove: true.
+Prover Qed returns Valid (2ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file out/gpt-5.2/235/235_0001/235_0005/235_merged.c, line 16):
+Prove: true.
+Prover Qed returns Valid (12ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file out/gpt-5.2/235/235_0001/235_0005/235_merged.c, line 16):
+Prove: true.
+Prover Qed returns Valid (4ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file out/gpt-5.2/235/235_0001/235_0005/235_merged.c, line 17):
+Prove: true.
+Prover Qed returns Valid (21ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file out/gpt-5.2/235/235_0001/235_0005/235_merged.c, line 17):
+Prove: true.
+Prover Qed returns Valid (2ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file out/gpt-5.2/235/235_0001/235_0005/235_merged.c, line 18):
+Let x = (-2) * j.
+Let x_1 = 20 - (2 * j).
+Let x_2 = 21 - (2 * j).
+Assume {
+  Type: is_sint32(j) /\ is_sint32(j - 1) /\ is_sint32(x_2) /\
+      is_sint32(23 - (2 * j)).
+  (* Invariant *)
+  Have: 7 <= j.
+  (* Invariant *)
+  Have: 5 <= j.
+  (* Invariant *)
+  Have: 0 < j.
+  (* Invariant *)
+  Have: j <= 10.
+  (* Invariant *)
+  Have: (j + (x_1 / 2)) = 10.
+  (* Invariant *)
+  Have: (((3 * j) - 21) % 3) = 0.
+  (* Invariant *)
+  Have: (x_2 % 2) = 1.
+  (* Invariant *)
+  Have: 2 <= j.
+  (* Invariant *)
+  Have: 3 <= j.
+  (* Invariant *)
+  Have: (x_1 % 2) = 0.
+  (* Invariant *)
+  Have: 6 <= j.
+  (* Invariant *)
+  Have: j <= 11.
+}
+Prove: (j + ((22 - (2 * j)) / 2)) = 11.
+Prover Z3 4.8.12 returns Valid (Qed:23ms) (90ms) (40927)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file out/gpt-5.2/235/235_0001/235_0005/235_merged.c, line 18):
+Prove: true.
+Prover Qed returns Valid (3ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file out/gpt-5.2/235/235_0001/235_0005/235_merged.c, line 19):
+Prove: true.
+Prover Qed returns Valid (12ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file out/gpt-5.2/235/235_0001/235_0005/235_merged.c, line 19):
+Prove: true.
+Prover Qed returns Valid (3ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file out/gpt-5.2/235/235_0001/235_0005/235_merged.c, line 20):
+Let x = 1 + i.
+Let x_1 = x / 2.
+Let x_2 = i + x_1.
+Let x_3 = i - 1.
+Let x_4 = -i.
+Let x_5 = -x_1.
+Assume {
+  Type: is_sint32(i) /\ is_sint32(2 + i) /\ is_sint32(10 - x_1) /\
+      is_sint32(11 - x_1).
+  (* Goal *)
+  When: x_2 <= 8.
+  (* Invariant *)
+  Have: i <= 8.
+  (* Invariant *)
+  Have: i <= 11.
+  (* Invariant *)
+  Have: x = (2 * x_1).
+  (* Invariant *)
+  Have: i <= 20.
+  (* Invariant *)
+  Have: 0 < i.
+  (* Invariant *)
+  Have: x_1 = (1 + (x_3 / 2)).
+  (* Invariant *)
+  Have: ((11 - i - x_1) % 3) = 0.
+  (* Invariant *)
+  Have: i <= 21.
+  (* Invariant *)
+  Have: (i % 2) = 1.
+  (* Invariant *)
+  Have: i <= 18.
+  (* Invariant *)
+  Have: i <= 15.
+  (* Invariant *)
+  Have: (x_3 % 2) = 0.
+  (* Then *)
+  Have: x_2 <= 11.
+  (* Invariant *)
+  Have: i <= 6.
+  (* Invariant *)
+  Have: i <= 9.
+  (* Invariant *)
+  Have: (-2) <= i.
+}
+Prove: ((8 - i - x_1) % 3) = 0.
+Prover Z3 4.8.12 returns Valid (Qed:26ms) (140ms) (61300)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file out/gpt-5.2/235/235_0001/235_0005/235_merged.c, line 20):
+Prove: true.
+Prover Qed returns Valid (2ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file out/gpt-5.2/235/235_0001/235_0005/235_merged.c, line 21):
+Prove: true.
+Prover Qed returns Valid (13ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file out/gpt-5.2/235/235_0001/235_0005/235_merged.c, line 21):
+Prove: true.
+Prover Qed returns Valid (2ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file out/gpt-5.2/235/235_0001/235_0005/235_merged.c, line 22):
+Prove: true.
+Prover Qed returns Valid (13ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file out/gpt-5.2/235/235_0001/235_0005/235_merged.c, line 22):
+Prove: true.
+Prover Qed returns Valid (2ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file out/gpt-5.2/235/235_0001/235_0005/235_merged.c, line 23):
+Prove: true.
+Prover Qed returns Valid (23ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file out/gpt-5.2/235/235_0001/235_0005/235_merged.c, line 23):
+Prove: true.
+Prover Qed returns Valid (2ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file out/gpt-5.2/235/235_0001/235_0005/235_merged.c, line 24):
+Prove: true.
+Prover Qed returns Valid (12ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file out/gpt-5.2/235/235_0001/235_0005/235_merged.c, line 24):
+Prove: true.
+Prover Qed returns Valid (2ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file out/gpt-5.2/235/235_0001/235_0005/235_merged.c, line 25):
+Prove: true.
+Prover Qed returns Valid (12ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file out/gpt-5.2/235/235_0001/235_0005/235_merged.c, line 25):
+Prove: true.
+Prover Qed returns Valid (3ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file out/gpt-5.2/235/235_0001/235_0005/235_merged.c, line 26):
+Prove: true.
+Prover Qed returns Valid (12ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file out/gpt-5.2/235/235_0001/235_0005/235_merged.c, line 26):
+Prove: true.
+Prover Qed returns Valid (3ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file out/gpt-5.2/235/235_0001/235_0005/235_merged.c, line 27):
+Let x = 1 + i.
+Let x_1 = x / 2.
+Let x_2 = i + x_1.
+Let x_3 = -i.
+Let x_4 = -x_1.
+Let x_5 = i - 1.
+Let x_6 = 2 + i.
+Assume {
+  Type: is_sint32(i) /\ is_sint32(x_6) /\ is_sint32(10 - x_1) /\
+      is_sint32(11 - x_1).
+  (* Invariant *)
+  Have: i <= 8.
+  (* Invariant *)
+  Have: i <= 11.
+  (* Invariant *)
+  Have: x = (2 * x_1).
+  (* Invariant *)
+  Have: i <= 20.
+  (* Invariant *)
+  Have: 0 < i.
+  (* Invariant *)
+  Have: x_1 = (1 + (x_5 / 2)).
+  (* Invariant *)
+  Have: ((11 - i - x_1) % 3) = 0.
+  (* Invariant *)
+  Have: i <= 21.
+  (* Invariant *)
+  Have: (i % 2) = 1.
+  (* Invariant *)
+  Have: i <= 18.
+  (* Invariant *)
+  Have: i <= 15.
+  (* Invariant *)
+  Have: (x_5 % 2) = 0.
+  (* Then *)
+  Have: x_2 <= 11.
+  (* Invariant *)
+  Have: ((x_2 <= 8) -> (i <= 6)).
+  (* Invariant *)
+  Have: i <= 9.
+  (* Invariant *)
+  Have: (-2) <= i.
+  (* Invariant *)
+  Have: ((x_2 <= 8) -> (((8 - i - x_1) % 3) = 0)).
+  (* Invariant *)
+  Have: i <= 19.
+}
+Prove: (x_6 % 2) = 1.
+Prover Z3 4.8.12 returns Valid (Qed:30ms) (80ms) (43877)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file out/gpt-5.2/235/235_0001/235_0005/235_merged.c, line 27):
+Prove: true.
+Prover Qed returns Valid (3ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file out/gpt-5.2/235/235_0001/235_0005/235_merged.c, line 28):
+Prove: true.
+Prover Qed returns Valid (12ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file out/gpt-5.2/235/235_0001/235_0005/235_merged.c, line 28):
+Prove: true.
+Prover Qed returns Valid (2ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file out/gpt-5.2/235/235_0001/235_0005/235_merged.c, line 29):
+Prove: true.
+Prover Qed returns Valid (12ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file out/gpt-5.2/235/235_0001/235_0005/235_merged.c, line 29):
+Prove: true.
+Prover Qed returns Valid (3ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file out/gpt-5.2/235/235_0001/235_0005/235_merged.c, line 30):
+Prove: true.
+Prover Qed returns Valid (20ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file out/gpt-5.2/235/235_0001/235_0005/235_merged.c, line 30):
+Prove: true.
+Prover Qed returns Valid (4ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file out/gpt-5.2/235/235_0001/235_0005/235_merged.c, line 31):
+Prove: true.
+Prover Qed returns Valid (20ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file out/gpt-5.2/235/235_0001/235_0005/235_merged.c, line 31):
+Prove: true.
+Prover Qed returns Valid (4ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file out/gpt-5.2/235/235_0001/235_0005/235_merged.c, line 32):
+Prove: true.
+Prover Qed returns Valid (28ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file out/gpt-5.2/235/235_0001/235_0005/235_merged.c, line 32):
+Prove: true.
+Prover Qed returns Valid (2ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file out/gpt-5.2/235/235_0001/235_0005/235_merged.c, line 33):
+Prove: true.
+Prover Qed returns Valid (17ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file out/gpt-5.2/235/235_0001/235_0005/235_merged.c, line 33):
+Prove: true.
+Prover Qed returns Valid (3ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file out/gpt-5.2/235/235_0001/235_0005/235_merged.c, line 34):
+Prove: true.
+Prover Qed returns Valid (28ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file out/gpt-5.2/235/235_0001/235_0005/235_merged.c, line 34):
+Prove: true.
+Prover Qed returns Valid (3ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file out/gpt-5.2/235/235_0001/235_0005/235_merged.c, line 35):
+Prove: true.
+Prover Qed returns Valid (13ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file out/gpt-5.2/235/235_0001/235_0005/235_merged.c, line 35):
+Prove: true.
+Prover Qed returns Valid (2ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file out/gpt-5.2/235/235_0001/235_0005/235_merged.c, line 36):
+Let x = 2 + i.
+Let x_1 = 1 + i.
+Let x_2 = x_1 / 2.
+Let x_3 = i + x_2.
+Let x_4 = i - 1.
+Let x_5 = -x_2.
+Assume {
+  Type: is_sint32(i) /\ is_sint32(x) /\ is_sint32(10 - x_2) /\
+      is_sint32(11 - x_2).
+  (* Goal *)
+  When: 9 <= x_3.
+  (* Invariant *)
+  Have: i <= 8.
+  (* Invariant *)
+  Have: i <= 11.
+  (* Invariant *)
+  Have: x_1 = (2 * x_2).
+  (* Invariant *)
+  Have: i <= 20.
+  (* Invariant *)
+  Have: 0 < i.
+  (* Invariant *)
+  Have: x_2 = (1 + (x_4 / 2)).
+  (* Invariant *)
+  Have: ((11 - i - x_2) % 3) = 0.
+  (* Invariant *)
+  Have: i <= 21.
+  (* Invariant *)
+  Have: (i % 2) = 1.
+  (* Invariant *)
+  Have: i <= 18.
+  (* Invariant *)
+  Have: i <= 15.
+  (* Invariant *)
+  Have: (x_4 % 2) = 0.
+  (* Then *)
+  Have: x_3 <= 11.
+  (* Invariant *)
+  Have: i <= 9.
+  (* Invariant *)
+  Have: (-2) <= i.
+  (* Invariant *)
+  Have: i <= 19.
+  (* Invariant *)
+  Have: (x % 2) = 1.
+  (* Invariant *)
+  Have: i <= 16.
+}
+Prove: 7 <= i.
+Prover Z3 4.8.12 returns Valid (Qed:42ms) (140ms) (42455)
+Prover Alt-Ergo  returns Valid (Qed:42ms) (85ms) (34)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file out/gpt-5.2/235/235_0001/235_0005/235_merged.c, line 36):
+Prove: true.
+Prover Qed returns Valid (2ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file out/gpt-5.2/235/235_0001/235_0005/235_merged.c, line 37):
+Let x = 1 + i.
+Let x_1 = x / 2.
+Let x_2 = i + x_1.
+Let x_3 = 2 + i.
+Let x_4 = -i.
+Let x_5 = -x_1.
+Let x_6 = i - 1.
+Assume {
+  Type: is_sint32(i) /\ is_sint32(x_3) /\ is_sint32(10 - x_1) /\
+      is_sint32(11 - x_1).
+  (* Invariant *)
+  Have: i <= 8.
+  (* Invariant *)
+  Have: i <= 11.
+  (* Invariant *)
+  Have: x = (2 * x_1).
+  (* Invariant *)
+  Have: i <= 20.
+  (* Invariant *)
+  Have: 0 < i.
+  (* Invariant *)
+  Have: x_1 = (1 + (x_6 / 2)).
+  (* Invariant *)
+  Have: ((11 - i - x_1) % 3) = 0.
+  (* Invariant *)
+  Have: i <= 21.
+  (* Invariant *)
+  Have: (i % 2) = 1.
+  (* Invariant *)
+  Have: i <= 18.
+  (* Invariant *)
+  Have: i <= 15.
+  (* Invariant *)
+  Have: (x_6 % 2) = 0.
+  (* Then *)
+  Have: x_2 <= 11.
+  (* Invariant *)
+  Have: ((x_2 <= 8) -> (i <= 6)).
+  (* Invariant *)
+  Have: i <= 9.
+  (* Invariant *)
+  Have: (-2) <= i.
+  (* Invariant *)
+  Have: ((x_2 <= 8) -> (((8 - i - x_1) % 3) = 0)).
+  (* Invariant *)
+  Have: i <= 19.
+  (* Invariant *)
+  Have: (x_3 % 2) = 1.
+  (* Invariant *)
+  Have: i <= 16.
+  (* Invariant *)
+  Have: ((x_2 <= 8) -> (i <= 13)).
+  (* Invariant *)
+  Have: ((9 <= x_2) -> (7 <= i)).
+}
+Prove: (x % 2) = 0.
+Prover Z3 4.8.12 returns Valid (Qed:42ms) (90ms) (44381)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file out/gpt-5.2/235/235_0001/235_0005/235_merged.c, line 37):
+Prove: true.
+Prover Qed returns Valid (2ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file out/gpt-5.2/235/235_0001/235_0005/235_merged.c, line 38):
+Prove: true.
+Prover Qed returns Valid (11ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file out/gpt-5.2/235/235_0001/235_0005/235_merged.c, line 38):
+Prove: true.
+Prover Qed returns Valid (3ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file out/gpt-5.2/235/235_0001/235_0005/235_merged.c, line 39):
+Prove: true.
+Prover Qed returns Valid (12ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file out/gpt-5.2/235/235_0001/235_0005/235_merged.c, line 39):
+Prove: true.
+Prover Qed returns Valid (2ms)
+
+------------------------------------------------------------
+
+Goal Assertion (file out/gpt-5.2/235/235_0001/235_0005/235_merged.c, line 47):
+Let x = (-2) * j.
+Let x_1 = 20 - (2 * j).
+Let x_2 = 21 - (2 * j).
+Assume {
+  Type: is_sint32(j) /\ is_sint32(x_2).
+  (* Invariant *)
+  Have: 5 <= j.
+  (* Invariant *)
+  Have: 0 < j.
+  (* Invariant *)
+  Have: j <= 10.
+  (* Invariant *)
+  Have: (j + (x_1 / 2)) = 10.
+  (* Invariant *)
+  Have: (x_2 % 2) = 1.
+  (* Invariant *)
+  Have: 2 <= j.
+  (* Invariant *)
+  Have: j <= 6.
+  (* Invariant *)
+  Have: (x_1 % 2) = 0.
+}
+Prove: j = 6.
+Prover Z3 4.8.12 returns Timeout (Qed:13ms) (8s)
+Prover Alt-Ergo  returns Timeout (Qed:13ms) (8s)
+
+------------------------------------------------------------
+
+Goal Loop assigns (file out/gpt-5.2/235/235_0001/235_0005/235_merged.c, line 40):
+Prove: true.
+Prover Qed returns Valid
+
+------------------------------------------------------------
+[wp:pedantic-assigns] out/gpt-5.2/235/235_0001/235_0005/235_merged.c:7: Warning: 
+  No 'assigns' specification for function 'main'.
+  Callers assumptions might be imprecise.

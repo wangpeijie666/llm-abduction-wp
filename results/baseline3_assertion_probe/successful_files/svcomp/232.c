@@ -9,10 +9,9 @@ int main(void) {
   int tmp;
 
   /*@
-    loop invariant 0 <= i <= 2048;
+    loop invariant 0 <= i <= SZ;
     loop invariant \forall integer j; 0 <= j < i ==> B[j] == A[j];
     loop assigns i, tmp, B[0..2047];
-    loop variant 2048 - i;
   */
   /* PROBE_HERE:loop1_before */
   for (i = 0; i < SZ; i++) {

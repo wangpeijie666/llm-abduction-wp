@@ -1,0 +1,31 @@
+Dataset: 46_fib
+File: 142.c
+Source: /home/wangpeijie/wpj_2010215/spec_generation_abduction/data/AutoBench/46_fib/142.c
+Final status: Invalid
+Best attempt: 1
+Best result: Invalid
+
+Command:
+frama-c -wp -wp-precond-weakening -wp-no-callee-precond -wp-prover Alt-Ergo,Z3 -wp-prop=-@terminates,-@variant,-@decreases -wp-print -wp-timeout 8 /tmp/baseline3_mwpvdsw0/generated_specs/attempt_01.c
+
+WP stdout:
+[kernel] Parsing /tmp/baseline3_mwpvdsw0/generated_specs/attempt_01.c (with preprocessing)
+[kernel:typing:no-proto] /tmp/baseline3_mwpvdsw0/generated_specs/attempt_01.c:4: Warning: 
+  Function unknown1 is declared without prototype.
+  Its formals will be inferred from actual arguments at first call.
+  Declare it as unknown1(void) if the function does not take any parameters.
+[kernel:typing:no-proto] /tmp/baseline3_mwpvdsw0/generated_specs/attempt_01.c:6: Warning: 
+  Function unknown2 is declared without prototype.
+  Its formals will be inferred from actual arguments at first call.
+  Declare it as unknown2(void) if the function does not take any parameters.
+[kernel:typing:no-proto] /tmp/baseline3_mwpvdsw0/generated_specs/attempt_01.c:8: Warning: 
+  Function unknown3 is declared without prototype.
+  Its formals will be inferred from actual arguments at first call.
+  Declare it as unknown3(void) if the function does not take any parameters.
+[kernel:annot-error] /tmp/baseline3_mwpvdsw0/generated_specs/attempt_01.c:61: Warning: 
+  unbound logic variable i. Ignoring loop annotation
+[kernel] User Error: warning annot-error treated as fatal error.
+[kernel] Frama-C aborted: invalid user input.
+
+
+WP stderr:

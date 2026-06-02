@@ -1,0 +1,122 @@
+[kernel] Parsing /tmp/baseline3_p28s3nm2/attempt_01_repair_04/repair_04_01_missing_spec_01_add_invariant.c (with preprocessing)
+[wp] Running WP plugin...
+[wp] Warning: Missing RTE guards
+[wp] 15 goals scheduled
+[wp] [Timeout] typed_main_loop_invariant_6_preserved (Qed 15ms) (Z3)
+[wp] Proved goals:   15 / 16
+  Unreachable:     1
+  Qed:            14 (0.99ms)
+  Timeout:         1
+------------------------------------------------------------
+  Function main
+------------------------------------------------------------
+
+Goal Post-condition (file /tmp/baseline3_p28s3nm2/attempt_01_repair_04/repair_04_01_missing_spec_01_add_invariant.c, line 8) in 'main':
+Prove: true.
+Prover Qed returns Valid (5ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline3_p28s3nm2/attempt_01_repair_04/repair_04_01_missing_spec_01_add_invariant.c, line 15):
+Prove: true.
+Prover Qed returns Valid (7ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline3_p28s3nm2/attempt_01_repair_04/repair_04_01_missing_spec_01_add_invariant.c, line 15):
+Prove: true.
+Prover Qed returns Valid (2ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline3_p28s3nm2/attempt_01_repair_04/repair_04_01_missing_spec_01_add_invariant.c, line 16):
+Prove: true.
+Prover Qed returns Valid (12ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline3_p28s3nm2/attempt_01_repair_04/repair_04_01_missing_spec_01_add_invariant.c, line 16):
+Prove: true.
+Prover Qed returns Valid (2ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline3_p28s3nm2/attempt_01_repair_04/repair_04_01_missing_spec_01_add_invariant.c, line 17):
+Prove: true.
+Prover Qed returns Valid (6ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline3_p28s3nm2/attempt_01_repair_04/repair_04_01_missing_spec_01_add_invariant.c, line 17):
+Prove: true.
+Prover Qed returns Valid (2ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline3_p28s3nm2/attempt_01_repair_04/repair_04_01_missing_spec_01_add_invariant.c, line 18):
+Prove: true.
+Prover Qed returns Valid (12ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline3_p28s3nm2/attempt_01_repair_04/repair_04_01_missing_spec_01_add_invariant.c, line 18):
+Prove: true.
+Prover Qed returns Valid (2ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline3_p28s3nm2/attempt_01_repair_04/repair_04_01_missing_spec_01_add_invariant.c, line 19):
+Prove: true.
+Prover Qed returns Valid (6ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline3_p28s3nm2/attempt_01_repair_04/repair_04_01_missing_spec_01_add_invariant.c, line 19):
+Prove: true.
+Prover Qed returns Valid (2ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline3_p28s3nm2/attempt_01_repair_04/repair_04_01_missing_spec_01_add_invariant.c, line 20):
+Let x = (-2) * j.
+Assume {
+  Type: is_sint32(j) /\ is_sint32(j - 1) /\ is_sint32(21 - (2 * j)) /\
+      is_sint32(23 - (2 * j)).
+  (* Invariant *)
+  Have: j <= 10.
+  (* Invariant *)
+  Have: 0 <= j.
+  (* Invariant *)
+  Have: 7 <= j.
+  (* Invariant *)
+  Have: j <= 11.
+  (* Invariant *)
+  Have: 0 < j.
+}
+Prove: 8 <= j.
+Prover Alt-Ergo 2.2.0 returns Failed
+unrecognized prover answer
+Prover Z3 4.8.12 returns Timeout (Qed:15ms) (8s)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline3_p28s3nm2/attempt_01_repair_04/repair_04_01_missing_spec_01_add_invariant.c, line 20):
+Prove: true.
+Prover Qed returns Valid (2ms)
+
+------------------------------------------------------------
+
+Goal Assertion (file /tmp/baseline3_p28s3nm2/attempt_01_repair_04/repair_04_01_missing_spec_01_add_invariant.c, line 30):
+Prove: true.
+Prover Qed returns Valid (5ms)
+
+------------------------------------------------------------
+
+Goal Loop assigns (file /tmp/baseline3_p28s3nm2/attempt_01_repair_04/repair_04_01_missing_spec_01_add_invariant.c, line 21):
+Prove: true.
+Prover Qed returns Valid
+
+------------------------------------------------------------
+[wp:pedantic-assigns] /tmp/baseline3_p28s3nm2/attempt_01_repair_04/repair_04_01_missing_spec_01_add_invariant.c:10: Warning: 
+  No 'assigns' specification for function 'main'.
+  Callers assumptions might be imprecise.

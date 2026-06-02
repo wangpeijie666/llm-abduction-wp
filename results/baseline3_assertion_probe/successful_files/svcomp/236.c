@@ -1,5 +1,6 @@
 /*@
 	requires n >= 0;
+	assigns \nothing;
 	ensures \true;
 */
 void foo(int n){
@@ -8,7 +9,8 @@ void foo(int n){
 
 	/*@
 		loop invariant 0 <= x <= n;
-		loop invariant y == n - x;
+		loop invariant 0 <= y <= n;
+		loop invariant x + y == n;
 		loop assigns x, y;
 	*/
 	/* PROBE_HERE:loop1_before */

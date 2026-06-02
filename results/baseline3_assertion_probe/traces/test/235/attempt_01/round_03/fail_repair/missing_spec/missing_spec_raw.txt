@@ -1,0 +1,9 @@
+[
+  {
+    "action": "add_invariant",
+    "original_text": "      loop invariant i + 2*j == 21;\n      loop invariant i >= 1;\n      loop invariant j <= 10;\n      loop invariant i <= 21;\n      loop invariant 0 <= j <= 10;\n      loop assigns i, j;\n      loop variant j;\n    */",
+    "replacement_text": "      loop invariant i + 2*j == 21;\n      loop invariant i >= 1;\n      loop invariant j <= 10;\n      loop invariant i <= 21;\n      loop invariant 0 <= j <= 10;\n      loop invariant i <= j + 2;\n      loop assigns i, j;\n      loop variant j;\n    */",
+    "reason": "At the assertion point WP only has bounds on j, not enough to conclude j==6. A key missing fact is a relationship between i and j at loop exit. With the loop guard negation at exit (j < i) and the strengthened invariant i <= j+2, we obtain i = j+1. Combined with the existing invariant i + 2*j == 21 this yields 3*j + 1 == 21, hence j==6, proving the assertion.",
+    "risk": "low"
+  }
+]

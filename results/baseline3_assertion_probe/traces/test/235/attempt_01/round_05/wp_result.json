@@ -1,0 +1,19 @@
+{
+  "result_type": "Pass_16_16",
+  "elapsed_sec": 1.394211,
+  "command": [
+    "frama-c",
+    "-wp",
+    "-wp-precond-weakening",
+    "-wp-no-callee-precond",
+    "-wp-prover",
+    "Alt-Ergo,Z3",
+    "-wp-prop=-@terminates,-@variant,-@decreases",
+    "-wp-print",
+    "-wp-timeout",
+    "8",
+    "/tmp/baseline3_p28s3nm2/attempt_01_repair_05/repair_05_01_wrong_spec_01_rewrite_annotation.c"
+  ],
+  "stdout_path": "/tmp/baseline3_p28s3nm2/wp_logs/attempt_01_round_05_wp_stdout.txt",
+  "stderr_path": "/tmp/baseline3_p28s3nm2/wp_logs/attempt_01_round_05_wp_stderr.txt"
+}

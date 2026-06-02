@@ -1,0 +1,16 @@
+[
+  {
+    "action": "rewrite_annotation",
+    "original_text": "/*@\n      loop invariant j >= i ==> (i + j == 11);\n      loop invariant j < i ==> (i + j == 17);\n      loop assigns i, j;\n    */",
+    "replacement_text": "/*@\n      loop invariant i + 2*j == 21;\n      loop assigns i, j;\n      loop variant j;\n    */",
+    "reason": "The existing split invariants are not inductive with updates i:=i+2 and j:=j-1, yielding contradictory preservation goals. The linear relation i+2*j==21 holds initially (1+2*10) and is preserved by the loop body: (i+2)+(2*(j-1)) = i+2*j. Together with loop exit condition j<i, it is sufficient to prove the final assertion j==6.",
+    "risk": "low",
+    "raw": {
+      "action": "rewrite_annotation",
+      "original_text": "/*@\n      loop invariant j >= i ==> (i + j == 11);\n      loop invariant j < i ==> (i + j == 17);\n      loop assigns i, j;\n    */",
+      "replacement_text": "/*@\n      loop invariant i + 2*j == 21;\n      loop assigns i, j;\n      loop variant j;\n    */",
+      "reason": "The existing split invariants are not inductive with updates i:=i+2 and j:=j-1, yielding contradictory preservation goals. The linear relation i+2*j==21 holds initially (1+2*10) and is preserved by the loop body: (i+2)+(2*(j-1)) = i+2*j. Together with loop exit condition j<i, it is sufficient to prove the final assertion j==6.",
+      "risk": "low"
+    }
+  }
+]

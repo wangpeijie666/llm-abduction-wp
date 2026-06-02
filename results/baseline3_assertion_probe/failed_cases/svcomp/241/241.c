@@ -1,9 +1,4 @@
 // hhk2008_true-unreach-call.c
-
-/*@
-  requires \true;
-  ensures \result == 0;
-*/
 int main() {
     int a;
     int b;
@@ -14,10 +9,12 @@ int main() {
     cnt = b;
     
     /*@
-      loop invariant cnt >= 0;
-      loop invariant res == a + (b - cnt);
+      loop invariant cnt <= b;
+      loop invariant res + cnt == a + b;
+      loop invariant cnt > 0 ==> res + cnt == a + b;
+      loop invariant cnt == b ==> res == a + (b - cnt);
       loop assigns cnt, res;
-      loop variant cnt;
+      loop invariant cnt <= 0 ==> res == a + b;
     */
     /* PROBE_HERE:loop1_before */
     while (cnt > 0) {

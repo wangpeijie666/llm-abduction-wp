@@ -1,0 +1,449 @@
+Dataset: 46_fib
+File: 169.c
+Source: /home/wangpeijie/wpj_2010215/spec_generation_abduction/data/AutoBench/46_fib/169.c
+Final status: Fail
+Best attempt: 1
+Best result: Fail_49_50
+
+Command:
+frama-c -wp -wp-precond-weakening -wp-no-callee-precond -wp-prover Alt-Ergo,Z3 -wp-prop=-@terminates,-@variant,-@decreases -wp-print -wp-timeout 8 /tmp/baseline3_dm5l21a4/attempt_01_repair_02/repair_02_01_missing_spec_01_add_invariant.c
+
+WP stdout:
+[kernel] Parsing /tmp/baseline3_dm5l21a4/attempt_01_repair_02/repair_02_01_missing_spec_01_add_invariant.c (with preprocessing)
+[kernel:typing:no-proto] /tmp/baseline3_dm5l21a4/attempt_01_repair_02/repair_02_01_missing_spec_01_add_invariant.c:1: Warning: 
+  Function unknown1 is declared without prototype.
+  Its formals will be inferred from actual arguments at first call.
+  Declare it as unknown1(void) if the function does not take any parameters.
+[kernel:typing:no-proto] /tmp/baseline3_dm5l21a4/attempt_01_repair_02/repair_02_01_missing_spec_01_add_invariant.c:2: Warning: 
+  Function unknown2 is declared without prototype.
+  Its formals will be inferred from actual arguments at first call.
+  Declare it as unknown2(void) if the function does not take any parameters.
+[kernel:typing:no-proto] /tmp/baseline3_dm5l21a4/attempt_01_repair_02/repair_02_01_missing_spec_01_add_invariant.c:3: Warning: 
+  Function unknown3 is declared without prototype.
+  Its formals will be inferred from actual arguments at first call.
+  Declare it as unknown3(void) if the function does not take any parameters.
+[wp] Running WP plugin...
+[kernel:annot:missing-spec] /tmp/baseline3_dm5l21a4/attempt_01_repair_02/repair_02_01_missing_spec_01_add_invariant.c:1: Warning: 
+  Neither code nor specification for function unknown1,
+   generating default exits, assigns and terminates. See -generated-spec-* options for more info
+[kernel:annot:missing-spec] /tmp/baseline3_dm5l21a4/attempt_01_repair_02/repair_02_01_missing_spec_01_add_invariant.c:2: Warning: 
+  Neither code nor specification for function unknown2,
+   generating default exits, assigns and terminates. See -generated-spec-* options for more info
+[kernel:annot:missing-spec] /tmp/baseline3_dm5l21a4/attempt_01_repair_02/repair_02_01_missing_spec_01_add_invariant.c:3: Warning: 
+  Neither code nor specification for function unknown3,
+   generating default exits, assigns and terminates. See -generated-spec-* options for more info
+[wp] Warning: Missing RTE guards
+[wp] 50 goals scheduled
+[wp] [Timeout] typed_foo_loop_invariant_9_preserved (Qed 326ms) (Z3)
+[wp] Proved goals:   49 / 50
+  Qed:            47 (52ms-14ms-326ms)
+  Z3 4.8.12:       2 (66ms-70ms)
+  Timeout:         1
+------------------------------------------------------------
+  Function foo
+------------------------------------------------------------
+
+Goal Exit-condition (generated) in 'foo':
+Prove: true.
+Prover Qed returns Valid (1ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline3_dm5l21a4/attempt_01_repair_02/repair_02_01_missing_spec_01_add_invariant.c, line 18):
+Prove: true.
+Prover Qed returns Valid (36ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline3_dm5l21a4/attempt_01_repair_02/repair_02_01_missing_spec_01_add_invariant.c, line 18):
+Prove: true.
+Prover Qed returns Valid (8ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline3_dm5l21a4/attempt_01_repair_02/repair_02_01_missing_spec_01_add_invariant.c, line 19):
+Prove: true.
+Prover Qed returns Valid (37ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline3_dm5l21a4/attempt_01_repair_02/repair_02_01_missing_spec_01_add_invariant.c, line 19):
+Prove: true.
+Prover Qed returns Valid (9ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline3_dm5l21a4/attempt_01_repair_02/repair_02_01_missing_spec_01_add_invariant.c, line 20):
+Prove: true.
+Prover Qed returns Valid (42ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline3_dm5l21a4/attempt_01_repair_02/repair_02_01_missing_spec_01_add_invariant.c, line 20):
+Prove: true.
+Prover Qed returns Valid (9ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline3_dm5l21a4/attempt_01_repair_02/repair_02_01_missing_spec_01_add_invariant.c, line 21):
+Let x_2 = x + y.
+Assume {
+  Type: is_sint32(j) /\ is_sint32(tmp_0_0) /\ is_sint32(x) /\
+      is_sint32(x_1) /\ is_sint32(y) /\ is_sint32(y_1) /\ is_sint32(y_2) /\
+      is_sint32(z) /\ is_sint32(1 + z) /\ is_sint32(x_2) /\
+      is_sint32(x + y - y_1) /\ is_sint32(x + y - z).
+  (* Invariant *)
+  Have: 0 <= z.
+  (* Invariant *)
+  Have: (-1) <= z.
+  (* Invariant *)
+  Have: (-2) <= z.
+  (* Invariant *)
+  Have: z <= j.
+  (* Then *)
+  Have: tmp_0_0 != 0.
+  (* Invariant *)
+  Have: z <= x_2.
+  (* Invariant *)
+  Have: x_2 <= j.
+  (* Else *)
+  Have: j <= x_2.
+  If (z % 2) = 1
+  Then { Have: (z = x_1) /\ ((x_1 + y_2) = x_2). Have: (1 + y_1) = y_2. }
+  Else { Have: (y_1 + z) = x_2. }
+}
+Prove: (-3) <= z.
+Prover Alt-Ergo 2.2.0 returns Failed
+unrecognized prover answer
+Prover Z3 4.8.12 returns Valid (Qed:324ms) (66ms) (28189)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline3_dm5l21a4/attempt_01_repair_02/repair_02_01_missing_spec_01_add_invariant.c, line 21):
+Prove: true.
+Prover Qed returns Valid (9ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline3_dm5l21a4/attempt_01_repair_02/repair_02_01_missing_spec_01_add_invariant.c, line 22):
+Prove: true.
+Prover Qed returns Valid (39ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline3_dm5l21a4/attempt_01_repair_02/repair_02_01_missing_spec_01_add_invariant.c, line 22):
+Prove: true.
+Prover Qed returns Valid (9ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline3_dm5l21a4/attempt_01_repair_02/repair_02_01_missing_spec_01_add_invariant.c, line 32):
+Prove: true.
+Prover Qed returns Valid (23ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline3_dm5l21a4/attempt_01_repair_02/repair_02_01_missing_spec_01_add_invariant.c, line 32):
+Prove: true.
+Prover Qed returns Valid (19ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline3_dm5l21a4/attempt_01_repair_02/repair_02_01_missing_spec_01_add_invariant.c, line 33):
+Let x = 1 + i.
+Let x_1 = -z.
+Assume {
+  Type: is_sint32(i) /\ is_sint32(j) /\ is_sint32(tmp_0_0) /\ is_sint32(z) /\
+      is_sint32(x) /\ is_sint32(i - z) /\ is_sint32(1 + i - z).
+  (* Invariant *)
+  Have: 0 <= z.
+  (* Invariant *)
+  Have: (-1) <= z.
+  (* Invariant *)
+  Have: (-2) <= z.
+  (* Invariant *)
+  Have: z <= j.
+  (* Then *)
+  Have: tmp_0_0 != 0.
+  (* Invariant *)
+  Have: z <= i.
+  (* Invariant *)
+  Have: i <= j.
+  (* Then *)
+  Have: i < j.
+}
+Prove: z <= x.
+Prover Alt-Ergo 2.2.0 returns Failed
+unrecognized prover answer
+Prover Z3 4.8.12 returns Valid (Qed:52ms) (70ms) (26386)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline3_dm5l21a4/attempt_01_repair_02/repair_02_01_missing_spec_01_add_invariant.c, line 33):
+Prove: true.
+Prover Qed returns Valid (18ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline3_dm5l21a4/attempt_01_repair_02/repair_02_01_missing_spec_01_add_invariant.c, line 34):
+Prove: true.
+Prover Qed returns Valid (25ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline3_dm5l21a4/attempt_01_repair_02/repair_02_01_missing_spec_01_add_invariant.c, line 34):
+Prove: true.
+Prover Qed returns Valid (19ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline3_dm5l21a4/attempt_01_repair_02/repair_02_01_missing_spec_01_add_invariant.c, line 53):
+Let x_1 = x + y.
+Assume {
+  Type: is_sint32(j) /\ is_sint32(tmp_0) /\ is_sint32(tmp_0_0) /\
+      is_sint32(x) /\ is_sint32(y) /\ is_sint32(y_1) /\ is_sint32(y_2) /\
+      is_sint32(z) /\ is_sint32(x - 1) /\ is_sint32(y - 1) /\
+      is_sint32(x_1) /\ is_sint32(x + y - y_1) /\ is_sint32(x + y - z).
+  (* Residual *)
+  When: (x % 2) != 0.
+  (* Invariant *)
+  Have: 0 <= z.
+  (* Invariant *)
+  Have: (-1) <= z.
+  (* Invariant *)
+  Have: (-2) <= z.
+  (* Invariant *)
+  Have: z <= j.
+  (* Then *)
+  Have: tmp_0_0 != 0.
+  (* Invariant *)
+  Have: z <= x_1.
+  (* Invariant *)
+  Have: x_1 <= j.
+  (* Else *)
+  Have: j <= x_1.
+  If (z % 2) = 1
+  Then { Have: (y_2 + z) = x_1. Have: (1 + y_1) = y_2. }
+  Else { Have: (y_1 + z) = x_1. }
+  (* Then *)
+  Have: tmp_0 != 0.
+}
+Prove: false.
+Prover Alt-Ergo 2.2.0 returns Failed
+unrecognized prover answer
+Prover Z3 4.8.12 returns Timeout (Qed:326ms) (8s)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline3_dm5l21a4/attempt_01_repair_02/repair_02_01_missing_spec_01_add_invariant.c, line 53):
+Prove: true.
+Prover Qed returns Valid (231ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline3_dm5l21a4/attempt_01_repair_02/repair_02_01_missing_spec_01_add_invariant.c, line 54):
+Prove: true.
+Prover Qed returns Valid (45ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline3_dm5l21a4/attempt_01_repair_02/repair_02_01_missing_spec_01_add_invariant.c, line 54):
+Prove: true.
+Prover Qed returns Valid (36ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline3_dm5l21a4/attempt_01_repair_02/repair_02_01_missing_spec_01_add_invariant.c, line 75):
+Prove: true.
+Prover Qed returns Valid (149ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline3_dm5l21a4/attempt_01_repair_02/repair_02_01_missing_spec_01_add_invariant.c, line 75):
+Prove: true.
+Prover Qed returns Valid (22ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline3_dm5l21a4/attempt_01_repair_02/repair_02_01_missing_spec_01_add_invariant.c, line 76):
+Prove: true.
+Prover Qed returns Valid (35ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline3_dm5l21a4/attempt_01_repair_02/repair_02_01_missing_spec_01_add_invariant.c, line 76):
+Prove: true.
+Prover Qed returns Valid (18ms)
+
+------------------------------------------------------------
+
+Goal Assertion (file /tmp/baseline3_dm5l21a4/attempt_01_repair_02/repair_02_01_missing_spec_01_add_invariant.c, line 92):
+Prove: true.
+Prover Qed returns Valid (27ms)
+
+------------------------------------------------------------
+
+Goal Loop assigns (file /tmp/baseline3_dm5l21a4/attempt_01_repair_02/repair_02_01_missing_spec_01_add_invariant.c, line 23) (1/4):
+Prove: true.
+Prover Qed returns Valid
+
+------------------------------------------------------------
+
+Goal Loop assigns (file /tmp/baseline3_dm5l21a4/attempt_01_repair_02/repair_02_01_missing_spec_01_add_invariant.c, line 23) (2/4):
+Call Result at line 26
+Prove: true.
+Prover Qed returns Valid (44ms)
+
+------------------------------------------------------------
+
+Goal Loop assigns (file /tmp/baseline3_dm5l21a4/attempt_01_repair_02/repair_02_01_missing_spec_01_add_invariant.c, line 23) (3/4):
+Effect at line 38
+Prove: true.
+Prover Qed returns Valid (46ms)
+
+------------------------------------------------------------
+
+Goal Loop assigns (file /tmp/baseline3_dm5l21a4/attempt_01_repair_02/repair_02_01_missing_spec_01_add_invariant.c, line 23) (4/4):
+Call Result at line 58
+Prove: true.
+Prover Qed returns Valid (47ms)
+
+------------------------------------------------------------
+
+Goal Loop assigns (file /tmp/baseline3_dm5l21a4/attempt_01_repair_02/repair_02_01_missing_spec_01_add_invariant.c, line 35):
+Prove: true.
+Prover Qed returns Valid
+
+------------------------------------------------------------
+
+Goal Loop assigns (file /tmp/baseline3_dm5l21a4/attempt_01_repair_02/repair_02_01_missing_spec_01_add_invariant.c, line 55) (1/2):
+Prove: true.
+Prover Qed returns Valid
+
+------------------------------------------------------------
+
+Goal Loop assigns (file /tmp/baseline3_dm5l21a4/attempt_01_repair_02/repair_02_01_missing_spec_01_add_invariant.c, line 55) (2/2):
+Call Result at line 58
+Prove: true.
+Prover Qed returns Valid (50ms)
+
+------------------------------------------------------------
+
+Goal Loop assigns (file /tmp/baseline3_dm5l21a4/attempt_01_repair_02/repair_02_01_missing_spec_01_add_invariant.c, line 77) (1/2):
+Prove: true.
+Prover Qed returns Valid
+
+------------------------------------------------------------
+
+Goal Loop assigns (file /tmp/baseline3_dm5l21a4/attempt_01_repair_02/repair_02_01_missing_spec_01_add_invariant.c, line 77) (2/2):
+Call Result at line 80
+Prove: true.
+Prover Qed returns Valid (34ms)
+
+------------------------------------------------------------
+
+Goal Assigns nothing in 'foo' (1/10):
+Prove: true.
+Prover Qed returns Valid
+
+------------------------------------------------------------
+
+Goal Assigns nothing in 'foo' (2/10):
+Effect at line 26
+Prove: true.
+Prover Qed returns Valid (11ms)
+
+------------------------------------------------------------
+
+Goal Assigns nothing in 'foo' (3/10):
+Call Result at line 26
+Prove: true.
+Prover Qed returns Valid (15ms)
+
+------------------------------------------------------------
+
+Goal Assigns nothing in 'foo' (4/10):
+Effect at line 38
+Prove: true.
+Prover Qed returns Valid (22ms)
+
+------------------------------------------------------------
+
+Goal Assigns nothing in 'foo' (5/10):
+Effect at line 44
+Prove: true.
+Prover Qed returns Valid (27ms)
+
+------------------------------------------------------------
+
+Goal Assigns nothing in 'foo' (6/10):
+Effect at line 45
+Prove: true.
+Prover Qed returns Valid (27ms)
+
+------------------------------------------------------------
+
+Goal Assigns nothing in 'foo' (7/10):
+Effect at line 48
+Prove: true.
+Prover Qed returns Valid (27ms)
+
+------------------------------------------------------------
+
+Goal Assigns nothing in 'foo' (8/10):
+Effect at line 49
+Prove: true.
+Prover Qed returns Valid (31ms)
+
+------------------------------------------------------------
+
+Goal Assigns nothing in 'foo' (9/10):
+Effect at line 58
+Prove: true.
+Prover Qed returns Valid (42ms)
+
+------------------------------------------------------------
+
+Goal Assigns nothing in 'foo' (10/10):
+Effect at line 80
+Prove: true.
+Prover Qed returns Valid (34ms)
+
+------------------------------------------------------------
+
+Goal Assigns nothing in 'foo' (1/5):
+Prove: true.
+Prover Qed returns Valid
+
+------------------------------------------------------------
+
+Goal Assigns nothing in 'foo' (2/5):
+Effect at line 26
+Prove: true.
+Prover Qed returns Valid (17ms)
+
+------------------------------------------------------------
+
+Goal Assigns nothing in 'foo' (3/5):
+Call Result at line 26
+Prove: true.
+Prover Qed returns Valid (26ms)
+
+------------------------------------------------------------
+
+Goal Assigns nothing in 'foo' (4/5):
+Effect at line 80
+Prove: true.
+Prover Qed returns Valid (35ms)
+
+------------------------------------------------------------
+
+Goal Assigns nothing in 'foo' (5/5):
+Call Result at line 80
+Prove: true.
+Prover Qed returns Valid (29ms)
+
+------------------------------------------------------------
+
+
+WP stderr:

@@ -1,0 +1,39 @@
+{
+  "po_name": "typed_main_loop_invariant_2_preserved",
+  "po_status": "Timeout",
+  "goal_kind": "invariant_preservation",
+  "goal_header": "Goal Preservation of Invariant (file /tmp/baseline3_p28s3nm2/generated_specs/attempt_01.c, line 15):",
+  "assumptions": "Type: is_sint32(j) /\\ is_sint32(j - 1) /\\ is_sint32(11 - j) /\\\n      is_sint32(13 - j).\n  (* Goal *)\n  When: 7 <= j.\n  (* Then *)\n  Have: 6 <= j.",
+  "prove_statement": "false.",
+  "prover_output": "Prover Alt-Ergo 2.2.0 returns Failed\nunrecognized prover answer\nProver Z3 4.8.12 returns Timeout (Qed:11ms) (8s)",
+  "source_file": "/tmp/baseline3_p28s3nm2/generated_specs/attempt_01.c",
+  "source_line": 15,
+  "goal_text": "Goal Preservation of Invariant (file /tmp/baseline3_p28s3nm2/generated_specs/attempt_01.c, line 15):\nLet x = -j.\nAssume {\n  Type: is_sint32(j) /\\ is_sint32(j - 1) /\\ is_sint32(11 - j) /\\\n      is_sint32(13 - j).\n  (* Goal *)\n  When: 7 <= j.\n  (* Then *)\n  Have: 6 <= j.\n}\nProve: false.\nProver Alt-Ergo 2.2.0 returns Failed\nunrecognized prover answer\nProver Z3 4.8.12 returns Timeout (Qed:11ms) (8s)",
+  "source_visible_identifiers": [
+    "i",
+    "j"
+  ],
+  "forbidden_wp_internal_identifiers": [
+    "attempt_01"
+  ],
+  "marker_loop_contexts": [
+    {
+      "marker": "loop1_before",
+      "marker_line": 19,
+      "marker_raw_line": "    /* PROBE_HERE:loop1_before */",
+      "enclosing_loop_line": null,
+      "enclosing_loop": "",
+      "preceding_acsl_block": "",
+      "integration_hint": "Facts needed across loop iterations usually belong in the preceding loop invariant block."
+    },
+    {
+      "marker": "loop1_body_entry",
+      "marker_line": 21,
+      "marker_raw_line": "        /* PROBE_HERE:loop1_body_entry */",
+      "enclosing_loop_line": 20,
+      "enclosing_loop": "while (j >= i) {",
+      "preceding_acsl_block": "",
+      "integration_hint": "Facts needed across loop iterations usually belong in the preceding loop invariant block."
+    }
+  ]
+}

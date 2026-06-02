@@ -1,0 +1,1703 @@
+[1/133] baseline3 SyGuS/1.c
+[21:19:46] LLM start SyGuS_1.c_initial1
+[21:21:00] LLM done SyGuS_1.c_initial1, chars=457
+[21:21:11] LLM start baseline3_diagnose_typed_main_loop_invariant_2_preserved
+[21:21:17] LLM done baseline3_diagnose_typed_main_loop_invariant_2_preserved, chars=585
+[21:21:17] LLM start baseline3_wrong_spec_typed_main_loop_invariant_2_preserved
+[21:21:22] LLM done baseline3_wrong_spec_typed_main_loop_invariant_2_preserved, chars=570
+baseline3 repair wrong_spec_typed_main_loop_invariant_2_preserved: applied proposal #1 -> repair_01_01_wrong_spec_01_rewrite_annotation.c
+[21:21:33] LLM start baseline3_diagnose_typed_main_assert
+[21:21:40] LLM done baseline3_diagnose_typed_main_assert, chars=870
+[21:21:40] LLM start baseline3_wrong_spec_typed_main_assert
+[21:22:01] LLM done baseline3_wrong_spec_typed_main_assert, chars=745
+baseline3 repair wrong_spec_typed_main_assert: applied proposal #1 -> repair_02_01_wrong_spec_01_rewrite_annotation.c
+[21:22:11] LLM start baseline3_diagnose_typed_main_loop_invariant_2_preserved
+[21:22:16] LLM done baseline3_diagnose_typed_main_loop_invariant_2_preserved, chars=525
+[21:22:16] LLM start baseline3_wrong_spec_typed_main_loop_invariant_2_preserved
+[21:22:24] LLM done baseline3_wrong_spec_typed_main_loop_invariant_2_preserved, chars=583
+baseline3 repair wrong_spec_typed_main_loop_invariant_2_preserved: applied proposal #1 -> repair_03_01_wrong_spec_01_rewrite_annotation.c
+[21:22:35] LLM start baseline3_diagnose_typed_main_assert
+[21:22:41] LLM done baseline3_diagnose_typed_main_assert, chars=779
+[21:22:41] LLM start baseline3_wrong_spec_typed_main_assert
+[21:22:47] LLM done baseline3_wrong_spec_typed_main_assert, chars=722
+baseline3 repair wrong_spec_typed_main_assert: not applied (no_applicable_repair)
+  #1 skipped: generated code rejected: LLM removed or changed original ACSL assertions: ['x>=y']
+baseline3 repair fallback: trying missing_spec after wrong_spec failed
+[21:22:47] LLM start baseline3_missing_spec_typed_main_assert
+[21:22:53] LLM done baseline3_missing_spec_typed_main_assert, chars=653
+baseline3 repair missing_spec_typed_main_assert: applied proposal #1 -> repair_04_01_missing_spec_01_add_invariant.c
+[21:23:03] LLM start baseline3_diagnose_typed_main_loop_invariant_3_preserved
+[21:23:09] LLM done baseline3_diagnose_typed_main_loop_invariant_3_preserved, chars=644
+[21:23:09] LLM start baseline3_candidates_typed_main_loop_invariant_3_preserved
+[21:23:16] LLM done baseline3_candidates_typed_main_loop_invariant_3_preserved, chars=818
+[21:23:37] LLM start baseline3_missing_spec_typed_main_loop_invariant_3_preserved
+[21:23:44] LLM done baseline3_missing_spec_typed_main_loop_invariant_3_preserved, chars=788
+baseline3 repair missing_spec_typed_main_loop_invariant_3_preserved: applied proposal #1 -> repair_05_01_missing_spec_01_add_invariant.c
+[21:23:55] LLM start baseline3_diagnose_typed_main_loop_invariant_4_preserved
+[21:24:00] LLM done baseline3_diagnose_typed_main_loop_invariant_4_preserved, chars=652
+[21:24:00] LLM start baseline3_candidates_typed_main_loop_invariant_4_preserved
+[21:24:09] LLM done baseline3_candidates_typed_main_loop_invariant_4_preserved, chars=1208
+[21:24:40] LLM start baseline3_missing_spec_typed_main_loop_invariant_4_preserved
+[21:24:45] LLM done baseline3_missing_spec_typed_main_loop_invariant_4_preserved, chars=595
+baseline3 repair missing_spec_typed_main_loop_invariant_4_preserved: applied proposal #1 -> repair_06_01_missing_spec_01_add_invariant.c
+[21:24:56] LLM start baseline3_diagnose_typed_main_loop_invariant_4_preserved
+[21:25:21] LLM done baseline3_diagnose_typed_main_loop_invariant_4_preserved, chars=714
+[21:25:21] LLM start baseline3_wrong_spec_typed_main_loop_invariant_4_preserved
+[21:25:28] LLM done baseline3_wrong_spec_typed_main_loop_invariant_4_preserved, chars=590
+baseline3 repair wrong_spec_typed_main_loop_invariant_4_preserved: applied proposal #1 -> repair_07_01_wrong_spec_01_delete_annotation.c
+[21:25:38] LLM start SyGuS_1.c_initial2
+[21:25:42] LLM done SyGuS_1.c_initial2, chars=384
+[21:25:43] LLM start baseline3_invalid_repair
+[21:25:48] LLM done baseline3_invalid_repair, chars=528
+[21:25:49] LLM start SyGuS_1.c_initial3
+[21:33:32] LLM error SyGuS_1.c_initial3: APIConnectionError: Error communicating with OpenAI: HTTPSConnectionPool(host='api.apiplus.org', port=443): Max retries exceeded with url: /v1/chat/completions (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1007)')))
+[2/133] baseline3 SyGuS/2.c
+[21:33:32] LLM start SyGuS_2.c_initial1
+[21:42:34] LLM error SyGuS_2.c_initial1: APIConnectionError: Error communicating with OpenAI: HTTPSConnectionPool(host='api.apiplus.org', port=443): Max retries exceeded with url: /v1/chat/completions (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1007)')))
+[21:42:34] LLM start SyGuS_2.c_initial2
+[21:42:40] LLM done SyGuS_2.c_initial2, chars=437
+[21:42:50] LLM start baseline3_diagnose_typed_main_loop_invariant_2_preserved
+[21:42:56] LLM done baseline3_diagnose_typed_main_loop_invariant_2_preserved, chars=599
+[21:42:56] LLM start baseline3_wrong_spec_typed_main_loop_invariant_2_preserved
+[21:43:01] LLM done baseline3_wrong_spec_typed_main_loop_invariant_2_preserved, chars=631
+baseline3 repair wrong_spec_typed_main_loop_invariant_2_preserved: applied proposal #1 -> repair_01_01_wrong_spec_01_rewrite_annotation.c
+[21:43:12] LLM start baseline3_diagnose_typed_main_assert
+[21:43:18] LLM done baseline3_diagnose_typed_main_assert, chars=796
+[21:43:18] LLM start baseline3_wrong_spec_typed_main_assert
+[21:43:23] LLM done baseline3_wrong_spec_typed_main_assert, chars=559
+baseline3 repair wrong_spec_typed_main_assert: not applied (no_applicable_repair)
+  #1 skipped: generated code rejected: LLM removed or changed original ACSL assertions: ['x>=y']
+baseline3 repair fallback: trying missing_spec after wrong_spec failed
+[21:43:23] LLM start baseline3_missing_spec_typed_main_assert
+[21:43:29] LLM done baseline3_missing_spec_typed_main_assert, chars=657
+baseline3 repair missing_spec_typed_main_assert: applied proposal #1 -> repair_02_01_missing_spec_01_add_invariant.c
+[3/133] baseline3 SyGuS/3.c
+[21:43:32] LLM start SyGuS_3.c_initial1
+[21:43:37] LLM done SyGuS_3.c_initial1, chars=452
+[21:43:47] LLM start baseline3_diagnose_typed_foo_loop_invariant_2_established
+[21:43:52] LLM done baseline3_diagnose_typed_foo_loop_invariant_2_established, chars=462
+[21:43:52] LLM start baseline3_wrong_spec_typed_foo_loop_invariant_2_established
+[21:43:57] LLM done baseline3_wrong_spec_typed_foo_loop_invariant_2_established, chars=499
+baseline3 repair wrong_spec_typed_foo_loop_invariant_2_established: applied proposal #1 -> repair_01_01_wrong_spec_01_delete_annotation.c
+[21:44:07] LLM start baseline3_diagnose_typed_foo_assert
+[21:44:12] LLM done baseline3_diagnose_typed_foo_assert, chars=492
+[21:44:12] LLM start baseline3_wrong_spec_typed_foo_assert
+[21:44:16] LLM done baseline3_wrong_spec_typed_foo_assert, chars=455
+baseline3 repair wrong_spec_typed_foo_assert: not applied (no_applicable_repair)
+  #1 skipped: generated code rejected: LLM removed or changed original ACSL assertions: ['z>=y']
+baseline3 repair fallback: trying missing_spec after wrong_spec failed
+[21:44:16] LLM start baseline3_missing_spec_typed_foo_assert
+[21:44:22] LLM done baseline3_missing_spec_typed_foo_assert, chars=568
+baseline3 repair missing_spec_typed_foo_assert: applied proposal #1 -> repair_02_01_missing_spec_01_add_invariant.c
+[21:44:32] LLM start baseline3_diagnose_typed_foo_loop_invariant_2_established
+[21:44:37] LLM done baseline3_diagnose_typed_foo_loop_invariant_2_established, chars=563
+[21:44:37] LLM start baseline3_wrong_spec_typed_foo_loop_invariant_2_established
+[21:44:44] LLM done baseline3_wrong_spec_typed_foo_loop_invariant_2_established, chars=626
+baseline3 repair wrong_spec_typed_foo_loop_invariant_2_established: applied proposal #1 -> repair_03_01_wrong_spec_01_rewrite_annotation.c
+[21:44:54] LLM start baseline3_diagnose_typed_foo_loop_invariant_2_established
+[21:44:59] LLM done baseline3_diagnose_typed_foo_loop_invariant_2_established, chars=520
+[21:44:59] LLM start baseline3_wrong_spec_typed_foo_loop_invariant_2_established
+[21:45:05] LLM done baseline3_wrong_spec_typed_foo_loop_invariant_2_established, chars=628
+baseline3 repair wrong_spec_typed_foo_loop_invariant_2_established: applied proposal #1 -> repair_04_01_wrong_spec_01_rewrite_annotation.c
+[4/133] baseline3 SyGuS/4.c
+[21:45:07] LLM start SyGuS_4.c_initial1
+[21:45:12] LLM done SyGuS_4.c_initial1, chars=449
+[21:45:23] LLM start baseline3_diagnose_typed_foo_loop_invariant_2_established
+[21:45:27] LLM done baseline3_diagnose_typed_foo_loop_invariant_2_established, chars=438
+[21:45:27] LLM start baseline3_wrong_spec_typed_foo_loop_invariant_2_established
+[21:45:32] LLM done baseline3_wrong_spec_typed_foo_loop_invariant_2_established, chars=560
+baseline3 repair wrong_spec_typed_foo_loop_invariant_2_established: applied proposal #1 -> repair_01_01_wrong_spec_01_rewrite_annotation.c
+[5/133] baseline3 SyGuS/5.c
+[21:45:35] LLM start SyGuS_5.c_initial1
+[21:45:40] LLM done SyGuS_5.c_initial1, chars=504
+[21:45:51] LLM start baseline3_diagnose_typed_main_loop_invariant_2_established
+[21:45:57] LLM done baseline3_diagnose_typed_main_loop_invariant_2_established, chars=887
+[21:45:57] LLM start baseline3_wrong_spec_typed_main_loop_invariant_2_established
+[21:46:02] LLM done baseline3_wrong_spec_typed_main_loop_invariant_2_established, chars=461
+baseline3 repair wrong_spec_typed_main_loop_invariant_2_established: applied proposal #1 -> repair_01_01_wrong_spec_01_delete_annotation.c
+[21:46:12] LLM start baseline3_diagnose_typed_main_loop_invariant_2_established
+[21:46:19] LLM done baseline3_diagnose_typed_main_loop_invariant_2_established, chars=805
+[21:46:19] LLM start baseline3_wrong_spec_typed_main_loop_invariant_2_established
+[21:46:23] LLM done baseline3_wrong_spec_typed_main_loop_invariant_2_established, chars=514
+baseline3 repair wrong_spec_typed_main_loop_invariant_2_established: applied proposal #1 -> repair_02_01_wrong_spec_01_rewrite_annotation.c
+[21:46:34] LLM start baseline3_diagnose_typed_main_assert
+[21:46:39] LLM done baseline3_diagnose_typed_main_assert, chars=605
+[21:46:39] LLM start baseline3_wrong_spec_typed_main_assert
+[21:46:44] LLM done baseline3_wrong_spec_typed_main_assert, chars=609
+baseline3 repair wrong_spec_typed_main_assert: not applied (no_applicable_repair)
+  #1 skipped: generated code rejected: LLM removed or changed original ACSL assertions: ['z>=y']
+baseline3 repair fallback: trying missing_spec after wrong_spec failed
+[21:46:44] LLM start baseline3_missing_spec_typed_main_assert
+[21:46:50] LLM done baseline3_missing_spec_typed_main_assert, chars=645
+baseline3 repair missing_spec_typed_main_assert: applied proposal #1 -> repair_03_01_missing_spec_01_add_invariant.c
+[21:47:00] LLM start baseline3_diagnose_typed_main_loop_invariant_2_established
+[21:47:05] LLM done baseline3_diagnose_typed_main_loop_invariant_2_established, chars=489
+[21:47:05] LLM start baseline3_wrong_spec_typed_main_loop_invariant_2_established
+[21:47:10] LLM done baseline3_wrong_spec_typed_main_loop_invariant_2_established, chars=503
+baseline3 repair wrong_spec_typed_main_loop_invariant_2_established: applied proposal #1 -> repair_04_01_wrong_spec_01_rewrite_annotation.c
+[21:47:20] LLM start baseline3_diagnose_typed_main_assert
+[21:47:25] LLM done baseline3_diagnose_typed_main_assert, chars=558
+[21:47:25] LLM start baseline3_wrong_spec_typed_main_assert
+[21:47:34] LLM done baseline3_wrong_spec_typed_main_assert, chars=520
+baseline3 repair wrong_spec_typed_main_assert: not applied (no_applicable_repair)
+  #1 skipped: generated code rejected: LLM removed or changed original ACSL assertions: ['z>=y']
+baseline3 repair fallback: trying missing_spec after wrong_spec failed
+[21:47:34] LLM start baseline3_missing_spec_typed_main_assert
+[21:47:41] LLM done baseline3_missing_spec_typed_main_assert, chars=908
+baseline3 repair missing_spec_typed_main_assert: applied proposal #1 -> repair_05_01_missing_spec_01_add_invariant.c
+[21:47:51] LLM start baseline3_diagnose_typed_main_loop_invariant_2_established
+[21:48:01] LLM done baseline3_diagnose_typed_main_loop_invariant_2_established, chars=489
+[21:48:01] LLM start baseline3_wrong_spec_typed_main_loop_invariant_2_established
+[21:48:07] LLM done baseline3_wrong_spec_typed_main_loop_invariant_2_established, chars=491
+baseline3 repair wrong_spec_typed_main_loop_invariant_2_established: applied proposal #1 -> repair_06_01_wrong_spec_01_rewrite_annotation.c
+[21:48:18] LLM start baseline3_diagnose_typed_main_assert
+[21:48:23] LLM done baseline3_diagnose_typed_main_assert, chars=694
+[21:48:23] LLM start baseline3_wrong_spec_typed_main_assert
+[21:48:29] LLM done baseline3_wrong_spec_typed_main_assert, chars=632
+baseline3 repair wrong_spec_typed_main_assert: not applied (no_applicable_repair)
+  #1 skipped: generated code rejected: LLM removed or changed original ACSL assertions: ['z>=y']
+baseline3 repair fallback: trying missing_spec after wrong_spec failed
+[21:48:29] LLM start baseline3_missing_spec_typed_main_assert
+[21:48:36] LLM done baseline3_missing_spec_typed_main_assert, chars=692
+baseline3 repair missing_spec_typed_main_assert: applied proposal #1 -> repair_07_01_missing_spec_01_add_invariant.c
+[21:48:46] LLM start SyGuS_5.c_initial2
+[21:48:53] LLM done SyGuS_5.c_initial2, chars=506
+[21:49:03] LLM start baseline3_diagnose_typed_main_loop_invariant_2_established
+[21:49:16] LLM done baseline3_diagnose_typed_main_loop_invariant_2_established, chars=494
+[21:49:16] LLM start baseline3_wrong_spec_typed_main_loop_invariant_2_established
+[21:49:25] LLM done baseline3_wrong_spec_typed_main_loop_invariant_2_established, chars=1123
+baseline3 repair wrong_spec_typed_main_loop_invariant_2_established: applied proposal #1 -> repair_01_01_wrong_spec_01_rewrite_annotation.c
+[21:49:35] LLM start baseline3_diagnose_typed_main_loop_invariant_2_established
+[21:49:42] LLM done baseline3_diagnose_typed_main_loop_invariant_2_established, chars=619
+[21:49:42] LLM start baseline3_wrong_spec_typed_main_loop_invariant_2_established
+[21:49:47] LLM done baseline3_wrong_spec_typed_main_loop_invariant_2_established, chars=620
+baseline3 repair wrong_spec_typed_main_loop_invariant_2_established: applied proposal #1 -> repair_02_01_wrong_spec_01_rewrite_annotation.c
+[21:49:57] LLM start baseline3_diagnose_typed_main_assert
+[21:50:03] LLM done baseline3_diagnose_typed_main_assert, chars=613
+[21:50:03] LLM start baseline3_wrong_spec_typed_main_assert
+[21:50:07] LLM done baseline3_wrong_spec_typed_main_assert, chars=436
+baseline3 repair wrong_spec_typed_main_assert: not applied (no_applicable_repair)
+  #1 skipped: generated code rejected: LLM removed or changed original ACSL assertions: ['z>=y']
+baseline3 repair fallback: trying missing_spec after wrong_spec failed
+[21:50:07] LLM start baseline3_missing_spec_typed_main_assert
+[21:50:12] LLM done baseline3_missing_spec_typed_main_assert, chars=513
+baseline3 repair missing_spec_typed_main_assert: applied proposal #1 -> repair_03_01_missing_spec_01_add_invariant.c
+[21:50:23] LLM start baseline3_diagnose_typed_main_loop_invariant_3_established
+[21:50:29] LLM done baseline3_diagnose_typed_main_loop_invariant_3_established, chars=873
+[21:50:29] LLM start baseline3_wrong_spec_typed_main_loop_invariant_3_established
+[21:50:33] LLM done baseline3_wrong_spec_typed_main_loop_invariant_3_established, chars=485
+baseline3 repair wrong_spec_typed_main_loop_invariant_3_established: applied proposal #1 -> repair_04_01_wrong_spec_01_delete_annotation.c
+[21:50:44] LLM start baseline3_diagnose_typed_main_assert
+[21:50:50] LLM done baseline3_diagnose_typed_main_assert, chars=651
+[21:50:50] LLM start baseline3_wrong_spec_typed_main_assert
+[21:50:55] LLM done baseline3_wrong_spec_typed_main_assert, chars=538
+baseline3 repair wrong_spec_typed_main_assert: not applied (no_applicable_repair)
+  #1 skipped: generated code rejected: LLM removed or changed original ACSL assertions: ['z>=y']
+baseline3 repair fallback: trying missing_spec after wrong_spec failed
+[21:50:55] LLM start baseline3_missing_spec_typed_main_assert
+[21:51:01] LLM done baseline3_missing_spec_typed_main_assert, chars=701
+baseline3 repair missing_spec_typed_main_assert: applied proposal #1 -> repair_05_01_missing_spec_01_add_invariant.c
+[21:51:11] LLM start baseline3_diagnose_typed_main_loop_invariant_2_established
+[21:51:16] LLM done baseline3_diagnose_typed_main_loop_invariant_2_established, chars=440
+[21:51:16] LLM start baseline3_wrong_spec_typed_main_loop_invariant_2_established
+[21:51:20] LLM done baseline3_wrong_spec_typed_main_loop_invariant_2_established, chars=491
+baseline3 repair wrong_spec_typed_main_loop_invariant_2_established: applied proposal #1 -> repair_06_01_wrong_spec_01_rewrite_annotation.c
+[21:51:30] LLM start baseline3_diagnose_typed_main_assert
+[21:51:35] LLM done baseline3_diagnose_typed_main_assert, chars=571
+[21:51:35] LLM start baseline3_wrong_spec_typed_main_assert
+[21:51:40] LLM done baseline3_wrong_spec_typed_main_assert, chars=540
+baseline3 repair wrong_spec_typed_main_assert: not applied (no_applicable_repair)
+  #1 skipped: generated code rejected: LLM removed or changed original ACSL assertions: ['z>=y']
+baseline3 repair fallback: trying missing_spec after wrong_spec failed
+[21:51:40] LLM start baseline3_missing_spec_typed_main_assert
+[21:51:56] LLM done baseline3_missing_spec_typed_main_assert, chars=828
+baseline3 repair missing_spec_typed_main_assert: applied proposal #1 -> repair_07_01_missing_spec_01_add_invariant.c
+[21:52:06] LLM start SyGuS_5.c_initial3
+[21:52:12] LLM done SyGuS_5.c_initial3, chars=455
+[21:52:23] LLM start baseline3_diagnose_typed_main_loop_invariant_2_established
+[21:52:27] LLM done baseline3_diagnose_typed_main_loop_invariant_2_established, chars=427
+[21:52:27] LLM start baseline3_wrong_spec_typed_main_loop_invariant_2_established
+[21:52:32] LLM done baseline3_wrong_spec_typed_main_loop_invariant_2_established, chars=520
+baseline3 repair wrong_spec_typed_main_loop_invariant_2_established: applied proposal #1 -> repair_01_01_wrong_spec_01_rewrite_annotation.c
+[21:52:38] LLM start baseline3_diagnose_typed_main_loop_invariant_2_established
+[21:52:45] LLM done baseline3_diagnose_typed_main_loop_invariant_2_established, chars=860
+[21:52:45] LLM start baseline3_wrong_spec_typed_main_loop_invariant_2_established
+[21:52:49] LLM done baseline3_wrong_spec_typed_main_loop_invariant_2_established, chars=516
+baseline3 repair wrong_spec_typed_main_loop_invariant_2_established: applied proposal #1 -> repair_02_01_wrong_spec_01_rewrite_annotation.c
+[21:53:00] LLM start baseline3_diagnose_typed_main_assert
+[21:53:05] LLM done baseline3_diagnose_typed_main_assert, chars=658
+[21:53:05] LLM start baseline3_wrong_spec_typed_main_assert
+[21:53:10] LLM done baseline3_wrong_spec_typed_main_assert, chars=498
+baseline3 repair wrong_spec_typed_main_assert: not applied (no_applicable_repair)
+  #1 skipped: generated code rejected: LLM removed or changed original ACSL assertions: ['z>=y']
+baseline3 repair fallback: trying missing_spec after wrong_spec failed
+[21:53:10] LLM start baseline3_missing_spec_typed_main_assert
+[21:53:15] LLM done baseline3_missing_spec_typed_main_assert, chars=682
+baseline3 repair missing_spec_typed_main_assert: applied proposal #1 -> repair_03_01_missing_spec_01_rewrite_assigns.c
+[21:53:26] LLM start baseline3_diagnose_typed_main_assert
+[21:53:31] LLM done baseline3_diagnose_typed_main_assert, chars=617
+[21:53:31] LLM start baseline3_wrong_spec_typed_main_assert
+[21:53:35] LLM done baseline3_wrong_spec_typed_main_assert, chars=501
+baseline3 repair wrong_spec_typed_main_assert: not applied (no_applicable_repair)
+  #1 skipped: generated code rejected: LLM removed or changed original ACSL assertions: ['z>=y']
+baseline3 repair fallback: trying missing_spec after wrong_spec failed
+[21:53:35] LLM start baseline3_missing_spec_typed_main_assert
+[21:53:42] LLM done baseline3_missing_spec_typed_main_assert, chars=635
+baseline3 repair missing_spec_typed_main_assert: applied proposal #1 -> repair_04_01_missing_spec_01_add_invariant.c
+[21:53:53] LLM start baseline3_diagnose_typed_main_loop_invariant_2_established
+[21:53:58] LLM done baseline3_diagnose_typed_main_loop_invariant_2_established, chars=697
+[21:53:58] LLM start baseline3_wrong_spec_typed_main_loop_invariant_2_established
+[21:54:03] LLM done baseline3_wrong_spec_typed_main_loop_invariant_2_established, chars=486
+baseline3 repair wrong_spec_typed_main_loop_invariant_2_established: applied proposal #1 -> repair_05_01_wrong_spec_01_rewrite_annotation.c
+[21:54:13] LLM start baseline3_diagnose_typed_main_assert
+[21:54:19] LLM done baseline3_diagnose_typed_main_assert, chars=633
+[21:54:19] LLM start baseline3_wrong_spec_typed_main_assert
+[21:54:24] LLM done baseline3_wrong_spec_typed_main_assert, chars=583
+baseline3 repair wrong_spec_typed_main_assert: not applied (no_applicable_repair)
+  #1 skipped: generated code rejected: LLM removed or changed original ACSL assertions: ['z>=y']
+baseline3 repair fallback: trying missing_spec after wrong_spec failed
+[21:54:24] LLM start baseline3_missing_spec_typed_main_assert
+[21:54:29] LLM done baseline3_missing_spec_typed_main_assert, chars=547
+baseline3 repair missing_spec_typed_main_assert: applied proposal #1 -> repair_06_01_missing_spec_01_add_invariant.c
+[21:54:39] LLM start baseline3_diagnose_typed_main_loop_invariant_2_established
+[21:54:46] LLM done baseline3_diagnose_typed_main_loop_invariant_2_established, chars=836
+[21:54:46] LLM start baseline3_wrong_spec_typed_main_loop_invariant_2_established
+[21:54:50] LLM done baseline3_wrong_spec_typed_main_loop_invariant_2_established, chars=490
+baseline3 repair wrong_spec_typed_main_loop_invariant_2_established: applied proposal #1 -> repair_07_01_wrong_spec_01_delete_annotation.c
+[6/133] baseline3 SyGuS/6.c
+[21:55:01] LLM start SyGuS_6.c_initial1
+[21:55:06] LLM done SyGuS_6.c_initial1, chars=494
+[21:55:16] LLM start baseline3_diagnose_typed_main_loop_invariant_2_established
+[21:55:22] LLM done baseline3_diagnose_typed_main_loop_invariant_2_established, chars=454
+[21:55:22] LLM start baseline3_wrong_spec_typed_main_loop_invariant_2_established
+[21:55:33] LLM done baseline3_wrong_spec_typed_main_loop_invariant_2_established, chars=775
+baseline3 repair wrong_spec_typed_main_loop_invariant_2_established: not applied (no_applicable_repair)
+  #1 skipped: generated code rejected: LLM changed executable C code; only ACSL/comments are allowed
+baseline3 repair fallback: trying missing_spec after wrong_spec failed
+[21:55:33] LLM start baseline3_missing_spec_typed_main_loop_invariant_2_established
+[21:55:40] LLM done baseline3_missing_spec_typed_main_loop_invariant_2_established, chars=731
+baseline3 repair missing_spec_typed_main_loop_invariant_2_established: applied proposal #1 -> repair_01_01_missing_spec_01_add_invariant.c
+[21:55:50] LLM start baseline3_diagnose_typed_main_loop_invariant_2_established
+[21:55:58] LLM done baseline3_diagnose_typed_main_loop_invariant_2_established, chars=774
+[21:55:58] LLM start baseline3_wrong_spec_typed_main_loop_invariant_2_established
+[21:56:02] LLM done baseline3_wrong_spec_typed_main_loop_invariant_2_established, chars=445
+baseline3 repair wrong_spec_typed_main_loop_invariant_2_established: applied proposal #1 -> repair_02_01_wrong_spec_01_rewrite_annotation.c
+[21:56:13] LLM start baseline3_diagnose_typed_main_loop_invariant_preserved
+[21:56:17] LLM done baseline3_diagnose_typed_main_loop_invariant_preserved, chars=480
+[21:56:17] LLM start baseline3_wrong_spec_typed_main_loop_invariant_preserved
+[21:56:22] LLM done baseline3_wrong_spec_typed_main_loop_invariant_preserved, chars=461
+baseline3 repair wrong_spec_typed_main_loop_invariant_preserved: applied proposal #1 -> repair_03_01_wrong_spec_01_rewrite_annotation.c
+[21:56:32] LLM start baseline3_diagnose_typed_main_assert
+[21:56:39] LLM done baseline3_diagnose_typed_main_assert, chars=725
+[21:56:39] LLM start baseline3_wrong_spec_typed_main_assert
+[21:56:48] LLM done baseline3_wrong_spec_typed_main_assert, chars=756
+baseline3 repair wrong_spec_typed_main_assert: applied proposal #1 -> repair_04_01_wrong_spec_01_rewrite_annotation.c
+[21:56:59] LLM start baseline3_diagnose_typed_main_loop_invariant_3_established
+[21:57:03] LLM done baseline3_diagnose_typed_main_loop_invariant_3_established, chars=485
+[21:57:03] LLM start baseline3_wrong_spec_typed_main_loop_invariant_3_established
+[21:57:08] LLM done baseline3_wrong_spec_typed_main_loop_invariant_3_established, chars=586
+baseline3 repair wrong_spec_typed_main_loop_invariant_3_established: applied proposal #1 -> repair_05_01_wrong_spec_01_rewrite_annotation.c
+[7/133] baseline3 SyGuS/7.c
+[21:57:11] LLM start SyGuS_7.c_initial1
+[21:57:18] LLM done SyGuS_7.c_initial1, chars=594
+[21:57:19] LLM start baseline3_invalid_repair
+[21:57:23] LLM done baseline3_invalid_repair, chars=348
+[21:57:23] LLM start SyGuS_7.c_initial2
+[21:57:29] LLM done SyGuS_7.c_initial2, chars=488
+[21:57:30] LLM start baseline3_invalid_repair
+[21:57:34] LLM done baseline3_invalid_repair, chars=428
+[21:57:35] LLM start baseline3_invalid_repair
+[21:57:40] LLM done baseline3_invalid_repair, chars=445
+[21:57:41] LLM start baseline3_invalid_repair
+[21:57:45] LLM done baseline3_invalid_repair, chars=391
+[21:57:46] LLM start SyGuS_7.c_initial3
+[21:57:52] LLM done SyGuS_7.c_initial3, chars=480
+[21:57:53] LLM start baseline3_invalid_repair
+[21:57:57] LLM done baseline3_invalid_repair, chars=449
+[8/133] baseline3 SyGuS/8.c
+[21:57:57] LLM start SyGuS_8.c_initial1
+[21:58:29] LLM done SyGuS_8.c_initial1, chars=479
+[21:58:40] LLM start baseline3_diagnose_typed_foo_assert
+[21:58:47] LLM done baseline3_diagnose_typed_foo_assert, chars=557
+[21:58:47] LLM start baseline3_wrong_spec_typed_foo_assert
+[21:58:54] LLM done baseline3_wrong_spec_typed_foo_assert, chars=526
+baseline3 repair wrong_spec_typed_foo_assert: not applied (no_applicable_repair)
+  #1 skipped: generated code rejected: LLM removed or changed original ACSL assertions: ['x!=20']
+baseline3 repair fallback: trying missing_spec after wrong_spec failed
+[21:58:54] LLM start baseline3_missing_spec_typed_foo_assert
+[21:59:01] LLM done baseline3_missing_spec_typed_foo_assert, chars=717
+baseline3 repair missing_spec_typed_foo_assert: applied proposal #1 -> repair_01_01_missing_spec_01_add_invariant.c
+[21:59:11] LLM start baseline3_diagnose_typed_foo_loop_invariant_3_established
+[21:59:18] LLM done baseline3_diagnose_typed_foo_loop_invariant_3_established, chars=819
+[21:59:18] LLM start baseline3_wrong_spec_typed_foo_loop_invariant_3_established
+[21:59:23] LLM done baseline3_wrong_spec_typed_foo_loop_invariant_3_established, chars=500
+baseline3 repair wrong_spec_typed_foo_loop_invariant_3_established: applied proposal #1 -> repair_02_01_wrong_spec_01_delete_annotation.c
+[21:59:33] LLM start baseline3_diagnose_typed_foo_assert
+[21:59:39] LLM done baseline3_diagnose_typed_foo_assert, chars=723
+[21:59:39] LLM start baseline3_wrong_spec_typed_foo_assert
+[21:59:45] LLM done baseline3_wrong_spec_typed_foo_assert, chars=575
+baseline3 repair wrong_spec_typed_foo_assert: not applied (no_applicable_repair)
+  #1 skipped: refuses to delete original target assertion
+baseline3 repair fallback: trying missing_spec after wrong_spec failed
+[21:59:45] LLM start baseline3_missing_spec_typed_foo_assert
+[21:59:52] LLM done baseline3_missing_spec_typed_foo_assert, chars=883
+baseline3 repair missing_spec_typed_foo_assert: applied proposal #1 -> repair_03_01_missing_spec_01_add_invariant.c
+[22:00:02] LLM start baseline3_diagnose_typed_foo_assert
+[22:00:08] LLM done baseline3_diagnose_typed_foo_assert, chars=702
+[22:00:08] LLM start baseline3_candidates_typed_foo_assert
+[22:00:16] LLM done baseline3_candidates_typed_foo_assert, chars=1116
+[22:00:16] LLM start baseline3_missing_spec_typed_foo_assert
+[22:00:22] LLM done baseline3_missing_spec_typed_foo_assert, chars=657
+baseline3 repair missing_spec_typed_foo_assert: applied proposal #1 -> repair_04_01_missing_spec_01_add_invariant.c
+[22:00:33] LLM start baseline3_diagnose_typed_foo_loop_invariant_3_preserved
+[22:00:38] LLM done baseline3_diagnose_typed_foo_loop_invariant_3_preserved, chars=499
+[22:00:38] LLM start baseline3_wrong_spec_typed_foo_loop_invariant_3_preserved
+[22:00:47] LLM done baseline3_wrong_spec_typed_foo_loop_invariant_3_preserved, chars=657
+baseline3 repair wrong_spec_typed_foo_loop_invariant_3_preserved: applied proposal #1 -> repair_05_01_wrong_spec_01_rewrite_annotation.c
+[22:00:58] LLM start baseline3_diagnose_typed_foo_loop_invariant_3_established
+[22:01:03] LLM done baseline3_diagnose_typed_foo_loop_invariant_3_established, chars=505
+[22:01:03] LLM start baseline3_wrong_spec_typed_foo_loop_invariant_3_established
+[22:01:10] LLM done baseline3_wrong_spec_typed_foo_loop_invariant_3_established, chars=507
+baseline3 repair wrong_spec_typed_foo_loop_invariant_3_established: applied proposal #1 -> repair_06_01_wrong_spec_01_rewrite_annotation.c
+[22:01:21] LLM start baseline3_diagnose_typed_foo_loop_invariant_3_preserved
+[22:01:26] LLM done baseline3_diagnose_typed_foo_loop_invariant_3_preserved, chars=558
+[22:01:26] LLM start baseline3_wrong_spec_typed_foo_loop_invariant_3_preserved
+[22:01:34] LLM done baseline3_wrong_spec_typed_foo_loop_invariant_3_preserved, chars=620
+baseline3 repair wrong_spec_typed_foo_loop_invariant_3_preserved: applied proposal #1 -> repair_07_01_wrong_spec_01_rewrite_annotation.c
+[9/133] baseline3 SyGuS/9.c
+[22:01:36] LLM start SyGuS_9.c_initial1
+[22:01:42] LLM done SyGuS_9.c_initial1, chars=463
+[22:01:52] LLM start baseline3_diagnose_typed_foo_loop_invariant_2_preserved
+[22:02:01] LLM done baseline3_diagnose_typed_foo_loop_invariant_2_preserved, chars=606
+[22:02:01] LLM start baseline3_wrong_spec_typed_foo_loop_invariant_2_preserved
+[22:02:07] LLM done baseline3_wrong_spec_typed_foo_loop_invariant_2_preserved, chars=586
+baseline3 repair wrong_spec_typed_foo_loop_invariant_2_preserved: applied proposal #1 -> repair_01_01_wrong_spec_01_rewrite_annotation.c
+[22:02:17] LLM start baseline3_diagnose_typed_foo_assert
+[22:02:24] LLM done baseline3_diagnose_typed_foo_assert, chars=638
+[22:02:24] LLM start baseline3_wrong_spec_typed_foo_assert
+[22:02:29] LLM done baseline3_wrong_spec_typed_foo_assert, chars=488
+baseline3 repair wrong_spec_typed_foo_assert: not applied (no_applicable_repair)
+  #1 skipped: generated code rejected: LLM removed or changed original ACSL assertions: ['y!=0']
+baseline3 repair fallback: trying missing_spec after wrong_spec failed
+[22:02:29] LLM start baseline3_missing_spec_typed_foo_assert
+[22:02:34] LLM done baseline3_missing_spec_typed_foo_assert, chars=583
+baseline3 repair missing_spec_typed_foo_assert: applied proposal #1 -> repair_02_01_missing_spec_01_add_invariant.c
+[10/133] baseline3 SyGuS/10.c
+[22:02:35] LLM start SyGuS_10.c_initial1
+[22:02:42] LLM done SyGuS_10.c_initial1, chars=578
+[22:02:52] LLM start baseline3_diagnose_typed_foo_loop_invariant_2_preserved
+[22:03:01] LLM done baseline3_diagnose_typed_foo_loop_invariant_2_preserved, chars=902
+[22:03:01] LLM start baseline3_wrong_spec_typed_foo_loop_invariant_2_preserved
+[22:03:08] LLM done baseline3_wrong_spec_typed_foo_loop_invariant_2_preserved, chars=1019
+baseline3 repair wrong_spec_typed_foo_loop_invariant_2_preserved: applied proposal #1 -> repair_01_01_wrong_spec_01_rewrite_annotation.c
+[22:03:19] LLM start baseline3_diagnose_typed_foo_loop_invariant_2_preserved
+[22:03:24] LLM done baseline3_diagnose_typed_foo_loop_invariant_2_preserved, chars=612
+[22:03:24] LLM start baseline3_wrong_spec_typed_foo_loop_invariant_2_preserved
+[22:03:31] LLM done baseline3_wrong_spec_typed_foo_loop_invariant_2_preserved, chars=560
+baseline3 repair wrong_spec_typed_foo_loop_invariant_2_preserved: applied proposal #1 -> repair_02_01_wrong_spec_01_rewrite_annotation.c
+[11/133] baseline3 SyGuS/11.c
+[22:03:34] LLM start SyGuS_11.c_initial1
+[22:03:39] LLM done SyGuS_11.c_initial1, chars=458
+[22:03:40] LLM start baseline3_invalid_repair
+[22:03:45] LLM done baseline3_invalid_repair, chars=392
+[22:03:56] LLM start baseline3_diagnose_typed_foo_assert
+[22:04:02] LLM done baseline3_diagnose_typed_foo_assert, chars=625
+[22:04:02] LLM start baseline3_wrong_spec_typed_foo_assert
+[22:04:08] LLM done baseline3_wrong_spec_typed_foo_assert, chars=536
+baseline3 repair wrong_spec_typed_foo_assert: not applied (no_applicable_repair)
+  #1 skipped: generated code rejected: LLM removed or changed original ACSL assertions: ['y!=0']
+baseline3 repair fallback: trying missing_spec after wrong_spec failed
+[22:04:08] LLM start baseline3_missing_spec_typed_foo_assert
+[22:04:15] LLM done baseline3_missing_spec_typed_foo_assert, chars=647
+baseline3 repair missing_spec_typed_foo_assert: applied proposal #1 -> repair_02_01_missing_spec_01_add_invariant.c
+[12/133] baseline3 SyGuS/12.c
+[22:04:18] LLM start SyGuS_12.c_initial1
+[22:04:26] LLM done SyGuS_12.c_initial1, chars=789
+[22:04:27] LLM start baseline3_invalid_repair
+[22:04:32] LLM done baseline3_invalid_repair, chars=435
+[22:04:32] LLM start SyGuS_12.c_initial2
+[22:04:41] LLM done SyGuS_12.c_initial2, chars=852
+[22:04:42] LLM start baseline3_invalid_repair
+[22:04:47] LLM done baseline3_invalid_repair, chars=437
+[22:04:47] LLM start SyGuS_12.c_initial3
+[22:04:54] LLM done SyGuS_12.c_initial3, chars=714
+[22:04:55] LLM start baseline3_invalid_repair
+[22:04:59] LLM done baseline3_invalid_repair, chars=347
+[13/133] baseline3 SyGuS/13.c
+[22:04:59] LLM start SyGuS_13.c_initial1
+[22:05:06] LLM done SyGuS_13.c_initial1, chars=576
+[22:05:17] LLM start baseline3_diagnose_typed_foo_loop_invariant_2_preserved
+[22:05:23] LLM done baseline3_diagnose_typed_foo_loop_invariant_2_preserved, chars=570
+[22:05:23] LLM start baseline3_wrong_spec_typed_foo_loop_invariant_2_preserved
+[22:05:30] LLM done baseline3_wrong_spec_typed_foo_loop_invariant_2_preserved, chars=850
+baseline3 repair wrong_spec_typed_foo_loop_invariant_2_preserved: applied proposal #1 -> repair_01_01_wrong_spec_01_rewrite_annotation.c
+[22:05:41] LLM start baseline3_diagnose_typed_foo_loop_invariant_3_preserved
+[22:05:47] LLM done baseline3_diagnose_typed_foo_loop_invariant_3_preserved, chars=851
+[22:05:47] LLM start baseline3_wrong_spec_typed_foo_loop_invariant_3_preserved
+[22:05:52] LLM done baseline3_wrong_spec_typed_foo_loop_invariant_3_preserved, chars=653
+baseline3 repair wrong_spec_typed_foo_loop_invariant_3_preserved: applied proposal #1 -> repair_02_01_wrong_spec_01_rewrite_annotation.c
+[22:06:03] LLM start baseline3_diagnose_typed_foo_loop_invariant_3_preserved
+[22:06:08] LLM done baseline3_diagnose_typed_foo_loop_invariant_3_preserved, chars=575
+[22:06:08] LLM start baseline3_candidates_typed_foo_loop_invariant_3_preserved
+[22:06:14] LLM done baseline3_candidates_typed_foo_loop_invariant_3_preserved, chars=543
+[22:06:14] LLM start baseline3_missing_spec_typed_foo_loop_invariant_3_preserved
+[22:06:17] LLM done baseline3_missing_spec_typed_foo_loop_invariant_3_preserved, chars=2
+baseline3 repair missing_spec_typed_foo_loop_invariant_3_preserved: not applied (no_proposals)
+baseline3 repair fallback: trying wrong_spec after missing_spec failed
+[22:06:17] LLM start baseline3_wrong_spec_typed_foo_loop_invariant_3_preserved
+[22:06:22] LLM done baseline3_wrong_spec_typed_foo_loop_invariant_3_preserved, chars=569
+baseline3 repair wrong_spec_typed_foo_loop_invariant_3_preserved: not applied (no_applicable_repair)
+  #1 skipped: action='regenerate', missing exact original_text or regenerate
+[22:06:22] LLM start SyGuS_13.c_initial2
+[22:06:30] LLM done SyGuS_13.c_initial2, chars=485
+[14/133] baseline3 SyGuS/14.c
+[22:06:33] LLM start SyGuS_14.c_initial1
+[22:06:38] LLM done SyGuS_14.c_initial1, chars=461
+[15/133] baseline3 SyGuS/15.c
+[22:06:41] LLM start SyGuS_15.c_initial1
+[22:06:46] LLM done SyGuS_15.c_initial1, chars=544
+[16/133] baseline3 SyGuS/16.c
+[22:06:48] LLM start SyGuS_16.c_initial1
+[22:06:56] LLM done SyGuS_16.c_initial1, chars=527
+[22:07:07] LLM start baseline3_diagnose_typed_foo_loop_invariant_2_preserved
+[22:07:15] LLM done baseline3_diagnose_typed_foo_loop_invariant_2_preserved, chars=758
+[22:07:15] LLM start baseline3_wrong_spec_typed_foo_loop_invariant_2_preserved
+[22:07:21] LLM done baseline3_wrong_spec_typed_foo_loop_invariant_2_preserved, chars=683
+baseline3 repair wrong_spec_typed_foo_loop_invariant_2_preserved: applied proposal #1 -> repair_01_01_wrong_spec_01_rewrite_annotation.c
+[22:07:32] LLM start baseline3_diagnose_typed_foo_assert
+[22:07:38] LLM done baseline3_diagnose_typed_foo_assert, chars=576
+[22:07:38] LLM start baseline3_wrong_spec_typed_foo_assert
+[22:07:42] LLM done baseline3_wrong_spec_typed_foo_assert, chars=413
+baseline3 repair wrong_spec_typed_foo_assert: applied proposal #1 -> repair_02_01_wrong_spec_01_rewrite_annotation.c
+[17/133] baseline3 SyGuS/17.c
+[22:07:45] LLM start SyGuS_17.c_initial1
+[22:07:52] LLM done SyGuS_17.c_initial1, chars=599
+[22:08:03] LLM start baseline3_diagnose_typed_foo_loop_invariant_2_established
+[22:08:11] LLM done baseline3_diagnose_typed_foo_loop_invariant_2_established, chars=922
+[22:08:11] LLM start baseline3_wrong_spec_typed_foo_loop_invariant_2_established
+[22:08:16] LLM done baseline3_wrong_spec_typed_foo_loop_invariant_2_established, chars=492
+baseline3 repair wrong_spec_typed_foo_loop_invariant_2_established: applied proposal #1 -> repair_01_01_wrong_spec_01_rewrite_annotation.c
+[22:08:26] LLM start baseline3_diagnose_typed_foo_assert
+[22:08:34] LLM done baseline3_diagnose_typed_foo_assert, chars=1002
+[22:08:34] LLM start baseline3_wrong_spec_typed_foo_assert
+[22:08:39] LLM done baseline3_wrong_spec_typed_foo_assert, chars=612
+baseline3 repair wrong_spec_typed_foo_assert: not applied (no_applicable_repair)
+  #1 skipped: generated code rejected: LLM removed or changed original ACSL assertions: ['m<n']
+baseline3 repair fallback: trying missing_spec after wrong_spec failed
+[22:08:39] LLM start baseline3_missing_spec_typed_foo_assert
+[22:08:45] LLM done baseline3_missing_spec_typed_foo_assert, chars=727
+baseline3 repair missing_spec_typed_foo_assert: applied proposal #1 -> repair_02_01_missing_spec_01_add_invariant.c
+[18/133] baseline3 SyGuS/18.c
+[22:08:48] LLM start SyGuS_18.c_initial1
+[22:08:55] LLM done SyGuS_18.c_initial1, chars=539
+[22:09:05] LLM start baseline3_diagnose_typed_foo_loop_invariant_2_established
+[22:09:09] LLM done baseline3_diagnose_typed_foo_loop_invariant_2_established, chars=413
+[22:09:09] LLM start baseline3_wrong_spec_typed_foo_loop_invariant_2_established
+[22:09:15] LLM done baseline3_wrong_spec_typed_foo_loop_invariant_2_established, chars=581
+baseline3 repair wrong_spec_typed_foo_loop_invariant_2_established: applied proposal #1 -> repair_01_01_wrong_spec_01_rewrite_annotation.c
+[22:09:26] LLM start baseline3_diagnose_typed_foo_assert
+[22:09:32] LLM done baseline3_diagnose_typed_foo_assert, chars=749
+[22:09:32] LLM start baseline3_wrong_spec_typed_foo_assert
+[22:09:37] LLM done baseline3_wrong_spec_typed_foo_assert, chars=428
+baseline3 repair wrong_spec_typed_foo_assert: applied proposal #1 -> repair_02_01_wrong_spec_01_rewrite_annotation.c
+[19/133] baseline3 SyGuS/19.c
+[22:09:40] LLM start SyGuS_19.c_initial1
+[22:09:47] LLM done SyGuS_19.c_initial1, chars=640
+[22:09:48] LLM start baseline3_invalid_repair
+[22:09:52] LLM done baseline3_invalid_repair, chars=449
+[22:10:02] LLM start baseline3_diagnose_typed_foo_assert
+[22:10:08] LLM done baseline3_diagnose_typed_foo_assert, chars=599
+[22:10:08] LLM start baseline3_wrong_spec_typed_foo_assert
+[22:10:14] LLM done baseline3_wrong_spec_typed_foo_assert, chars=549
+baseline3 repair wrong_spec_typed_foo_assert: not applied (no_applicable_repair)
+  #1 skipped: generated code rejected: LLM removed or changed original ACSL assertions: ['m<n']
+baseline3 repair fallback: trying missing_spec after wrong_spec failed
+[22:10:14] LLM start baseline3_missing_spec_typed_foo_assert
+[22:10:20] LLM done baseline3_missing_spec_typed_foo_assert, chars=817
+baseline3 repair missing_spec_typed_foo_assert: applied proposal #1 -> repair_02_01_missing_spec_01_add_invariant.c
+[20/133] baseline3 SyGuS/20.c
+[22:10:23] LLM start SyGuS_20.c_initial1
+[22:10:36] LLM done SyGuS_20.c_initial1, chars=653
+[21/133] baseline3 SyGuS/21.c
+[22:10:37] LLM start SyGuS_21.c_initial1
+[22:10:43] LLM done SyGuS_21.c_initial1, chars=527
+[22:10:54] LLM start baseline3_diagnose_typed_main_assert
+[22:11:00] LLM done baseline3_diagnose_typed_main_assert, chars=647
+[22:11:00] LLM start baseline3_wrong_spec_typed_main_assert
+[22:11:05] LLM done baseline3_wrong_spec_typed_main_assert, chars=512
+baseline3 repair wrong_spec_typed_main_assert: not applied (no_applicable_repair)
+  #1 skipped: generated code rejected: LLM removed or changed original ACSL assertions: ['m<n']
+baseline3 repair fallback: trying missing_spec after wrong_spec failed
+[22:11:05] LLM start baseline3_missing_spec_typed_main_assert
+[22:11:11] LLM done baseline3_missing_spec_typed_main_assert, chars=669
+baseline3 repair missing_spec_typed_main_assert: applied proposal #1 -> repair_01_01_missing_spec_01_add_invariant.c
+[22:11:22] LLM start baseline3_diagnose_typed_main_loop_invariant_3_established
+[22:11:28] LLM done baseline3_diagnose_typed_main_loop_invariant_3_established, chars=581
+[22:11:28] LLM start baseline3_wrong_spec_typed_main_loop_invariant_3_established
+[22:11:34] LLM done baseline3_wrong_spec_typed_main_loop_invariant_3_established, chars=787
+baseline3 repair wrong_spec_typed_main_loop_invariant_3_established: applied proposal #1 -> repair_02_01_wrong_spec_01_rewrite_annotation.c
+[22:11:45] LLM start baseline3_diagnose_typed_main_assert
+[22:11:52] LLM done baseline3_diagnose_typed_main_assert, chars=694
+[22:11:52] LLM start baseline3_wrong_spec_typed_main_assert
+[22:11:59] LLM done baseline3_wrong_spec_typed_main_assert, chars=580
+baseline3 repair wrong_spec_typed_main_assert: not applied (no_applicable_repair)
+  #1 skipped: generated code rejected: LLM removed or changed original ACSL assertions: ['m<n']
+baseline3 repair fallback: trying missing_spec after wrong_spec failed
+[22:11:59] LLM start baseline3_missing_spec_typed_main_assert
+[22:12:05] LLM done baseline3_missing_spec_typed_main_assert, chars=860
+baseline3 repair missing_spec_typed_main_assert: applied proposal #1 -> repair_03_01_missing_spec_01_add_invariant.c
+[22:12:15] LLM start baseline3_diagnose_typed_main_loop_invariant_3_established
+[22:12:20] LLM done baseline3_diagnose_typed_main_loop_invariant_3_established, chars=460
+[22:12:20] LLM start baseline3_wrong_spec_typed_main_loop_invariant_3_established
+[22:12:24] LLM done baseline3_wrong_spec_typed_main_loop_invariant_3_established, chars=319
+baseline3 repair wrong_spec_typed_main_loop_invariant_3_established: applied proposal #1 -> repair_04_01_wrong_spec_01_rewrite_annotation.c
+[22:12:34] LLM start baseline3_diagnose_typed_main_assert
+[22:12:51] LLM done baseline3_diagnose_typed_main_assert, chars=625
+[22:12:51] LLM start baseline3_candidates_typed_main_assert
+[22:13:04] LLM done baseline3_candidates_typed_main_assert, chars=2168
+[22:13:29] LLM start baseline3_missing_spec_typed_main_assert
+[22:13:35] LLM done baseline3_missing_spec_typed_main_assert, chars=727
+baseline3 repair missing_spec_typed_main_assert: applied proposal #1 -> repair_05_01_missing_spec_01_add_invariant.c
+[22:13:46] LLM start baseline3_diagnose_typed_main_loop_invariant_4_established
+[22:13:52] LLM done baseline3_diagnose_typed_main_loop_invariant_4_established, chars=850
+[22:13:52] LLM start baseline3_wrong_spec_typed_main_loop_invariant_4_established
+[22:13:57] LLM done baseline3_wrong_spec_typed_main_loop_invariant_4_established, chars=614
+baseline3 repair wrong_spec_typed_main_loop_invariant_4_established: applied proposal #1 -> repair_06_01_wrong_spec_01_delete_annotation.c
+[22:14:08] LLM start baseline3_diagnose_typed_main_assert
+[22:14:15] LLM done baseline3_diagnose_typed_main_assert, chars=662
+[22:14:15] LLM start baseline3_wrong_spec_typed_main_assert
+[22:14:24] LLM done baseline3_wrong_spec_typed_main_assert, chars=1429
+baseline3 repair wrong_spec_typed_main_assert: not applied (no_applicable_repair)
+  #1 skipped: generated code rejected: LLM removed or changed original ACSL assertions: ['m<n']
+  #2 skipped: generated code rejected: LLM removed or changed original ACSL assertions: ['m<n']
+  #3 skipped: generated code rejected: LLM removed or changed original ACSL assertions: ['m<n']
+baseline3 repair fallback: trying missing_spec after wrong_spec failed
+[22:14:24] LLM start baseline3_missing_spec_typed_main_assert
+[22:14:29] LLM done baseline3_missing_spec_typed_main_assert, chars=612
+baseline3 repair missing_spec_typed_main_assert: applied proposal #1 -> repair_07_01_missing_spec_01_add_invariant.c
+[22:14:40] LLM start SyGuS_21.c_initial2
+[22:14:45] LLM done SyGuS_21.c_initial2, chars=600
+[22:14:56] LLM start baseline3_diagnose_typed_main_assert
+[22:15:03] LLM done baseline3_diagnose_typed_main_assert, chars=772
+[22:15:03] LLM start baseline3_wrong_spec_typed_main_assert
+[22:15:08] LLM done baseline3_wrong_spec_typed_main_assert, chars=616
+baseline3 repair wrong_spec_typed_main_assert: not applied (no_applicable_repair)
+  #1 skipped: generated code rejected: LLM removed or changed original ACSL assertions: ['m<n']
+baseline3 repair fallback: trying missing_spec after wrong_spec failed
+[22:15:08] LLM start baseline3_missing_spec_typed_main_assert
+[22:15:10] LLM done baseline3_missing_spec_typed_main_assert, chars=2
+baseline3 repair missing_spec_typed_main_assert: not applied (no_proposals)
+[22:15:10] LLM start SyGuS_21.c_initial3
+[22:15:16] LLM done SyGuS_21.c_initial3, chars=559
+[22:15:27] LLM start baseline3_diagnose_typed_main_loop_invariant_3_established
+[22:15:32] LLM done baseline3_diagnose_typed_main_loop_invariant_3_established, chars=699
+[22:15:32] LLM start baseline3_wrong_spec_typed_main_loop_invariant_3_established
+[22:15:37] LLM done baseline3_wrong_spec_typed_main_loop_invariant_3_established, chars=655
+baseline3 repair wrong_spec_typed_main_loop_invariant_3_established: applied proposal #1 -> repair_01_01_wrong_spec_01_rewrite_annotation.c
+[22:15:48] LLM start baseline3_diagnose_typed_main_assert
+[22:15:54] LLM done baseline3_diagnose_typed_main_assert, chars=882
+[22:15:54] LLM start baseline3_wrong_spec_typed_main_assert
+[22:16:03] LLM done baseline3_wrong_spec_typed_main_assert, chars=1209
+baseline3 repair wrong_spec_typed_main_assert: not applied (no_applicable_repair)
+  #1 skipped: generated code rejected: LLM removed or changed original ACSL assertions: ['m<n']
+  #2 skipped: generated code rejected: LLM removed or changed original ACSL assertions: ['m<n']
+baseline3 repair fallback: trying missing_spec after wrong_spec failed
+[22:16:03] LLM start baseline3_missing_spec_typed_main_assert
+[22:17:22] LLM done baseline3_missing_spec_typed_main_assert, chars=832
+baseline3 repair missing_spec_typed_main_assert: applied proposal #1 -> repair_02_01_missing_spec_01_add_invariant.c
+[22:17:33] LLM start baseline3_diagnose_typed_main_assert
+[22:17:39] LLM done baseline3_diagnose_typed_main_assert, chars=573
+[22:17:39] LLM start baseline3_wrong_spec_typed_main_assert
+[22:17:46] LLM done baseline3_wrong_spec_typed_main_assert, chars=559
+baseline3 repair wrong_spec_typed_main_assert: not applied (no_applicable_repair)
+  #1 skipped: generated code rejected: LLM removed or changed original ACSL assertions: ['m<n']
+baseline3 repair fallback: trying missing_spec after wrong_spec failed
+[22:17:46] LLM start baseline3_missing_spec_typed_main_assert
+[22:17:56] LLM done baseline3_missing_spec_typed_main_assert, chars=711
+baseline3 repair missing_spec_typed_main_assert: applied proposal #1 -> repair_03_01_missing_spec_01_add_requires.c
+[22/133] baseline3 SyGuS/22.c
+[22:17:58] LLM start SyGuS_22.c_initial1
+[22:18:04] LLM done SyGuS_22.c_initial1, chars=571
+[22:18:14] LLM start baseline3_diagnose_typed_main_loop_invariant_3_established
+[22:18:22] LLM done baseline3_diagnose_typed_main_loop_invariant_3_established, chars=789
+[22:18:22] LLM start baseline3_wrong_spec_typed_main_loop_invariant_3_established
+[22:18:27] LLM done baseline3_wrong_spec_typed_main_loop_invariant_3_established, chars=565
+baseline3 repair wrong_spec_typed_main_loop_invariant_3_established: applied proposal #1 -> repair_01_01_wrong_spec_01_rewrite_annotation.c
+[22:18:38] LLM start baseline3_diagnose_typed_main_assert
+[22:18:46] LLM done baseline3_diagnose_typed_main_assert, chars=661
+[22:18:46] LLM start baseline3_wrong_spec_typed_main_assert
+[22:18:51] LLM done baseline3_wrong_spec_typed_main_assert, chars=586
+baseline3 repair wrong_spec_typed_main_assert: applied proposal #1 -> repair_02_01_wrong_spec_01_delete_annotation.c
+[23/133] baseline3 SyGuS/23.c
+[22:18:54] LLM start SyGuS_23.c_initial1
+[22:18:59] LLM done SyGuS_23.c_initial1, chars=353
+[22:19:00] LLM start baseline3_invalid_repair
+[22:19:05] LLM done baseline3_invalid_repair, chars=562
+[22:19:05] LLM start SyGuS_23.c_initial2
+[22:19:10] LLM done SyGuS_23.c_initial2, chars=529
+[22:19:11] LLM start baseline3_invalid_repair
+[22:19:16] LLM done baseline3_invalid_repair, chars=510
+[22:19:16] LLM start SyGuS_23.c_initial3
+[22:19:21] LLM done SyGuS_23.c_initial3, chars=412
+[22:19:22] LLM start baseline3_invalid_repair
+[22:19:27] LLM done baseline3_invalid_repair, chars=499
+[24/133] baseline3 SyGuS/24.c
+[22:19:27] LLM start SyGuS_24.c_initial1
+[22:19:33] LLM done SyGuS_24.c_initial1, chars=521
+[22:19:34] LLM start baseline3_invalid_repair
+[22:19:44] LLM done baseline3_invalid_repair, chars=478
+[22:19:44] LLM start SyGuS_24.c_initial2
+[22:19:50] LLM done SyGuS_24.c_initial2, chars=470
+[22:19:51] LLM start baseline3_invalid_repair
+[22:20:07] LLM done baseline3_invalid_repair, chars=595
+[22:20:07] LLM start SyGuS_24.c_initial3
+[22:20:12] LLM done SyGuS_24.c_initial3, chars=431
+[22:20:13] LLM start baseline3_invalid_repair
+[22:20:18] LLM done baseline3_invalid_repair, chars=582
+[25/133] baseline3 SyGuS/25.c
+[22:20:18] LLM start SyGuS_25.c_initial1
+[22:20:23] LLM done SyGuS_25.c_initial1, chars=397
+[22:20:24] LLM start baseline3_invalid_repair
+[22:20:29] LLM done baseline3_invalid_repair, chars=363
+[22:20:29] LLM start SyGuS_25.c_initial2
+[22:20:34] LLM done SyGuS_25.c_initial2, chars=395
+[22:20:36] LLM start baseline3_invalid_repair
+[22:20:49] LLM done baseline3_invalid_repair, chars=486
+[22:20:49] LLM start SyGuS_25.c_initial3
+[22:20:56] LLM done SyGuS_25.c_initial3, chars=316
+[26/133] baseline3 SyGuS/26.c
+[22:20:57] LLM start SyGuS_26.c_initial1
+[22:21:03] LLM done SyGuS_26.c_initial1, chars=508
+[22:21:14] LLM start baseline3_diagnose_typed_foo_loop_invariant_preserved
+[22:21:18] LLM done baseline3_diagnose_typed_foo_loop_invariant_preserved, chars=435
+[22:21:18] LLM start baseline3_wrong_spec_typed_foo_loop_invariant_preserved
+[22:21:26] LLM done baseline3_wrong_spec_typed_foo_loop_invariant_preserved, chars=908
+baseline3 repair wrong_spec_typed_foo_loop_invariant_preserved: applied proposal #1 -> repair_01_01_wrong_spec_01_delete_annotation.c
+[22:21:36] LLM start baseline3_diagnose_typed_foo_loop_invariant_preserved
+[22:21:42] LLM done baseline3_diagnose_typed_foo_loop_invariant_preserved, chars=552
+[22:21:42] LLM start baseline3_wrong_spec_typed_foo_loop_invariant_preserved
+[22:21:47] LLM done baseline3_wrong_spec_typed_foo_loop_invariant_preserved, chars=418
+baseline3 repair wrong_spec_typed_foo_loop_invariant_preserved: applied proposal #1 -> repair_02_01_wrong_spec_01_rewrite_annotation.c
+[22:21:58] LLM start baseline3_diagnose_typed_foo_loop_invariant_preserved
+[22:22:05] LLM done baseline3_diagnose_typed_foo_loop_invariant_preserved, chars=941
+[22:22:05] LLM start baseline3_wrong_spec_typed_foo_loop_invariant_preserved
+[22:22:11] LLM done baseline3_wrong_spec_typed_foo_loop_invariant_preserved, chars=674
+baseline3 repair wrong_spec_typed_foo_loop_invariant_preserved: applied proposal #1 -> repair_03_01_wrong_spec_01_rewrite_annotation.c
+[22:22:22] LLM start baseline3_diagnose_typed_foo_loop_invariant_established
+[22:22:28] LLM done baseline3_diagnose_typed_foo_loop_invariant_established, chars=634
+[22:22:28] LLM start baseline3_wrong_spec_typed_foo_loop_invariant_established
+[22:22:33] LLM done baseline3_wrong_spec_typed_foo_loop_invariant_established, chars=556
+baseline3 repair wrong_spec_typed_foo_loop_invariant_established: applied proposal #1 -> repair_04_01_wrong_spec_01_rewrite_annotation.c
+[22:22:43] LLM start baseline3_diagnose_typed_foo_loop_invariant_preserved
+[22:22:48] LLM done baseline3_diagnose_typed_foo_loop_invariant_preserved, chars=490
+[22:22:48] LLM start baseline3_wrong_spec_typed_foo_loop_invariant_preserved
+[22:22:58] LLM done baseline3_wrong_spec_typed_foo_loop_invariant_preserved, chars=640
+baseline3 repair wrong_spec_typed_foo_loop_invariant_preserved: applied proposal #1 -> repair_05_01_wrong_spec_01_rewrite_annotation.c
+[22:23:08] LLM start baseline3_diagnose_typed_foo_loop_invariant_established
+[22:23:16] LLM done baseline3_diagnose_typed_foo_loop_invariant_established, chars=470
+[22:23:16] LLM start baseline3_wrong_spec_typed_foo_loop_invariant_established
+[22:23:21] LLM done baseline3_wrong_spec_typed_foo_loop_invariant_established, chars=632
+baseline3 repair wrong_spec_typed_foo_loop_invariant_established: applied proposal #1 -> repair_06_01_wrong_spec_01_rewrite_annotation.c
+[22:23:32] LLM start baseline3_diagnose_typed_foo_loop_invariant_preserved
+[22:23:37] LLM done baseline3_diagnose_typed_foo_loop_invariant_preserved, chars=594
+[22:23:37] LLM start baseline3_wrong_spec_typed_foo_loop_invariant_preserved
+[22:23:54] LLM done baseline3_wrong_spec_typed_foo_loop_invariant_preserved, chars=629
+baseline3 repair wrong_spec_typed_foo_loop_invariant_preserved: applied proposal #1 -> repair_07_01_wrong_spec_01_rewrite_annotation.c
+[22:24:04] LLM start SyGuS_26.c_initial2
+[22:24:10] LLM done SyGuS_26.c_initial2, chars=488
+[22:24:20] LLM start baseline3_diagnose_typed_foo_loop_invariant_preserved
+[22:24:27] LLM done baseline3_diagnose_typed_foo_loop_invariant_preserved, chars=798
+[22:24:27] LLM start baseline3_wrong_spec_typed_foo_loop_invariant_preserved
+[22:24:33] LLM done baseline3_wrong_spec_typed_foo_loop_invariant_preserved, chars=706
+baseline3 repair wrong_spec_typed_foo_loop_invariant_preserved: applied proposal #1 -> repair_01_01_wrong_spec_01_rewrite_annotation.c
+[22:24:44] LLM start baseline3_diagnose_typed_foo_loop_invariant_established
+[22:24:51] LLM done baseline3_diagnose_typed_foo_loop_invariant_established, chars=892
+[22:24:51] LLM start baseline3_wrong_spec_typed_foo_loop_invariant_established
+[22:24:56] LLM done baseline3_wrong_spec_typed_foo_loop_invariant_established, chars=524
+baseline3 repair wrong_spec_typed_foo_loop_invariant_established: applied proposal #1 -> repair_02_01_wrong_spec_01_rewrite_annotation.c
+[22:25:06] LLM start baseline3_diagnose_typed_foo_assert
+[22:25:14] LLM done baseline3_diagnose_typed_foo_assert, chars=1009
+[22:25:14] LLM start baseline3_wrong_spec_typed_foo_assert
+[22:25:19] LLM done baseline3_wrong_spec_typed_foo_assert, chars=537
+baseline3 repair wrong_spec_typed_foo_assert: not applied (no_applicable_repair)
+  #1 skipped: generated code rejected: LLM removed or changed original ACSL assertions: ['n<1']
+baseline3 repair fallback: trying missing_spec after wrong_spec failed
+[22:25:19] LLM start baseline3_missing_spec_typed_foo_assert
+[22:25:25] LLM done baseline3_missing_spec_typed_foo_assert, chars=626
+baseline3 repair missing_spec_typed_foo_assert: applied proposal #1 -> repair_03_01_missing_spec_01_add_invariant.c
+[22:25:35] LLM start baseline3_diagnose_typed_foo_loop_invariant_2_preserved
+[22:25:40] LLM done baseline3_diagnose_typed_foo_loop_invariant_2_preserved, chars=475
+[22:25:40] LLM start baseline3_wrong_spec_typed_foo_loop_invariant_2_preserved
+[22:25:45] LLM done baseline3_wrong_spec_typed_foo_loop_invariant_2_preserved, chars=508
+baseline3 repair wrong_spec_typed_foo_loop_invariant_2_preserved: applied proposal #1 -> repair_04_01_wrong_spec_01_rewrite_annotation.c
+[22:25:55] LLM start baseline3_diagnose_typed_foo_loop_invariant_preserved
+[22:26:02] LLM done baseline3_diagnose_typed_foo_loop_invariant_preserved, chars=621
+[22:26:02] LLM start baseline3_wrong_spec_typed_foo_loop_invariant_preserved
+[22:26:08] LLM done baseline3_wrong_spec_typed_foo_loop_invariant_preserved, chars=515
+baseline3 repair wrong_spec_typed_foo_loop_invariant_preserved: applied proposal #1 -> repair_05_01_wrong_spec_01_rewrite_annotation.c
+[22:26:18] LLM start baseline3_diagnose_typed_foo_loop_invariant_established
+[22:26:25] LLM done baseline3_diagnose_typed_foo_loop_invariant_established, chars=874
+[22:26:25] LLM start baseline3_wrong_spec_typed_foo_loop_invariant_established
+[22:26:53] LLM done baseline3_wrong_spec_typed_foo_loop_invariant_established, chars=499
+baseline3 repair wrong_spec_typed_foo_loop_invariant_established: applied proposal #1 -> repair_06_01_wrong_spec_01_rewrite_annotation.c
+[22:27:04] LLM start baseline3_diagnose_typed_foo_assert
+[22:27:10] LLM done baseline3_diagnose_typed_foo_assert, chars=535
+[22:27:10] LLM start baseline3_wrong_spec_typed_foo_assert
+[22:27:17] LLM done baseline3_wrong_spec_typed_foo_assert, chars=632
+baseline3 repair wrong_spec_typed_foo_assert: not applied (no_applicable_repair)
+  #1 skipped: generated code rejected: LLM removed or changed original ACSL assertions: ['n<1']
+baseline3 repair fallback: trying missing_spec after wrong_spec failed
+[22:27:17] LLM start baseline3_missing_spec_typed_foo_assert
+[22:27:23] LLM done baseline3_missing_spec_typed_foo_assert, chars=828
+baseline3 repair missing_spec_typed_foo_assert: applied proposal #1 -> repair_07_01_missing_spec_01_add_invariant.c
+[22:27:34] LLM start SyGuS_26.c_initial3
+[22:27:39] LLM done SyGuS_26.c_initial3, chars=451
+[22:27:50] LLM start baseline3_diagnose_typed_foo_loop_invariant_preserved
+[22:27:55] LLM done baseline3_diagnose_typed_foo_loop_invariant_preserved, chars=489
+[22:27:55] LLM start baseline3_wrong_spec_typed_foo_loop_invariant_preserved
+[22:28:00] LLM done baseline3_wrong_spec_typed_foo_loop_invariant_preserved, chars=562
+baseline3 repair wrong_spec_typed_foo_loop_invariant_preserved: applied proposal #1 -> repair_01_01_wrong_spec_01_rewrite_annotation.c
+[22:28:10] LLM start baseline3_diagnose_typed_foo_loop_invariant_2_preserved
+[22:28:15] LLM done baseline3_diagnose_typed_foo_loop_invariant_2_preserved, chars=509
+[22:28:15] LLM start baseline3_candidates_typed_foo_loop_invariant_2_preserved
+[22:28:22] LLM done baseline3_candidates_typed_foo_loop_invariant_2_preserved, chars=990
+[22:28:22] LLM start baseline3_missing_spec_typed_foo_loop_invariant_2_preserved
+[22:28:25] LLM done baseline3_missing_spec_typed_foo_loop_invariant_2_preserved, chars=2
+baseline3 repair missing_spec_typed_foo_loop_invariant_2_preserved: not applied (no_proposals)
+baseline3 repair fallback: trying wrong_spec after missing_spec failed
+[22:28:25] LLM start baseline3_wrong_spec_typed_foo_loop_invariant_2_preserved
+[22:28:30] LLM done baseline3_wrong_spec_typed_foo_loop_invariant_2_preserved, chars=554
+baseline3 repair wrong_spec_typed_foo_loop_invariant_2_preserved: not applied (no_applicable_repair)
+  #1 skipped: action='regenerate', missing exact original_text or regenerate
+[27/133] baseline3 SyGuS/27.c
+[22:28:30] LLM start SyGuS_27.c_initial1
+[22:28:35] LLM done SyGuS_27.c_initial1, chars=422
+[28/133] baseline3 SyGuS/28.c
+[22:28:37] LLM start SyGuS_28.c_initial1
+[22:28:42] LLM done SyGuS_28.c_initial1, chars=437
+[22:28:53] LLM start baseline3_diagnose_typed_foo_loop_invariant_preserved
+[22:28:59] LLM done baseline3_diagnose_typed_foo_loop_invariant_preserved, chars=508
+[22:28:59] LLM start baseline3_wrong_spec_typed_foo_loop_invariant_preserved
+[22:29:03] LLM done baseline3_wrong_spec_typed_foo_loop_invariant_preserved, chars=481
+baseline3 repair wrong_spec_typed_foo_loop_invariant_preserved: applied proposal #1 -> repair_01_01_wrong_spec_01_rewrite_annotation.c
+[22:29:14] LLM start baseline3_diagnose_typed_foo_assert
+[22:29:20] LLM done baseline3_diagnose_typed_foo_assert, chars=773
+[22:29:20] LLM start baseline3_wrong_spec_typed_foo_assert
+[22:29:25] LLM done baseline3_wrong_spec_typed_foo_assert, chars=638
+baseline3 repair wrong_spec_typed_foo_assert: not applied (no_applicable_repair)
+  #1 skipped: generated code rejected: LLM removed or changed original ACSL assertions: ['n<0']
+baseline3 repair fallback: trying missing_spec after wrong_spec failed
+[22:29:25] LLM start baseline3_missing_spec_typed_foo_assert
+[22:29:31] LLM done baseline3_missing_spec_typed_foo_assert, chars=911
+baseline3 repair missing_spec_typed_foo_assert: applied proposal #1 -> repair_02_01_missing_spec_01_add_invariant.c
+[22:29:42] LLM start baseline3_diagnose_typed_foo_loop_invariant_3_preserved
+[22:29:48] LLM done baseline3_diagnose_typed_foo_loop_invariant_3_preserved, chars=601
+[22:29:48] LLM start baseline3_wrong_spec_typed_foo_loop_invariant_3_preserved
+[22:30:05] LLM done baseline3_wrong_spec_typed_foo_loop_invariant_3_preserved, chars=702
+baseline3 repair wrong_spec_typed_foo_loop_invariant_3_preserved: applied proposal #1 -> repair_03_01_wrong_spec_01_rewrite_annotation.c
+[29/133] baseline3 SyGuS/29.c
+[22:30:07] LLM start SyGuS_29.c_initial1
+[22:30:14] LLM done SyGuS_29.c_initial1, chars=467
+[30/133] baseline3 SyGuS/30.c
+[22:30:17] LLM start SyGuS_30.c_initial1
+[22:30:24] LLM done SyGuS_30.c_initial1, chars=406
+[31/133] baseline3 SyGuS/31.c
+[22:30:26] LLM start SyGuS_31.c_initial1
+[22:30:31] LLM done SyGuS_31.c_initial1, chars=366
+[32/133] baseline3 SyGuS/32.c
+[22:30:32] LLM start SyGuS_32.c_initial1
+[22:30:39] LLM done SyGuS_32.c_initial1, chars=421
+[33/133] baseline3 SyGuS/33.c
+[22:30:41] LLM start SyGuS_33.c_initial1
+[22:30:47] LLM done SyGuS_33.c_initial1, chars=450
+[34/133] baseline3 SyGuS/34.c
+[22:30:48] LLM start SyGuS_34.c_initial1
+[22:30:55] LLM done SyGuS_34.c_initial1, chars=401
+[35/133] baseline3 SyGuS/35.c
+[22:30:57] LLM start SyGuS_35.c_initial1
+[22:31:04] LLM done SyGuS_35.c_initial1, chars=495
+[36/133] baseline3 SyGuS/36.c
+[22:31:06] LLM start SyGuS_36.c_initial1
+[22:31:12] LLM done SyGuS_36.c_initial1, chars=503
+[37/133] baseline3 SyGuS/37.c
+[22:31:14] LLM start SyGuS_37.c_initial1
+[22:31:21] LLM done SyGuS_37.c_initial1, chars=556
+[38/133] baseline3 SyGuS/38.c
+[22:31:24] LLM start SyGuS_38.c_initial1
+[22:31:30] LLM done SyGuS_38.c_initial1, chars=535
+[39/133] baseline3 SyGuS/39.c
+[22:31:33] LLM start SyGuS_39.c_initial1
+[22:31:38] LLM done SyGuS_39.c_initial1, chars=602
+[40/133] baseline3 SyGuS/40.c
+[22:31:41] LLM start SyGuS_40.c_initial1
+[22:31:47] LLM done SyGuS_40.c_initial1, chars=588
+[22:31:48] LLM start SyGuS_40.c_initial2
+[22:31:57] LLM done SyGuS_40.c_initial2, chars=571
+[41/133] baseline3 SyGuS/41.c
+[22:32:00] LLM start SyGuS_41.c_initial1
+[22:32:08] LLM done SyGuS_41.c_initial1, chars=621
+[22:32:18] LLM start baseline3_diagnose_typed_foo_assert
+[22:32:23] LLM done baseline3_diagnose_typed_foo_assert, chars=490
+[22:32:23] LLM start baseline3_wrong_spec_typed_foo_assert
+[22:32:29] LLM done baseline3_wrong_spec_typed_foo_assert, chars=608
+baseline3 repair wrong_spec_typed_foo_assert: not applied (no_applicable_repair)
+  #1 skipped: generated code rejected: LLM removed or changed original ACSL assertions: ['c<=n']
+baseline3 repair fallback: trying missing_spec after wrong_spec failed
+[22:32:29] LLM start baseline3_missing_spec_typed_foo_assert
+[22:32:31] LLM done baseline3_missing_spec_typed_foo_assert, chars=2
+baseline3 repair missing_spec_typed_foo_assert: not applied (no_proposals)
+[22:32:31] LLM start SyGuS_41.c_initial2
+[22:32:38] LLM done SyGuS_41.c_initial2, chars=698
+[42/133] baseline3 SyGuS/42.c
+[22:32:40] LLM start SyGuS_42.c_initial1
+[22:32:48] LLM done SyGuS_42.c_initial1, chars=624
+[43/133] baseline3 SyGuS/43.c
+[22:32:49] LLM start SyGuS_43.c_initial1
+[22:32:55] LLM done SyGuS_43.c_initial1, chars=580
+[44/133] baseline3 SyGuS/44.c
+[22:32:57] LLM start SyGuS_44.c_initial1
+[22:33:02] LLM done SyGuS_44.c_initial1, chars=588
+[45/133] baseline3 SyGuS/45.c
+[22:33:04] LLM start SyGuS_45.c_initial1
+[22:33:11] LLM done SyGuS_45.c_initial1, chars=631
+[46/133] baseline3 SyGuS/46.c
+[22:33:13] LLM start SyGuS_46.c_initial1
+[22:33:21] LLM done SyGuS_46.c_initial1, chars=559
+[47/133] baseline3 SyGuS/47.c
+[22:33:23] LLM start SyGuS_47.c_initial1
+[22:33:30] LLM done SyGuS_47.c_initial1, chars=682
+[48/133] baseline3 SyGuS/48.c
+[22:33:32] LLM start SyGuS_48.c_initial1
+[22:33:38] LLM done SyGuS_48.c_initial1, chars=477
+[49/133] baseline3 SyGuS/49.c
+[22:33:39] LLM start SyGuS_49.c_initial1
+[22:33:46] LLM done SyGuS_49.c_initial1, chars=609
+[50/133] baseline3 SyGuS/50.c
+[22:33:47] LLM start SyGuS_50.c_initial1
+[22:33:53] LLM done SyGuS_50.c_initial1, chars=473
+[51/133] baseline3 SyGuS/51.c
+[22:33:55] LLM start SyGuS_51.c_initial1
+[22:34:02] LLM done SyGuS_51.c_initial1, chars=528
+[52/133] baseline3 SyGuS/52.c
+[22:34:04] LLM start SyGuS_52.c_initial1
+[22:34:10] LLM done SyGuS_52.c_initial1, chars=515
+[53/133] baseline3 SyGuS/53.c
+[22:34:12] LLM start SyGuS_53.c_initial1
+[22:34:18] LLM done SyGuS_53.c_initial1, chars=520
+[54/133] baseline3 SyGuS/54.c
+[22:34:21] LLM start SyGuS_54.c_initial1
+[22:34:27] LLM done SyGuS_54.c_initial1, chars=646
+[22:34:28] LLM start baseline3_invalid_repair
+[22:34:32] LLM done baseline3_invalid_repair, chars=409
+[22:34:32] LLM start SyGuS_54.c_initial2
+[22:34:38] LLM done SyGuS_54.c_initial2, chars=590
+[55/133] baseline3 SyGuS/55.c
+[22:34:41] LLM start SyGuS_55.c_initial1
+[22:34:47] LLM done SyGuS_55.c_initial1, chars=547
+[56/133] baseline3 SyGuS/56.c
+[22:34:50] LLM start SyGuS_56.c_initial1
+[22:34:56] LLM done SyGuS_56.c_initial1, chars=490
+[22:35:06] LLM start baseline3_diagnose_typed_foo_assert
+[22:35:12] LLM done baseline3_diagnose_typed_foo_assert, chars=612
+[22:35:12] LLM start baseline3_wrong_spec_typed_foo_assert
+[22:35:18] LLM done baseline3_wrong_spec_typed_foo_assert, chars=407
+baseline3 repair wrong_spec_typed_foo_assert: not applied (no_applicable_repair)
+  #1 skipped: refuses to delete original target assertion
+baseline3 repair fallback: trying missing_spec after wrong_spec failed
+[22:35:18] LLM start baseline3_missing_spec_typed_foo_assert
+[22:35:21] LLM done baseline3_missing_spec_typed_foo_assert, chars=2
+baseline3 repair missing_spec_typed_foo_assert: not applied (no_proposals)
+[22:35:21] LLM start SyGuS_56.c_initial2
+[22:35:27] LLM done SyGuS_56.c_initial2, chars=516
+[22:35:37] LLM start baseline3_diagnose_typed_foo_assert
+[22:35:43] LLM done baseline3_diagnose_typed_foo_assert, chars=596
+[22:35:43] LLM start baseline3_wrong_spec_typed_foo_assert
+[22:35:47] LLM done baseline3_wrong_spec_typed_foo_assert, chars=445
+baseline3 repair wrong_spec_typed_foo_assert: not applied (no_applicable_repair)
+  #1 skipped: refuses to delete original target assertion
+baseline3 repair fallback: trying missing_spec after wrong_spec failed
+[22:35:47] LLM start baseline3_missing_spec_typed_foo_assert
+[22:35:52] LLM done baseline3_missing_spec_typed_foo_assert, chars=680
+baseline3 repair missing_spec_typed_foo_assert: applied proposal #1 -> repair_01_01_missing_spec_01_add_invariant.c
+[57/133] baseline3 SyGuS/57.c
+[22:35:54] LLM start SyGuS_57.c_initial1
+[22:36:00] LLM done SyGuS_57.c_initial1, chars=549
+[22:36:11] LLM start baseline3_diagnose_typed_foo_assert
+[22:36:16] LLM done baseline3_diagnose_typed_foo_assert, chars=580
+[22:36:16] LLM start baseline3_wrong_spec_typed_foo_assert
+[22:36:29] LLM done baseline3_wrong_spec_typed_foo_assert, chars=553
+baseline3 repair wrong_spec_typed_foo_assert: not applied (no_applicable_repair)
+  #1 skipped: generated code rejected: LLM removed or changed original ACSL assertions: ['c!=n']
+baseline3 repair fallback: trying missing_spec after wrong_spec failed
+[22:36:29] LLM start baseline3_missing_spec_typed_foo_assert
+[22:36:32] LLM done baseline3_missing_spec_typed_foo_assert, chars=475
+baseline3 repair missing_spec_typed_foo_assert: applied proposal #1 -> repair_01_01_missing_spec_01_add_invariant.c
+[58/133] baseline3 SyGuS/58.c
+[22:36:34] LLM start SyGuS_58.c_initial1
+[22:36:39] LLM done SyGuS_58.c_initial1, chars=473
+[59/133] baseline3 SyGuS/59.c
+[22:36:42] LLM start SyGuS_59.c_initial1
+[22:36:48] LLM done SyGuS_59.c_initial1, chars=518
+[60/133] baseline3 SyGuS/60.c
+[22:36:51] LLM start SyGuS_60.c_initial1
+[22:36:56] LLM done SyGuS_60.c_initial1, chars=591
+[61/133] baseline3 SyGuS/61.c
+[22:36:59] LLM start SyGuS_61.c_initial1
+[22:37:04] LLM done SyGuS_61.c_initial1, chars=569
+[62/133] baseline3 SyGuS/62.c
+[22:37:07] LLM start SyGuS_62.c_initial1
+[22:37:13] LLM done SyGuS_62.c_initial1, chars=575
+[22:37:24] LLM start baseline3_diagnose_typed_foo_assert
+[22:37:30] LLM done baseline3_diagnose_typed_foo_assert, chars=806
+[22:37:30] LLM start baseline3_wrong_spec_typed_foo_assert
+[22:37:35] LLM done baseline3_wrong_spec_typed_foo_assert, chars=493
+baseline3 repair wrong_spec_typed_foo_assert: not applied (no_applicable_repair)
+  #1 skipped: generated code rejected: LLM removed or changed original ACSL assertions: ['c>0']
+baseline3 repair fallback: trying missing_spec after wrong_spec failed
+[22:37:35] LLM start baseline3_missing_spec_typed_foo_assert
+[22:37:42] LLM done baseline3_missing_spec_typed_foo_assert, chars=883
+baseline3 repair missing_spec_typed_foo_assert: applied proposal #1 -> repair_01_01_missing_spec_01_add_ensures.c
+[22:37:43] LLM start SyGuS_62.c_initial2
+[22:37:49] LLM done SyGuS_62.c_initial2, chars=529
+[22:38:00] LLM start baseline3_diagnose_typed_foo_assert
+[22:38:05] LLM done baseline3_diagnose_typed_foo_assert, chars=572
+[22:38:05] LLM start baseline3_wrong_spec_typed_foo_assert
+[22:38:10] LLM done baseline3_wrong_spec_typed_foo_assert, chars=558
+baseline3 repair wrong_spec_typed_foo_assert: not applied (no_applicable_repair)
+  #1 skipped: generated code rejected: LLM removed or changed original ACSL assertions: ['c>0']
+baseline3 repair fallback: trying missing_spec after wrong_spec failed
+[22:38:10] LLM start baseline3_missing_spec_typed_foo_assert
+[22:38:15] LLM done baseline3_missing_spec_typed_foo_assert, chars=704
+baseline3 repair missing_spec_typed_foo_assert: not applied (no_applicable_repair)
+  #1 skipped: generated code rejected: LLM changed executable C code; only ACSL/comments are allowed
+[22:38:15] LLM start SyGuS_62.c_initial3
+[22:38:22] LLM done SyGuS_62.c_initial3, chars=561
+[22:38:32] LLM start baseline3_diagnose_typed_foo_assert
+[22:38:39] LLM done baseline3_diagnose_typed_foo_assert, chars=860
+[22:38:39] LLM start baseline3_wrong_spec_typed_foo_assert
+[22:38:45] LLM done baseline3_wrong_spec_typed_foo_assert, chars=489
+baseline3 repair wrong_spec_typed_foo_assert: not applied (no_applicable_repair)
+  #1 skipped: generated code rejected: LLM removed or changed original ACSL assertions: ['c>0']
+baseline3 repair fallback: trying missing_spec after wrong_spec failed
+[22:38:45] LLM start baseline3_missing_spec_typed_foo_assert
+[22:38:51] LLM done baseline3_missing_spec_typed_foo_assert, chars=829
+baseline3 repair missing_spec_typed_foo_assert: applied proposal #1 -> repair_01_01_missing_spec_01_add_invariant.c
+[22:39:02] LLM start baseline3_diagnose_typed_foo_loop_invariant_3_preserved
+[22:39:07] LLM done baseline3_diagnose_typed_foo_loop_invariant_3_preserved, chars=528
+[22:39:07] LLM start baseline3_wrong_spec_typed_foo_loop_invariant_3_preserved
+[22:39:13] LLM done baseline3_wrong_spec_typed_foo_loop_invariant_3_preserved, chars=640
+baseline3 repair wrong_spec_typed_foo_loop_invariant_3_preserved: applied proposal #1 -> repair_02_01_wrong_spec_01_rewrite_annotation.c
+[22:39:24] LLM start baseline3_diagnose_typed_foo_assert
+[22:39:32] LLM done baseline3_diagnose_typed_foo_assert, chars=476
+[22:39:32] LLM start baseline3_wrong_spec_typed_foo_assert
+[22:39:37] LLM done baseline3_wrong_spec_typed_foo_assert, chars=439
+baseline3 repair wrong_spec_typed_foo_assert: not applied (no_applicable_repair)
+  #1 skipped: generated code rejected: LLM removed or changed original ACSL assertions: ['c>0']
+baseline3 repair fallback: trying missing_spec after wrong_spec failed
+[22:39:37] LLM start baseline3_missing_spec_typed_foo_assert
+[22:39:43] LLM done baseline3_missing_spec_typed_foo_assert, chars=734
+baseline3 repair missing_spec_typed_foo_assert: applied proposal #1 -> repair_03_01_missing_spec_01_add_invariant.c
+[22:39:54] LLM start baseline3_diagnose_typed_foo_assert
+[22:40:02] LLM done baseline3_diagnose_typed_foo_assert, chars=949
+[22:40:02] LLM start baseline3_wrong_spec_typed_foo_assert
+[22:40:06] LLM done baseline3_wrong_spec_typed_foo_assert, chars=440
+baseline3 repair wrong_spec_typed_foo_assert: not applied (no_applicable_repair)
+  #1 skipped: generated code rejected: LLM removed or changed original ACSL assertions: ['c>0']
+baseline3 repair fallback: trying missing_spec after wrong_spec failed
+[22:40:06] LLM start baseline3_missing_spec_typed_foo_assert
+[22:40:14] LLM done baseline3_missing_spec_typed_foo_assert, chars=690
+baseline3 repair missing_spec_typed_foo_assert: applied proposal #1 -> repair_04_01_missing_spec_01_add_invariant.c
+[63/133] baseline3 SyGuS/63.c
+[22:40:15] LLM start SyGuS_63.c_initial1
+[22:40:20] LLM done SyGuS_63.c_initial1, chars=446
+[22:40:31] LLM start baseline3_diagnose_typed_main_loop_invariant_2_established
+[22:40:36] LLM done baseline3_diagnose_typed_main_loop_invariant_2_established, chars=561
+[22:40:36] LLM start baseline3_wrong_spec_typed_main_loop_invariant_2_established
+[22:40:41] LLM done baseline3_wrong_spec_typed_main_loop_invariant_2_established, chars=589
+baseline3 repair wrong_spec_typed_main_loop_invariant_2_established: applied proposal #1 -> repair_01_01_wrong_spec_01_rewrite_annotation.c
+[64/133] baseline3 SyGuS/64.c
+[22:40:43] LLM start SyGuS_64.c_initial1
+[22:40:49] LLM done SyGuS_64.c_initial1, chars=485
+[22:40:59] LLM start baseline3_diagnose_typed_main_loop_invariant_2_established
+[22:41:04] LLM done baseline3_diagnose_typed_main_loop_invariant_2_established, chars=425
+[22:41:04] LLM start baseline3_wrong_spec_typed_main_loop_invariant_2_established
+[22:41:10] LLM done baseline3_wrong_spec_typed_main_loop_invariant_2_established, chars=634
+baseline3 repair wrong_spec_typed_main_loop_invariant_2_established: applied proposal #1 -> repair_01_01_wrong_spec_01_rewrite_annotation.c
+[65/133] baseline3 SyGuS/65.c
+[22:41:12] LLM start SyGuS_65.c_initial1
+[22:41:18] LLM done SyGuS_65.c_initial1, chars=518
+[22:41:28] LLM start baseline3_diagnose_typed_main_loop_invariant_2_established
+[22:41:33] LLM done baseline3_diagnose_typed_main_loop_invariant_2_established, chars=466
+[22:41:33] LLM start baseline3_wrong_spec_typed_main_loop_invariant_2_established
+[22:41:39] LLM done baseline3_wrong_spec_typed_main_loop_invariant_2_established, chars=694
+baseline3 repair wrong_spec_typed_main_loop_invariant_2_established: applied proposal #1 -> repair_01_01_wrong_spec_01_rewrite_annotation.c
+[22:41:50] LLM start baseline3_diagnose_typed_main_loop_invariant_2_established
+[22:41:56] LLM done baseline3_diagnose_typed_main_loop_invariant_2_established, chars=904
+[22:41:56] LLM start baseline3_wrong_spec_typed_main_loop_invariant_2_established
+[22:42:00] LLM done baseline3_wrong_spec_typed_main_loop_invariant_2_established, chars=486
+baseline3 repair wrong_spec_typed_main_loop_invariant_2_established: applied proposal #1 -> repair_02_01_wrong_spec_01_delete_annotation.c
+[22:42:10] LLM start baseline3_diagnose_typed_main_loop_invariant_2_established
+[22:42:16] LLM done baseline3_diagnose_typed_main_loop_invariant_2_established, chars=570
+[22:42:16] LLM start baseline3_wrong_spec_typed_main_loop_invariant_2_established
+[22:42:20] LLM done baseline3_wrong_spec_typed_main_loop_invariant_2_established, chars=498
+baseline3 repair wrong_spec_typed_main_loop_invariant_2_established: applied proposal #1 -> repair_03_01_wrong_spec_01_rewrite_annotation.c
+[22:42:31] LLM start baseline3_diagnose_typed_main_loop_invariant_2_preserved
+[22:42:36] LLM done baseline3_diagnose_typed_main_loop_invariant_2_preserved, chars=505
+[22:42:36] LLM start baseline3_wrong_spec_typed_main_loop_invariant_2_preserved
+[22:42:43] LLM done baseline3_wrong_spec_typed_main_loop_invariant_2_preserved, chars=651
+baseline3 repair wrong_spec_typed_main_loop_invariant_2_preserved: applied proposal #1 -> repair_04_01_wrong_spec_01_rewrite_annotation.c
+[22:42:53] LLM start baseline3_diagnose_typed_main_loop_invariant_2_preserved
+[22:42:59] LLM done baseline3_diagnose_typed_main_loop_invariant_2_preserved, chars=573
+[22:42:59] LLM start baseline3_wrong_spec_typed_main_loop_invariant_2_preserved
+[22:43:05] LLM done baseline3_wrong_spec_typed_main_loop_invariant_2_preserved, chars=714
+baseline3 repair wrong_spec_typed_main_loop_invariant_2_preserved: applied proposal #1 -> repair_05_01_wrong_spec_01_rewrite_annotation.c
+[22:43:15] LLM start baseline3_diagnose_typed_main_assert
+[22:43:21] LLM done baseline3_diagnose_typed_main_assert, chars=611
+[22:43:21] LLM start baseline3_wrong_spec_typed_main_assert
+[22:43:27] LLM done baseline3_wrong_spec_typed_main_assert, chars=652
+baseline3 repair wrong_spec_typed_main_assert: applied proposal #1 -> repair_06_01_wrong_spec_01_rewrite_annotation.c
+[22:43:37] LLM start baseline3_diagnose_typed_main_assert
+[22:43:43] LLM done baseline3_diagnose_typed_main_assert, chars=681
+[22:43:43] LLM start baseline3_wrong_spec_typed_main_assert
+[22:43:49] LLM done baseline3_wrong_spec_typed_main_assert, chars=594
+baseline3 repair wrong_spec_typed_main_assert: applied proposal #1 -> repair_07_01_wrong_spec_01_rewrite_annotation.c
+[66/133] baseline3 SyGuS/66.c
+[22:43:50] LLM start SyGuS_66.c_initial1
+[22:43:55] LLM done SyGuS_66.c_initial1, chars=450
+[22:44:05] LLM start baseline3_diagnose_typed_main_loop_invariant_2_established
+[22:44:09] LLM done baseline3_diagnose_typed_main_loop_invariant_2_established, chars=390
+[22:44:09] LLM start baseline3_wrong_spec_typed_main_loop_invariant_2_established
+[22:44:15] LLM done baseline3_wrong_spec_typed_main_loop_invariant_2_established, chars=550
+baseline3 repair wrong_spec_typed_main_loop_invariant_2_established: applied proposal #1 -> repair_01_01_wrong_spec_01_rewrite_annotation.c
+[22:44:25] LLM start baseline3_diagnose_typed_main_loop_invariant_2_established
+[22:44:29] LLM done baseline3_diagnose_typed_main_loop_invariant_2_established, chars=445
+[22:44:29] LLM start baseline3_wrong_spec_typed_main_loop_invariant_2_established
+[22:44:34] LLM done baseline3_wrong_spec_typed_main_loop_invariant_2_established, chars=468
+baseline3 repair wrong_spec_typed_main_loop_invariant_2_established: applied proposal #1 -> repair_02_01_wrong_spec_01_rewrite_annotation.c
+[22:44:45] LLM start baseline3_diagnose_typed_main_loop_invariant_2_established
+[22:44:50] LLM done baseline3_diagnose_typed_main_loop_invariant_2_established, chars=460
+[22:44:50] LLM start baseline3_wrong_spec_typed_main_loop_invariant_2_established
+[22:44:56] LLM done baseline3_wrong_spec_typed_main_loop_invariant_2_established, chars=496
+baseline3 repair wrong_spec_typed_main_loop_invariant_2_established: applied proposal #1 -> repair_03_01_wrong_spec_01_rewrite_annotation.c
+[22:45:06] LLM start baseline3_diagnose_typed_main_loop_invariant_2_established
+[22:45:11] LLM done baseline3_diagnose_typed_main_loop_invariant_2_established, chars=446
+[22:45:11] LLM start baseline3_wrong_spec_typed_main_loop_invariant_2_established
+[22:45:17] LLM done baseline3_wrong_spec_typed_main_loop_invariant_2_established, chars=591
+baseline3 repair wrong_spec_typed_main_loop_invariant_2_established: applied proposal #1 -> repair_04_01_wrong_spec_01_rewrite_annotation.c
+[22:45:28] LLM start baseline3_diagnose_typed_main_assert
+[22:45:34] LLM done baseline3_diagnose_typed_main_assert, chars=512
+[22:45:34] LLM start baseline3_wrong_spec_typed_main_assert
+[22:45:39] LLM done baseline3_wrong_spec_typed_main_assert, chars=424
+baseline3 repair wrong_spec_typed_main_assert: applied proposal #1 -> repair_05_01_wrong_spec_01_rewrite_annotation.c
+[67/133] baseline3 SyGuS/67.c
+[22:45:41] LLM start SyGuS_67.c_initial1
+[22:45:48] LLM done SyGuS_67.c_initial1, chars=606
+[22:45:58] LLM start baseline3_diagnose_typed_foo_loop_invariant_2_established
+[22:46:03] LLM done baseline3_diagnose_typed_foo_loop_invariant_2_established, chars=439
+[22:46:03] LLM start baseline3_wrong_spec_typed_foo_loop_invariant_2_established
+[22:46:08] LLM done baseline3_wrong_spec_typed_foo_loop_invariant_2_established, chars=534
+baseline3 repair wrong_spec_typed_foo_loop_invariant_2_established: applied proposal #1 -> repair_01_01_wrong_spec_01_rewrite_annotation.c
+[22:46:19] LLM start baseline3_diagnose_typed_foo_loop_invariant_2_established
+[22:46:23] LLM done baseline3_diagnose_typed_foo_loop_invariant_2_established, chars=423
+[22:46:23] LLM start baseline3_wrong_spec_typed_foo_loop_invariant_2_established
+[22:46:29] LLM done baseline3_wrong_spec_typed_foo_loop_invariant_2_established, chars=566
+baseline3 repair wrong_spec_typed_foo_loop_invariant_2_established: applied proposal #1 -> repair_02_01_wrong_spec_01_rewrite_annotation.c
+[22:46:39] LLM start baseline3_diagnose_typed_foo_loop_invariant_2_established
+[22:46:44] LLM done baseline3_diagnose_typed_foo_loop_invariant_2_established, chars=476
+[22:46:44] LLM start baseline3_wrong_spec_typed_foo_loop_invariant_2_established
+[22:46:54] LLM done baseline3_wrong_spec_typed_foo_loop_invariant_2_established, chars=1475
+baseline3 repair wrong_spec_typed_foo_loop_invariant_2_established: applied proposal #1 -> repair_03_01_wrong_spec_01_rewrite_annotation.c
+[22:47:04] LLM start baseline3_diagnose_typed_foo_loop_invariant_2_established
+[22:47:13] LLM done baseline3_diagnose_typed_foo_loop_invariant_2_established, chars=577
+[22:47:13] LLM start baseline3_wrong_spec_typed_foo_loop_invariant_2_established
+[22:47:20] LLM done baseline3_wrong_spec_typed_foo_loop_invariant_2_established, chars=549
+baseline3 repair wrong_spec_typed_foo_loop_invariant_2_established: applied proposal #1 -> repair_04_01_wrong_spec_01_rewrite_annotation.c
+[22:47:30] LLM start baseline3_diagnose_typed_foo_loop_invariant_2_established
+[22:47:35] LLM done baseline3_diagnose_typed_foo_loop_invariant_2_established, chars=494
+[22:47:35] LLM start baseline3_wrong_spec_typed_foo_loop_invariant_2_established
+[22:47:51] LLM done baseline3_wrong_spec_typed_foo_loop_invariant_2_established, chars=609
+baseline3 repair wrong_spec_typed_foo_loop_invariant_2_established: applied proposal #1 -> repair_05_01_wrong_spec_01_rewrite_annotation.c
+[68/133] baseline3 SyGuS/68.c
+[22:47:52] LLM start SyGuS_68.c_initial1
+[22:47:59] LLM done SyGuS_68.c_initial1, chars=574
+[22:48:09] LLM start baseline3_diagnose_typed_foo_loop_invariant_2_established
+[22:48:16] LLM done baseline3_diagnose_typed_foo_loop_invariant_2_established, chars=801
+[22:48:16] LLM start baseline3_wrong_spec_typed_foo_loop_invariant_2_established
+[22:48:26] LLM done baseline3_wrong_spec_typed_foo_loop_invariant_2_established, chars=1295
+baseline3 repair wrong_spec_typed_foo_loop_invariant_2_established: applied proposal #1 -> repair_01_01_wrong_spec_01_rewrite_annotation.c
+[22:48:36] LLM start baseline3_diagnose_typed_foo_loop_invariant_2_established
+[22:48:41] LLM done baseline3_diagnose_typed_foo_loop_invariant_2_established, chars=500
+[22:48:41] LLM start baseline3_wrong_spec_typed_foo_loop_invariant_2_established
+[22:48:47] LLM done baseline3_wrong_spec_typed_foo_loop_invariant_2_established, chars=598
+baseline3 repair wrong_spec_typed_foo_loop_invariant_2_established: applied proposal #1 -> repair_02_01_wrong_spec_01_rewrite_annotation.c
+[69/133] baseline3 SyGuS/69.c
+[22:48:48] LLM start SyGuS_69.c_initial1
+[22:48:54] LLM done SyGuS_69.c_initial1, chars=529
+[22:49:05] LLM start baseline3_diagnose_typed_foo_loop_invariant_2_established
+[22:49:12] LLM done baseline3_diagnose_typed_foo_loop_invariant_2_established, chars=909
+[22:49:12] LLM start baseline3_wrong_spec_typed_foo_loop_invariant_2_established
+[22:49:18] LLM done baseline3_wrong_spec_typed_foo_loop_invariant_2_established, chars=671
+baseline3 repair wrong_spec_typed_foo_loop_invariant_2_established: applied proposal #1 -> repair_01_01_wrong_spec_01_rewrite_annotation.c
+[70/133] baseline3 SyGuS/70.c
+[22:49:20] LLM start SyGuS_70.c_initial1
+[22:49:26] LLM done SyGuS_70.c_initial1, chars=552
+[22:49:36] LLM start baseline3_diagnose_typed_foo_loop_invariant_2_established
+[22:49:42] LLM done baseline3_diagnose_typed_foo_loop_invariant_2_established, chars=654
+[22:49:42] LLM start baseline3_wrong_spec_typed_foo_loop_invariant_2_established
+[22:49:48] LLM done baseline3_wrong_spec_typed_foo_loop_invariant_2_established, chars=637
+baseline3 repair wrong_spec_typed_foo_loop_invariant_2_established: applied proposal #1 -> repair_01_01_wrong_spec_01_rewrite_annotation.c
+[22:49:58] LLM start baseline3_diagnose_typed_foo_loop_invariant_2_established
+[22:50:03] LLM done baseline3_diagnose_typed_foo_loop_invariant_2_established, chars=525
+[22:50:03] LLM start baseline3_wrong_spec_typed_foo_loop_invariant_2_established
+[22:50:11] LLM done baseline3_wrong_spec_typed_foo_loop_invariant_2_established, chars=591
+baseline3 repair wrong_spec_typed_foo_loop_invariant_2_established: applied proposal #1 -> repair_02_01_wrong_spec_01_rewrite_annotation.c
+[22:50:22] LLM start baseline3_diagnose_typed_foo_loop_invariant_2_established
+[22:50:27] LLM done baseline3_diagnose_typed_foo_loop_invariant_2_established, chars=512
+[22:50:27] LLM start baseline3_wrong_spec_typed_foo_loop_invariant_2_established
+[22:50:33] LLM done baseline3_wrong_spec_typed_foo_loop_invariant_2_established, chars=652
+baseline3 repair wrong_spec_typed_foo_loop_invariant_2_established: applied proposal #1 -> repair_03_01_wrong_spec_01_rewrite_annotation.c
+[71/133] baseline3 SyGuS/71.c
+[22:50:36] LLM start SyGuS_71.c_initial1
+[22:50:42] LLM done SyGuS_71.c_initial1, chars=478
+[72/133] baseline3 SyGuS/72.c
+[22:50:45] LLM start SyGuS_72.c_initial1
+[22:50:54] LLM done SyGuS_72.c_initial1, chars=583
+[22:50:55] LLM start baseline3_invalid_repair
+[22:50:59] LLM done baseline3_invalid_repair, chars=432
+[22:50:59] LLM start SyGuS_72.c_initial2
+[22:51:05] LLM done SyGuS_72.c_initial2, chars=508
+[73/133] baseline3 SyGuS/73.c
+[22:51:08] LLM start SyGuS_73.c_initial1
+[22:51:16] LLM done SyGuS_73.c_initial1, chars=558
+[74/133] baseline3 SyGuS/74.c
+[22:51:18] LLM start SyGuS_74.c_initial1
+[22:51:24] LLM done SyGuS_74.c_initial1, chars=472
+[75/133] baseline3 SyGuS/75.c
+[22:51:27] LLM start SyGuS_75.c_initial1
+[22:51:33] LLM done SyGuS_75.c_initial1, chars=497
+[76/133] baseline3 SyGuS/76.c
+[22:51:36] LLM start SyGuS_76.c_initial1
+[22:51:45] LLM done SyGuS_76.c_initial1, chars=535
+[77/133] baseline3 SyGuS/77.c
+[22:51:47] LLM start SyGuS_77.c_initial1
+[22:51:53] LLM done SyGuS_77.c_initial1, chars=486
+[78/133] baseline3 SyGuS/78.c
+[22:51:55] LLM start SyGuS_78.c_initial1
+[22:52:01] LLM done SyGuS_78.c_initial1, chars=429
+[79/133] baseline3 SyGuS/79.c
+[22:52:04] LLM start SyGuS_79.c_initial1
+[22:52:10] LLM done SyGuS_79.c_initial1, chars=494
+[80/133] baseline3 SyGuS/80.c
+[22:52:12] LLM start SyGuS_80.c_initial1
+[22:52:18] LLM done SyGuS_80.c_initial1, chars=513
+[81/133] baseline3 SyGuS/81.c
+[22:52:21] LLM start SyGuS_81.c_initial1
+[22:52:26] LLM done SyGuS_81.c_initial1, chars=487
+[82/133] baseline3 SyGuS/82.c
+[22:52:29] LLM start SyGuS_82.c_initial1
+[22:52:35] LLM done SyGuS_82.c_initial1, chars=508
+[83/133] baseline3 SyGuS/83.c
+[22:52:38] LLM start SyGuS_83.c_initial1
+[22:52:43] LLM done SyGuS_83.c_initial1, chars=370
+[84/133] baseline3 SyGuS/84.c
+[22:52:46] LLM start SyGuS_84.c_initial1
+[22:52:50] LLM done SyGuS_84.c_initial1, chars=361
+[22:53:01] LLM start baseline3_diagnose_typed_main_assert
+[22:53:09] LLM done baseline3_diagnose_typed_main_assert, chars=751
+[22:53:09] LLM start baseline3_wrong_spec_typed_main_assert
+[22:53:14] LLM done baseline3_wrong_spec_typed_main_assert, chars=475
+baseline3 repair wrong_spec_typed_main_assert: not applied (no_applicable_repair)
+  #1 skipped: generated code rejected: LLM removed or changed original ACSL assertions: ['y>0']
+baseline3 repair fallback: trying missing_spec after wrong_spec failed
+[22:53:14] LLM start baseline3_missing_spec_typed_main_assert
+[22:53:20] LLM done baseline3_missing_spec_typed_main_assert, chars=616
+baseline3 repair missing_spec_typed_main_assert: applied proposal #1 -> repair_01_01_missing_spec_01_add_invariant.c
+[85/133] baseline3 SyGuS/85.c
+[22:53:21] LLM start SyGuS_85.c_initial1
+[22:53:26] LLM done SyGuS_85.c_initial1, chars=378
+[86/133] baseline3 SyGuS/86.c
+[22:53:29] LLM start SyGuS_86.c_initial1
+[22:53:34] LLM done SyGuS_86.c_initial1, chars=425
+[22:53:45] LLM start baseline3_diagnose_typed_main_loop_invariant_2_preserved
+[22:53:51] LLM done baseline3_diagnose_typed_main_loop_invariant_2_preserved, chars=821
+[22:53:51] LLM start baseline3_wrong_spec_typed_main_loop_invariant_2_preserved
+[22:54:03] LLM done baseline3_wrong_spec_typed_main_loop_invariant_2_preserved, chars=1601
+baseline3 repair wrong_spec_typed_main_loop_invariant_2_preserved: applied proposal #1 -> repair_01_01_wrong_spec_01_rewrite_annotation.c
+[22:54:14] LLM start baseline3_diagnose_typed_main_loop_invariant_2_preserved
+[22:54:20] LLM done baseline3_diagnose_typed_main_loop_invariant_2_preserved, chars=827
+[22:54:20] LLM start baseline3_wrong_spec_typed_main_loop_invariant_2_preserved
+[22:54:25] LLM done baseline3_wrong_spec_typed_main_loop_invariant_2_preserved, chars=548
+baseline3 repair wrong_spec_typed_main_loop_invariant_2_preserved: applied proposal #1 -> repair_02_01_wrong_spec_01_rewrite_annotation.c
+[22:54:36] LLM start baseline3_diagnose_typed_main_loop_invariant_2_preserved
+[22:54:48] LLM done baseline3_diagnose_typed_main_loop_invariant_2_preserved, chars=599
+[22:54:48] LLM start baseline3_candidates_typed_main_loop_invariant_2_preserved
+[22:54:53] LLM done baseline3_candidates_typed_main_loop_invariant_2_preserved, chars=499
+[22:55:04] LLM start baseline3_missing_spec_typed_main_loop_invariant_2_preserved
+[22:55:11] LLM done baseline3_missing_spec_typed_main_loop_invariant_2_preserved, chars=603
+baseline3 repair missing_spec_typed_main_loop_invariant_2_preserved: applied proposal #1 -> repair_03_01_missing_spec_01_add_invariant.c
+[22:55:21] LLM start baseline3_diagnose_typed_main_loop_invariant_3_preserved
+[22:55:26] LLM done baseline3_diagnose_typed_main_loop_invariant_3_preserved, chars=555
+[22:55:26] LLM start baseline3_candidates_typed_main_loop_invariant_3_preserved
+[22:55:42] LLM done baseline3_candidates_typed_main_loop_invariant_3_preserved, chars=931
+[22:56:03] LLM start baseline3_missing_spec_typed_main_loop_invariant_3_preserved
+[22:56:11] LLM done baseline3_missing_spec_typed_main_loop_invariant_3_preserved, chars=1055
+baseline3 repair missing_spec_typed_main_loop_invariant_3_preserved: not applied (no_applicable_repair)
+  #1 skipped: generated code rejected: LLM changed executable C code; only ACSL/comments are allowed
+baseline3 repair fallback: trying wrong_spec after missing_spec failed
+[22:56:11] LLM start baseline3_wrong_spec_typed_main_loop_invariant_3_preserved
+[22:56:22] LLM done baseline3_wrong_spec_typed_main_loop_invariant_3_preserved, chars=1546
+baseline3 repair wrong_spec_typed_main_loop_invariant_3_preserved: applied proposal #1 -> repair_04_01_wrong_spec_01_rewrite_annotation.c
+[22:56:32] LLM start baseline3_diagnose_typed_main_loop_invariant_3_preserved
+[22:56:38] LLM done baseline3_diagnose_typed_main_loop_invariant_3_preserved, chars=631
+[22:56:38] LLM start baseline3_candidates_typed_main_loop_invariant_3_preserved
+[22:56:50] LLM done baseline3_candidates_typed_main_loop_invariant_3_preserved, chars=1506
+[22:57:21] LLM start baseline3_missing_spec_typed_main_loop_invariant_3_preserved
+[22:57:29] LLM done baseline3_missing_spec_typed_main_loop_invariant_3_preserved, chars=817
+baseline3 repair missing_spec_typed_main_loop_invariant_3_preserved: applied proposal #1 -> repair_05_01_missing_spec_01_add_invariant.c
+[22:57:40] LLM start baseline3_diagnose_typed_main_loop_invariant_4_preserved
+[22:57:50] LLM done baseline3_diagnose_typed_main_loop_invariant_4_preserved, chars=805
+[22:57:50] LLM start baseline3_wrong_spec_typed_main_loop_invariant_4_preserved
+[22:57:56] LLM done baseline3_wrong_spec_typed_main_loop_invariant_4_preserved, chars=646
+baseline3 repair wrong_spec_typed_main_loop_invariant_4_preserved: applied proposal #1 -> repair_06_01_wrong_spec_01_delete_annotation.c
+[22:58:07] LLM start baseline3_diagnose_typed_main_loop_invariant_3_preserved
+[22:58:12] LLM done baseline3_diagnose_typed_main_loop_invariant_3_preserved, chars=603
+[22:58:12] LLM start baseline3_wrong_spec_typed_main_loop_invariant_3_preserved
+[22:58:18] LLM done baseline3_wrong_spec_typed_main_loop_invariant_3_preserved, chars=578
+baseline3 repair wrong_spec_typed_main_loop_invariant_3_preserved: applied proposal #1 -> repair_07_01_wrong_spec_01_rewrite_annotation.c
+[87/133] baseline3 SyGuS/87.c
+[22:58:21] LLM start SyGuS_87.c_initial1
+[22:58:30] LLM done SyGuS_87.c_initial1, chars=522
+[22:58:40] LLM start baseline3_diagnose_typed_foo_loop_invariant_preserved
+[22:58:44] LLM done baseline3_diagnose_typed_foo_loop_invariant_preserved, chars=485
+[22:58:44] LLM start baseline3_wrong_spec_typed_foo_loop_invariant_preserved
+[22:58:49] LLM done baseline3_wrong_spec_typed_foo_loop_invariant_preserved, chars=482
+baseline3 repair wrong_spec_typed_foo_loop_invariant_preserved: applied proposal #1 -> repair_01_01_wrong_spec_01_rewrite_annotation.c
+[22:58:59] LLM start baseline3_diagnose_typed_foo_assert
+[22:59:04] LLM done baseline3_diagnose_typed_foo_assert, chars=565
+[22:59:04] LLM start baseline3_wrong_spec_typed_foo_assert
+[22:59:09] LLM done baseline3_wrong_spec_typed_foo_assert, chars=571
+baseline3 repair wrong_spec_typed_foo_assert: not applied (no_applicable_repair)
+  #1 skipped: generated code rejected: LLM removed or changed original ACSL assertions: ['lock==1']
+baseline3 repair fallback: trying missing_spec after wrong_spec failed
+[22:59:09] LLM start baseline3_missing_spec_typed_foo_assert
+[22:59:16] LLM done baseline3_missing_spec_typed_foo_assert, chars=809
+baseline3 repair missing_spec_typed_foo_assert: applied proposal #1 -> repair_02_01_missing_spec_01_add_invariant.c
+[22:59:26] LLM start baseline3_diagnose_typed_foo_assert
+[22:59:34] LLM done baseline3_diagnose_typed_foo_assert, chars=1013
+[22:59:34] LLM start baseline3_wrong_spec_typed_foo_assert
+[22:59:39] LLM done baseline3_wrong_spec_typed_foo_assert, chars=537
+baseline3 repair wrong_spec_typed_foo_assert: not applied (no_applicable_repair)
+  #1 skipped: generated code rejected: LLM removed or changed original ACSL assertions: ['lock==1']
+baseline3 repair fallback: trying missing_spec after wrong_spec failed
+[22:59:39] LLM start baseline3_missing_spec_typed_foo_assert
+[22:59:44] LLM done baseline3_missing_spec_typed_foo_assert, chars=615
+baseline3 repair missing_spec_typed_foo_assert: applied proposal #1 -> repair_03_01_missing_spec_01_add_invariant.c
+[88/133] baseline3 SyGuS/88.c
+[22:59:46] LLM start SyGuS_88.c_initial1
+[22:59:52] LLM done SyGuS_88.c_initial1, chars=576
+[89/133] baseline3 SyGuS/89.c
+[22:59:53] LLM start SyGuS_89.c_initial1
+[22:59:59] LLM done SyGuS_89.c_initial1, chars=596
+[23:00:10] LLM start baseline3_diagnose_typed_foo_assert
+[23:00:15] LLM done baseline3_diagnose_typed_foo_assert, chars=494
+[23:00:15] LLM start baseline3_wrong_spec_typed_foo_assert
+[23:00:20] LLM done baseline3_wrong_spec_typed_foo_assert, chars=608
+baseline3 repair wrong_spec_typed_foo_assert: not applied (no_applicable_repair)
+  #1 skipped: generated code rejected: LLM removed or changed original ACSL assertions: ['lock==1']
+baseline3 repair fallback: trying missing_spec after wrong_spec failed
+[23:00:20] LLM start baseline3_missing_spec_typed_foo_assert
+[23:00:23] LLM done baseline3_missing_spec_typed_foo_assert, chars=2
+baseline3 repair missing_spec_typed_foo_assert: not applied (no_proposals)
+[23:00:23] LLM start SyGuS_89.c_initial2
+[23:00:29] LLM done SyGuS_89.c_initial2, chars=652
+[23:00:30] LLM start baseline3_invalid_repair
+[23:00:36] LLM done baseline3_invalid_repair, chars=467
+[23:00:36] LLM start SyGuS_89.c_initial3
+[23:00:42] LLM done SyGuS_89.c_initial3, chars=558
+[23:00:53] LLM start baseline3_diagnose_typed_foo_assert
+[23:01:00] LLM done baseline3_diagnose_typed_foo_assert, chars=669
+[23:01:00] LLM start baseline3_wrong_spec_typed_foo_assert
+[23:01:05] LLM done baseline3_wrong_spec_typed_foo_assert, chars=548
+baseline3 repair wrong_spec_typed_foo_assert: not applied (no_applicable_repair)
+  #1 skipped: generated code rejected: LLM removed or changed original ACSL assertions: ['lock==1']
+baseline3 repair fallback: trying missing_spec after wrong_spec failed
+[23:01:05] LLM start baseline3_missing_spec_typed_foo_assert
+[23:01:08] LLM done baseline3_missing_spec_typed_foo_assert, chars=2
+baseline3 repair missing_spec_typed_foo_assert: not applied (no_proposals)
+[90/133] baseline3 SyGuS/90.c
+[23:01:08] LLM start SyGuS_90.c_initial1
+[23:01:14] LLM done SyGuS_90.c_initial1, chars=549
+[23:01:25] LLM start baseline3_diagnose_typed_foo_loop_invariant_2_established
+[23:01:30] LLM done baseline3_diagnose_typed_foo_loop_invariant_2_established, chars=504
+[23:01:30] LLM start baseline3_wrong_spec_typed_foo_loop_invariant_2_established
+[23:01:35] LLM done baseline3_wrong_spec_typed_foo_loop_invariant_2_established, chars=539
+baseline3 repair wrong_spec_typed_foo_loop_invariant_2_established: applied proposal #1 -> repair_01_01_wrong_spec_01_rewrite_annotation.c
+[23:01:46] LLM start baseline3_diagnose_typed_foo_loop_invariant_preserved
+[23:01:52] LLM done baseline3_diagnose_typed_foo_loop_invariant_preserved, chars=919
+[23:01:52] LLM start baseline3_wrong_spec_typed_foo_loop_invariant_preserved
+[23:01:57] LLM done baseline3_wrong_spec_typed_foo_loop_invariant_preserved, chars=519
+baseline3 repair wrong_spec_typed_foo_loop_invariant_preserved: applied proposal #1 -> repair_02_01_wrong_spec_01_rewrite_annotation.c
+[23:02:08] LLM start baseline3_diagnose_typed_foo_assert
+[23:02:13] LLM done baseline3_diagnose_typed_foo_assert, chars=586
+[23:02:13] LLM start baseline3_wrong_spec_typed_foo_assert
+[23:02:23] LLM done baseline3_wrong_spec_typed_foo_assert, chars=582
+baseline3 repair wrong_spec_typed_foo_assert: not applied (no_applicable_repair)
+  #1 skipped: generated code rejected: LLM removed or changed original ACSL assertions: ['lock==1']
+baseline3 repair fallback: trying missing_spec after wrong_spec failed
+[23:02:23] LLM start baseline3_missing_spec_typed_foo_assert
+[23:02:29] LLM done baseline3_missing_spec_typed_foo_assert, chars=763
+baseline3 repair missing_spec_typed_foo_assert: applied proposal #1 -> repair_03_01_missing_spec_01_add_invariant.c
+[23:02:39] LLM start baseline3_diagnose_typed_foo_loop_invariant_3_established
+[23:02:44] LLM done baseline3_diagnose_typed_foo_loop_invariant_3_established, chars=499
+[23:02:44] LLM start baseline3_wrong_spec_typed_foo_loop_invariant_3_established
+[23:02:52] LLM done baseline3_wrong_spec_typed_foo_loop_invariant_3_established, chars=559
+baseline3 repair wrong_spec_typed_foo_loop_invariant_3_established: applied proposal #1 -> repair_04_01_wrong_spec_01_rewrite_annotation.c
+[23:03:03] LLM start baseline3_diagnose_typed_foo_assert
+[23:03:09] LLM done baseline3_diagnose_typed_foo_assert, chars=554
+[23:03:09] LLM start baseline3_wrong_spec_typed_foo_assert
+[23:03:14] LLM done baseline3_wrong_spec_typed_foo_assert, chars=542
+baseline3 repair wrong_spec_typed_foo_assert: not applied (no_applicable_repair)
+  #1 skipped: generated code rejected: LLM removed or changed original ACSL assertions: ['lock==1']
+baseline3 repair fallback: trying missing_spec after wrong_spec failed
+[23:03:14] LLM start baseline3_missing_spec_typed_foo_assert
+[23:03:21] LLM done baseline3_missing_spec_typed_foo_assert, chars=844
+baseline3 repair missing_spec_typed_foo_assert: applied proposal #1 -> repair_05_01_missing_spec_01_add_invariant.c
+[23:03:22] LLM start SyGuS_90.c_initial2
+[23:03:28] LLM done SyGuS_90.c_initial2, chars=565
+[23:03:39] LLM start baseline3_diagnose_typed_foo_assert
+[23:03:46] LLM done baseline3_diagnose_typed_foo_assert, chars=580
+[23:03:46] LLM start baseline3_wrong_spec_typed_foo_assert
+[23:03:51] LLM done baseline3_wrong_spec_typed_foo_assert, chars=552
+baseline3 repair wrong_spec_typed_foo_assert: not applied (no_applicable_repair)
+  #1 skipped: generated code rejected: LLM removed or changed original ACSL assertions: ['lock==1']
+baseline3 repair fallback: trying missing_spec after wrong_spec failed
+[23:03:51] LLM start baseline3_missing_spec_typed_foo_assert
+[23:03:53] LLM done baseline3_missing_spec_typed_foo_assert, chars=2
+baseline3 repair missing_spec_typed_foo_assert: not applied (no_proposals)
+[23:03:53] LLM start SyGuS_90.c_initial3
+[23:03:59] LLM done SyGuS_90.c_initial3, chars=434
+[23:04:10] LLM start baseline3_diagnose_typed_foo_assert
+[23:04:15] LLM done baseline3_diagnose_typed_foo_assert, chars=555
+[23:04:15] LLM start baseline3_wrong_spec_typed_foo_assert
+[23:04:22] LLM done baseline3_wrong_spec_typed_foo_assert, chars=490
+baseline3 repair wrong_spec_typed_foo_assert: not applied (no_applicable_repair)
+  #1 skipped: generated code rejected: LLM removed or changed original ACSL assertions: ['lock==1']
+baseline3 repair fallback: trying missing_spec after wrong_spec failed
+[23:04:22] LLM start baseline3_missing_spec_typed_foo_assert
+[23:04:28] LLM done baseline3_missing_spec_typed_foo_assert, chars=634
+baseline3 repair missing_spec_typed_foo_assert: applied proposal #1 -> repair_01_01_missing_spec_01_add_invariant.c
+[23:04:39] LLM start baseline3_diagnose_typed_foo_assert
+[23:04:44] LLM done baseline3_diagnose_typed_foo_assert, chars=590
+[23:04:44] LLM start baseline3_wrong_spec_typed_foo_assert
+[23:04:51] LLM done baseline3_wrong_spec_typed_foo_assert, chars=559
+baseline3 repair wrong_spec_typed_foo_assert: not applied (no_applicable_repair)
+  #1 skipped: generated code rejected: LLM removed or changed original ACSL assertions: ['lock==1']
+baseline3 repair fallback: trying missing_spec after wrong_spec failed
+[23:04:51] LLM start baseline3_missing_spec_typed_foo_assert
+[23:04:56] LLM done baseline3_missing_spec_typed_foo_assert, chars=613
+baseline3 repair missing_spec_typed_foo_assert: applied proposal #1 -> repair_02_01_missing_spec_01_add_contract.c
+[91/133] baseline3 SyGuS/91.c
+[23:04:57] LLM start SyGuS_91.c_initial1
+[23:05:02] LLM done SyGuS_91.c_initial1, chars=451
+[92/133] baseline3 SyGuS/92.c
+[23:05:04] LLM start SyGuS_92.c_initial1
+[23:05:08] LLM done SyGuS_92.c_initial1, chars=298
+[93/133] baseline3 SyGuS/93.c
+[23:05:09] LLM start SyGuS_93.c_initial1
+[23:05:28] LLM done SyGuS_93.c_initial1, chars=591
+[94/133] baseline3 SyGuS/94.c
+[23:05:31] LLM start SyGuS_94.c_initial1
+[23:05:37] LLM done SyGuS_94.c_initial1, chars=411
+[23:05:47] LLM start baseline3_diagnose_typed_foo_assert
+[23:05:54] LLM done baseline3_diagnose_typed_foo_assert, chars=538
+[23:05:54] LLM start baseline3_candidates_typed_foo_assert
+[23:06:06] LLM done baseline3_candidates_typed_foo_assert, chars=1390
+[23:06:06] LLM start baseline3_missing_spec_typed_foo_assert
+[23:06:13] LLM done baseline3_missing_spec_typed_foo_assert, chars=676
+baseline3 repair missing_spec_typed_foo_assert: applied proposal #1 -> repair_01_01_missing_spec_01_add_invariant.c
+[95/133] baseline3 SyGuS/95.c
+[23:06:15] LLM start SyGuS_95.c_initial1
+[23:06:21] LLM done SyGuS_95.c_initial1, chars=471
+[96/133] baseline3 SyGuS/96.c
+[23:06:23] LLM start SyGuS_96.c_initial1
+[23:06:29] LLM done SyGuS_96.c_initial1, chars=415
+[97/133] baseline3 SyGuS/97.c
+[23:06:30] LLM start SyGuS_97.c_initial1
+[23:06:48] LLM done SyGuS_97.c_initial1, chars=415
+[98/133] baseline3 SyGuS/98.c
+[23:06:49] LLM start SyGuS_98.c_initial1
+[23:06:56] LLM done SyGuS_98.c_initial1, chars=386
+[99/133] baseline3 SyGuS/99.c
+[23:06:57] LLM start SyGuS_99.c_initial1
+[23:07:04] LLM done SyGuS_99.c_initial1, chars=486
+[100/133] baseline3 SyGuS/100.c
+[23:07:06] LLM start SyGuS_100.c_initial1
+[23:07:11] LLM done SyGuS_100.c_initial1, chars=366
+[101/133] baseline3 SyGuS/101.c
+[23:07:12] LLM start SyGuS_101.c_initial1
+[23:07:18] LLM done SyGuS_101.c_initial1, chars=408
+[102/133] baseline3 SyGuS/102.c
+[23:07:20] LLM start SyGuS_102.c_initial1
+[23:07:28] LLM done SyGuS_102.c_initial1, chars=373
+[103/133] baseline3 SyGuS/103.c
+[23:07:30] LLM start SyGuS_103.c_initial1
+[23:07:34] LLM done SyGuS_103.c_initial1, chars=291
+[104/133] baseline3 SyGuS/104.c
+[23:07:35] LLM start SyGuS_104.c_initial1
+[23:07:40] LLM done SyGuS_104.c_initial1, chars=387
+[23:07:51] LLM start baseline3_diagnose_typed_foo_loop_invariant_2_established
+[23:07:58] LLM done baseline3_diagnose_typed_foo_loop_invariant_2_established, chars=844
+[23:07:58] LLM start baseline3_wrong_spec_typed_foo_loop_invariant_2_established
+[23:08:04] LLM done baseline3_wrong_spec_typed_foo_loop_invariant_2_established, chars=547
+baseline3 repair wrong_spec_typed_foo_loop_invariant_2_established: applied proposal #1 -> repair_01_01_wrong_spec_01_rewrite_annotation.c
+[105/133] baseline3 SyGuS/105.c
+[23:08:07] LLM start SyGuS_105.c_initial1
+[23:08:12] LLM done SyGuS_105.c_initial1, chars=390
+[106/133] baseline3 SyGuS/106.c
+[23:08:13] LLM start SyGuS_106.c_initial1
+[23:08:18] LLM done SyGuS_106.c_initial1, chars=493
+[107/133] baseline3 SyGuS/107.c
+[23:08:20] LLM start SyGuS_107.c_initial1
+[23:08:25] LLM done SyGuS_107.c_initial1, chars=511
+[108/133] baseline3 SyGuS/108.c
+[23:08:26] LLM start SyGuS_108.c_initial1
+[23:08:32] LLM done SyGuS_108.c_initial1, chars=507
+[23:08:33] LLM start baseline3_invalid_repair
+[23:08:38] LLM done baseline3_invalid_repair, chars=441
+[109/133] baseline3 SyGuS/109.c
+[23:08:39] LLM start SyGuS_109.c_initial1
+[23:08:45] LLM done SyGuS_109.c_initial1, chars=547
+[23:08:55] LLM start baseline3_diagnose_typed_foo_loop_invariant_2_established
+[23:09:03] LLM done baseline3_diagnose_typed_foo_loop_invariant_2_established, chars=641
+[23:09:03] LLM start baseline3_wrong_spec_typed_foo_loop_invariant_2_established
+[23:09:09] LLM done baseline3_wrong_spec_typed_foo_loop_invariant_2_established, chars=670
+baseline3 repair wrong_spec_typed_foo_loop_invariant_2_established: applied proposal #1 -> repair_01_01_wrong_spec_01_rewrite_annotation.c
+[23:09:19] LLM start baseline3_diagnose_typed_foo_ensures
+[23:09:26] LLM done baseline3_diagnose_typed_foo_ensures, chars=932
+[23:09:26] LLM start baseline3_candidates_typed_foo_ensures
+[23:09:33] LLM done baseline3_candidates_typed_foo_ensures, chars=1088
+[23:09:33] LLM start baseline3_missing_spec_typed_foo_ensures
+[23:09:39] LLM done baseline3_missing_spec_typed_foo_ensures, chars=667
+baseline3 repair missing_spec_typed_foo_ensures: applied proposal #1 -> repair_02_01_missing_spec_01_add_invariant.c
+[23:09:49] LLM start baseline3_diagnose_typed_foo_loop_invariant_2_established
+[23:09:58] LLM done baseline3_diagnose_typed_foo_loop_invariant_2_established, chars=878
+[23:09:58] LLM start baseline3_wrong_spec_typed_foo_loop_invariant_2_established
+[23:10:13] LLM done baseline3_wrong_spec_typed_foo_loop_invariant_2_established, chars=617
+baseline3 repair wrong_spec_typed_foo_loop_invariant_2_established: applied proposal #1 -> repair_03_01_wrong_spec_01_rewrite_annotation.c
+[23:10:24] LLM start baseline3_diagnose_typed_foo_ensures
+[23:10:29] LLM done baseline3_diagnose_typed_foo_ensures, chars=559
+[23:10:29] LLM start baseline3_wrong_spec_typed_foo_ensures
+[23:10:34] LLM done baseline3_wrong_spec_typed_foo_ensures, chars=555
+baseline3 repair wrong_spec_typed_foo_ensures: applied proposal #1 -> repair_04_01_wrong_spec_01_rewrite_assigns.c
+[23:10:35] LLM start baseline3_invalid_repair
+[23:10:40] LLM done baseline3_invalid_repair, chars=505
+[23:10:50] LLM start baseline3_diagnose_typed_foo_ensures
+[23:11:06] LLM done baseline3_diagnose_typed_foo_ensures, chars=684
+[23:11:06] LLM start baseline3_candidates_typed_foo_ensures
+[23:11:18] LLM done baseline3_candidates_typed_foo_ensures, chars=1673
+[23:11:18] LLM start baseline3_missing_spec_typed_foo_ensures
+[23:11:24] LLM done baseline3_missing_spec_typed_foo_ensures, chars=700
+baseline3 repair missing_spec_typed_foo_ensures: applied proposal #1 -> repair_06_01_missing_spec_01_rewrite_assigns.c
+[23:11:25] LLM start baseline3_invalid_repair
+[23:11:29] LLM done baseline3_invalid_repair, chars=460
+[23:11:40] LLM start SyGuS_109.c_initial2
+[23:11:46] LLM done SyGuS_109.c_initial2, chars=542
+[23:11:56] LLM start baseline3_diagnose_typed_foo_loop_invariant_2_established
+[23:12:03] LLM done baseline3_diagnose_typed_foo_loop_invariant_2_established, chars=831
+[23:12:03] LLM start baseline3_wrong_spec_typed_foo_loop_invariant_2_established
+[23:12:09] LLM done baseline3_wrong_spec_typed_foo_loop_invariant_2_established, chars=702
+baseline3 repair wrong_spec_typed_foo_loop_invariant_2_established: applied proposal #1 -> repair_01_01_wrong_spec_01_rewrite_annotation.c
+[23:12:19] LLM start baseline3_diagnose_typed_foo_ensures
+[23:12:25] LLM done baseline3_diagnose_typed_foo_ensures, chars=526
+[23:12:25] LLM start baseline3_candidates_typed_foo_ensures
+[23:12:42] LLM done baseline3_candidates_typed_foo_ensures, chars=980
+[23:13:05] LLM start baseline3_missing_spec_typed_foo_ensures
+[23:13:26] LLM done baseline3_missing_spec_typed_foo_ensures, chars=794
+baseline3 repair missing_spec_typed_foo_ensures: applied proposal #1 -> repair_02_01_missing_spec_01_add_invariant.c
+[23:13:37] LLM start baseline3_diagnose_typed_foo_ensures
+[23:13:41] LLM done baseline3_diagnose_typed_foo_ensures, chars=438
+[23:13:41] LLM start baseline3_wrong_spec_typed_foo_ensures
+[23:13:47] LLM done baseline3_wrong_spec_typed_foo_ensures, chars=563
+baseline3 repair wrong_spec_typed_foo_ensures: applied proposal #1 -> repair_03_01_wrong_spec_01_rewrite_assigns.c
+[23:13:48] LLM start baseline3_invalid_repair
+[23:13:52] LLM done baseline3_invalid_repair, chars=346
+[23:14:02] LLM start baseline3_diagnose_typed_foo_ensures
+[23:14:08] LLM done baseline3_diagnose_typed_foo_ensures, chars=616
+[23:14:08] LLM start baseline3_wrong_spec_typed_foo_ensures
+[23:14:13] LLM done baseline3_wrong_spec_typed_foo_ensures, chars=623
+baseline3 repair wrong_spec_typed_foo_ensures: applied proposal #1 -> repair_05_01_wrong_spec_01_rewrite_annotation.c
+[23:14:14] LLM start baseline3_invalid_repair
+[23:14:18] LLM done baseline3_invalid_repair, chars=355
+[23:14:29] LLM start baseline3_diagnose_typed_foo_ensures
+[23:14:36] LLM done baseline3_diagnose_typed_foo_ensures, chars=876
+[23:14:36] LLM start baseline3_candidates_typed_foo_ensures
+[23:14:41] LLM done baseline3_candidates_typed_foo_ensures, chars=436
+[23:14:41] LLM start baseline3_missing_spec_typed_foo_ensures
+[23:14:48] LLM done baseline3_missing_spec_typed_foo_ensures, chars=945
+baseline3 repair missing_spec_typed_foo_ensures: applied proposal #1 -> repair_07_01_missing_spec_01_add_invariant.c
+[23:14:58] LLM start SyGuS_109.c_initial3
+[23:15:04] LLM done SyGuS_109.c_initial3, chars=519
+[23:15:05] LLM start baseline3_invalid_repair
+[23:15:09] LLM done baseline3_invalid_repair, chars=421
+[23:15:20] LLM start baseline3_diagnose_typed_foo_loop_invariant_2_established
+[23:15:31] LLM done baseline3_diagnose_typed_foo_loop_invariant_2_established, chars=481
+[23:15:31] LLM start baseline3_wrong_spec_typed_foo_loop_invariant_2_established
+[23:15:36] LLM done baseline3_wrong_spec_typed_foo_loop_invariant_2_established, chars=614
+baseline3 repair wrong_spec_typed_foo_loop_invariant_2_established: applied proposal #1 -> repair_02_01_wrong_spec_01_rewrite_annotation.c
+[23:15:47] LLM start baseline3_diagnose_typed_foo_ensures
+[23:15:54] LLM done baseline3_diagnose_typed_foo_ensures, chars=1029
+[23:15:54] LLM start baseline3_candidates_typed_foo_ensures
+[23:16:00] LLM done baseline3_candidates_typed_foo_ensures, chars=433
+[23:16:00] LLM start baseline3_missing_spec_typed_foo_ensures
+[23:16:05] LLM done baseline3_missing_spec_typed_foo_ensures, chars=607
+baseline3 repair missing_spec_typed_foo_ensures: applied proposal #1 -> repair_03_01_missing_spec_01_add_contract.c
+[23:16:16] LLM start baseline3_diagnose_typed_foo_ensures
+[23:16:22] LLM done baseline3_diagnose_typed_foo_ensures, chars=644
+[23:16:22] LLM start baseline3_wrong_spec_typed_foo_ensures
+[23:16:28] LLM done baseline3_wrong_spec_typed_foo_ensures, chars=678
+baseline3 repair wrong_spec_typed_foo_ensures: applied proposal #1 -> repair_04_01_wrong_spec_01_rewrite_annotation.c
+[110/133] baseline3 SyGuS/110.c
+[23:16:31] LLM start SyGuS_110.c_initial1
+[23:16:37] LLM done SyGuS_110.c_initial1, chars=510
+[111/133] baseline3 SyGuS/111.c
+[23:16:38] LLM start SyGuS_111.c_initial1
+[23:16:43] LLM done SyGuS_111.c_initial1, chars=440
+[112/133] baseline3 SyGuS/112.c
+[23:16:45] LLM start SyGuS_112.c_initial1
+[23:16:52] LLM done SyGuS_112.c_initial1, chars=541
+[113/133] baseline3 SyGuS/113.c
+[23:16:53] LLM start SyGuS_113.c_initial1
+[23:17:01] LLM done SyGuS_113.c_initial1, chars=458
+[114/133] baseline3 SyGuS/114.c
+[23:17:02] LLM start SyGuS_114.c_initial1
+[23:17:07] LLM done SyGuS_114.c_initial1, chars=414
+[115/133] baseline3 SyGuS/115.c
+[23:17:08] LLM start SyGuS_115.c_initial1
+[23:17:14] LLM done SyGuS_115.c_initial1, chars=438
+[116/133] baseline3 SyGuS/116.c
+[23:17:15] LLM start SyGuS_116.c_initial1
+[23:17:21] LLM done SyGuS_116.c_initial1, chars=446
+[117/133] baseline3 SyGuS/117.c
+[23:17:22] LLM start SyGuS_117.c_initial1
+[23:17:27] LLM done SyGuS_117.c_initial1, chars=377
+[118/133] baseline3 SyGuS/118.c
+[23:17:28] LLM start SyGuS_118.c_initial1
+[23:17:34] LLM done SyGuS_118.c_initial1, chars=510
+[119/133] baseline3 SyGuS/119.c
+[23:17:35] LLM start SyGuS_119.c_initial1
+[23:17:45] LLM done SyGuS_119.c_initial1, chars=479
+[120/133] baseline3 SyGuS/120.c
+[23:17:46] LLM start SyGuS_120.c_initial1
+[23:17:51] LLM done SyGuS_120.c_initial1, chars=383
+[121/133] baseline3 SyGuS/121.c
+[23:17:53] LLM start SyGuS_121.c_initial1
+[23:17:58] LLM done SyGuS_121.c_initial1, chars=381
+[122/133] baseline3 SyGuS/122.c
+[23:17:59] LLM start SyGuS_122.c_initial1
+[23:18:05] LLM done SyGuS_122.c_initial1, chars=526
+[123/133] baseline3 SyGuS/123.c
+[23:18:06] LLM start SyGuS_123.c_initial1
+[23:18:12] LLM done SyGuS_123.c_initial1, chars=472
+[124/133] baseline3 SyGuS/124.c
+[23:18:13] LLM start SyGuS_124.c_initial1
+[23:18:18] LLM done SyGuS_124.c_initial1, chars=441
+[125/133] baseline3 SyGuS/125.c
+[23:18:21] LLM start SyGuS_125.c_initial1
+[23:18:26] LLM done SyGuS_125.c_initial1, chars=418
+[126/133] baseline3 SyGuS/126.c
+[23:18:28] LLM start SyGuS_126.c_initial1
+[23:18:33] LLM done SyGuS_126.c_initial1, chars=270
+[127/133] baseline3 SyGuS/127.c
+[23:18:34] LLM start SyGuS_127.c_initial1
+[23:18:39] LLM done SyGuS_127.c_initial1, chars=367
+[128/133] baseline3 SyGuS/128.c
+[23:18:40] LLM start SyGuS_128.c_initial1
+[23:18:49] LLM done SyGuS_128.c_initial1, chars=313
+[129/133] baseline3 SyGuS/129.c
+[23:18:50] LLM start SyGuS_129.c_initial1
+[23:18:55] LLM done SyGuS_129.c_initial1, chars=310
+[130/133] baseline3 SyGuS/130.c
+[23:18:56] LLM start SyGuS_130.c_initial1
+[23:19:03] LLM done SyGuS_130.c_initial1, chars=728
+[23:19:14] LLM start baseline3_diagnose_typed_foo_loop_invariant_preserved
+[23:19:19] LLM done baseline3_diagnose_typed_foo_loop_invariant_preserved, chars=477
+[23:19:19] LLM start baseline3_wrong_spec_typed_foo_loop_invariant_preserved
+[23:19:25] LLM done baseline3_wrong_spec_typed_foo_loop_invariant_preserved, chars=569
+baseline3 repair wrong_spec_typed_foo_loop_invariant_preserved: applied proposal #1 -> repair_01_01_wrong_spec_01_rewrite_annotation.c
+[23:19:35] LLM start baseline3_diagnose_typed_foo_loop_invariant_2_preserved
+[23:19:40] LLM done baseline3_diagnose_typed_foo_loop_invariant_2_preserved, chars=561
+[23:19:40] LLM start baseline3_wrong_spec_typed_foo_loop_invariant_2_preserved
+[23:19:46] LLM done baseline3_wrong_spec_typed_foo_loop_invariant_2_preserved, chars=554
+baseline3 repair wrong_spec_typed_foo_loop_invariant_2_preserved: applied proposal #1 -> repair_02_01_wrong_spec_01_rewrite_annotation.c
+[23:19:57] LLM start baseline3_diagnose_typed_foo_loop_invariant_3_preserved
+[23:20:02] LLM done baseline3_diagnose_typed_foo_loop_invariant_3_preserved, chars=478
+[23:20:02] LLM start baseline3_wrong_spec_typed_foo_loop_invariant_3_preserved
+[23:20:07] LLM done baseline3_wrong_spec_typed_foo_loop_invariant_3_preserved, chars=530
+baseline3 repair wrong_spec_typed_foo_loop_invariant_3_preserved: applied proposal #1 -> repair_03_01_wrong_spec_01_rewrite_annotation.c
+[23:20:18] LLM start baseline3_diagnose_typed_foo_loop_assigns_part4
+[23:20:26] LLM done baseline3_diagnose_typed_foo_loop_assigns_part4, chars=1001
+[23:20:26] LLM start baseline3_wrong_spec_typed_foo_loop_assigns_part4
+[23:20:31] LLM done baseline3_wrong_spec_typed_foo_loop_assigns_part4, chars=506
+baseline3 repair wrong_spec_typed_foo_loop_assigns_part4: applied proposal #1 -> repair_04_01_wrong_spec_01_rewrite_assigns.c
+[23:20:42] LLM start baseline3_diagnose_typed_foo_assert
+[23:20:48] LLM done baseline3_diagnose_typed_foo_assert, chars=580
+[23:20:48] LLM start baseline3_wrong_spec_typed_foo_assert
+[23:20:55] LLM done baseline3_wrong_spec_typed_foo_assert, chars=640
+baseline3 repair wrong_spec_typed_foo_assert: not applied (no_applicable_repair)
+  #1 skipped: generated code rejected: LLM removed or changed original ACSL assertions: ['x2>=0']
+baseline3 repair fallback: trying missing_spec after wrong_spec failed
+[23:20:55] LLM start baseline3_missing_spec_typed_foo_assert
+[23:21:00] LLM done baseline3_missing_spec_typed_foo_assert, chars=509
+baseline3 repair missing_spec_typed_foo_assert: applied proposal #1 -> repair_05_01_missing_spec_01_add_requires.c
+[23:21:11] LLM start baseline3_diagnose_typed_foo_assert
+[23:21:18] LLM done baseline3_diagnose_typed_foo_assert, chars=604
+[23:21:18] LLM start baseline3_candidates_typed_foo_assert
+[23:21:29] LLM done baseline3_candidates_typed_foo_assert, chars=1577
+[23:21:29] LLM start baseline3_missing_spec_typed_foo_assert
+[23:21:35] LLM done baseline3_missing_spec_typed_foo_assert, chars=778
+baseline3 repair missing_spec_typed_foo_assert: applied proposal #1 -> repair_06_01_missing_spec_01_add_invariant.c
+[131/133] baseline3 SyGuS/131.c
+[23:21:38] LLM start SyGuS_131.c_initial1
+[23:21:44] LLM done SyGuS_131.c_initial1, chars=677
+[23:21:55] LLM start baseline3_diagnose_typed_foo_loop_invariant_preserved
+[23:22:02] LLM done baseline3_diagnose_typed_foo_loop_invariant_preserved, chars=625
+[23:22:02] LLM start baseline3_wrong_spec_typed_foo_loop_invariant_preserved
+[23:22:09] LLM done baseline3_wrong_spec_typed_foo_loop_invariant_preserved, chars=772
+baseline3 repair wrong_spec_typed_foo_loop_invariant_preserved: applied proposal #1 -> repair_01_01_wrong_spec_01_rewrite_annotation.c
+[23:22:19] LLM start baseline3_diagnose_typed_foo_loop_invariant_preserved
+[23:22:24] LLM done baseline3_diagnose_typed_foo_loop_invariant_preserved, chars=487
+[23:22:24] LLM start baseline3_wrong_spec_typed_foo_loop_invariant_preserved
+[23:22:43] LLM done baseline3_wrong_spec_typed_foo_loop_invariant_preserved, chars=1293
+baseline3 repair wrong_spec_typed_foo_loop_invariant_preserved: applied proposal #1 -> repair_02_01_wrong_spec_01_rewrite_annotation.c
+[23:22:54] LLM start baseline3_diagnose_typed_foo_assert_2
+[23:22:59] LLM done baseline3_diagnose_typed_foo_assert_2, chars=571
+[23:22:59] LLM start baseline3_wrong_spec_typed_foo_assert_2
+[23:23:04] LLM done baseline3_wrong_spec_typed_foo_assert_2, chars=563
+baseline3 repair wrong_spec_typed_foo_assert_2: applied proposal #1 -> repair_03_01_wrong_spec_01_delete_annotation.c
+[23:23:15] LLM start baseline3_diagnose_typed_foo_assert
+[23:23:20] LLM done baseline3_diagnose_typed_foo_assert, chars=662
+[23:23:20] LLM start baseline3_wrong_spec_typed_foo_assert
+[23:23:26] LLM done baseline3_wrong_spec_typed_foo_assert, chars=586
+baseline3 repair wrong_spec_typed_foo_assert: not applied (no_applicable_repair)
+  #1 skipped: generated code rejected: LLM removed or changed original ACSL assertions: ['x3>=0']
+baseline3 repair fallback: trying missing_spec after wrong_spec failed
+[23:23:26] LLM start baseline3_missing_spec_typed_foo_assert
+[23:23:31] LLM done baseline3_missing_spec_typed_foo_assert, chars=493
+baseline3 repair missing_spec_typed_foo_assert: applied proposal #1 -> repair_04_01_missing_spec_01_add_requires.c
+[23:23:41] LLM start baseline3_diagnose_typed_foo_assert
+[23:23:47] LLM done baseline3_diagnose_typed_foo_assert, chars=732
+[23:23:47] LLM start baseline3_candidates_typed_foo_assert
+[23:24:01] LLM done baseline3_candidates_typed_foo_assert, chars=2169
+[23:24:02] LLM start baseline3_missing_spec_typed_foo_assert
+[23:24:10] LLM done baseline3_missing_spec_typed_foo_assert, chars=1006
+baseline3 repair missing_spec_typed_foo_assert: applied proposal #1 -> repair_05_01_missing_spec_01_add_invariant.c
+[132/133] baseline3 SyGuS/132.c
+[23:24:12] LLM start SyGuS_132.c_initial1
+[23:24:18] LLM done SyGuS_132.c_initial1, chars=555
+[133/133] baseline3 SyGuS/133.c
+[23:24:20] LLM start SyGuS_133.c_initial1
+[23:24:25] LLM done SyGuS_133.c_initial1, chars=367
+Summary: /home/wangpeijie/wpj_2010215/spec_generation_abduction/results/baseline3_assertion_probe/baseline3_summary.md
+Successful files: /home/wangpeijie/wpj_2010215/spec_generation_abduction/results/baseline3_assertion_probe/successful_files
+Failed cases: /home/wangpeijie/wpj_2010215/spec_generation_abduction/results/baseline3_assertion_probe/failed_cases
+Console log: /home/wangpeijie/wpj_2010215/spec_generation_abduction/results/baseline3_assertion_probe/baseline3_console_SyGuS.txt

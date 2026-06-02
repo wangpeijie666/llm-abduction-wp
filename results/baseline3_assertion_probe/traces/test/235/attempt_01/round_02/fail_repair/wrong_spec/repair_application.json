@@ -1,0 +1,8 @@
+{
+  "path": "/tmp/baseline3_p28s3nm2/attempt_01_repair_03/repair_03_01_wrong_spec_01_rewrite_annotation.c",
+  "reason": "applied",
+  "details": [
+    "#1 applied: action='rewrite_annotation', file=repair_03_01_wrong_spec_01_rewrite_annotation.c"
+  ],
+  "applied_index": 1
+}

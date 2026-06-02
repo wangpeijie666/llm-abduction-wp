@@ -1,0 +1,106 @@
+Dataset: SyGuS
+File: 89.c
+Source: /home/wangpeijie/wpj_2010215/spec_generation_abduction/data/AutoBench/SyGuS/89.c
+Final status: Fail
+Best attempt: 1
+Best result: Fail_10_11
+
+Command:
+frama-c -wp -wp-precond-weakening -wp-no-callee-precond -wp-prover Alt-Ergo,Z3 -wp-prop=-@terminates,-@variant,-@decreases -wp-print -wp-timeout 8 /tmp/baseline3_3wvtkxj2/generated_specs/attempt_01.c
+
+WP stdout:
+[kernel] Parsing /tmp/baseline3_3wvtkxj2/generated_specs/attempt_01.c (with preprocessing)
+[kernel:typing:implicit-function-declaration] /tmp/baseline3_3wvtkxj2/generated_specs/attempt_01.c:16: Warning: 
+  Calling undeclared function unknown. Old style K&R code?
+[wp] Running WP plugin...
+[kernel:annot:missing-spec] /tmp/baseline3_3wvtkxj2/generated_specs/attempt_01.c:16: Warning: 
+  Neither code nor specification for function unknown,
+   generating default exits, assigns and terminates. See -generated-spec-* options for more info
+[wp] Warning: Missing RTE guards
+[wp] 11 goals scheduled
+[wp] [Timeout] typed_foo_assert (Qed 9ms) (Z3)
+[wp] Proved goals:   10 / 11
+  Qed:            10 (0.85ms)
+  Timeout:         1
+------------------------------------------------------------
+  Function foo
+------------------------------------------------------------
+
+Goal Exit-condition (generated) in 'foo':
+Prove: true.
+Prover Qed returns Valid (0.51ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline3_3wvtkxj2/generated_specs/attempt_01.c, line 9):
+Prove: true.
+Prover Qed returns Valid (2ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline3_3wvtkxj2/generated_specs/attempt_01.c, line 9):
+Prove: true.
+Prover Qed returns Valid (2ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline3_3wvtkxj2/generated_specs/attempt_01.c, line 10):
+Prove: true.
+Prover Qed returns Valid (1ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline3_3wvtkxj2/generated_specs/attempt_01.c, line 10):
+Prove: true.
+Prover Qed returns Valid (2ms)
+
+------------------------------------------------------------
+
+Goal Assertion (file /tmp/baseline3_3wvtkxj2/generated_specs/attempt_01.c, line 26):
+Assume {
+  Type: is_sint32(lock_0).
+  (* Invariant *)
+  Have: (lock_0 = 0) \/ (lock_0 = 1).
+}
+Prove: lock_0 = 1.
+Prover Alt-Ergo 2.2.0 returns Failed
+unrecognized prover answer
+Prover Z3 4.8.12 returns Timeout (Qed:9ms) (8s)
+
+------------------------------------------------------------
+
+Goal Loop assigns (file /tmp/baseline3_3wvtkxj2/generated_specs/attempt_01.c, line 11) (1/2):
+Prove: true.
+Prover Qed returns Valid
+
+------------------------------------------------------------
+
+Goal Loop assigns (file /tmp/baseline3_3wvtkxj2/generated_specs/attempt_01.c, line 11) (2/2):
+Call Result at line 16
+Prove: true.
+Prover Qed returns Valid (1ms)
+
+------------------------------------------------------------
+
+Goal Assigns nothing in 'foo' (1/2):
+Prove: true.
+Prover Qed returns Valid
+
+------------------------------------------------------------
+
+Goal Assigns nothing in 'foo' (2/2):
+Effect at line 14
+Prove: true.
+Prover Qed returns Valid (3ms)
+
+------------------------------------------------------------
+
+Goal Assigns nothing in 'foo':
+Effect at line 14
+Prove: true.
+Prover Qed returns Valid (3ms)
+
+------------------------------------------------------------
+
+
+WP stderr:

@@ -1,0 +1,84 @@
+[kernel] Parsing /tmp/baseline3_p28s3nm2/attempt_01_repair_01/repair_01_01_wrong_spec_01_rewrite_annotation.c (with preprocessing)
+[wp] Running WP plugin...
+[wp] Warning: Missing RTE guards
+[wp] 7 goals scheduled
+[wp] [Timeout] typed_main_loop_invariant_2_preserved (Qed 10ms) (Z3)
+[wp] [Timeout] typed_main_loop_invariant_preserved (Qed 12ms) (Z3)
+[wp] [Timeout] typed_main_assert (Qed 6ms) (Z3)
+[wp] Proved goals:    5 / 8
+  Unreachable:     1
+  Qed:             4 (6ms-4ms-12ms)
+  Timeout:         3
+------------------------------------------------------------
+  Function main
+------------------------------------------------------------
+
+Goal Post-condition (file /tmp/baseline3_p28s3nm2/attempt_01_repair_01/repair_01_01_wrong_spec_01_rewrite_annotation.c, line 8) in 'main':
+Prove: true.
+Prover Qed returns Valid (6ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline3_p28s3nm2/attempt_01_repair_01/repair_01_01_wrong_spec_01_rewrite_annotation.c, line 15):
+Let x = -j.
+Assume {
+  Type: is_sint32(j) /\ is_sint32(j - 1) /\ is_sint32(11 - j) /\
+      is_sint32(13 - j).
+  (* Goal *)
+  When: 7 <= j.
+  (* Then *)
+  Have: 6 <= j.
+}
+Prove: false.
+Prover Alt-Ergo 2.2.0 returns Failed
+unrecognized prover answer
+Prover Z3 4.8.12 returns Timeout (Qed:12ms) (8s)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline3_p28s3nm2/attempt_01_repair_01/repair_01_01_wrong_spec_01_rewrite_annotation.c, line 15):
+Prove: true.
+Prover Qed returns Valid (2ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline3_p28s3nm2/attempt_01_repair_01/repair_01_01_wrong_spec_01_rewrite_annotation.c, line 16):
+Let x = -j.
+Assume {
+  Type: is_sint32(j) /\ is_sint32(j - 1) /\ is_sint32(11 - j) /\
+      is_sint32(13 - j).
+  (* Goal *)
+  When: j <= 6.
+  (* Then *)
+  Have: 6 <= j.
+}
+Prove: false.
+Prover Alt-Ergo 2.2.0 returns Failed
+unrecognized prover answer
+Prover Z3 4.8.12 returns Timeout (Qed:10ms) (8s)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline3_p28s3nm2/attempt_01_repair_01/repair_01_01_wrong_spec_01_rewrite_annotation.c, line 16):
+Prove: true.
+Prover Qed returns Valid (1ms)
+
+------------------------------------------------------------
+
+Goal Assertion (file /tmp/baseline3_p28s3nm2/attempt_01_repair_01/repair_01_01_wrong_spec_01_rewrite_annotation.c, line 25):
+Assume { Type: is_sint32(j) /\ is_sint32(17 - j). (* Else *) Have: j <= 8. }
+Prove: j = 6.
+Prover Alt-Ergo 2.2.0 returns Failed
+unrecognized prover answer
+Prover Z3 4.8.12 returns Timeout (Qed:6ms) (8s)
+
+------------------------------------------------------------
+
+Goal Loop assigns (file /tmp/baseline3_p28s3nm2/attempt_01_repair_01/repair_01_01_wrong_spec_01_rewrite_annotation.c, line 17):
+Prove: true.
+Prover Qed returns Valid
+
+------------------------------------------------------------
+[wp:pedantic-assigns] /tmp/baseline3_p28s3nm2/attempt_01_repair_01/repair_01_01_wrong_spec_01_rewrite_annotation.c:10: Warning: 
+  No 'assigns' specification for function 'main'.
+  Callers assumptions might be imprecise.

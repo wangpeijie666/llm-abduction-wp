@@ -1,0 +1,15 @@
+{
+  "name": "typed_main_loop_invariant_2_preserved",
+  "status": "Timeout",
+  "raw_line": "[wp] [Timeout] typed_main_loop_invariant_2_preserved (Qed 10ms) (Z3)",
+  "line_no": 5,
+  "failure_mode": "timeout",
+  "profile": "(Qed 10ms) (Z3)",
+  "goal_header": "Goal Preservation of Invariant (file /tmp/baseline3_p28s3nm2/generated_specs/attempt_01.c, line 15):",
+  "goal_text": "Goal Preservation of Invariant (file /tmp/baseline3_p28s3nm2/generated_specs/attempt_01.c, line 15):\nLet x = -j.\nAssume {\n  Type: is_sint32(j) /\\ is_sint32(j - 1) /\\ is_sint32(11 - j) /\\\n      is_sint32(13 - j).\n  (* Goal *)\n  When: 7 <= j.\n  (* Then *)\n  Have: 6 <= j.\n}\nProve: false.\nProver Alt-Ergo 2.2.0 returns Failed\nunrecognized prover answer\nProver Z3 4.8.12 returns Timeout (Qed:11ms) (8s)",
+  "assumptions": "Type: is_sint32(j) /\\ is_sint32(j - 1) /\\ is_sint32(11 - j) /\\\n      is_sint32(13 - j).\n  (* Goal *)\n  When: 7 <= j.\n  (* Then *)\n  Have: 6 <= j.",
+  "prove_statement": "false.",
+  "prover_output": "Prover Alt-Ergo 2.2.0 returns Failed\nunrecognized prover answer\nProver Z3 4.8.12 returns Timeout (Qed:11ms) (8s)",
+  "source_file": "/tmp/baseline3_p28s3nm2/generated_specs/attempt_01.c",
+  "source_line": 15
+}

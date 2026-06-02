@@ -1,0 +1,15 @@
+{
+  "category": "wrong_spec",
+  "target_kind": "invariant_preservation",
+  "reason": "The loop invariants are not inductive w.r.t. the loop body updates i:=i+2 and j:=j-1. Preservation generates contradictory goals (e.g., assuming 7 <= j must imply 6 <= j, then proving false), indicating the invariant was rewritten incorrectly/too strong and does not match the actual state relations maintained by the loop.",
+  "suspect_text": "loop invariant j >= i ==> (i + j == 11);\nloop invariant j < i ==> (i + j == 17);",
+  "source_line": null,
+  "recommended_action": "rewrite_annotation",
+  "raw": {
+    "category": "wrong_spec",
+    "target_kind": "invariant_preservation",
+    "suspect_text": "loop invariant j >= i ==> (i + j == 11);\nloop invariant j < i ==> (i + j == 17);",
+    "reason": "The loop invariants are not inductive w.r.t. the loop body updates i:=i+2 and j:=j-1. Preservation generates contradictory goals (e.g., assuming 7 <= j must imply 6 <= j, then proving false), indicating the invariant was rewritten incorrectly/too strong and does not match the actual state relations maintained by the loop.",
+    "recommended_action": "rewrite_annotation"
+  }
+}

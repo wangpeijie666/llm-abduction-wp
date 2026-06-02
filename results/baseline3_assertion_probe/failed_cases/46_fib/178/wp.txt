@@ -1,0 +1,333 @@
+Dataset: 46_fib
+File: 178.c
+Source: /home/wangpeijie/wpj_2010215/spec_generation_abduction/data/AutoBench/46_fib/178.c
+Final status: Fail
+Best attempt: 1
+Best result: Fail_41_42
+
+Command:
+frama-c -wp -wp-precond-weakening -wp-no-callee-precond -wp-prover Alt-Ergo,Z3 -wp-prop=-@terminates,-@variant,-@decreases -wp-print -wp-timeout 8 /tmp/baseline3__i79ugzs/attempt_01_repair_06/repair_06_01_wrong_spec_01_rewrite_annotation.c
+
+WP stdout:
+[kernel] Parsing /tmp/baseline3__i79ugzs/attempt_01_repair_06/repair_06_01_wrong_spec_01_rewrite_annotation.c (with preprocessing)
+[kernel:typing:no-proto] /tmp/baseline3__i79ugzs/attempt_01_repair_06/repair_06_01_wrong_spec_01_rewrite_annotation.c:4: Warning: 
+  Function unknown1 is declared without prototype.
+  Its formals will be inferred from actual arguments at first call.
+  Declare it as unknown1(void) if the function does not take any parameters.
+[kernel:typing:no-proto] /tmp/baseline3__i79ugzs/attempt_01_repair_06/repair_06_01_wrong_spec_01_rewrite_annotation.c:6: Warning: 
+  Function unknown2 is declared without prototype.
+  Its formals will be inferred from actual arguments at first call.
+  Declare it as unknown2(void) if the function does not take any parameters.
+[kernel:typing:no-proto] /tmp/baseline3__i79ugzs/attempt_01_repair_06/repair_06_01_wrong_spec_01_rewrite_annotation.c:8: Warning: 
+  Function unknown3 is declared without prototype.
+  Its formals will be inferred from actual arguments at first call.
+  Declare it as unknown3(void) if the function does not take any parameters.
+[kernel:typing:no-proto] /tmp/baseline3__i79ugzs/attempt_01_repair_06/repair_06_01_wrong_spec_01_rewrite_annotation.c:10: Warning: 
+  Function unknown4 is declared without prototype.
+  Its formals will be inferred from actual arguments at first call.
+  Declare it as unknown4(void) if the function does not take any parameters.
+[wp] Running WP plugin...
+[kernel:annot:missing-spec] /tmp/baseline3__i79ugzs/attempt_01_repair_06/repair_06_01_wrong_spec_01_rewrite_annotation.c:4: Warning: 
+  Neither code nor explicit exits and terminates for function unknown1,
+   generating default clauses. See -generated-spec-* options for more info
+[kernel:annot:missing-spec] /tmp/baseline3__i79ugzs/attempt_01_repair_06/repair_06_01_wrong_spec_01_rewrite_annotation.c:6: Warning: 
+  Neither code nor explicit exits and terminates for function unknown2,
+   generating default clauses. See -generated-spec-* options for more info
+[kernel:annot:missing-spec] /tmp/baseline3__i79ugzs/attempt_01_repair_06/repair_06_01_wrong_spec_01_rewrite_annotation.c:8: Warning: 
+  Neither code nor explicit exits and terminates for function unknown3,
+   generating default clauses. See -generated-spec-* options for more info
+[wp] Warning: Missing RTE guards
+[wp] 42 goals scheduled
+[wp] [Timeout] typed_foo_loop_invariant_8_preserved (Qed 61ms) (Z3)
+[wp] Proved goals:   41 / 42
+  Qed:            41 (1ms)
+  Timeout:         1
+------------------------------------------------------------
+  Function foo
+------------------------------------------------------------
+
+Goal Exit-condition (generated) in 'foo':
+Prove: true.
+Prover Qed returns Valid (0.84ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline3__i79ugzs/attempt_01_repair_06/repair_06_01_wrong_spec_01_rewrite_annotation.c, line 22):
+Prove: true.
+Prover Qed returns Valid (28ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline3__i79ugzs/attempt_01_repair_06/repair_06_01_wrong_spec_01_rewrite_annotation.c, line 22):
+Prove: true.
+Prover Qed returns Valid (5ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline3__i79ugzs/attempt_01_repair_06/repair_06_01_wrong_spec_01_rewrite_annotation.c, line 23):
+Prove: true.
+Prover Qed returns Valid (23ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline3__i79ugzs/attempt_01_repair_06/repair_06_01_wrong_spec_01_rewrite_annotation.c, line 23):
+Prove: true.
+Prover Qed returns Valid (7ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline3__i79ugzs/attempt_01_repair_06/repair_06_01_wrong_spec_01_rewrite_annotation.c, line 24):
+Prove: true.
+Prover Qed returns Valid (14ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline3__i79ugzs/attempt_01_repair_06/repair_06_01_wrong_spec_01_rewrite_annotation.c, line 24):
+Prove: true.
+Prover Qed returns Valid (5ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline3__i79ugzs/attempt_01_repair_06/repair_06_01_wrong_spec_01_rewrite_annotation.c, line 25):
+Prove: true.
+Prover Qed returns Valid (62ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline3__i79ugzs/attempt_01_repair_06/repair_06_01_wrong_spec_01_rewrite_annotation.c, line 25):
+Prove: true.
+Prover Qed returns Valid (4ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline3__i79ugzs/attempt_01_repair_06/repair_06_01_wrong_spec_01_rewrite_annotation.c, line 26):
+Prove: true.
+Prover Qed returns Valid (24ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline3__i79ugzs/attempt_01_repair_06/repair_06_01_wrong_spec_01_rewrite_annotation.c, line 26):
+Prove: true.
+Prover Qed returns Valid (4ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline3__i79ugzs/attempt_01_repair_06/repair_06_01_wrong_spec_01_rewrite_annotation.c, line 27):
+Prove: true.
+Prover Qed returns Valid (4ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline3__i79ugzs/attempt_01_repair_06/repair_06_01_wrong_spec_01_rewrite_annotation.c, line 27):
+Prove: true.
+Prover Qed returns Valid (5ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline3__i79ugzs/attempt_01_repair_06/repair_06_01_wrong_spec_01_rewrite_annotation.c, line 49):
+Prove: true.
+Prover Qed returns Valid (26ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline3__i79ugzs/attempt_01_repair_06/repair_06_01_wrong_spec_01_rewrite_annotation.c, line 49):
+Prove: true.
+Prover Qed returns Valid (12ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline3__i79ugzs/attempt_01_repair_06/repair_06_01_wrong_spec_01_rewrite_annotation.c, line 50):
+Assume {
+  Type: is_sint32(i) /\ is_sint32(j) /\ is_sint32(tmp_1_0) /\ is_sint32(x) /\
+      is_sint32(y) /\ is_sint32(z) /\ is_sint32(1 + z) /\ is_sint32(z - y).
+  (* Invariant *)
+  Have: 0 <= x.
+  (* Invariant *)
+  Have: i <= j.
+  (* Invariant *)
+  Have: i <= (1 + j).
+  (* Then *)
+  Have: tmp_1_0 != 0.
+}
+Prove: (2 * y) = z.
+Prover Alt-Ergo 2.2.0 returns Failed
+unrecognized prover answer
+Prover Z3 4.8.12 returns Timeout (Qed:61ms) (8s)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline3__i79ugzs/attempt_01_repair_06/repair_06_01_wrong_spec_01_rewrite_annotation.c, line 50):
+Prove: true.
+Prover Qed returns Valid (28ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline3__i79ugzs/attempt_01_repair_06/repair_06_01_wrong_spec_01_rewrite_annotation.c, line 57):
+Prove: true.
+Prover Qed returns Valid (29ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline3__i79ugzs/attempt_01_repair_06/repair_06_01_wrong_spec_01_rewrite_annotation.c, line 57):
+Prove: true.
+Prover Qed returns Valid (24ms)
+
+------------------------------------------------------------
+
+Goal Assertion (file /tmp/baseline3__i79ugzs/attempt_01_repair_06/repair_06_01_wrong_spec_01_rewrite_annotation.c, line 71):
+Prove: true.
+Prover Qed returns Valid (27ms)
+
+------------------------------------------------------------
+
+Goal Loop assigns (file /tmp/baseline3__i79ugzs/attempt_01_repair_06/repair_06_01_wrong_spec_01_rewrite_annotation.c, line 28) (1/2):
+Prove: true.
+Prover Qed returns Valid
+
+------------------------------------------------------------
+
+Goal Loop assigns (file /tmp/baseline3__i79ugzs/attempt_01_repair_06/repair_06_01_wrong_spec_01_rewrite_annotation.c, line 28) (2/2):
+Call Result at line 31
+Prove: true.
+Prover Qed returns Valid (21ms)
+
+------------------------------------------------------------
+
+Goal Loop assigns (file /tmp/baseline3__i79ugzs/attempt_01_repair_06/repair_06_01_wrong_spec_01_rewrite_annotation.c, line 51) (1/3):
+Prove: true.
+Prover Qed returns Valid
+
+------------------------------------------------------------
+
+Goal Loop assigns (file /tmp/baseline3__i79ugzs/attempt_01_repair_06/repair_06_01_wrong_spec_01_rewrite_annotation.c, line 51) (2/3):
+Call Result at line 54
+Prove: true.
+Prover Qed returns Valid (32ms)
+
+------------------------------------------------------------
+
+Goal Loop assigns (file /tmp/baseline3__i79ugzs/attempt_01_repair_06/repair_06_01_wrong_spec_01_rewrite_annotation.c, line 51) (3/3):
+Call Result at line 61
+Prove: true.
+Prover Qed returns Valid (33ms)
+
+------------------------------------------------------------
+
+Goal Loop assigns (file /tmp/baseline3__i79ugzs/attempt_01_repair_06/repair_06_01_wrong_spec_01_rewrite_annotation.c, line 58) (1/2):
+Prove: true.
+Prover Qed returns Valid
+
+------------------------------------------------------------
+
+Goal Loop assigns (file /tmp/baseline3__i79ugzs/attempt_01_repair_06/repair_06_01_wrong_spec_01_rewrite_annotation.c, line 58) (2/2):
+Call Result at line 61
+Prove: true.
+Prover Qed returns Valid (30ms)
+
+------------------------------------------------------------
+
+Goal Assigns nothing in 'foo' (1/8):
+Prove: true.
+Prover Qed returns Valid
+
+------------------------------------------------------------
+
+Goal Assigns nothing in 'foo' (2/8):
+Effect at line 31
+Prove: true.
+Prover Qed returns Valid (7ms)
+
+------------------------------------------------------------
+
+Goal Assigns nothing in 'foo' (3/8):
+Call Result at line 31
+Prove: true.
+Prover Qed returns Valid (10ms)
+
+------------------------------------------------------------
+
+Goal Assigns nothing in 'foo' (4/8):
+Effect at line 42
+Prove: true.
+Prover Qed returns Valid (13ms)
+
+------------------------------------------------------------
+
+Goal Assigns nothing in 'foo' (5/8):
+Effect at line 44
+Prove: true.
+Prover Qed returns Valid (12ms)
+
+------------------------------------------------------------
+
+Goal Assigns nothing in 'foo' (6/8):
+Effect at line 54
+Prove: true.
+Prover Qed returns Valid (17ms)
+
+------------------------------------------------------------
+
+Goal Assigns nothing in 'foo' (7/8):
+Call Result at line 54
+Prove: true.
+Prover Qed returns Valid (21ms)
+
+------------------------------------------------------------
+
+Goal Assigns nothing in 'foo' (8/8):
+Effect at line 61
+Prove: true.
+Prover Qed returns Valid (26ms)
+
+------------------------------------------------------------
+
+Goal Assigns nothing in 'foo' (1/7):
+Prove: true.
+Prover Qed returns Valid
+
+------------------------------------------------------------
+
+Goal Assigns nothing in 'foo' (2/7):
+Effect at line 31
+Prove: true.
+Prover Qed returns Valid (6ms)
+
+------------------------------------------------------------
+
+Goal Assigns nothing in 'foo' (3/7):
+Call Result at line 31
+Prove: true.
+Prover Qed returns Valid (9ms)
+
+------------------------------------------------------------
+
+Goal Assigns nothing in 'foo' (4/7):
+Effect at line 42
+Prove: true.
+Prover Qed returns Valid (13ms)
+
+------------------------------------------------------------
+
+Goal Assigns nothing in 'foo' (5/7):
+Effect at line 44
+Prove: true.
+Prover Qed returns Valid (12ms)
+
+------------------------------------------------------------
+
+Goal Assigns nothing in 'foo' (6/7):
+Effect at line 54
+Prove: true.
+Prover Qed returns Valid (18ms)
+
+------------------------------------------------------------
+
+Goal Assigns nothing in 'foo' (7/7):
+Call Result at line 54
+Prove: true.
+Prover Qed returns Valid (22ms)
+
+------------------------------------------------------------
+
+
+WP stderr:

@@ -1,0 +1,17 @@
+[
+  {
+    "name": "typed_main_loop_invariant_6_preserved",
+    "status": "Timeout",
+    "raw_line": "[wp] [Timeout] typed_main_loop_invariant_6_preserved (Qed 15ms) (Z3)",
+    "line_no": 5,
+    "failure_mode": "timeout",
+    "profile": "(Qed 15ms) (Z3)",
+    "goal_header": "Goal Preservation of Invariant (file /tmp/baseline3_p28s3nm2/attempt_01_repair_04/repair_04_01_missing_spec_01_add_invariant.c, line 20):",
+    "goal_text": "Goal Preservation of Invariant (file /tmp/baseline3_p28s3nm2/attempt_01_repair_04/repair_04_01_missing_spec_01_add_invariant.c, line 20):\nLet x = (-2) * j.\nAssume {\n  Type: is_sint32(j) /\\ is_sint32(j - 1) /\\ is_sint32(21 - (2 * j)) /\\\n      is_sint32(23 - (2 * j)).\n  (* Invariant *)\n  Have: j <= 10.\n  (* Invariant *)\n  Have: 0 <= j.\n  (* Invariant *)\n  Have: 7 <= j.\n  (* Invariant *)\n  Have: j <= 11.\n  (* Invariant *)\n  Have: 0 < j.\n}\nProve: 8 <= j.\nProver Alt-Ergo 2.2.0 returns Failed\nunrecognized prover answer\nProver Z3 4.8.12 returns Timeout (Qed:15ms) (8s)",
+    "assumptions": "Type: is_sint32(j) /\\ is_sint32(j - 1) /\\ is_sint32(21 - (2 * j)) /\\\n      is_sint32(23 - (2 * j)).\n  (* Invariant *)\n  Have: j <= 10.\n  (* Invariant *)\n  Have: 0 <= j.\n  (* Invariant *)\n  Have: 7 <= j.\n  (* Invariant *)\n  Have: j <= 11.\n  (* Invariant *)\n  Have: 0 < j.",
+    "prove_statement": "8 <= j.",
+    "prover_output": "Prover Alt-Ergo 2.2.0 returns Failed\nunrecognized prover answer\nProver Z3 4.8.12 returns Timeout (Qed:15ms) (8s)",
+    "source_file": "/tmp/baseline3_p28s3nm2/attempt_01_repair_04/repair_04_01_missing_spec_01_add_invariant.c",
+    "source_line": 20
+  }
+]

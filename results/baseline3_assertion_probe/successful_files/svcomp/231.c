@@ -1,5 +1,8 @@
 #include "assert.h"
 
+/*@
+  ensures \result == 0;
+*/
 int main(void) {
   int A[2048];
   int i;

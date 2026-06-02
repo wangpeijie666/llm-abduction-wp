@@ -1,0 +1,497 @@
+Dataset: frama-c-problem
+File: 229.c
+Source: /home/wangpeijie/wpj_2010215/spec_generation_abduction/data/AutoBench/frama-c-problem/229.c
+Final status: Fail
+Best attempt: 1
+Best result: Fail_33_35
+
+Command:
+frama-c -wp -wp-precond-weakening -wp-no-callee-precond -wp-prover Alt-Ergo,Z3 -wp-prop=-@terminates,-@variant,-@decreases -wp-print -wp-timeout 8 /tmp/baseline3_4vk5g5ua/attempt_01_repair_02/repair_02_01_wrong_spec_01_rewrite_annotation.c
+
+WP stdout:
+[kernel] Parsing /tmp/baseline3_4vk5g5ua/attempt_01_repair_02/repair_02_01_wrong_spec_01_rewrite_annotation.c (with preprocessing)
+[wp] Running WP plugin...
+[wp] Warning: Missing RTE guards
+[wp] 34 goals scheduled
+[wp] [Unknown] typed_order_3_ensures_3 (Qed 260ms) (Z3)
+[wp] [Timeout] typed_test_assert (Qed 32ms) (Z3)
+[wp] Proved goals:   33 / 35
+  Unreachable:     1
+  Qed:            27 (32ms-34ms-273ms)
+  Z3 4.8.12:       5 (92ms-97ms)
+  Timeout:         1
+  Unknown:         1
+------------------------------------------------------------
+  Function order_3
+------------------------------------------------------------
+
+Goal Post-condition (file /tmp/baseline3_4vk5g5ua/attempt_01_repair_02/repair_02_01_wrong_spec_01_rewrite_annotation.c, line 6) in 'order_3':
+Let x = Mint_3[c].
+Let x_1 = Mint_3[b].
+Let x_2 = Mint_5[c].
+Let x_3 = Mint_5[a].
+Let x_4 = Mint_1[b].
+Let x_5 = Mint_1[a].
+Let x_6 = Mint_0[a].
+Let x_7 = Mint_0[c].
+Assume {
+  Type: is_sint32(x_5) /\ is_sint32(x_4) /\ is_sint32(x_6) /\
+      is_sint32(Mint_0[b]) /\ is_sint32(x_7) /\ is_sint32(Mint_2[b]) /\
+      is_sint32(x_1) /\ is_sint32(x) /\ is_sint32(Mint_4[a]) /\
+      is_sint32(x_3) /\ is_sint32(x_2).
+  (* Heap *)
+  Type: (region(a.base) <= 0) /\ (region(b.base) <= 0) /\
+      (region(c.base) <= 0) /\ linked(Malloc_0).
+  (* Pre-condition *)
+  Have: valid_rw(Malloc_0, a, 1).
+  (* Pre-condition *)
+  Have: valid_rw(Malloc_0, b, 1).
+  (* Pre-condition *)
+  Have: valid_rw(Malloc_0, c, 1).
+  If x_4 < x_5
+  Then { Have: Mint_1[b <- x_5][a <- x_5] = Mint_5. }
+  Else { Have: Mint_5 = Mint_1. }
+  If x_2 < x_3
+  Then {
+    Have: Mint_5 = Mint_4.
+    Have: Mint_4[a <- Mint_4[c]][c <- Mint_4[a]] = Mint_3.
+  }
+  Else { Have: Mint_5 = Mint_3. }
+  If x < x_1
+  Then {
+    Have: Mint_3 = Mint_2.
+    Have: Mint_2[b <- Mint_2[c]][c <- Mint_2[b]] = Mint_0.
+  }
+  Else { Have: Mint_3 = Mint_0. }
+}
+Prove: x_6 <= x_7.
+Prover Alt-Ergo 2.2.0 returns Failed
+unrecognized prover answer
+Prover Z3 4.8.12 returns Valid (Qed:273ms) (94ms) (47288)
+
+------------------------------------------------------------
+
+Goal Post-condition (file /tmp/baseline3_4vk5g5ua/attempt_01_repair_02/repair_02_01_wrong_spec_01_rewrite_annotation.c, line 7) in 'order_3':
+Let x = Mint_3[c].
+Let x_1 = Mint_3[a].
+Let x_2 = Mint_1[b].
+Let x_3 = Mint_1[a].
+Let x_4 = Mint_0[c].
+Let x_5 = Mint_0[b].
+Let m = Mint_0[b <- x_4][c <- x_5].
+Let x_6 = m[b].
+Assume {
+  Type: is_sint32(x_3) /\ is_sint32(x_2) /\ is_sint32(x_5) /\
+      is_sint32(x_4) /\ is_sint32(Mint_2[a]) /\ is_sint32(x_1) /\
+      is_sint32(x) /\ is_sint32(m[a]) /\ is_sint32(x_6).
+  (* Heap *)
+  Type: (region(a.base) <= 0) /\ (region(b.base) <= 0) /\
+      (region(c.base) <= 0) /\ linked(Malloc_0).
+  (* Residual *)
+  When: x_4 < x_5.
+  (* Pre-condition *)
+  Have: valid_rw(Malloc_0, a, 1).
+  (* Pre-condition *)
+  Have: valid_rw(Malloc_0, b, 1).
+  (* Pre-condition *)
+  Have: valid_rw(Malloc_0, c, 1).
+  If x_2 < x_3
+  Then { Have: Mint_1[b <- x_3][a <- x_3] = Mint_3. }
+  Else { Have: Mint_3 = Mint_1. }
+  If x < x_1
+  Then {
+    Have: Mint_3 = Mint_2.
+    Have: Mint_2[a <- Mint_2[c]][c <- Mint_2[a]] = Mint_0.
+  }
+  Else { Have: Mint_3 = Mint_0. }
+}
+Prove: x_6 <= x_5.
+Prover Alt-Ergo 2.2.0 returns Failed
+unrecognized prover answer
+Prover Z3 4.8.12 returns Valid (Qed:246ms) (92ms) (43164)
+
+------------------------------------------------------------
+
+Goal Post-condition (file /tmp/baseline3_4vk5g5ua/attempt_01_repair_02/repair_02_01_wrong_spec_01_rewrite_annotation.c, line 8) in 'order_3':
+Let x = Mint_3[c].
+Let x_1 = Mint_3[b].
+Let x_2 = Mint_5[c].
+Let x_3 = Mint_5[a].
+Let x_4 = Mint_1[b].
+Let x_5 = Mint_1[a].
+Let x_6 = Mint_0[a].
+Assume {
+  Type: is_sint32(x_5) /\ is_sint32(x_4) /\ is_sint32(x_6) /\
+      is_sint32(Mint_0[b]) /\ is_sint32(Mint_0[c]) /\ is_sint32(Mint_2[b]) /\
+      is_sint32(x_1) /\ is_sint32(x) /\ is_sint32(Mint_4[a]) /\
+      is_sint32(x_3) /\ is_sint32(x_2).
+  (* Heap *)
+  Type: (region(a.base) <= 0) /\ (region(b.base) <= 0) /\
+      (region(c.base) <= 0) /\ linked(Malloc_0).
+  (* Pre-condition *)
+  Have: valid_rw(Malloc_0, a, 1).
+  (* Pre-condition *)
+  Have: valid_rw(Malloc_0, b, 1).
+  (* Pre-condition *)
+  Have: valid_rw(Malloc_0, c, 1).
+  If x_4 < x_5
+  Then { Have: Mint_1[b <- x_5][a <- x_5] = Mint_5. }
+  Else { Have: Mint_5 = Mint_1. }
+  If x_2 < x_3
+  Then {
+    Have: Mint_5 = Mint_4.
+    Have: Mint_4[a <- Mint_4[c]][c <- Mint_4[a]] = Mint_3.
+  }
+  Else { Have: Mint_5 = Mint_3. }
+  If x < x_1
+  Then {
+    Have: Mint_3 = Mint_2.
+    Have: Mint_2[b <- Mint_2[c]][c <- Mint_2[b]] = Mint_0.
+  }
+  Else { Have: Mint_3 = Mint_0. }
+}
+Prove: exists i_2,i_1,i : Z. ((i * i_1 * i_2) = 1) /\
+    (x_6 = (i_2 * Mint_1[shift_sint32(a, 0)])).
+Prover Alt-Ergo 2.2.0 returns Failed
+unrecognized prover answer
+Prover Z3 4.8.12 returns Unknown (Qed:260ms)
+
+------------------------------------------------------------
+
+Goal Assigns (file /tmp/baseline3_4vk5g5ua/attempt_01_repair_02/repair_02_01_wrong_spec_01_rewrite_annotation.c, line 5) in 'order_3' (1/6):
+Effect at line 16
+Prove: true.
+Prover Qed returns Valid (6ms)
+
+------------------------------------------------------------
+
+Goal Assigns (file /tmp/baseline3_4vk5g5ua/attempt_01_repair_02/repair_02_01_wrong_spec_01_rewrite_annotation.c, line 5) in 'order_3' (2/6):
+Effect at line 17
+Prove: true.
+Prover Qed returns Valid (8ms)
+
+------------------------------------------------------------
+
+Goal Assigns (file /tmp/baseline3_4vk5g5ua/attempt_01_repair_02/repair_02_01_wrong_spec_01_rewrite_annotation.c, line 5) in 'order_3' (3/6):
+Effect at line 21
+Prove: true.
+Prover Qed returns Valid (14ms)
+
+------------------------------------------------------------
+
+Goal Assigns (file /tmp/baseline3_4vk5g5ua/attempt_01_repair_02/repair_02_01_wrong_spec_01_rewrite_annotation.c, line 5) in 'order_3' (4/6):
+Effect at line 22
+Prove: true.
+Prover Qed returns Valid (12ms)
+
+------------------------------------------------------------
+
+Goal Assigns (file /tmp/baseline3_4vk5g5ua/attempt_01_repair_02/repair_02_01_wrong_spec_01_rewrite_annotation.c, line 5) in 'order_3' (5/6):
+Effect at line 26
+Prove: true.
+Prover Qed returns Valid (16ms)
+
+------------------------------------------------------------
+
+Goal Assigns (file /tmp/baseline3_4vk5g5ua/attempt_01_repair_02/repair_02_01_wrong_spec_01_rewrite_annotation.c, line 5) in 'order_3' (6/6):
+Effect at line 27
+Prove: true.
+Prover Qed returns Valid (16ms)
+
+------------------------------------------------------------
+------------------------------------------------------------
+  Function test
+------------------------------------------------------------
+
+Goal Exit-condition (generated) in 'test':
+Prove: true.
+Prover Qed returns Valid
+
+------------------------------------------------------------
+
+Goal Assertion (file /tmp/baseline3_4vk5g5ua/attempt_01_repair_02/repair_02_01_wrong_spec_01_rewrite_annotation.c, line 38):
+Let a = global(L_a1_44).
+Let x = i * Mint_0[shift_sint32(a, 0)].
+Assume {
+  Type: is_sint32(v) /\ is_sint32(v_1) /\ is_sint32(x).
+  (* Initializer *)
+  Init: Mint_0[a] = 5.
+  (* Initializer *)
+  Init: Mint_0[global(L_b1_45)] = 3.
+  (* Initializer *)
+  Init: Mint_0[global(L_c1_46)] = 4.
+  (* Call 'order_3' *)
+  Have: ((i * i_1 * i_2) = 1) /\ (v <= v_1) /\ (x <= v_1).
+}
+Prove: (v = 4) /\ (v_1 = 5) /\ (x = 3).
+Prover Alt-Ergo 2.2.0 returns Failed
+unrecognized prover answer
+Prover Z3 4.8.12 returns Timeout (Qed:32ms) (8s)
+
+------------------------------------------------------------
+
+Goal Assertion (file /tmp/baseline3_4vk5g5ua/attempt_01_repair_02/repair_02_01_wrong_spec_01_rewrite_annotation.c, line 42):
+Let a = global(L_a2_47).
+Let x = i * Mint_0[shift_sint32(a, 0)].
+Let a_1 = global(L_a1_44).
+Assume {
+  Type: is_sint32(v) /\ is_sint32(v_1) /\ is_sint32(x).
+  (* Initializer *)
+  Init: Mint_0[a_1] = 5.
+  (* Initializer *)
+  Init: Mint_0[global(L_b1_45)] = 3.
+  (* Initializer *)
+  Init: Mint_0[global(L_c1_46)] = 4.
+  (* Call 'order_3' *)
+  Have: ((i_1 * i_2 * i_3) = 1) /\
+      ((i_1 * Mint_0[shift_sint32(a_1, 0)]) = 3).
+  (* Initializer *)
+  Init: Mint_0[a] = 2.
+  (* Initializer *)
+  Init: Mint_0[global(L_b2_48)] = 2.
+  (* Initializer *)
+  Init: Mint_0[global(L_c2_49)] = 2.
+  (* Call 'order_3' *)
+  Have: ((i * i_4 * i_5) = 1) /\ (v <= v_1) /\ (x <= v_1).
+}
+Prove: (v = 2) /\ (v_1 = 2) /\ (x = 2).
+Prover Alt-Ergo 2.2.0 returns Failed
+unrecognized prover answer
+Prover Z3 4.8.12 returns Valid (Qed:77ms) (96ms) (44787)
+
+------------------------------------------------------------
+
+Goal Assertion (file /tmp/baseline3_4vk5g5ua/attempt_01_repair_02/repair_02_01_wrong_spec_01_rewrite_annotation.c, line 46):
+Let a = global(L_a3_50).
+Let x = i * Mint_0[shift_sint32(a, 0)].
+Let a_1 = global(L_a2_47).
+Let a_2 = global(L_a1_44).
+Assume {
+  Type: is_sint32(v) /\ is_sint32(v_1) /\ is_sint32(x).
+  (* Initializer *)
+  Init: Mint_0[a_2] = 5.
+  (* Initializer *)
+  Init: Mint_0[global(L_b1_45)] = 3.
+  (* Initializer *)
+  Init: Mint_0[global(L_c1_46)] = 4.
+  (* Call 'order_3' *)
+  Have: ((i_1 * i_2 * i_3) = 1) /\
+      ((i_1 * Mint_0[shift_sint32(a_2, 0)]) = 3).
+  (* Initializer *)
+  Init: Mint_0[a_1] = 2.
+  (* Initializer *)
+  Init: Mint_0[global(L_b2_48)] = 2.
+  (* Initializer *)
+  Init: Mint_0[global(L_c2_49)] = 2.
+  (* Call 'order_3' *)
+  Have: ((i_4 * i_5 * i_6) = 1) /\
+      ((i_4 * Mint_0[shift_sint32(a_1, 0)]) = 2).
+  (* Initializer *)
+  Init: Mint_0[a] = 4.
+  (* Initializer *)
+  Init: Mint_0[global(L_b3_51)] = 3.
+  (* Initializer *)
+  Init: Mint_0[global(L_c3_52)] = 4.
+  (* Call 'order_3' *)
+  Have: ((i * i_7 * i_8) = 1) /\ (v <= v_1) /\ (x <= v_1).
+}
+Prove: (v = 4) /\ (v_1 = 4) /\ (x = 3).
+Prover Alt-Ergo 2.2.0 returns Failed
+unrecognized prover answer
+Prover Z3 4.8.12 returns Valid (Qed:115ms) (92ms) (45754)
+
+------------------------------------------------------------
+
+Goal Assertion (file /tmp/baseline3_4vk5g5ua/attempt_01_repair_02/repair_02_01_wrong_spec_01_rewrite_annotation.c, line 50):
+Let a = global(L_a4_53).
+Let x = i * Mint_0[shift_sint32(a, 0)].
+Let a_1 = global(L_a3_50).
+Let a_2 = global(L_a2_47).
+Let a_3 = global(L_a1_44).
+Assume {
+  Type: is_sint32(v) /\ is_sint32(v_1) /\ is_sint32(x).
+  (* Initializer *)
+  Init: Mint_0[a_3] = 5.
+  (* Initializer *)
+  Init: Mint_0[global(L_b1_45)] = 3.
+  (* Initializer *)
+  Init: Mint_0[global(L_c1_46)] = 4.
+  (* Call 'order_3' *)
+  Have: ((i_1 * i_2 * i_3) = 1) /\
+      ((i_1 * Mint_0[shift_sint32(a_3, 0)]) = 3).
+  (* Initializer *)
+  Init: Mint_0[a_2] = 2.
+  (* Initializer *)
+  Init: Mint_0[global(L_b2_48)] = 2.
+  (* Initializer *)
+  Init: Mint_0[global(L_c2_49)] = 2.
+  (* Call 'order_3' *)
+  Have: ((i_4 * i_5 * i_6) = 1) /\
+      ((i_4 * Mint_0[shift_sint32(a_2, 0)]) = 2).
+  (* Initializer *)
+  Init: Mint_0[a_1] = 4.
+  (* Initializer *)
+  Init: Mint_0[global(L_b3_51)] = 3.
+  (* Initializer *)
+  Init: Mint_0[global(L_c3_52)] = 4.
+  (* Call 'order_3' *)
+  Have: ((i_7 * i_8 * i_9) = 1) /\
+      ((i_7 * Mint_0[shift_sint32(a_1, 0)]) = 3).
+  (* Initializer *)
+  Init: Mint_0[a] = 4.
+  (* Initializer *)
+  Init: Mint_0[global(L_b4_54)] = 5.
+  (* Initializer *)
+  Init: Mint_0[global(L_c4_55)] = 4.
+  (* Call 'order_3' *)
+  Have: ((i * i_10 * i_11) = 1) /\ (v <= v_1) /\ (x <= v_1).
+}
+Prove: (v = 4) /\ (v_1 = 5) /\ (x = 4).
+Prover Alt-Ergo 2.2.0 returns Failed
+unrecognized prover answer
+Prover Z3 4.8.12 returns Valid (Qed:168ms) (97ms) (46722)
+
+------------------------------------------------------------
+
+Goal Assigns nothing in 'test' (1/4):
+Call Effect at line 37
+Prove: true.
+Prover Qed returns Valid (16ms)
+
+------------------------------------------------------------
+
+Goal Assigns nothing in 'test' (2/4):
+Call Effect at line 41
+Prove: true.
+Prover Qed returns Valid (23ms)
+
+------------------------------------------------------------
+
+Goal Assigns nothing in 'test' (3/4):
+Call Effect at line 45
+Prove: true.
+Prover Qed returns Valid (23ms)
+
+------------------------------------------------------------
+
+Goal Assigns nothing in 'test' (4/4):
+Call Effect at line 49
+Prove: true.
+Prover Qed returns Valid (1ms)
+
+------------------------------------------------------------
+
+Goal Assigns nothing in 'test' (1/4):
+Call Effect at line 37
+Prove: true.
+Prover Qed returns Valid (10ms)
+
+------------------------------------------------------------
+
+Goal Assigns nothing in 'test' (2/4):
+Call Effect at line 41
+Prove: true.
+Prover Qed returns Valid (16ms)
+
+------------------------------------------------------------
+
+Goal Assigns nothing in 'test' (3/4):
+Call Effect at line 45
+Prove: true.
+Prover Qed returns Valid (29ms)
+
+------------------------------------------------------------
+
+Goal Assigns nothing in 'test' (4/4):
+Call Effect at line 49
+Prove: true.
+Prover Qed returns Valid (31ms)
+
+------------------------------------------------------------
+
+Goal Instance of 'Pre-condition (file /tmp/baseline3_4vk5g5ua/attempt_01_repair_02/repair_02_01_wrong_spec_01_rewrite_annotation.c, line 2) in 'order_3'' in 'test' at call 'order_3' (file /tmp/baseline3_4vk5g5ua/attempt_01_repair_02/repair_02_01_wrong_spec_01_rewrite_annotation.c, line 37)
+:
+Prove: true.
+Prover Qed returns Valid (6ms)
+
+------------------------------------------------------------
+
+Goal Instance of 'Pre-condition (file /tmp/baseline3_4vk5g5ua/attempt_01_repair_02/repair_02_01_wrong_spec_01_rewrite_annotation.c, line 3) in 'order_3'' in 'test' at call 'order_3' (file /tmp/baseline3_4vk5g5ua/attempt_01_repair_02/repair_02_01_wrong_spec_01_rewrite_annotation.c, line 37)
+:
+Prove: true.
+Prover Qed returns Valid (5ms)
+
+------------------------------------------------------------
+
+Goal Instance of 'Pre-condition (file /tmp/baseline3_4vk5g5ua/attempt_01_repair_02/repair_02_01_wrong_spec_01_rewrite_annotation.c, line 4) in 'order_3'' in 'test' at call 'order_3' (file /tmp/baseline3_4vk5g5ua/attempt_01_repair_02/repair_02_01_wrong_spec_01_rewrite_annotation.c, line 37)
+:
+Prove: true.
+Prover Qed returns Valid (6ms)
+
+------------------------------------------------------------
+
+Goal Instance of 'Pre-condition (file /tmp/baseline3_4vk5g5ua/attempt_01_repair_02/repair_02_01_wrong_spec_01_rewrite_annotation.c, line 2) in 'order_3'' in 'test' at call 'order_3' (file /tmp/baseline3_4vk5g5ua/attempt_01_repair_02/repair_02_01_wrong_spec_01_rewrite_annotation.c, line 41)
+:
+Prove: true.
+Prover Qed returns Valid (12ms)
+
+------------------------------------------------------------
+
+Goal Instance of 'Pre-condition (file /tmp/baseline3_4vk5g5ua/attempt_01_repair_02/repair_02_01_wrong_spec_01_rewrite_annotation.c, line 3) in 'order_3'' in 'test' at call 'order_3' (file /tmp/baseline3_4vk5g5ua/attempt_01_repair_02/repair_02_01_wrong_spec_01_rewrite_annotation.c, line 41)
+:
+Prove: true.
+Prover Qed returns Valid (12ms)
+
+------------------------------------------------------------
+
+Goal Instance of 'Pre-condition (file /tmp/baseline3_4vk5g5ua/attempt_01_repair_02/repair_02_01_wrong_spec_01_rewrite_annotation.c, line 4) in 'order_3'' in 'test' at call 'order_3' (file /tmp/baseline3_4vk5g5ua/attempt_01_repair_02/repair_02_01_wrong_spec_01_rewrite_annotation.c, line 41)
+:
+Prove: true.
+Prover Qed returns Valid (12ms)
+
+------------------------------------------------------------
+
+Goal Instance of 'Pre-condition (file /tmp/baseline3_4vk5g5ua/attempt_01_repair_02/repair_02_01_wrong_spec_01_rewrite_annotation.c, line 2) in 'order_3'' in 'test' at call 'order_3' (file /tmp/baseline3_4vk5g5ua/attempt_01_repair_02/repair_02_01_wrong_spec_01_rewrite_annotation.c, line 45)
+:
+Prove: true.
+Prover Qed returns Valid (23ms)
+
+------------------------------------------------------------
+
+Goal Instance of 'Pre-condition (file /tmp/baseline3_4vk5g5ua/attempt_01_repair_02/repair_02_01_wrong_spec_01_rewrite_annotation.c, line 3) in 'order_3'' in 'test' at call 'order_3' (file /tmp/baseline3_4vk5g5ua/attempt_01_repair_02/repair_02_01_wrong_spec_01_rewrite_annotation.c, line 45)
+:
+Prove: true.
+Prover Qed returns Valid (21ms)
+
+------------------------------------------------------------
+
+Goal Instance of 'Pre-condition (file /tmp/baseline3_4vk5g5ua/attempt_01_repair_02/repair_02_01_wrong_spec_01_rewrite_annotation.c, line 4) in 'order_3'' in 'test' at call 'order_3' (file /tmp/baseline3_4vk5g5ua/attempt_01_repair_02/repair_02_01_wrong_spec_01_rewrite_annotation.c, line 45)
+:
+Prove: true.
+Prover Qed returns Valid (18ms)
+
+------------------------------------------------------------
+
+Goal Instance of 'Pre-condition (file /tmp/baseline3_4vk5g5ua/attempt_01_repair_02/repair_02_01_wrong_spec_01_rewrite_annotation.c, line 2) in 'order_3'' in 'test' at call 'order_3' (file /tmp/baseline3_4vk5g5ua/attempt_01_repair_02/repair_02_01_wrong_spec_01_rewrite_annotation.c, line 49)
+:
+Prove: true.
+Prover Qed returns Valid (24ms)
+
+------------------------------------------------------------
+
+Goal Instance of 'Pre-condition (file /tmp/baseline3_4vk5g5ua/attempt_01_repair_02/repair_02_01_wrong_spec_01_rewrite_annotation.c, line 3) in 'order_3'' in 'test' at call 'order_3' (file /tmp/baseline3_4vk5g5ua/attempt_01_repair_02/repair_02_01_wrong_spec_01_rewrite_annotation.c, line 49)
+:
+Prove: true.
+Prover Qed returns Valid (25ms)
+
+------------------------------------------------------------
+
+Goal Instance of 'Pre-condition (file /tmp/baseline3_4vk5g5ua/attempt_01_repair_02/repair_02_01_wrong_spec_01_rewrite_annotation.c, line 4) in 'order_3'' in 'test' at call 'order_3' (file /tmp/baseline3_4vk5g5ua/attempt_01_repair_02/repair_02_01_wrong_spec_01_rewrite_annotation.c, line 49)
+:
+Prove: true.
+Prover Qed returns Valid (25ms)
+
+------------------------------------------------------------
+
+
+WP stderr:

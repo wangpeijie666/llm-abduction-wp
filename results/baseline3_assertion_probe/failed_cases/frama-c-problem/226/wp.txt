@@ -1,0 +1,109 @@
+Dataset: frama-c-problem
+File: 226.c
+Source: /home/wangpeijie/wpj_2010215/spec_generation_abduction/data/AutoBench/frama-c-problem/226.c
+Final status: Fail
+Best attempt: 2
+Best result: Fail_10_11
+
+Command:
+frama-c -wp -wp-precond-weakening -wp-no-callee-precond -wp-prover Alt-Ergo,Z3 -wp-prop=-@terminates,-@variant,-@decreases -wp-print -wp-timeout 8 /tmp/baseline3_ucx1v6ma/attempt_02_repair_07/repair_07_01_missing_spec_01_add_ensures.c
+
+WP stdout:
+[kernel] Parsing /tmp/baseline3_ucx1v6ma/attempt_02_repair_07/repair_07_01_missing_spec_01_add_ensures.c (with preprocessing)
+[wp] Running WP plugin...
+[wp] Warning: Missing RTE guards
+[wp] 10 goals scheduled
+[wp] [Unknown] typed_div_rem_ensures (Qed 16ms) (Z3)
+[wp] Proved goals:   10 / 11
+  Unreachable:     1
+  Qed:             9 (2ms)
+  Unknown:         1
+------------------------------------------------------------
+  Function div_rem
+------------------------------------------------------------
+
+Goal Post-condition (file /tmp/baseline3_ucx1v6ma/attempt_02_repair_07/repair_07_01_missing_spec_01_add_ensures.c, line 4) in 'div_rem':
+Let x_1 = to_uint32(x / y).
+Let x_2 = Mint_0[q <- x_1][r <- to_uint32(x % y)][q].
+Assume {
+  Type: is_uint32(x) /\ is_uint32(y) /\ is_uint32(x_2).
+  (* Heap *)
+  Type: (region(q.base) <= 0) /\ (region(r.base) <= 0) /\ linked(Malloc_0).
+  (* Pre-condition *)
+  Have: valid_rw(Malloc_0, q, 1) /\ valid_rw(Malloc_0, r, 1).
+  (* Pre-condition *)
+  Have: y != 0.
+}
+Prove: x_2 = x_1.
+Prover Alt-Ergo 2.2.0 returns Failed
+unrecognized prover answer
+Prover Z3 4.8.12 returns Unknown (Qed:16ms)
+
+------------------------------------------------------------
+
+Goal Post-condition (file /tmp/baseline3_ucx1v6ma/attempt_02_repair_07/repair_07_01_missing_spec_01_add_ensures.c, line 5) in 'div_rem':
+Prove: true.
+Prover Qed returns Valid (7ms)
+
+------------------------------------------------------------
+
+Goal Post-condition (file /tmp/baseline3_ucx1v6ma/attempt_02_repair_07/repair_07_01_missing_spec_01_add_ensures.c, line 6) in 'div_rem':
+Prove: true.
+Prover Qed returns Valid
+
+------------------------------------------------------------
+
+Goal Assigns (file /tmp/baseline3_ucx1v6ma/attempt_02_repair_07/repair_07_01_missing_spec_01_add_ensures.c, line 3) in 'div_rem' (1/2):
+Effect at line 9
+Prove: true.
+Prover Qed returns Valid (4ms)
+
+------------------------------------------------------------
+
+Goal Assigns (file /tmp/baseline3_ucx1v6ma/attempt_02_repair_07/repair_07_01_missing_spec_01_add_ensures.c, line 3) in 'div_rem' (2/2):
+Effect at line 10
+Prove: true.
+Prover Qed returns Valid (4ms)
+
+------------------------------------------------------------
+------------------------------------------------------------
+  Function main
+------------------------------------------------------------
+
+Goal Exit-condition (generated) in 'main':
+Prove: true.
+Prover Qed returns Valid
+
+------------------------------------------------------------
+
+Goal Assertion (file /tmp/baseline3_ucx1v6ma/attempt_02_repair_07/repair_07_01_missing_spec_01_add_ensures.c, line 17):
+Prove: true.
+Prover Qed returns Valid (3ms)
+
+------------------------------------------------------------
+
+Goal Assertion (file /tmp/baseline3_ucx1v6ma/attempt_02_repair_07/repair_07_01_missing_spec_01_add_ensures.c, line 18):
+Prove: true.
+Prover Qed returns Valid (3ms)
+
+------------------------------------------------------------
+
+Goal Instance of 'Pre-condition (file /tmp/baseline3_ucx1v6ma/attempt_02_repair_07/repair_07_01_missing_spec_01_add_ensures.c, line 1) in 'div_rem'' in 'main' at call 'div_rem' (file /tmp/baseline3_ucx1v6ma/attempt_02_repair_07/repair_07_01_missing_spec_01_add_ensures.c, line 16)
+:
+Prove: true.
+Prover Qed returns Valid (1ms)
+
+------------------------------------------------------------
+
+Goal Instance of 'Pre-condition (file /tmp/baseline3_ucx1v6ma/attempt_02_repair_07/repair_07_01_missing_spec_01_add_ensures.c, line 2) in 'div_rem'' in 'main' at call 'div_rem' (file /tmp/baseline3_ucx1v6ma/attempt_02_repair_07/repair_07_01_missing_spec_01_add_ensures.c, line 16)
+:
+Prove: true.
+Prover Qed returns Valid
+
+------------------------------------------------------------
+[wp:pedantic-assigns] /tmp/baseline3_ucx1v6ma/attempt_02_repair_07/repair_07_01_missing_spec_01_add_ensures.c:14: Warning: 
+  No 'assigns' specification for function 'main'.
+  Callers assumptions might be imprecise.
+
+
+WP stderr:

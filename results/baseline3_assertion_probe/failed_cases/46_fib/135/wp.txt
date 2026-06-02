@@ -1,0 +1,207 @@
+Dataset: 46_fib
+File: 135.c
+Source: /home/wangpeijie/wpj_2010215/spec_generation_abduction/data/AutoBench/46_fib/135.c
+Final status: Fail
+Best attempt: 1
+Best result: Fail_20_21
+
+Command:
+frama-c -wp -wp-precond-weakening -wp-no-callee-precond -wp-prover Alt-Ergo,Z3 -wp-prop=-@terminates,-@variant,-@decreases -wp-print -wp-timeout 8 /tmp/baseline3_duxzl_2y/attempt_01_repair_04/repair_04_01_missing_spec_01_add_invariant.c
+
+WP stdout:
+[kernel] Parsing /tmp/baseline3_duxzl_2y/attempt_01_repair_04/repair_04_01_missing_spec_01_add_invariant.c (with preprocessing)
+[kernel:typing:no-proto] /tmp/baseline3_duxzl_2y/attempt_01_repair_04/repair_04_01_missing_spec_01_add_invariant.c:2: Warning: 
+  Function unknown1 is declared without prototype.
+  Its formals will be inferred from actual arguments at first call.
+  Declare it as unknown1(void) if the function does not take any parameters.
+[kernel:typing:no-proto] /tmp/baseline3_duxzl_2y/attempt_01_repair_04/repair_04_01_missing_spec_01_add_invariant.c:3: Warning: 
+  Function unknown2 is declared without prototype.
+  Its formals will be inferred from actual arguments at first call.
+  Declare it as unknown2(void) if the function does not take any parameters.
+[kernel:typing:no-proto] /tmp/baseline3_duxzl_2y/attempt_01_repair_04/repair_04_01_missing_spec_01_add_invariant.c:4: Warning: 
+  Function unknown3 is declared without prototype.
+  Its formals will be inferred from actual arguments at first call.
+  Declare it as unknown3(void) if the function does not take any parameters.
+[kernel:typing:no-proto] /tmp/baseline3_duxzl_2y/attempt_01_repair_04/repair_04_01_missing_spec_01_add_invariant.c:5: Warning: 
+  Function unknown4 is declared without prototype.
+  Its formals will be inferred from actual arguments at first call.
+  Declare it as unknown4(void) if the function does not take any parameters.
+[kernel:typing:no-proto] /tmp/baseline3_duxzl_2y/attempt_01_repair_04/repair_04_01_missing_spec_01_add_invariant.c:10: Warning: 
+  Function unknown1 is declared without prototype.
+  Its formals will be inferred from actual arguments at first call.
+  Declare it as unknown1(void) if the function does not take any parameters.
+[kernel:typing:no-proto] /tmp/baseline3_duxzl_2y/attempt_01_repair_04/repair_04_01_missing_spec_01_add_invariant.c:14: Warning: 
+  Function unknown2 is declared without prototype.
+  Its formals will be inferred from actual arguments at first call.
+  Declare it as unknown2(void) if the function does not take any parameters.
+[kernel:typing:no-proto] /tmp/baseline3_duxzl_2y/attempt_01_repair_04/repair_04_01_missing_spec_01_add_invariant.c:18: Warning: 
+  Function unknown3 is declared without prototype.
+  Its formals will be inferred from actual arguments at first call.
+  Declare it as unknown3(void) if the function does not take any parameters.
+[kernel:typing:no-proto] /tmp/baseline3_duxzl_2y/attempt_01_repair_04/repair_04_01_missing_spec_01_add_invariant.c:22: Warning: 
+  Function unknown4 is declared without prototype.
+  Its formals will be inferred from actual arguments at first call.
+  Declare it as unknown4(void) if the function does not take any parameters.
+[wp] Running WP plugin...
+[kernel:annot:missing-spec] /tmp/baseline3_duxzl_2y/attempt_01_repair_04/repair_04_01_missing_spec_01_add_invariant.c:3: Warning: 
+  Neither code nor explicit exits and terminates for function unknown2,
+   generating default clauses. See -generated-spec-* options for more info
+[wp] Warning: Missing RTE guards
+[wp] 21 goals scheduled
+[wp] [Timeout] typed_main_loop_invariant_5_preserved (Qed 53ms) (Z3)
+[wp] Proved goals:   20 / 21
+  Qed:            20 (3ms)
+  Timeout:         1
+------------------------------------------------------------
+  Function main
+------------------------------------------------------------
+
+Goal Exit-condition (generated) in 'main':
+Prove: true.
+Prover Qed returns Valid (1ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline3_duxzl_2y/attempt_01_repair_04/repair_04_01_missing_spec_01_add_invariant.c, line 38):
+Prove: true.
+Prover Qed returns Valid (21ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline3_duxzl_2y/attempt_01_repair_04/repair_04_01_missing_spec_01_add_invariant.c, line 38):
+Prove: true.
+Prover Qed returns Valid (3ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline3_duxzl_2y/attempt_01_repair_04/repair_04_01_missing_spec_01_add_invariant.c, line 39):
+Prove: true.
+Prover Qed returns Valid (42ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline3_duxzl_2y/attempt_01_repair_04/repair_04_01_missing_spec_01_add_invariant.c, line 39):
+Prove: true.
+Prover Qed returns Valid (4ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline3_duxzl_2y/attempt_01_repair_04/repair_04_01_missing_spec_01_add_invariant.c, line 40):
+Prove: true.
+Prover Qed returns Valid (12ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline3_duxzl_2y/attempt_01_repair_04/repair_04_01_missing_spec_01_add_invariant.c, line 40):
+Prove: true.
+Prover Qed returns Valid (4ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline3_duxzl_2y/attempt_01_repair_04/repair_04_01_missing_spec_01_add_invariant.c, line 41):
+Prove: true.
+Prover Qed returns Valid (15ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline3_duxzl_2y/attempt_01_repair_04/repair_04_01_missing_spec_01_add_invariant.c, line 41):
+Prove: true.
+Prover Qed returns Valid (4ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline3_duxzl_2y/attempt_01_repair_04/repair_04_01_missing_spec_01_add_invariant.c, line 44):
+Let x_1 = z + (4 * x).
+Let x_2 = 2 * x.
+Assume {
+  Type: is_sint32(tmp_0) /\ is_sint32(x) /\ is_sint32(z) /\ is_sint32(x_2) /\
+      is_sint32(1 + x) /\ is_sint32(2 + x_2) /\ is_sint32(x_1).
+  (* Residual *)
+  When: (x_1 % 2) != 1.
+  (* Invariant *)
+  Have: 0 <= x.
+  (* Then *)
+  Have: tmp_0 != 0.
+  (* Invariant *)
+  Have: (-1) <= x.
+}
+Prove: false.
+Prover Alt-Ergo 2.2.0 returns Failed
+unrecognized prover answer
+Prover Z3 4.8.12 returns Timeout (Qed:53ms) (8s)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline3_duxzl_2y/attempt_01_repair_04/repair_04_01_missing_spec_01_add_invariant.c, line 44):
+Prove: true.
+Prover Qed returns Valid (3ms)
+
+------------------------------------------------------------
+
+Goal Assertion (file /tmp/baseline3_duxzl_2y/attempt_01_repair_04/repair_04_01_missing_spec_01_add_invariant.c, line 57):
+Prove: true.
+Prover Qed returns Valid (7ms)
+
+------------------------------------------------------------
+
+Goal Assertion (file /tmp/baseline3_duxzl_2y/attempt_01_repair_04/repair_04_01_missing_spec_01_add_invariant.c, line 58):
+Prove: true.
+Prover Qed returns Valid (10ms)
+
+------------------------------------------------------------
+
+Goal Loop assigns (file /tmp/baseline3_duxzl_2y/attempt_01_repair_04/repair_04_01_missing_spec_01_add_invariant.c, line 37) (1/2):
+Prove: true.
+Prover Qed returns Valid
+
+------------------------------------------------------------
+
+Goal Loop assigns (file /tmp/baseline3_duxzl_2y/attempt_01_repair_04/repair_04_01_missing_spec_01_add_invariant.c, line 37) (2/2):
+Call Result at line 47
+Prove: true.
+Prover Qed returns Valid (17ms)
+
+------------------------------------------------------------
+
+Goal Assigns nothing in 'main' (1/2):
+Prove: true.
+Prover Qed returns Valid
+
+------------------------------------------------------------
+
+Goal Assigns nothing in 'main' (2/2):
+Effect at line 47
+Prove: true.
+Prover Qed returns Valid (6ms)
+
+------------------------------------------------------------
+
+Goal Assigns nothing in 'main' (1/4):
+Prove: true.
+Prover Qed returns Valid
+
+------------------------------------------------------------
+
+Goal Assigns nothing in 'main' (2/4):
+Effect at line 47
+Prove: true.
+Prover Qed returns Valid (5ms)
+
+------------------------------------------------------------
+
+Goal Assigns nothing in 'main' (3/4):
+Call Result at line 47
+Prove: true.
+Prover Qed returns Valid (7ms)
+
+------------------------------------------------------------
+
+Goal Assigns nothing in 'main' (4/4):
+Effect at line 59
+Prove: true.
+Prover Qed returns Valid (9ms)
+
+------------------------------------------------------------
+
+
+WP stderr:

@@ -1,0 +1,22 @@
+{
+  "category": "wrong_spec",
+  "target_kind": "assertion",
+  "reason": "From the available assumptions WP only knows j <= 6 (plus typing/range facts). That is insufficient to prove equality, and in fact the loop exit condition gives j < i, which together with the invariant i+2*j==21 implies j=6 (and i=9). The failure indicates the current loop invariant is too weak (missing the complementary fact relating i and j at loop exit), so the post-loop assertion is currently not derivable.",
+  "suspect_text": "//@ assert(j == 6);",
+  "source_line": null,
+  "recommended_action": "add_invariant",
+  "raw": {
+    "category": "wrong_spec",
+    "target_kind": "assertion",
+    "suspect_text": "//@ assert(j == 6);",
+    "reason": "From the available assumptions WP only knows j <= 6 (plus typing/range facts). That is insufficient to prove equality, and in fact the loop exit condition gives j < i, which together with the invariant i+2*j==21 implies j=6 (and i=9). The failure indicates the current loop invariant is too weak (missing the complementary fact relating i and j at loop exit), so the post-loop assertion is currently not derivable.",
+    "recommended_action": "add_invariant",
+    "raw": {
+      "needed_bridge_facts": [
+        "at loop exit: j < i (negation of loop condition)",
+        "combine with invariant i + 2*j == 21 to conclude j == 6"
+      ],
+      "suggested_fix": "Strengthen the loop invariant (or add an additional invariant) so that together with the negated loop condition it entails j==6, e.g., track a relation such as i == 21 - 2*j (equivalent) and add bounds/ordering facts allowing derivation at exit."
+    }
+  }
+}

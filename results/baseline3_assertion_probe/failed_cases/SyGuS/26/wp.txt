@@ -1,0 +1,108 @@
+Dataset: SyGuS
+File: 26.c
+Source: /home/wangpeijie/wpj_2010215/spec_generation_abduction/data/AutoBench/SyGuS/26.c
+Final status: Fail
+Best attempt: 2
+Best result: Fail_10_11
+
+Command:
+frama-c -wp -wp-precond-weakening -wp-no-callee-precond -wp-prover Alt-Ergo,Z3 -wp-prop=-@terminates,-@variant,-@decreases -wp-print -wp-timeout 8 /tmp/baseline3_zxou3v1r/attempt_02_repair_07/repair_07_01_missing_spec_01_add_invariant.c
+
+WP stdout:
+[kernel] Parsing /tmp/baseline3_zxou3v1r/attempt_02_repair_07/repair_07_01_missing_spec_01_add_invariant.c (with preprocessing)
+[wp] Running WP plugin...
+[wp] Warning: Missing RTE guards
+[wp] 10 goals scheduled
+[wp] [Timeout] typed_foo_loop_invariant_3_preserved (Qed 8ms) (Z3)
+[wp] Proved goals:   10 / 11
+  Unreachable:     1
+  Qed:             8 (7ms-2ms-8ms)
+  Z3 4.8.12:       1 (60ms)
+  Timeout:         1
+------------------------------------------------------------
+  Function foo
+------------------------------------------------------------
+
+Goal Post-condition (file /tmp/baseline3_zxou3v1r/attempt_02_repair_07/repair_07_01_missing_spec_01_add_invariant.c, line 5) in 'foo':
+Prove: true.
+Prover Qed returns Valid
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline3_zxou3v1r/attempt_02_repair_07/repair_07_01_missing_spec_01_add_invariant.c, line 10):
+Prove: true.
+Prover Qed returns Valid
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline3_zxou3v1r/attempt_02_repair_07/repair_07_01_missing_spec_01_add_invariant.c, line 10):
+Prove: true.
+Prover Qed returns Valid
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline3_zxou3v1r/attempt_02_repair_07/repair_07_01_missing_spec_01_add_invariant.c, line 11):
+Prove: true.
+Prover Qed returns Valid
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline3_zxou3v1r/attempt_02_repair_07/repair_07_01_missing_spec_01_add_invariant.c, line 11):
+Prove: true.
+Prover Qed returns Valid
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline3_zxou3v1r/attempt_02_repair_07/repair_07_01_missing_spec_01_add_invariant.c, line 12):
+Assume {
+  Type: is_sint32(n) /\ is_sint32(x) /\ is_sint32(x - 1).
+  (* Goal *)
+  When: x <= 2.
+  (* Pre-condition *)
+  Have: n != 1.
+  (* Then *)
+  Have: 2 <= x.
+}
+Prove: false.
+Prover Alt-Ergo 2.2.0 returns Failed
+unrecognized prover answer
+Prover Z3 4.8.12 returns Timeout (Qed:8ms) (8s)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline3_zxou3v1r/attempt_02_repair_07/repair_07_01_missing_spec_01_add_invariant.c, line 12):
+Prove: true.
+Prover Qed returns Valid (1ms)
+
+------------------------------------------------------------
+
+Goal Assertion (file /tmp/baseline3_zxou3v1r/attempt_02_repair_07/repair_07_01_missing_spec_01_add_invariant.c, line 23):
+Assume {
+  Type: is_sint32(n).
+  (* Pre-condition *)
+  Have: n != 1.
+  (* Else *)
+  Have: n <= 1.
+}
+Prove: n <= 0.
+Prover Alt-Ergo 2.2.0 returns Failed
+unrecognized prover answer
+Prover Z3 4.8.12 returns Valid (Qed:7ms) (60ms) (24461)
+
+------------------------------------------------------------
+
+Goal Loop assigns (file /tmp/baseline3_zxou3v1r/attempt_02_repair_07/repair_07_01_missing_spec_01_add_invariant.c, line 13):
+Prove: true.
+Prover Qed returns Valid
+
+------------------------------------------------------------
+
+Goal Assigns nothing in 'foo':
+Effect at line 17
+Prove: true.
+Prover Qed returns Valid (2ms)
+
+------------------------------------------------------------
+
+
+WP stderr:

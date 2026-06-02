@@ -1,0 +1,37 @@
+[1/1] baseline3 test/235.c
+[09:56:55] LLM start test_235.c_initial1
+[09:57:02] LLM done test_235.c_initial1, chars=704
+[09:57:12] LLM start baseline3_diagnose_typed_main_loop_invariant_2_preserved
+[09:57:18] LLM done baseline3_diagnose_typed_main_loop_invariant_2_preserved, chars=779
+[09:57:18] LLM start baseline3_wrong_spec_typed_main_loop_invariant_2_preserved
+[09:57:26] LLM done baseline3_wrong_spec_typed_main_loop_invariant_2_preserved, chars=1025
+baseline3 repair wrong_spec_typed_main_loop_invariant_2_preserved: applied proposal #1 -> repair_01_01_wrong_spec_01_rewrite_annotation.c
+[09:57:37] LLM start baseline3_diagnose_typed_main_loop_invariant_2_preserved
+[09:57:41] LLM done baseline3_diagnose_typed_main_loop_invariant_2_preserved, chars=540
+[09:57:41] LLM start baseline3_wrong_spec_typed_main_loop_invariant_2_preserved
+[09:57:47] LLM done baseline3_wrong_spec_typed_main_loop_invariant_2_preserved, chars=693
+baseline3 repair wrong_spec_typed_main_loop_invariant_2_preserved: applied proposal #1 -> repair_02_01_wrong_spec_01_rewrite_annotation.c
+[09:57:57] LLM start baseline3_diagnose_typed_main_assert
+[09:58:06] LLM done baseline3_diagnose_typed_main_assert, chars=1015
+[09:58:06] LLM start baseline3_wrong_spec_typed_main_assert
+[09:58:13] LLM done baseline3_wrong_spec_typed_main_assert, chars=811
+baseline3 repair wrong_spec_typed_main_assert: applied proposal #1 -> repair_03_01_wrong_spec_01_rewrite_annotation.c
+[09:58:24] LLM start baseline3_diagnose_typed_main_assert
+[09:58:30] LLM done baseline3_diagnose_typed_main_assert, chars=575
+[09:58:30] LLM start baseline3_wrong_spec_typed_main_assert
+[09:58:36] LLM done baseline3_wrong_spec_typed_main_assert, chars=521
+baseline3 repair wrong_spec_typed_main_assert: not applied (no_applicable_repair)
+  #1 skipped: generated code rejected: LLM removed or changed original ACSL assertions: ['j==6']
+baseline3 repair fallback: trying missing_spec after wrong_spec failed
+[09:58:36] LLM start baseline3_missing_spec_typed_main_assert
+[09:58:44] LLM done baseline3_missing_spec_typed_main_assert, chars=966
+baseline3 repair missing_spec_typed_main_assert: applied proposal #1 -> repair_04_01_missing_spec_01_add_invariant.c
+[09:58:55] LLM start baseline3_diagnose_typed_main_loop_invariant_6_preserved
+[09:59:00] LLM done baseline3_diagnose_typed_main_loop_invariant_6_preserved, chars=587
+[09:59:00] LLM start baseline3_wrong_spec_typed_main_loop_invariant_6_preserved
+[09:59:07] LLM done baseline3_wrong_spec_typed_main_loop_invariant_6_preserved, chars=697
+baseline3 repair wrong_spec_typed_main_loop_invariant_6_preserved: applied proposal #1 -> repair_05_01_wrong_spec_01_rewrite_annotation.c
+Summary: /home/wangpeijie/wpj_2010215/spec_generation_abduction/results/baseline3_assertion_probe/baseline3_summary.md
+Successful files: /home/wangpeijie/wpj_2010215/spec_generation_abduction/results/baseline3_assertion_probe/successful_files
+Failed cases: /home/wangpeijie/wpj_2010215/spec_generation_abduction/results/baseline3_assertion_probe/failed_cases
+Console log: /home/wangpeijie/wpj_2010215/spec_generation_abduction/results/baseline3_assertion_probe/baseline3_console_test.txt

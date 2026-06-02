@@ -1,0 +1,17 @@
+Dataset: frama-c-problem
+File: 231.c
+Source: /home/wangpeijie/wpj_2010215/spec_generation_abduction/data/AutoBench/frama-c-problem/231.c
+Final status: Error
+Best attempt: 1
+Best result: Error
+
+Command:
+
+
+Attempt error:
+APIConnectionError: Error communicating with OpenAI: HTTPSConnectionPool(host='api.apiplus.org', port=443): Max retries exceeded with url: /v1/chat/completions (Caused by ProxyError('Cannot connect to proxy.', ConnectionResetError(104, 'Connection reset by peer')))
+
+WP stdout:
+
+
+WP stderr:

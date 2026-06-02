@@ -1,0 +1,14 @@
+{
+  "dataset": "test",
+  "filename": "235.c",
+  "source_path": "/home/wangpeijie/wpj_2010215/spec_generation_abduction/data/AutoBench/test/235.c",
+  "final_status": "Pass",
+  "overall_success": true,
+  "best_attempt": 1,
+  "best_result_type": "Pass_16_16",
+  "successful_saved_file": "/home/wangpeijie/wpj_2010215/spec_generation_abduction/results/baseline3_assertion_probe/successful_files/test/235.c",
+  "failed_saved_file": "",
+  "failure_wp_output": "",
+  "skipped_existing": false,
+  "trace_dir": "/home/wangpeijie/wpj_2010215/spec_generation_abduction/results/baseline3_assertion_probe/traces/test/235"
+}

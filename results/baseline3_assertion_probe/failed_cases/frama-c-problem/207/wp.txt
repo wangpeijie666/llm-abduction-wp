@@ -1,0 +1,139 @@
+Dataset: frama-c-problem
+File: 207.c
+Source: /home/wangpeijie/wpj_2010215/spec_generation_abduction/data/AutoBench/frama-c-problem/207.c
+Final status: Fail
+Best attempt: 3
+Best result: Fail_14_15
+
+Command:
+frama-c -wp -wp-precond-weakening -wp-no-callee-precond -wp-prover Alt-Ergo,Z3 -wp-prop=-@terminates,-@variant,-@decreases -wp-print -wp-timeout 8 /tmp/baseline3_96dy4qd7/attempt_03_repair_03/repair_03_01_wrong_spec_01_delete_annotation.c
+
+WP stdout:
+[kernel] Parsing /tmp/baseline3_96dy4qd7/attempt_03_repair_03/repair_03_01_wrong_spec_01_delete_annotation.c (with preprocessing)
+[wp] Running WP plugin...
+[wp] Warning: Missing RTE guards
+[wp] 14 goals scheduled
+[wp] [Timeout] typed_func_ensures (Qed 12ms) (Z3)
+[wp] Proved goals:   14 / 15
+  Unreachable:     1
+  Qed:            12 (12ms-2ms-15ms)
+  Z3 4.8.12:       1 (75ms)
+  Timeout:         1
+------------------------------------------------------------
+  Function func
+------------------------------------------------------------
+
+Goal Post-condition (file /tmp/baseline3_96dy4qd7/attempt_03_repair_03/repair_03_01_wrong_spec_01_delete_annotation.c, line 4) in 'func':
+Let x_1 = func_0 + x.
+Assume {
+  Type: is_sint32(func_0) /\ is_sint32(x) /\ is_sint32(x_1).
+  (* Invariant *)
+  Have: 0 <= func_0.
+  (* Else *)
+  Have: x <= 0.
+}
+Prove: (if (0 < x_1) then x_1 else 0) = func_0.
+Prover Alt-Ergo 2.2.0 returns Failed
+unrecognized prover answer
+Prover Z3 4.8.12 returns Timeout (Qed:12ms) (8s)
+
+------------------------------------------------------------
+
+Goal Post-condition (file /tmp/baseline3_96dy4qd7/attempt_03_repair_03/repair_03_01_wrong_spec_01_delete_annotation.c, line 5) in 'func':
+Prove: true.
+Prover Qed returns Valid (6ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline3_96dy4qd7/attempt_03_repair_03/repair_03_01_wrong_spec_01_delete_annotation.c, line 13):
+Prove: true.
+Prover Qed returns Valid (7ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline3_96dy4qd7/attempt_03_repair_03/repair_03_01_wrong_spec_01_delete_annotation.c, line 13):
+Prove: true.
+Prover Qed returns Valid (2ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline3_96dy4qd7/attempt_03_repair_03/repair_03_01_wrong_spec_01_delete_annotation.c, line 14):
+Let x_1 = -x.
+Assume {
+  Type: is_sint32(c) /\ is_sint32(x) /\ is_sint32(x - 1) /\
+      is_sint32(c - x) /\ is_sint32(1 + c - x).
+  (* Invariant *)
+  Have: x <= c.
+  (* Invariant *)
+  Have: 0 < x.
+}
+Prove: x <= (1 + c).
+Prover Alt-Ergo 2.2.0 returns Failed
+unrecognized prover answer
+Prover Z3 4.8.12 returns Valid (Qed:15ms) (75ms) (25410)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline3_96dy4qd7/attempt_03_repair_03/repair_03_01_wrong_spec_01_delete_annotation.c, line 14):
+Prove: true.
+Prover Qed returns Valid (2ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline3_96dy4qd7/attempt_03_repair_03/repair_03_01_wrong_spec_01_delete_annotation.c, line 15):
+Prove: true.
+Prover Qed returns Valid (7ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline3_96dy4qd7/attempt_03_repair_03/repair_03_01_wrong_spec_01_delete_annotation.c, line 15):
+Prove: true.
+Prover Qed returns Valid (2ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline3_96dy4qd7/attempt_03_repair_03/repair_03_01_wrong_spec_01_delete_annotation.c, line 16):
+Prove: true.
+Prover Qed returns Valid (8ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline3_96dy4qd7/attempt_03_repair_03/repair_03_01_wrong_spec_01_delete_annotation.c, line 16):
+Prove: true.
+Prover Qed returns Valid (2ms)
+
+------------------------------------------------------------
+
+Goal Loop assigns (file /tmp/baseline3_96dy4qd7/attempt_03_repair_03/repair_03_01_wrong_spec_01_delete_annotation.c, line 17):
+Prove: true.
+Prover Qed returns Valid
+
+------------------------------------------------------------
+
+Goal Assigns nothing in 'func':
+Effect at line 20
+Prove: true.
+Prover Qed returns Valid (3ms)
+
+------------------------------------------------------------
+------------------------------------------------------------
+  Function main
+------------------------------------------------------------
+
+Goal Exit-condition (generated) in 'main':
+Prove: true.
+Prover Qed returns Valid
+
+------------------------------------------------------------
+
+Goal Assertion (file /tmp/baseline3_96dy4qd7/attempt_03_repair_03/repair_03_01_wrong_spec_01_delete_annotation.c, line 31):
+Prove: true.
+Prover Qed returns Valid (2ms)
+
+------------------------------------------------------------
+[wp:pedantic-assigns] /tmp/baseline3_96dy4qd7/attempt_03_repair_03/repair_03_01_wrong_spec_01_delete_annotation.c:29: Warning: 
+  No 'assigns' specification for function 'main'.
+  Callers assumptions might be imprecise.
+
+
+WP stderr:

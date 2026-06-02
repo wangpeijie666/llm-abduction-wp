@@ -4,13 +4,16 @@
 #include <limits.h>
 
 /*@
-    ensures \result >= INT_MIN && \result <= INT_MAX;
     assigns \nothing;
+    ensures \result >= INT_MIN && \result <= INT_MAX;
 */
 int unknown_int();
 
+/*@
+    assigns \nothing;
+*/
 int main() {
-    unsigned int i, j, a, b;
+    unsigned int i,j,a,b;
     int flag = unknown_int();
     a = 0;
     b = 0;
@@ -22,15 +25,13 @@ int main() {
     }
 
     /*@
-        loop assigns a, b, i, j;
-        loop invariant a >= 0;
-        loop invariant b >= 0;
-        loop invariant i >= 0;
-        loop invariant j >= 1;
+        loop invariant (j - i) == (flag ? 1u : 0u);
         loop invariant b == a * (j - i);
-        loop invariant j >= i;
-        loop invariant 0 < j;
-        loop invariant j == (i % 2 == 0 ? j + 2 : j + 1);
+        // Bridge lemma for modular arithmetic simplification in WP:
+        // from (j - i) == c, we also have c + (i + 2u) == (j + 2u) (mod 2^32)
+        // which matches the i/j updates in the loop body and helps preserve the first invariant.
+        loop invariant (flag ? 1u : 0u) + (i + 2u) == j + 2u;
+        loop assigns a, b, i, j;
     */
     /* PROBE_HERE:loop1_before */
     while (unknown_int()) {
@@ -38,13 +39,12 @@ int main() {
         a++;
         b += (j - i);
         i += 2;
-        if (i % 2 == 0) {
+        if (i%2 == 0) {
             j += 2;
         } else {
             j++;
         }
     }
-
     if (flag) {
         //@ assert(a == b);
     }

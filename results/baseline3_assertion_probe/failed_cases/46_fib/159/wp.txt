@@ -1,0 +1,171 @@
+Dataset: 46_fib
+File: 159.c
+Source: /home/wangpeijie/wpj_2010215/spec_generation_abduction/data/AutoBench/46_fib/159.c
+Final status: Fail
+Best attempt: 2
+Best result: Fail_15_16
+
+Command:
+frama-c -wp -wp-precond-weakening -wp-no-callee-precond -wp-prover Alt-Ergo,Z3 -wp-prop=-@terminates,-@variant,-@decreases -wp-print -wp-timeout 8 /tmp/baseline3_vikeopxn/attempt_02_repair_07/repair_07_01_wrong_spec_01_rewrite_annotation.c
+
+WP stdout:
+[kernel] Parsing /tmp/baseline3_vikeopxn/attempt_02_repair_07/repair_07_01_wrong_spec_01_rewrite_annotation.c (with preprocessing)
+[kernel:typing:no-proto] /tmp/baseline3_vikeopxn/attempt_02_repair_07/repair_07_01_wrong_spec_01_rewrite_annotation.c:4: Warning: 
+  Function unknown1 is declared without prototype.
+  Its formals will be inferred from actual arguments at first call.
+  Declare it as unknown1(void) if the function does not take any parameters.
+[kernel:typing:no-proto] /tmp/baseline3_vikeopxn/attempt_02_repair_07/repair_07_01_wrong_spec_01_rewrite_annotation.c:6: Warning: 
+  Function unknown2 is declared without prototype.
+  Its formals will be inferred from actual arguments at first call.
+  Declare it as unknown2(void) if the function does not take any parameters.
+[kernel:typing:no-proto] /tmp/baseline3_vikeopxn/attempt_02_repair_07/repair_07_01_wrong_spec_01_rewrite_annotation.c:8: Warning: 
+  Function unknown3 is declared without prototype.
+  Its formals will be inferred from actual arguments at first call.
+  Declare it as unknown3(void) if the function does not take any parameters.
+[kernel:typing:no-proto] /tmp/baseline3_vikeopxn/attempt_02_repair_07/repair_07_01_wrong_spec_01_rewrite_annotation.c:10: Warning: 
+  Function unknown4 is declared without prototype.
+  Its formals will be inferred from actual arguments at first call.
+  Declare it as unknown4(void) if the function does not take any parameters.
+[wp] Running WP plugin...
+[kernel:annot:missing-spec] /tmp/baseline3_vikeopxn/attempt_02_repair_07/repair_07_01_wrong_spec_01_rewrite_annotation.c:4: Warning: 
+  Neither code nor explicit exits and terminates for function unknown1,
+   generating default clauses. See -generated-spec-* options for more info
+[kernel:annot:missing-spec] /tmp/baseline3_vikeopxn/attempt_02_repair_07/repair_07_01_wrong_spec_01_rewrite_annotation.c:6: Warning: 
+  Neither code nor explicit exits and terminates for function unknown2,
+   generating default clauses. See -generated-spec-* options for more info
+[kernel:annot:missing-spec] /tmp/baseline3_vikeopxn/attempt_02_repair_07/repair_07_01_wrong_spec_01_rewrite_annotation.c:10: Warning: 
+  Neither code nor explicit exits and terminates for function unknown4,
+   generating default clauses. See -generated-spec-* options for more info
+[wp] Warning: Missing RTE guards
+[wp] 16 goals scheduled
+[wp] [Timeout] typed_main_loop_invariant_2_preserved (Qed 218ms) (Z3)
+[wp] Proved goals:   15 / 16
+  Qed:            15 (14ms)
+  Timeout:         1
+------------------------------------------------------------
+  Function main
+------------------------------------------------------------
+
+Goal Exit-condition (generated) in 'main':
+Prove: true.
+Prover Qed returns Valid (0.58ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline3_vikeopxn/attempt_02_repair_07/repair_07_01_wrong_spec_01_rewrite_annotation.c, line 15):
+Prove: true.
+Prover Qed returns Valid (15ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline3_vikeopxn/attempt_02_repair_07/repair_07_01_wrong_spec_01_rewrite_annotation.c, line 15):
+Prove: true.
+Prover Qed returns Valid (3ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline3_vikeopxn/attempt_02_repair_07/repair_07_01_wrong_spec_01_rewrite_annotation.c, line 26):
+Assume {
+  Type: is_sint32(tmp_0) /\ is_sint32(tmp_1_0) /\ is_sint32(w) /\
+      is_sint32(x) /\ is_sint32(x_1) /\ is_sint32(x_2) /\ is_sint32(y) /\
+      is_sint32(z).
+  (* Then *)
+  Have: tmp_1_0 != 0.
+  (* Then *)
+  Have: tmp_0 != 0.
+  If (w % 2) = 1
+  Then { Have: x_2 = x_1. Have: (1 + x_2) = x. }
+  Else { Have: x_2 = x. }
+  If (z % 2) = 0
+  Then { Have: (1 + x_2) = y. }
+  Else { Have: y = x_2. }
+}
+Prove: y = x.
+Prover Alt-Ergo 2.2.0 returns Failed
+unrecognized prover answer
+Prover Z3 4.8.12 returns Timeout (Qed:218ms) (8s)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline3_vikeopxn/attempt_02_repair_07/repair_07_01_wrong_spec_01_rewrite_annotation.c, line 26):
+Prove: true.
+Prover Qed returns Valid (9ms)
+
+------------------------------------------------------------
+
+Goal Preservation of Invariant (file /tmp/baseline3_vikeopxn/attempt_02_repair_07/repair_07_01_wrong_spec_01_rewrite_annotation.c, line 39):
+Prove: true.
+Prover Qed returns Valid (18ms)
+
+------------------------------------------------------------
+
+Goal Establishment of Invariant (file /tmp/baseline3_vikeopxn/attempt_02_repair_07/repair_07_01_wrong_spec_01_rewrite_annotation.c, line 39):
+Prove: true.
+Prover Qed returns Valid (13ms)
+
+------------------------------------------------------------
+
+Goal Assertion (file /tmp/baseline3_vikeopxn/attempt_02_repair_07/repair_07_01_wrong_spec_01_rewrite_annotation.c, line 49):
+Prove: true.
+Prover Qed returns Valid (13ms)
+
+------------------------------------------------------------
+
+Goal Loop assigns (file /tmp/baseline3_vikeopxn/attempt_02_repair_07/repair_07_01_wrong_spec_01_rewrite_annotation.c, line 20) (1/4):
+Prove: true.
+Prover Qed returns Valid
+
+------------------------------------------------------------
+
+Goal Loop assigns (file /tmp/baseline3_vikeopxn/attempt_02_repair_07/repair_07_01_wrong_spec_01_rewrite_annotation.c, line 20) (2/4):
+Call Result at line 23
+Prove: true.
+Prover Qed returns Valid (17ms)
+
+------------------------------------------------------------
+
+Goal Loop assigns (file /tmp/baseline3_vikeopxn/attempt_02_repair_07/repair_07_01_wrong_spec_01_rewrite_annotation.c, line 20) (3/4):
+Call Result at line 31
+Prove: true.
+Prover Qed returns Valid (16ms)
+
+------------------------------------------------------------
+
+Goal Loop assigns (file /tmp/baseline3_vikeopxn/attempt_02_repair_07/repair_07_01_wrong_spec_01_rewrite_annotation.c, line 20) (4/4):
+Call Result at line 43
+Prove: true.
+Prover Qed returns Valid (15ms)
+
+------------------------------------------------------------
+
+Goal Loop assigns (file /tmp/baseline3_vikeopxn/attempt_02_repair_07/repair_07_01_wrong_spec_01_rewrite_annotation.c, line 28) (1/2):
+Prove: true.
+Prover Qed returns Valid
+
+------------------------------------------------------------
+
+Goal Loop assigns (file /tmp/baseline3_vikeopxn/attempt_02_repair_07/repair_07_01_wrong_spec_01_rewrite_annotation.c, line 28) (2/2):
+Call Result at line 31
+Prove: true.
+Prover Qed returns Valid (19ms)
+
+------------------------------------------------------------
+
+Goal Loop assigns (file /tmp/baseline3_vikeopxn/attempt_02_repair_07/repair_07_01_wrong_spec_01_rewrite_annotation.c, line 40) (1/2):
+Prove: true.
+Prover Qed returns Valid
+
+------------------------------------------------------------
+
+Goal Loop assigns (file /tmp/baseline3_vikeopxn/attempt_02_repair_07/repair_07_01_wrong_spec_01_rewrite_annotation.c, line 40) (2/2):
+Call Result at line 43
+Prove: true.
+Prover Qed returns Valid (17ms)
+
+------------------------------------------------------------
+[wp:pedantic-assigns] /tmp/baseline3_vikeopxn/attempt_02_repair_07/repair_07_01_wrong_spec_01_rewrite_annotation.c:12: Warning: 
+  No 'assigns' specification for function 'main'.
+  Callers assumptions might be imprecise.
+
+
+WP stderr:
